@@ -8,7 +8,7 @@ entity entity_counter is
       cnt_mode  : in std_logic;
       cnt_limit : in integer;
       cnt_rst   : in std_logic;
-      cnt_out   : out std_logic
+      cnt_out   : out integer
     );
 end entity entity_counter;
 
