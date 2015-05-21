@@ -10,10 +10,10 @@ entity entity_marquee_generator is
     );
 end entity entity_marquee_generator;
 
-architecture architecture_marquee_formula of entity_marquee_generator is
+architecture architecture_marquee_generator of entity_marquee_generator is
 begin
   marquee_formula_p : process(val_in)
   begin
     val_out <= (7 sra val_in) + ((val_in / 6) sra (val_in mod 6)) + (val_in / 7);
   end process marquee_formula_p;
-end architecture_marquee_formula;
+end architecture_marquee_generator;
