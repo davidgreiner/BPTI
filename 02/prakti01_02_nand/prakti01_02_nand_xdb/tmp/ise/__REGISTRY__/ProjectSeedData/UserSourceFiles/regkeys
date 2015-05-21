@@ -1,0 +1,15 @@
+NUM_USER_FILES
+4
+s
+user_file_1
+../files/nand/gate_and.vhd
+s
+user_file_2
+../files/nand/gate_nand.vhd
+s
+user_file_3
+../files/nand/gate_not.vhd
+s
+user_file_4
+gate_nand.ucf
+s

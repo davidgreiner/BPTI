@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------
+Release 10.1.02 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_nand/prakti01_02_nand.ise
+-intstyle ise -v 3 -s 4 -xml gate_nand gate_nand.ncd -o gate_nand.twr
+gate_nand.pcf -ucf gate_nand.ucf
+
+Design file:              gate_nand.ncd
+Physical constraint file: gate_nand.pcf
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a1             |o1             |    7.900|
+a2             |o1             |    8.586|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 13 14:51:16 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 161 MB
+
+
+

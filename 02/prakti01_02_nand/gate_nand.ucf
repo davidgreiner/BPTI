@@ -1,0 +1,3 @@
+NET "o1" LOC = D25;
+NET "a1" LOC = J17;
+NET "a2" LOC = J15;

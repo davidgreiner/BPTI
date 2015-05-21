@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Release 10.1.02 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/prakti01_02_led.ise
+-intstyle ise -v 3 -s 4 -xml entity_flash entity_flash.ncd -o entity_flash.twr
+entity_flash.pcf -ucf entity_counter.ucf
+
+Design file:              entity_flash.ncd
+Physical constraint file: entity_flash.pcf
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk_in to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+led         |    6.421(R)|dcm_counter       |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    8.005|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed May 13 14:34:08 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 162 MB
+
+
+

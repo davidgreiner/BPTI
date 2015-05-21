@@ -1,0 +1,3 @@
+vhdl work "../files/nand/gate_not.vhd"
+vhdl work "../files/nand/gate_and.vhd"
+vhdl work "../files/nand/gate_nand.vhd"

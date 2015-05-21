@@ -1,0 +1,149 @@
+Release 10.1.02 par K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+i82pc25::  Wed May 13 14:50:48 2015
+
+par -w -intstyle ise -ol std -t 1 gate_nand_map.ncd gate_nand.ncd gate_nand.pcf
+ 
+
+
+Constraints file: gate_nand.pcf.
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+   "gate_nand" is an NCD, version 3.2, device xc3sd1800a, package fg676, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.32 2008-05-28".
+
+
+Design Summary Report:
+
+ Number of External IOBs                           3 out of 519     1%
+
+   Number of External Input IOBs                  2
+
+      Number of External Input IBUFs              2
+        Number of LOCed External Input IBUFs      2 out of 2     100%
+
+
+   Number of External Output IOBs                 1
+
+      Number of External Output IOBs              1
+        Number of LOCed External Output IOBs      1 out of 1     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of Slices                          1 out of 16640   1%
+      Number of SLICEMs                      0 out of 8320    0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:10aa3) REAL time: 7 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:10aa3) REAL time: 7 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:10aa3) REAL time: 7 secs 
+
+Phase 4.2
+Phase 4.2 (Checksum:10aa3) REAL time: 7 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:10aa3) REAL time: 7 secs 
+
+Phase 6.8
+.
+Phase 6.8 (Checksum:16346) REAL time: 7 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:16346) REAL time: 7 secs 
+
+Phase 8.18
+Phase 8.18 (Checksum:1634f) REAL time: 7 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:1634f) REAL time: 7 secs 
+
+REAL time consumed by placer: 7 secs 
+CPU  time consumed by placer: 6 secs 
+Writing design to file gate_nand.ncd
+
+
+Total REAL time to Placer completion: 7 secs 
+Total CPU time to Placer completion: 6 secs 
+
+Starting Router
+
+Phase 1: 3 unrouted;       REAL time: 17 secs 
+
+Phase 2: 3 unrouted;       REAL time: 17 secs 
+
+Phase 3: 0 unrouted;       REAL time: 17 secs 
+
+Phase 4: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 5: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 6: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 17 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 17 secs 
+
+
+Total REAL time to Router completion: 17 secs 
+Total CPU time to Router completion: 16 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+Timing Score: 0
+
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 21 secs 
+Total CPU time to PAR completion: 18 secs 
+
+Peak Memory Usage:  216 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file gate_nand.ncd
+
+
+
+PAR done!

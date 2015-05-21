@@ -1,0 +1,27 @@
+v 3
+file . "gate_nor.vhd" "20150505104000.000" "20150505124047.411":
+  architecture nor_a of two_in_one_out at 14( 229) + 0 on 60;
+  entity testbench_nor at 32( 754) + 0 on 61;
+  architecture tb_nor of testbench_nor at 39( 873) + 0 on 62;
+file . "gate_or.vhd" "20150505101636.000" "20150505124109.237":
+  entity two_in_one_out at 1( 0) + 0 on 63;
+  architecture or_a of two_in_one_out at 14( 228) + 0 on 64;
+  entity testbench_or at 27( 414) + 0 on 65;
+  architecture tb_or of testbench_or at 34( 530) + 0 on 66;
+file . "gate_and.vhd" "20150505100900.000" "20150505120919.186":
+  architecture and_a of two_in_one_out at 15( 230) + 0 on 28;
+  entity testbench_and at 27( 419) + 0 on 29;
+  architecture tb_and of testbench_and at 34( 538) + 0 on 30;
+file . "gate_not.vhd" "20150505102252.000" "20150505122437.209":
+  entity one_in_one_out at 1( 0) + 0 on 39;
+  architecture not_a of one_in_one_out at 13( 201) + 0 on 40;
+  entity testbench_not at 26( 373) + 0 on 41;
+  architecture tb_not of testbench_not at 33( 492) + 0 on 42;
+file . "gate_nand.vhd" "20150505103005.000" "20150505123011.853":
+  architecture nand_a of two_in_one_out at 15( 231) + 0 on 52;
+  entity testbench_nand at 34( 764) + 0 on 53;
+  architecture tb_nand of testbench_nand at 41( 886) + 0 on 54;
+file . "counter.vhd" "20150505104929.000" "20150505124930.650":
+  architecture counter of one_in_one_out at 2( 38) + 0 on 76;
+  entity testbench_counter at 20( 445) + 0 on 77;
+  architecture tb_counter of testbench_counter at 27( 576) + 0 on 78;

@@ -1,0 +1,190 @@
+Release 10.1.02 par K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+i82pc25::  Wed May 13 14:33:33 2015
+
+par -w -intstyle ise -ol std -t 1 entity_flash_map.ncd entity_flash.ncd
+entity_flash.pcf 
+
+
+Constraints file: entity_flash.pcf.
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+   "entity_flash" is an NCD, version 3.2, device xc3sd1800a, package fg676, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.32 2008-05-28".
+
+
+Design Summary Report:
+
+ Number of External IOBs                           2 out of 519     1%
+
+   Number of External Input IOBs                  1
+
+      Number of External Input IBUFs              1
+        Number of LOCed External Input IBUFs      1 out of 1     100%
+
+
+   Number of External Output IOBs                 1
+
+      Number of External Output IOBs              1
+        Number of LOCed External Output IOBs      1 out of 1     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of DCMs                            1 out of 8      12%
+   Number of Slices                         22 out of 16640   1%
+      Number of SLICEMs                      0 out of 8320    0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:a68f) REAL time: 7 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:a68f) REAL time: 7 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:a68f) REAL time: 7 secs 
+
+Phase 4.2
+
+......
+Phase 4.2 (Checksum:14d23) REAL time: 7 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:14d23) REAL time: 7 secs 
+
+Phase 6.8
+..................................
+.
+Phase 6.8 (Checksum:72fa2) REAL time: 12 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:72fa2) REAL time: 12 secs 
+
+Phase 8.18
+Phase 8.18 (Checksum:7ce01) REAL time: 12 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:7ce01) REAL time: 12 secs 
+
+REAL time consumed by placer: 12 secs 
+CPU  time consumed by placer: 11 secs 
+Writing design to file entity_flash.ncd
+
+
+Total REAL time to Placer completion: 12 secs 
+Total CPU time to Placer completion: 11 secs 
+
+Starting Router
+
+Phase 1: 129 unrouted;       REAL time: 22 secs 
+
+Phase 2: 107 unrouted;       REAL time: 22 secs 
+
+Phase 3: 13 unrouted;       REAL time: 22 secs 
+
+Phase 4: 13 unrouted; (52)      REAL time: 22 secs 
+
+Phase 5: 15 unrouted; (0)      REAL time: 22 secs 
+
+Phase 6: 0 unrouted; (0)      REAL time: 22 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 22 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 23 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 23 secs 
+
+Phase 10: 0 unrouted; (0)      REAL time: 23 secs 
+
+
+Total REAL time to Router completion: 23 secs 
+Total CPU time to Router completion: 21 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         dcm_counter | BUFGMUX_X1Y10| No   |   18 |  0.165     |  1.688      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no
+   requested value.
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dcm | SETUP   |         N/A|     8.005ns|     N/A|           0
+  _counter                                  | HOLD    |     1.348ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 27 secs 
+Total CPU time to PAR completion: 24 secs 
+
+Peak Memory Usage:  217 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file entity_flash.ncd
+
+
+
+PAR done!
