@@ -23,5 +23,5 @@ signal counter_to_generator : std_logic_vector;
 
 begin
     counter_pm : entity_counter port map(cnt_in => fill_in; cnt_mode => fill_mode; cnt_rst => fill_rst; cnt_limit => 35; cnt_out => counter_to_generator);
-    generator_pm : entity_fill_generator port map (counter_to_generator => val_in; fill_out => val_out);
+    generator_pm : entity_fill_generator port map (counter_to_generator => val_in; fill_out => val_out; fill_rst => val_rst);
 end architecture;
