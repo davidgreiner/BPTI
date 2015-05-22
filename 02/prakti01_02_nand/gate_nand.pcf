@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map K.37 on Wed May 13 14:50:40 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "a1" LOCATE = SITE "J17" LEVEL 1;
+COMP "a2" LOCATE = SITE "J15" LEVEL 1;
+COMP "o1" LOCATE = SITE "D25" LEVEL 1;
+SCHEMATIC END;
+

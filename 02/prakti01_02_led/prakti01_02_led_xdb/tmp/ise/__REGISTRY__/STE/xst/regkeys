@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/xst -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/prakti01_02_led.ise -intstyle ise -ifn /home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/entity_flash.xst -ofn /home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/entity_flash.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

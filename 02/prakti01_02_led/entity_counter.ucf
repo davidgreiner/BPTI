@@ -1,0 +1,2 @@
+NET "led" LOC = D25;
+NET "clk_in" LOC = F13;

@@ -1,0 +1,450 @@
+Release 10.1.02 - xst K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/02/prakti01_02_led/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+Reading design: entity_flash.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "entity_flash.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "entity_flash"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : entity_flash
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : entity_flash.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/led_dcm.vhd" in Library work.
+Architecture architecture_dcm of Entity entity_dcm is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/counter.vhd" in Library work.
+Architecture architecture_conter of Entity entity_counter is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/connector_clock_counter.vhd" in Library work.
+Architecture architecture_flash of Entity entity_flash is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <entity_flash> in library <work> (architecture <architecture_flash>).
+
+Analyzing hierarchy for entity <entity_dcm> in library <work> (architecture <architecture_dcm>).
+
+Analyzing hierarchy for entity <entity_counter> in library <work> (architecture <architecture_conter>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <entity_flash> in library <work> (Architecture <architecture_flash>).
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/connector_clock_counter.vhd" line 23: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/connector_clock_counter.vhd" line 23: Unconnected output port 'CLK0_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/connector_clock_counter.vhd" line 23: Unconnected output port 'LOCKED_OUT' of component 'entity_dcm'.
+Entity <entity_flash> analyzed. Unit <entity_flash> generated.
+
+Analyzing Entity <entity_dcm> in library <work> (Architecture <architecture_dcm>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKDV_DIVIDE =  5.0000000000000000" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  8.0000000000000000" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  FALSE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+Entity <entity_dcm> analyzed. Unit <entity_dcm> generated.
+
+Analyzing Entity <entity_counter> in library <work> (Architecture <architecture_conter>).
+Entity <entity_counter> analyzed. Unit <entity_counter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <entity_counter>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/counter.vhd".
+    Found 1-bit register for signal <cnt_out>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter$add0000> created at line 27.
+    Found 1-bit register for signal <outsignal>.
+    Summary:
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <entity_counter> synthesized.
+
+
+Synthesizing Unit <entity_dcm>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/led_dcm.vhd".
+Unit <entity_dcm> synthesized.
+
+
+Synthesizing Unit <entity_flash>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/02/files/led/connector_clock_counter.vhd".
+Unit <entity_flash> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 32-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <entity_flash> ...
+
+Optimizing unit <entity_counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block entity_flash, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : entity_flash.ngr
+Top Level Output File Name         : entity_flash
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+# BELS                             : 115
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 19
+#      LUT2                        : 13
+#      LUT4                        : 8
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 34
+#      FD                          : 33
+#      FDE                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 2
+#      IBUFG                       : 1
+#      OBUF                        : 1
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                       27  out of  16640     0%  
+ Number of Slice Flip Flops:             34  out of  33280     0%  
+ Number of 4 input LUTs:                 42  out of  33280     0%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    519     0%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+dcm_pm/CLKDV_BUF                   | BUFG                   | 34    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.938ns (Maximum Frequency: 125.976MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: 1.070ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_pm/CLKDV_BUF'
+  Clock period: 7.938ns (frequency: 125.976MHz)
+  Total number of paths / destination ports: 6226 / 35
+-------------------------------------------------------------------------
+Delay:               7.938ns (Levels of Logic = 35)
+  Source:            counter_pm/counter_8 (FF)
+  Destination:       counter_pm/counter_31 (FF)
+  Source Clock:      dcm_pm/CLKDV_BUF rising
+  Destination Clock: dcm_pm/CLKDV_BUF rising
+
+  Data Path: counter_pm/counter_8 to counter_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.590  counter_pm/counter_8 (counter_pm/counter_8)
+     LUT4:I0->O            1   0.648   0.000  counter_pm/outsignal_cmp_eq0000_wg_lut<0> (counter_pm/outsignal_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<0> (counter_pm/outsignal_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<1> (counter_pm/outsignal_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<2> (counter_pm/outsignal_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<3> (counter_pm/outsignal_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<4> (counter_pm/outsignal_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<5> (counter_pm/outsignal_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/outsignal_cmp_eq0000_wg_cy<6> (counter_pm/outsignal_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          14   0.141   1.080  counter_pm/outsignal_cmp_eq0000_wg_cy<7> (counter_pm/outsignal_cmp_eq0000)
+     LUT2:I1->O            1   0.643   0.000  counter_pm/counter_mux0000<7>1 (counter_pm/counter_mux0000<7>)
+     MUXCY:S->O            1   0.632   0.000  counter_pm/Madd_counter_add0000_cy<7> (counter_pm/Madd_counter_add0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<8> (counter_pm/Madd_counter_add0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<9> (counter_pm/Madd_counter_add0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<10> (counter_pm/Madd_counter_add0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<11> (counter_pm/Madd_counter_add0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<12> (counter_pm/Madd_counter_add0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<13> (counter_pm/Madd_counter_add0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<14> (counter_pm/Madd_counter_add0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<15> (counter_pm/Madd_counter_add0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<16> (counter_pm/Madd_counter_add0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<17> (counter_pm/Madd_counter_add0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<18> (counter_pm/Madd_counter_add0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<19> (counter_pm/Madd_counter_add0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<20> (counter_pm/Madd_counter_add0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<21> (counter_pm/Madd_counter_add0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<22> (counter_pm/Madd_counter_add0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<23> (counter_pm/Madd_counter_add0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<24> (counter_pm/Madd_counter_add0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<25> (counter_pm/Madd_counter_add0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<26> (counter_pm/Madd_counter_add0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<27> (counter_pm/Madd_counter_add0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<28> (counter_pm/Madd_counter_add0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  counter_pm/Madd_counter_add0000_cy<29> (counter_pm/Madd_counter_add0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  counter_pm/Madd_counter_add0000_cy<30> (counter_pm/Madd_counter_add0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  counter_pm/Madd_counter_add0000_xor<31> (counter_pm/counter_add0000<31>)
+     FD:D                      0.252          counter_pm/counter_31
+    ----------------------------------------
+    Total                      7.938ns (6.268ns logic, 1.670ns route)
+                                       (79.0% logic, 21.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_pm/CLKDV_BUF'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            counter_pm/cnt_out (FF)
+  Destination:       led (PAD)
+  Source Clock:      dcm_pm/CLKDV_BUF rising
+
+  Data Path: counter_pm/cnt_out to led
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.420  counter_pm/cnt_out (counter_pm/cnt_out)
+     OBUF:I->O                 4.520          led_OBUF (led)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.070ns (Levels of Logic = 1)
+  Source:            clk_in (PAD)
+  Destination:       dcm_pm/DCM_SP_INST:CLKIN (PAD)
+
+  Data Path: clk_in to dcm_pm/DCM_SP_INST:CLKIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O            0   1.070   0.000  dcm_pm/CLKIN_IBUFG_INST (dcm_pm/CLKIN_IBUFG_OUT)
+    DCM_SP:CLKIN               0.000          dcm_pm/DCM_SP_INST
+    ----------------------------------------
+    Total                      1.070ns (1.070ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 10.30 secs
+ 
+--> 
+
+
+Total memory usage is 204172 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

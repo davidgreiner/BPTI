@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map K.37 on Wed May 13 14:33:26 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led" LOCATE = SITE "D25" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "F13" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,3 @@
+vhdl work "../files/led/led_dcm.vhd"
+vhdl work "../files/led/counter.vhd"
+vhdl work "../files/led/connector_clock_counter.vhd"
