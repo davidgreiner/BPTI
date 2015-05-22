@@ -37,9 +37,9 @@ Clock to Setup on destination clock chaser_clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_clk_in  |   12.928|         |         |         |
-chaser_rst     |    4.139|    4.139|         |         |
-chaser_speed   |    9.720|         |         |         |
+chaser_clk_in  |   12.443|         |         |         |
+chaser_rst     |    4.404|    4.404|         |         |
+chaser_speed   |   10.283|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock chaser_rst
@@ -47,7 +47,7 @@ Clock to Setup on destination clock chaser_rst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_rst     |         |         |    5.036|   18.116|
+chaser_rst     |         |         |    6.216|   18.079|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock chaser_speed
@@ -55,12 +55,12 @@ Clock to Setup on destination clock chaser_speed
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_rst     |    8.992|    8.992|         |         |
-chaser_speed   |    1.541|         |         |         |
+chaser_rst     |    8.401|    8.401|         |         |
+chaser_speed   |    1.545|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri May 22 16:27:56 2015 
+Analysis completed Fri May 22 17:20:10 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

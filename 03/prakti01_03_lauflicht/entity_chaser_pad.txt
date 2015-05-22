@@ -1,7 +1,7 @@
 Release 10.1.02 - par K.37 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Fri May 22 16:27:41 2015
+Fri May 22 17:19:58 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -33,7 +33,7 @@ Pinout by Pin Number:
 |A11       |             |          |GND                   |         |           |              |          |         |           |         |         |          |         |           |                |
 |A12       |             |DIFFMTB   |IO_L29P_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |A13       |             |IBUF      |IP_0                  |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|A14       |             |DIFFSTB   |IO_L26N_0/GCLK7       |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
+|A14       |chaser_speed |IBUF      |IO_L26N_0/GCLK7       |INPUT    |LVCMOS25*  |0             |          |         |           |IBUF     |         |          |         |NO         |NONE            |
 |A15       |             |DIFFSTB   |IO_L23N_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |A16       |             |          |GND                   |         |           |              |          |         |           |         |         |          |         |           |                |
 |A17       |             |IBUF      |IP_0                  |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
@@ -240,7 +240,7 @@ Pinout by Pin Number:
 |C10       |             |DIFFMTB   |IO_L34P_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |C11       |             |DIFFMTB   |IO_L32P_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |C12       |             |DIFFSTB   |IO_L30N_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|C13       |chaser_speed |IBUF      |IO_L28N_0/GCLK11      |INPUT    |LVCMOS25*  |0             |          |         |           |IBUF     |         |          |         |NO         |NONE            |
+|C13       |             |DIFFSTB   |IO_L28N_0/GCLK11      |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |C14       |             |          |GND                   |         |           |              |          |         |           |         |         |          |         |           |                |
 |C15       |             |DIFFSTB   |IO_L22N_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
 |C16       |             |DIFFSTB   |IO_L21N_0             |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
