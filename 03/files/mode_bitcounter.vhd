@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity entity_bitcounter is
     port
@@ -22,13 +23,20 @@ architecture architecture_bitcounter of entity_bitcounter is
             cnt_out     : out integer
         );
     end component;
+	 
+	 signal convert : integer;
 begin
     counter_pm : entity_counter port map
     (
-        cnt_in => bit_in;
-        cnt_mode => bit_mode;
-        cnt_rst => bit_rst;
-        cnt_limit => 255;
-        std_logic_vector(to_unsigned(cnt_out, bit_out'length)) => bit_out
+        cnt_in => bit_in,
+        cnt_mode => bit_mode,
+        cnt_rst => bit_rst,
+        cnt_limit => 255,
+        cnt_out => convert
     );
+	 
+	 bitcounter_p : process(convert)
+	 begin
+		bit_out <= std_logic_vector(to_unsigned(convert, bit_out'length));
+	 end process;
 end architecture_bitcounter;

@@ -43,25 +43,26 @@ end component;
 --     );
 -- end component;
 
-signal clock_bitcounter     : std_logic;
-signal clock_fill           : std_logic;
--- signal clock_marquee        : std_logic;
+signal clock_bitcounter     : std_logic := '0';
+signal clock_fill           : std_logic := '0';
+signal led_bitcounter			: std_logic_vector(7 downto 0) := "00000000";
+signal led_fill					: std_logic_vector(7 downto 0) := "00000000";-- signal clock_marquee        : std_logic;
 
 begin
     bitcounter_pm : entity_bitcounter port map
     (
-        bit_in     => clock_bitcounter;
-        bit_mode   => man_toggle;
-        bit_rst    => man_rst;
-        bit_out    => man_led
+        bit_in     => clock_bitcounter,
+        bit_mode   => man_toggle,
+        bit_rst    => man_rst,
+        bit_out    => led_bitcounter
     );
 
     fill_pm : entity_fill port map
     (
-        fill_in     => clock_fill;
-        fill_mode   => man_toggle;
-        fill_rst    => man_rst;
-        fill_out    => man_led
+        fill_in     => clock_fill,
+        fill_mode   => man_toggle,
+        fill_rst    => man_rst,
+        fill_out    => led_fill
     );
 
     -- marquee_pm : entity_marquee port map
@@ -73,21 +74,36 @@ begin
     -- );
 
 
-    manager_p : process (man_clk, man_mode, man_rst, man_toggle)
+    manager_p : process (man_clk, man_rst)
     variable state_mode     : integer := 0;
-    variable state_toggle   : std_logic := '0';
     begin
         if(man_rst = '0') then
             state_mode := 0;
-            state_toggle := '0';
-        elsif(man_mode'event and man_mode='1') then
-            state_mode := (state_mode + 1) mod mode_amount;
+				clock_bitcounter <= '0';
+				clock_fill <= '0';
+				led_bitcounter <= "00000000";
+				led_fill <= "00000000";
         elsif(man_clk'event and man_clk='1') then
-            case state_mode is
-                when 0 => clock_bitcounter <= man_clk;
-                when 1 => clock_fill <= man_clk;
-                -- when 2 => clock_marquee <= man_clk;
-            end case;
+				if(man_mode='1') then
+					state_mode := (state_mode + 1);
+					if (state_mode >= mode_amount) then
+						state_mode := 0;
+					end if;
+				end if;
+				
+            if(state_mode = 0) then
+                clock_bitcounter <= man_clk; 
+					 clock_fill <= '0';
+					 man_led <= led_bitcounter;
+				elsif(state_mode = 1) then
+                clock_fill <= man_clk;
+					 clock_bitcounter <= '0';
+					 man_led <= led_fill;
+				else
+					 clock_bitcounter <= '0';
+					 clock_fill <= '0';
+					 man_led <= "00000000";
+				 end if;
         end if;
     end process;
 

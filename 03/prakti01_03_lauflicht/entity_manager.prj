@@ -1,0 +1,7 @@
+vhdl work "../files/mode_marquee_generator.vhd"
+vhdl work "../files/mode_fill_generator.vhd"
+vhdl work "../files/counter.vhd"
+vhdl work "../files/mode_marquee.vhd"
+vhdl work "../files/mode_fill.vhd"
+vhdl work "../files/mode_bitcounter.vhd"
+vhdl work "../files/manager.vhd"

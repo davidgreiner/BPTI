@@ -25,28 +25,28 @@ end component;
 component entity_fill_generator
     port
     (
-        val_in  : in std_logic_vector(7 downto 0);
+        val_in  : in integer;
         val_rst : in std_logic;
         val_out : out std_logic_vector(7 downto 0)
     );
 end component;
 
-signal counter_to_generator : std_logic_vector(7 downto 0);
+signal counter_to_generator : integer;
 
 begin
     counter_pm : entity_counter port map
     (
-        cnt_in      => fill_in;
-        cnt_mode    => fill_mode;
-        cnt_rst     => fill_rst;
-        cnt_limit   => 35;
-        std_logic_vector(to_unsigned(cnt_out, counter_to_generator'length)) => counter_to_generator
+        cnt_in      => fill_in,
+        cnt_mode    => fill_mode,
+        cnt_rst     => fill_rst,
+        cnt_limit   => 35,
+        cnt_out		=> counter_to_generator
     );
 
     generator_pm : entity_fill_generator port map
     (
-        counter_to_generator => val_in;
-        val_rst => fill_rst;
+        val_in => counter_to_generator,
+        val_rst => fill_rst,
         val_out => fill_out
     );
 end architecture;

@@ -1,0 +1,543 @@
+Release 10.1.02 - xst K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: entity_chaser.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "entity_chaser.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "entity_chaser"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : entity_chaser
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : entity_chaser.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/counter.vhd" in Library work.
+Architecture architecture_counter of Entity entity_counter is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill_generator.vhd" in Library work.
+Architecture architecture_fill_generator of Entity entity_fill_generator is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_bitcounter.vhd" in Library work.
+Architecture architecture_bitcounter of Entity entity_bitcounter is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill.vhd" in Library work.
+Architecture architecture_fill of Entity entity_fill is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/dcm.vhd" in Library work.
+Architecture architecture_dcm of Entity entity_dcm is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/clock_down.vhd" in Library work.
+Architecture architecture_clock_down of Entity entity_clock_down is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/manager.vhd" in Library work.
+Entity <entity_manager> compiled.
+Entity <entity_manager> (Architecture <architecture_manager>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/led.vhd" in Library work.
+Architecture architecture_led of Entity entity_led is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" in Library work.
+Architecture architecture_chaser of Entity entity_chaser is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <entity_chaser> in library <work> (architecture <architecture_chaser>).
+
+Analyzing hierarchy for entity <entity_dcm> in library <work> (architecture <architecture_dcm>).
+
+Analyzing hierarchy for entity <entity_clock_down> in library <work> (architecture <architecture_clock_down>).
+
+Analyzing hierarchy for entity <entity_manager> in library <work> (architecture <architecture_manager>).
+
+Analyzing hierarchy for entity <entity_led> in library <work> (architecture <architecture_led>).
+
+Analyzing hierarchy for entity <entity_bitcounter> in library <work> (architecture <architecture_bitcounter>).
+
+Analyzing hierarchy for entity <entity_fill> in library <work> (architecture <architecture_fill>).
+
+Analyzing hierarchy for entity <entity_counter> in library <work> (architecture <architecture_counter>).
+
+Analyzing hierarchy for entity <entity_fill_generator> in library <work> (architecture <architecture_fill_generator>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <entity_chaser> in library <work> (Architecture <architecture_chaser>).
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 83: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 83: Unconnected output port 'CLK0_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 83: Unconnected output port 'LOCKED_OUT' of component 'entity_dcm'.
+Entity <entity_chaser> analyzed. Unit <entity_chaser> generated.
+
+Analyzing Entity <entity_dcm> in library <work> (Architecture <architecture_dcm>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKDV_DIVIDE =  5.0000000000000000" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  8.0000000000000000" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <entity_dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <entity_dcm>.
+Entity <entity_dcm> analyzed. Unit <entity_dcm> generated.
+
+Analyzing Entity <entity_clock_down> in library <work> (Architecture <architecture_clock_down>).
+Entity <entity_clock_down> analyzed. Unit <entity_clock_down> generated.
+
+Analyzing Entity <entity_manager> in library <work> (Architecture <architecture_manager>).
+INFO:Xst:2679 - Register <led_bitcounter> in unit <entity_manager> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <led_fill> in unit <entity_manager> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
+Entity <entity_manager> analyzed. Unit <entity_manager> generated.
+
+Analyzing Entity <entity_bitcounter> in library <work> (Architecture <architecture_bitcounter>).
+Entity <entity_bitcounter> analyzed. Unit <entity_bitcounter> generated.
+
+Analyzing Entity <entity_counter> in library <work> (Architecture <architecture_counter>).
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/counter.vhd" line 17: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <cnt_mode>, <cnt_limit>
+Entity <entity_counter> analyzed. Unit <entity_counter> generated.
+
+Analyzing Entity <entity_fill> in library <work> (Architecture <architecture_fill>).
+Entity <entity_fill> analyzed. Unit <entity_fill> generated.
+
+Analyzing Entity <entity_fill_generator> in library <work> (Architecture <architecture_fill_generator>).
+Entity <entity_fill_generator> analyzed. Unit <entity_fill_generator> generated.
+
+Analyzing Entity <entity_led> in library <work> (Architecture <architecture_led>).
+Entity <entity_led> analyzed. Unit <entity_led> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <entity_clock_down>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/clock_down.vhd".
+    Found 1-bit register for signal <clk_out>.
+    Found 32-bit up counter for signal <counter>.
+    Found 32-bit adder for signal <counter$add0000> created at line 23.
+    Found 32-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 25.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <entity_clock_down> synthesized.
+
+
+Synthesizing Unit <entity_led>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/led.vhd".
+Unit <entity_led> synthesized.
+
+
+Synthesizing Unit <entity_counter>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/counter.vhd".
+    Found 32-bit register for signal <cnt_out>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter$addsub0000> created at line 28.
+    Found 32-bit subtractor for signal <counter$addsub0001> created at line 33.
+    Found 32-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 29.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0000> created at line 34.
+    Found 32-bit 4-to-1 multiplexer for signal <counter$mux0002> created at line 27.
+    Found 32-bit 4-to-1 multiplexer for signal <counter$mux0004> created at line 27.
+    Found 32-bit addsub for signal <counter$share0000> created at line 27.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <entity_counter> synthesized.
+
+
+Synthesizing Unit <entity_fill_generator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill_generator.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <count_to>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <basis_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit comparator greatequal for signal <basis_0$cmp_ge0000> created at line 26.
+    Found 32-bit comparator less for signal <basis_0$cmp_lt0000> created at line 26.
+    Found 32-bit comparator not equal for signal <basis_0$cmp_ne0001> created at line 51.
+    Found 32-bit comparator greatequal for signal <basis_1$cmp_ge0000> created at line 29.
+    Found 32-bit comparator less for signal <basis_1$cmp_lt0000> created at line 29.
+    Found 32-bit comparator greatequal for signal <basis_2$cmp_ge0000> created at line 32.
+    Found 32-bit comparator less for signal <basis_2$cmp_lt0000> created at line 32.
+    Found 32-bit comparator greatequal for signal <basis_3$cmp_ge0000> created at line 35.
+    Found 32-bit comparator less for signal <basis_3$cmp_lt0000> created at line 35.
+    Found 32-bit comparator greatequal for signal <basis_4$cmp_ge0000> created at line 38.
+    Found 32-bit comparator less for signal <basis_4$cmp_lt0000> created at line 38.
+    Found 32-bit comparator greatequal for signal <basis_5$cmp_ge0000> created at line 41.
+    Found 32-bit comparator less for signal <basis_5$cmp_lt0000> created at line 41.
+    Found 32-bit comparator greatequal for signal <basis_6$cmp_ge0000> created at line 44.
+    Found 32-bit comparator less for signal <basis_6$cmp_lt0000> created at line 44.
+    Found 32-bit comparator greatequal for signal <basis_7$cmp_ge0000> created at line 47.
+    Found 32-bit comparator less for signal <basis_7$cmp_lt0000> created at line 47.
+    Found 32-bit subtractor for signal <basis_7$sub0000> created at line 53.
+    Found 32-bit comparator equal for signal <count_to$cmp_eq0000> created at line 51.
+    Found 32-bit 4-to-1 multiplexer for signal <shift$mux0001> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <entity_fill_generator> synthesized.
+
+
+Synthesizing Unit <entity_dcm>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/dcm.vhd".
+Unit <entity_dcm> synthesized.
+
+
+Synthesizing Unit <entity_bitcounter>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_bitcounter.vhd".
+WARNING:Xst:646 - Signal <convert<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <entity_bitcounter> synthesized.
+
+
+Synthesizing Unit <entity_fill>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill.vhd".
+Unit <entity_fill> synthesized.
+
+
+Synthesizing Unit <entity_manager>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/manager.vhd".
+WARNING:Xst:2110 - Clock of register <clock_fill> seems to be also used in the data or control logic of that element.
+WARNING:Xst:2110 - Clock of register <clock_bitcounter> seems to be also used in the data or control logic of that element.
+    Found 8-bit register for signal <man_led>.
+    Found 1-bit register for signal <clock_bitcounter>.
+    Found 1-bit register for signal <clock_fill>.
+    Found 32-bit register for signal <state_mode>.
+    Found 32-bit adder for signal <state_mode$addsub0000> created at line 88.
+    Found 32-bit comparator greatequal for signal <state_mode$cmp_ge0000> created at line 89.
+    Found 32-bit 4-to-1 multiplexer for signal <state_mode$mux0001>.
+    Summary:
+	inferred  42 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <entity_manager> synthesized.
+
+
+Synthesizing Unit <entity_chaser>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd".
+    Found 32-bit register for signal <speed>.
+    Found 1-bit register for signal <state_speed>.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+Unit <entity_chaser> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 3
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 73
+ 1-bit register                                        : 68
+ 32-bit register                                       : 4
+ 8-bit register                                        : 1
+# Latches                                              : 9
+ 1-bit latch                                           : 8
+ 32-bit latch                                          : 1
+# Comparators                                          : 24
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 2
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+WARNING:Xst:1293 - FF/Latch <speed_0> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_1> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_2> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_3> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_4> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_7> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_8> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_9> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_25> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_26> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_27> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_28> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_29> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_30> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <speed_31> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <speed_11> in Unit <entity_chaser> is equivalent to the following 6 FFs/Latches, which will be removed : <speed_12> <speed_13> <speed_18> <speed_19> <speed_20> <speed_21> 
+INFO:Xst:2261 - The FF/Latch <speed_6> in Unit <entity_chaser> is equivalent to the following 4 FFs/Latches, which will be removed : <speed_14> <speed_16> <speed_22> <speed_24> 
+INFO:Xst:2261 - The FF/Latch <speed_5> in Unit <entity_chaser> is equivalent to the following 4 FFs/Latches, which will be removed : <speed_10> <speed_15> <speed_17> <speed_23> 
+WARNING:Xst:2677 - Node <cnt_out_8> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_9> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_10> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_11> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_12> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_13> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_14> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_15> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_16> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_17> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_18> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_19> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_20> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_21> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_22> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_23> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_24> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_25> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_26> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_27> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_28> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_29> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_30> of sequential type is unconnected in block <counter_pm>.
+WARNING:Xst:2677 - Node <cnt_out_31> of sequential type is unconnected in block <counter_pm>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 3
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 175
+ Flip-Flops                                            : 175
+# Latches                                              : 9
+ 1-bit latch                                           : 8
+ 32-bit latch                                          : 1
+# Comparators                                          : 24
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 2
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<7>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_7>
+   Signal <manager_pm/led_bitcounter<7>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<6>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_6>
+   Signal <manager_pm/led_bitcounter<6>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_5>
+   Signal <manager_pm/led_bitcounter<5>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_4>
+   Signal <manager_pm/led_bitcounter<4>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_3>
+   Signal <manager_pm/led_bitcounter<3>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_2>
+   Signal <manager_pm/led_bitcounter<2>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_1>
+   Signal <manager_pm/led_bitcounter<1>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_0>
+   Signal <manager_pm/led_bitcounter<0>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<7>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<7>> is assigned to logic
+   Signal <manager_pm/led_fill<7>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<6>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<6>> is assigned to logic
+   Signal <manager_pm/led_fill<6>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<5>> is assigned to logic
+   Signal <manager_pm/led_fill<5>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<4>> is assigned to logic
+   Signal <manager_pm/led_fill<4>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<3>> is assigned to logic
+   Signal <manager_pm/led_fill<3>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<2>> is assigned to logic
+   Signal <manager_pm/led_fill<2>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<1>> is assigned to logic
+   Signal <manager_pm/led_fill<1>> in Unit <entity_manager> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Signal <manager_pm/fill_pm/generator_pm/val_out<0>> is assigned to logic
+   Signal <manager_pm/led_fill<0>> in Unit <entity_manager> is assigned to GND
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 11.46 secs
+ 
+--> 
+
+
+Total memory usage is 210472 kilobytes
+
+Number of errors   :   16 (   0 filtered)
+Number of warnings :   55 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

@@ -9,14 +9,14 @@ entity entity_chaser is
         chaser_rst      : in std_logic;
         chaser_speed    : in std_logic;
         chaser_toggle   : in std_logic;
-        chase_led0      : out std_logic;
-        chase_led1      : out std_logic;
-        chase_led2      : out std_logic;
-        chase_led3      : out std_logic;
-        chase_led4      : out std_logic;
-        chase_led5      : out std_logic;
-        chase_led6      : out std_logic;
-        chase_led7      : out std_logic
+        chaser_led0      : out std_logic;
+        chaser_led1      : out std_logic;
+        chaser_led2      : out std_logic;
+        chaser_led3      : out std_logic;
+        chaser_led4      : out std_logic;
+        chaser_led5      : out std_logic;
+        chaser_led6      : out std_logic;
+        chaser_led7      : out std_logic
     );
 end entity entity_chaser;
 
@@ -82,35 +82,35 @@ signal led          : std_logic_vector(7 downto 0);
 begin
     dcm_pm : entity_dcm port map
     (
-        CLKIN_IN    => chaser_clk_in;
-        RST_IN      => chaser_rst;
+        CLKIN_IN    => chaser_clk_in,
+        RST_IN      => chaser_rst,
         CLKDV_OUT   => clck
     );
     clock_down_pm : entity_clock_down port map
     (
-        clk_in      => clck;
-        clk_rst     => chaser_rst;
-        clk_limit   => speed;
+        clk_in      => clck,
+        clk_rst     => chaser_rst,
+        clk_limit   => speed,
         clk_out     => downsample
     );
     manager_pm : entity_manager port map
     (
-        man_clk     => downsample;
-        man_mode    => chaser_mode;
-        man_rst     => chaser_rst;
-        man_toggle  => chaser_toggle;
+        man_clk     => downsample,
+        man_mode    => chaser_mode,
+        man_rst     => chaser_rst,
+        man_toggle  => chaser_toggle,
         man_led     => led
     );
     led_pm : entity_led port map
     (
-        led_in      => led;
-        led_out0    => chaser_led0;
-        led_out1    => chaser_led1;
-        led_out2    => chaser_led2;
-        led_out3    => chaser_led3;
-        led_out4    => chaser_led4;
-        led_out5    => chaser_led5;
-        led_out6    => chaser_led6;
+        led_in      => led,
+        led_out0    => chaser_led0,
+        led_out1    => chaser_led1,
+        led_out2    => chaser_led2,
+        led_out3    => chaser_led3,
+        led_out4    => chaser_led4,
+        led_out5    => chaser_led5,
+        led_out6    => chaser_led6,
         led_out7    => chaser_led7
     );
 
@@ -124,10 +124,10 @@ begin
             state_speed := '0';
         elsif(chaser_speed'event and chaser_speed = '1') then
             if(state_speed = '0') then
-                state_speed = '1';
+                state_speed := '1';
                 speed <= speed_low;
             else
-                state_speed = '0';
+                state_speed := '0';
                 speed <= speed_high;
             end if;
         end if;

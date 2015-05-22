@@ -1,0 +1,12 @@
+NET "chaser_clk_in" LOC = F13;
+NET "chaser_led0" LOC = P18;
+NET "chaser_led1" LOC = P25;
+NET "chaser_led2" LOC = N19;
+NET "chaser_led3" LOC = K22;
+NET "chaser_led4" LOC = H20;
+NET "chaser_led5" LOC = G21;
+NET "chaser_led6" LOC = D24;
+NET "chaser_led7" LOC = D25;
+NET "chaser_mode" LOC = J17;
+NET "chaser_toggle" LOC = J15;
+NET "chaser_rst" LOC = Y16;
