@@ -14,8 +14,8 @@ end entity entity_fill_generator;
 architecture architecture_fill_generator of entity_fill_generator is
 begin
     fill_generator_p : process(val_in, val_rst)
-    variable basis : std_logic_vector(7 downto 0) := '0';
-    variable shift : std_logic_vector(7 downto 0) := '0';
+    variable basis : std_logic_vector(7 downto 0) := "00000000";
+    variable shift : std_logic_vector(7 downto 0) := "10000000";
     variable count_to : std_logic := 7;
     begin
         if(val_rst = '0') then
