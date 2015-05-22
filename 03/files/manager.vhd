@@ -33,19 +33,19 @@ component entity_fill
         fill_out     : out std_logic_vector(7 downto 0)
     );
 end component;
-component entity_marquee
-    port
-    (
-        marq_in      : in std_logic;
-        marq_mode    : in std_logic;
-        marq_rst     : in std_logic;
-        marq_out     : out std_logic_vector(7 downto 0)
-    );
-end component;
+-- component entity_marquee
+--     port
+--     (
+--         marq_in      : in std_logic;
+--         marq_mode    : in std_logic;
+--         marq_rst     : in std_logic;
+--         marq_out     : out std_logic_vector(7 downto 0)
+--     );
+-- end component;
 
 signal clock_bitcounter     : std_logic;
 signal clock_fill           : std_logic;
-signal clock_marquee        : std_logic;
+-- signal clock_marquee        : std_logic;
 
 begin
     bitcounter_pm : entity_bitcounter port map
@@ -64,13 +64,13 @@ begin
         fill_out    => man_led
     );
 
-    marquee_pm : entity_marquee port map
-    (
-        marq_in     => clock_marquee;
-        marq_mode   => man_toggle;
-        marq_rst    => man_rst;
-        marq_out    => man_led
-    );
+    -- marquee_pm : entity_marquee port map
+    -- (
+    --     marq_in     => clock_marquee;
+    --     marq_mode   => man_toggle;
+    --     marq_rst    => man_rst;
+    --     marq_out    => man_led
+    -- );
 
 
     manager_p : process (man_clk, man_mode, man_rst, man_toggle)
@@ -86,7 +86,7 @@ begin
             case state_mode is
                 when 0 => clock_bitcounter <= man_clk;
                 when 1 => clock_fill <= man_clk;
-                when 2 => clock_marquee <= man_clk;
+                -- when 2 => clock_marquee <= man_clk;
             end case;
         end if;
     end process;
