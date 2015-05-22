@@ -15,7 +15,7 @@ end entity entity_counter;
 architecture architecture_counter of entity_counter is
 begin
     counter_p : process(cnt_in, cnt_rst)
-    variable counter : interger := 0;
+    variable counter : integer := 0;
     begin
         if(cnt_rst = '0') then
             if(cnt_mode = '0') then
