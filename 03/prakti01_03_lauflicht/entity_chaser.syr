@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst
@@ -185,8 +185,6 @@ Analyzing Entity <entity_clock_down> in library <work> (Architecture <architectu
 Entity <entity_clock_down> analyzed. Unit <entity_clock_down> generated.
 
 Analyzing Entity <entity_manager> in library <work> (Architecture <architecture_manager>).
-INFO:Xst:2679 - Register <led_bitcounter> in unit <entity_manager> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <led_fill> in unit <entity_manager> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <entity_manager> analyzed. Unit <entity_manager> generated.
 
 Analyzing Entity <entity_bitcounter> in library <work> (Architecture <architecture_bitcounter>).
@@ -321,8 +319,8 @@ WARNING:Xst:2110 - Clock of register <clock_bitcounter> seems to be also used in
     Found 1-bit register for signal <clock_bitcounter>.
     Found 1-bit register for signal <clock_fill>.
     Found 32-bit register for signal <state_mode>.
-    Found 32-bit adder for signal <state_mode$addsub0000> created at line 88.
-    Found 32-bit comparator greatequal for signal <state_mode$cmp_ge0000> created at line 89.
+    Found 32-bit adder for signal <state_mode$addsub0000> created at line 85.
+    Found 32-bit comparator greatequal for signal <state_mode$cmp_ge0000> created at line 86.
     Found 32-bit 4-to-1 multiplexer for signal <state_mode$mux0001>.
     Summary:
 	inferred  42 D-type flip-flop(s).
@@ -447,97 +445,1151 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_31> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_30> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_29> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_28> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_27> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_26> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_25> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_24> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_23> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_22> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_21> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_20> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_19> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_18> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_17> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_16> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_15> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_14> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_13> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_12> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_11> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_10> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_9> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_8> of sequential type is unconnected in block <entity_manager>.
+WARNING:Xst:2170 - Unit entity_fill_generator : the following signal(s) form a combinatorial loop: Mcompar_count_to_cmp_eq0000_cy<11>, Mcompar_count_to_cmp_eq0000_cy<0>, Mcompar_count_to_cmp_eq0000_cy<7>, Mcompar_count_to_cmp_eq0000_lut<0>, val_out<7>, Mcompar_count_to_cmp_eq0000_cy<6>, Mcompar_count_to_cmp_eq0000_cy<4>, Mcompar_count_to_cmp_eq0000_cy<3>, Mcompar_count_to_cmp_eq0000_cy<15>, Mcompar_count_to_cmp_eq0000_cy<2>, Mcompar_count_to_cmp_eq0000_cy<1>, shift<0>, Mcompar_count_to_cmp_eq0000_cy<5>, Mcompar_count_to_cmp_eq0000_cy<14>, Mcompar_count_to_cmp_eq0000_cy<9>, Mcompar_count_to_cmp_eq0000_cy<10>, Mcompar_count_to_cmp_eq0000_cy<8>, Mcompar_count_to_cmp_eq0000_cy<12>, Mcompar_count_to_cmp_eq0000_cy<13>.
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<7>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_7>
-   Signal <manager_pm/led_bitcounter<7>> in Unit <entity_manager> is assigned to GND
+Optimizing unit <entity_chaser> ...
+WARNING:Xst:1293 - FF/Latch <speed_11> has a constant value of 1 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<6>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_6>
-   Signal <manager_pm/led_bitcounter<6>> in Unit <entity_manager> is assigned to GND
+Optimizing unit <entity_fill_generator> ...
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<5>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_5>
-   Signal <manager_pm/led_bitcounter<5>> in Unit <entity_manager> is assigned to GND
+Optimizing unit <entity_manager> ...
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<4>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_4>
-   Signal <manager_pm/led_bitcounter<4>> in Unit <entity_manager> is assigned to GND
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block entity_chaser, actual ratio is 2.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<2> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<3> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<4> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<6> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<7> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<3>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_3>
-   Signal <manager_pm/led_bitcounter<3>> in Unit <entity_manager> is assigned to GND
+Final Macro Processing ...
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<2>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_2>
-   Signal <manager_pm/led_bitcounter<2>> in Unit <entity_manager> is assigned to GND
+=========================================================================
+Final Register Report
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<1>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_1>
-   Signal <manager_pm/led_bitcounter<1>> in Unit <entity_manager> is assigned to GND
+Macro Statistics
+# Registers                                            : 182
+ Flip-Flops                                            : 182
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_bitcounter<0>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Output signal of FDE instance <manager_pm/bitcounter_pm/counter_pm/cnt_out_0>
-   Signal <manager_pm/led_bitcounter<0>> in Unit <entity_manager> is assigned to GND
+=========================================================================
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<7>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<7>> is assigned to logic
-   Signal <manager_pm/led_fill<7>> in Unit <entity_manager> is assigned to GND
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<6>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<6>> is assigned to logic
-   Signal <manager_pm/led_fill<6>> in Unit <entity_manager> is assigned to GND
+Partition Implementation Status
+-------------------------------
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<5>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<5>> is assigned to logic
-   Signal <manager_pm/led_fill<5>> in Unit <entity_manager> is assigned to GND
+  No Partitions were found in this design.
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<4>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<4>> is assigned to logic
-   Signal <manager_pm/led_fill<4>> in Unit <entity_manager> is assigned to GND
+-------------------------------
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<3>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<3>> is assigned to logic
-   Signal <manager_pm/led_fill<3>> in Unit <entity_manager> is assigned to GND
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : entity_chaser.ngr
+Top Level Output File Name         : entity_chaser
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<2>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<2>> is assigned to logic
-   Signal <manager_pm/led_fill<2>> in Unit <entity_manager> is assigned to GND
+Design Statistics
+# IOs                              : 13
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<1>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<1>> is assigned to logic
-   Signal <manager_pm/led_fill<1>> in Unit <entity_manager> is assigned to GND
+Cell Usage :
+# BELS                             : 1581
+#      GND                         : 1
+#      INV                         : 122
+#      LUT1                        : 145
+#      LUT2                        : 125
+#      LUT2_D                      : 2
+#      LUT3                        : 129
+#      LUT4                        : 188
+#      MULT_AND                    : 51
+#      MUXCY                       : 502
+#      VCC                         : 1
+#      XORCY                       : 315
+# FlipFlops/Latches                : 222
+#      FDC                         : 67
+#      FDCP                        : 64
+#      FDE                         : 51
+#      LD                          : 8
+#      LDC                         : 29
+#      LDP                         : 3
+# Clock Buffers                    : 7
+#      BUFG                        : 6
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 8
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<2> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<3> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<4> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<6> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<7> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 
-ERROR:Xst:528 - Multi-source in Unit <entity_manager> on signal <led_fill<0>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <manager_pm/fill_pm/generator_pm/val_out<0>> is assigned to logic
-   Signal <manager_pm/led_fill<0>> in Unit <entity_manager> is assigned to GND
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                      408  out of  16640     2%  
+ Number of Slice Flip Flops:            222  out of  33280     0%  
+ Number of 4 input LUTs:                711  out of  33280     2%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    519     2%  
+ Number of GCLKs:                         7  out of     24    29%  
+ Number of DCMs:                          1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 11.46 secs
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+Clock Signal                                                                                                                             | Clock buffer(FF name)                              | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+chaser_speed                                                                                                                             | BUFGP                                              | 3     |
+dcm_pm/CLKDV_BUF                                                                                                                         | BUFG                                               | 33    |
+manager_pm/fill_pm/generator_pm/basis_7_not0001(manager_pm/fill_pm/generator_pm/basis_7_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_7)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_6_not0001(manager_pm/fill_pm/generator_pm/basis_6_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_6)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_5_not0001(manager_pm/fill_pm/generator_pm/basis_5_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_5)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_4_not0001(manager_pm/fill_pm/generator_pm/basis_4_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_4)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_3_not0001(manager_pm/fill_pm/generator_pm/basis_3_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_3)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_2_not0001(manager_pm/fill_pm/generator_pm/basis_2_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_2)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_1_not0001(manager_pm/fill_pm/generator_pm/basis_1_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_1)   | 1     |
+manager_pm/fill_pm/generator_pm/basis_0_not0001(manager_pm/fill_pm/generator_pm/basis_0_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_0)   | 1     |
+manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1(manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>:O)| BUFG(*)(manager_pm/fill_pm/generator_pm/count_to_0)| 32    |
+manager_pm/clock_bitcounter1                                                                                                             | BUFG                                               | 40    |
+manager_pm/clock_fill1                                                                                                                   | BUFG                                               | 64    |
+clock_down_pm/clk_out1                                                                                                                   | BUFG                                               | 42    |
+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+Control Signal                                                                                                 | Buffer(FF name)                                     | Load  |
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+chaser_rst_inv(manager_pm/fill_pm/generator_pm/count_to_0_0_not00001_INV_0:O)                                  | NONE(state_speed)                                   | 152   |
+N0(XST_GND:G)                                                                                                  | NONE(manager_pm/bitcounter_pm/counter_pm/counter_22)| 53    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0000(manager_pm/bitcounter_pm/counter_pm/counter_0_and00001:O)| NONE(manager_pm/bitcounter_pm/counter_pm/counter_6) | 11    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0001(manager_pm/bitcounter_pm/counter_pm/counter_0_and00011:O)| NONE(manager_pm/bitcounter_pm/counter_pm/counter_6) | 11    |
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.152ns (Maximum Frequency: 65.998MHz)
+   Minimum input arrival time before clock: 10.681ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: 2.124ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'chaser_speed'
+  Clock period: 2.385ns (frequency: 419.287MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               2.385ns (Levels of Logic = 1)
+  Source:            state_speed (FF)
+  Destination:       state_speed (FF)
+  Source Clock:      chaser_speed rising
+  Destination Clock: chaser_speed rising
+
+  Data Path: state_speed to state_speed
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.447  state_speed (state_speed)
+     INV:I->O              2   0.648   0.447  speed_mux0001<15>1_INV_0 (speed_mux0001<15>)
+     FDC:D                     0.252          state_speed
+    ----------------------------------------
+    Total                      2.385ns (1.491ns logic, 0.894ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_pm/CLKDV_BUF'
+  Clock period: 12.665ns (frequency: 78.959MHz)
+  Total number of paths / destination ports: 379203 / 33
+-------------------------------------------------------------------------
+Delay:               12.665ns (Levels of Logic = 66)
+  Source:            clock_down_pm/counter_1 (FF)
+  Destination:       clock_down_pm/counter_31 (FF)
+  Source Clock:      dcm_pm/CLKDV_BUF rising
+  Destination Clock: dcm_pm/CLKDV_BUF rising
+
+  Data Path: clock_down_pm/counter_1 to clock_down_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.590  clock_down_pm/counter_1 (clock_down_pm/counter_1)
+     LUT1:I0->O            1   0.648   0.000  clock_down_pm/Madd_counter_add0000_cy<1>_rt (clock_down_pm/Madd_counter_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  clock_down_pm/Madd_counter_add0000_cy<1> (clock_down_pm/Madd_counter_add0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<2> (clock_down_pm/Madd_counter_add0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<3> (clock_down_pm/Madd_counter_add0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<4> (clock_down_pm/Madd_counter_add0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<5> (clock_down_pm/Madd_counter_add0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<6> (clock_down_pm/Madd_counter_add0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<7> (clock_down_pm/Madd_counter_add0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<8> (clock_down_pm/Madd_counter_add0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<9> (clock_down_pm/Madd_counter_add0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<10> (clock_down_pm/Madd_counter_add0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<11> (clock_down_pm/Madd_counter_add0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<12> (clock_down_pm/Madd_counter_add0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<13> (clock_down_pm/Madd_counter_add0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<14> (clock_down_pm/Madd_counter_add0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<15> (clock_down_pm/Madd_counter_add0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<16> (clock_down_pm/Madd_counter_add0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<17> (clock_down_pm/Madd_counter_add0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<18> (clock_down_pm/Madd_counter_add0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<19> (clock_down_pm/Madd_counter_add0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<20> (clock_down_pm/Madd_counter_add0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<21> (clock_down_pm/Madd_counter_add0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<22> (clock_down_pm/Madd_counter_add0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<23> (clock_down_pm/Madd_counter_add0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<24> (clock_down_pm/Madd_counter_add0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<25> (clock_down_pm/Madd_counter_add0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<26> (clock_down_pm/Madd_counter_add0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<27> (clock_down_pm/Madd_counter_add0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Madd_counter_add0000_cy<28> (clock_down_pm/Madd_counter_add0000_cy<28>)
+     XORCY:CI->O           1   0.844   0.563  clock_down_pm/Madd_counter_add0000_xor<29> (clock_down_pm/counter_add0000<29>)
+     LUT2:I0->O            1   0.648   0.000  clock_down_pm/Mcompar_counter_cmp_ge0000_lut<19> (clock_down_pm/Mcompar_counter_cmp_ge0000_lut<19>)
+     MUXCY:S->O            1   0.632   0.000  clock_down_pm/Mcompar_counter_cmp_ge0000_cy<19> (clock_down_pm/Mcompar_counter_cmp_ge0000_cy<19>)
+     MUXCY:CI->O          34   0.141   1.295  clock_down_pm/Mcompar_counter_cmp_ge0000_cy<20> (clock_down_pm/counter_cmp_ge0000)
+     LUT3:I2->O            1   0.648   0.000  clock_down_pm/Mcount_counter_lut<0> (clock_down_pm/Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  clock_down_pm/Mcount_counter_cy<0> (clock_down_pm/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<1> (clock_down_pm/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<2> (clock_down_pm/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<3> (clock_down_pm/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<4> (clock_down_pm/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<5> (clock_down_pm/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<6> (clock_down_pm/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<7> (clock_down_pm/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<8> (clock_down_pm/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<9> (clock_down_pm/Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<10> (clock_down_pm/Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<11> (clock_down_pm/Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<12> (clock_down_pm/Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<13> (clock_down_pm/Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<14> (clock_down_pm/Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<15> (clock_down_pm/Mcount_counter_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<16> (clock_down_pm/Mcount_counter_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<17> (clock_down_pm/Mcount_counter_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<18> (clock_down_pm/Mcount_counter_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<19> (clock_down_pm/Mcount_counter_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<20> (clock_down_pm/Mcount_counter_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<21> (clock_down_pm/Mcount_counter_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<22> (clock_down_pm/Mcount_counter_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<23> (clock_down_pm/Mcount_counter_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<24> (clock_down_pm/Mcount_counter_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<25> (clock_down_pm/Mcount_counter_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<26> (clock_down_pm/Mcount_counter_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<27> (clock_down_pm/Mcount_counter_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<28> (clock_down_pm/Mcount_counter_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  clock_down_pm/Mcount_counter_cy<29> (clock_down_pm/Mcount_counter_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  clock_down_pm/Mcount_counter_cy<30> (clock_down_pm/Mcount_counter_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  clock_down_pm/Mcount_counter_xor<31> (clock_down_pm/Mcount_counter31)
+     FDC:D                     0.252          clock_down_pm/counter_31
+    ----------------------------------------
+    Total                     12.665ns (10.217ns logic, 2.448ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1'
+  Clock period: 10.084ns (frequency: 99.164MHz)
+  Total number of paths / destination ports: 16896 / 32
+-------------------------------------------------------------------------
+Delay:               10.084ns (Levels of Logic = 35)
+  Source:            manager_pm/fill_pm/generator_pm/count_to_0 (LATCH)
+  Destination:       manager_pm/fill_pm/generator_pm/count_to_0 (LATCH)
+  Source Clock:      manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1 falling
+  Destination Clock: manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/count_to_0 to manager_pm/fill_pm/generator_pm/count_to_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              9   0.728   0.963  manager_pm/fill_pm/generator_pm/count_to_0 (manager_pm/fill_pm/generator_pm/count_to_0)
+     LUT1:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<0>_rt (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<0> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<1> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<2> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<3> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<4> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<5> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<6> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<7> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<8> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<9> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<10> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<11> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<12> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<13> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<14> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<15> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<16> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<17> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<18> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<19> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<20> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<21> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<22> (manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_cy<22>)
+     XORCY:CI->O           2   0.844   0.590  manager_pm/fill_pm/generator_pm/Msub_basis_7_sub0000_xor<23> (manager_pm/fill_pm/generator_pm/basis_7_sub0000<23>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_lut<0> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<0> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<1> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<2> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<3> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<4> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<5> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<6> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<6>)
+     MUXCY:CI->O          48   0.269   1.410  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<7> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001)
+     LUT2:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/count_to_mux0002<9>1 (manager_pm/fill_pm/generator_pm/count_to_mux0002<9>)
+     LDC:D                     0.252          manager_pm/fill_pm/generator_pm/count_to_22
+    ----------------------------------------
+    Total                     10.084ns (7.121ns logic, 2.963ns route)
+                                       (70.6% logic, 29.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'manager_pm/clock_bitcounter1'
+  Clock period: 15.152ns (frequency: 65.998MHz)
+  Total number of paths / destination ports: 631488 / 40
+-------------------------------------------------------------------------
+Delay:               15.152ns (Levels of Logic = 69)
+  Source:            manager_pm/bitcounter_pm/counter_pm/counter_0 (FF)
+  Destination:       manager_pm/bitcounter_pm/counter_pm/counter_31 (FF)
+  Source Clock:      manager_pm/clock_bitcounter1 rising
+  Destination Clock: manager_pm/clock_bitcounter1 rising
+
+  Data Path: manager_pm/bitcounter_pm/counter_pm/counter_0 to manager_pm/bitcounter_pm/counter_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             3   0.591   0.674  manager_pm/bitcounter_pm/counter_pm/counter_0 (manager_pm/bitcounter_pm/counter_pm/counter_0)
+     LUT1:I0->O            1   0.648   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<0>_rt (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<0> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<1> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<2> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<3> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<4> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<5> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<6> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<7> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<8> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<9> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<10> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<11> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<12> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<13> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<14> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<15> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<16> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<17> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<18> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<19> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<20> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<21> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<22> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<23> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<24> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<25> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<26> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<27> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<28> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<29> (manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_cy<29>)
+     XORCY:CI->O           1   0.844   0.452  manager_pm/bitcounter_pm/counter_pm/Msub_counter_addsub0001_xor<30> (manager_pm/bitcounter_pm/counter_pm/counter_addsub0001<30>)
+     LUT3:I2->O            1   0.648   0.000  manager_pm/bitcounter_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7> (manager_pm/bitcounter_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/bitcounter_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7> (manager_pm/bitcounter_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7>)
+     MUXCY:CI->O          12   0.269   1.041  manager_pm/bitcounter_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<8> (manager_pm/bitcounter_pm/counter_pm/counter_cmp_le0000)
+     LUT2:I1->O            8   0.643   0.789  manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux00041011)
+     LUT3:I2->O            1   0.648   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<8> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<9> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<10> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<11> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<12> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<13> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<14> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<15> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<16> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<17> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<18> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<19> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<20> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<21> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<22> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<23> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<24> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<25> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<26> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<27> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<28> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<29> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<30> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.500  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_xor<31> (manager_pm/bitcounter_pm/counter_pm/counter_share0000<31>)
+     LUT2:I1->O            1   0.643   0.000  manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux0002251 (manager_pm/bitcounter_pm/counter_pm/counter_mux0002<31>)
+     FDCP:D                    0.252          manager_pm/bitcounter_pm/counter_pm/counter_31
+    ----------------------------------------
+    Total                     15.152ns (11.696ns logic, 3.456ns route)
+                                       (77.2% logic, 22.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'manager_pm/clock_fill1'
+  Clock period: 14.914ns (frequency: 67.051MHz)
+  Total number of paths / destination ports: 1182720 / 64
+-------------------------------------------------------------------------
+Delay:               14.914ns (Levels of Logic = 68)
+  Source:            manager_pm/fill_pm/counter_pm/counter_0 (FF)
+  Destination:       manager_pm/fill_pm/counter_pm/counter_31 (FF)
+  Source Clock:      manager_pm/clock_fill1 rising
+  Destination Clock: manager_pm/clock_fill1 rising
+
+  Data Path: manager_pm/fill_pm/counter_pm/counter_0 to manager_pm/fill_pm/counter_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             3   0.591   0.674  manager_pm/fill_pm/counter_pm/counter_0 (manager_pm/fill_pm/counter_pm/counter_0)
+     LUT1:I0->O            1   0.648   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<0>_rt (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<0> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<1> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<2> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<3> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<4> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<5> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<6> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<7> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<8> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<9> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<10> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<11> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<12> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<13> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<14> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<15> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<16> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<17> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<18> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<19> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<20> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<21> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<22> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<23> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<24> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<25> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<26> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<27> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<28> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<29> (manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_cy<29>)
+     XORCY:CI->O           1   0.844   0.452  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_xor<30> (manager_pm/fill_pm/counter_pm/counter_addsub0001<30>)
+     LUT3:I2->O            1   0.648   0.000  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7> (manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7> (manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7>)
+     MUXCY:CI->O           7   0.269   0.788  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<8> (manager_pm/fill_pm/counter_pm/counter_cmp_le0000)
+     LUT2:I1->O            7   0.643   0.708  manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011)
+     MULT_AND:I1->LO       0   0.654   0.000  manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand (manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand1)
+     MUXCY:DI->O           1   0.787   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<6> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<7> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<8> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<9> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<10> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<11> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<12> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<13> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<14> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<15> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<16> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<17> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<18> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<19> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<20> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<21> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<22> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<23> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<24> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<25> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<26> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<27> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<28> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<29> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<30> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.500  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_xor<31> (manager_pm/fill_pm/counter_pm/counter_share0000<31>)
+     LUT2:I1->O            2   0.643   0.000  manager_pm/fill_pm/counter_pm/Mmux_counter_mux0002251 (manager_pm/fill_pm/counter_pm/counter_mux0002<31>)
+     FDCP:D                    0.252          manager_pm/fill_pm/counter_pm/counter_31
+    ----------------------------------------
+    Total                     14.914ns (11.792ns logic, 3.122ns route)
+                                       (79.1% logic, 20.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_down_pm/clk_out1'
+  Clock period: 13.380ns (frequency: 74.737MHz)
+  Total number of paths / destination ports: 192016 / 42
+-------------------------------------------------------------------------
+Delay:               13.380ns (Levels of Logic = 45)
+  Source:            manager_pm/state_mode_1 (FF)
+  Destination:       manager_pm/clock_bitcounter (FF)
+  Source Clock:      clock_down_pm/clk_out1 rising
+  Destination Clock: clock_down_pm/clk_out1 rising
+
+  Data Path: manager_pm/state_mode_1 to manager_pm/clock_bitcounter
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.590  manager_pm/state_mode_1 (manager_pm/state_mode_1)
+     LUT1:I0->O            1   0.648   0.000  manager_pm/Madd_state_mode_addsub0000_cy<1>_rt (manager_pm/Madd_state_mode_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/Madd_state_mode_addsub0000_cy<1> (manager_pm/Madd_state_mode_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<2> (manager_pm/Madd_state_mode_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<3> (manager_pm/Madd_state_mode_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<4> (manager_pm/Madd_state_mode_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<5> (manager_pm/Madd_state_mode_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<6> (manager_pm/Madd_state_mode_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<7> (manager_pm/Madd_state_mode_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<8> (manager_pm/Madd_state_mode_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<9> (manager_pm/Madd_state_mode_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<10> (manager_pm/Madd_state_mode_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<11> (manager_pm/Madd_state_mode_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<12> (manager_pm/Madd_state_mode_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<13> (manager_pm/Madd_state_mode_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<14> (manager_pm/Madd_state_mode_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<15> (manager_pm/Madd_state_mode_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<16> (manager_pm/Madd_state_mode_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<17> (manager_pm/Madd_state_mode_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<18> (manager_pm/Madd_state_mode_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<19> (manager_pm/Madd_state_mode_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<20> (manager_pm/Madd_state_mode_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<21> (manager_pm/Madd_state_mode_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<22> (manager_pm/Madd_state_mode_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<23> (manager_pm/Madd_state_mode_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<24> (manager_pm/Madd_state_mode_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<25> (manager_pm/Madd_state_mode_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<26> (manager_pm/Madd_state_mode_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<27> (manager_pm/Madd_state_mode_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Madd_state_mode_addsub0000_cy<28> (manager_pm/Madd_state_mode_addsub0000_cy<28>)
+     XORCY:CI->O           2   0.844   0.450  manager_pm/Madd_state_mode_addsub0000_xor<29> (manager_pm/state_mode_addsub0000<29>)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/Mcompar_state_mode_cmp_ge0000_lut<7> (manager_pm/Mcompar_state_mode_cmp_ge0000_lut<7>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/Mcompar_state_mode_cmp_ge0000_cy<7> (manager_pm/Mcompar_state_mode_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/Mcompar_state_mode_cmp_ge0000_cy<8> (manager_pm/Mcompar_state_mode_cmp_ge0000_cy<8>)
+     MUXCY:CI->O          32   0.269   1.265  manager_pm/Mcompar_state_mode_cmp_ge0000_cy<9> (manager_pm/state_mode_cmp_ge0000)
+     LUT4:I3->O            2   0.648   0.590  manager_pm/Mmux_state_mode_mux0001171 (manager_pm/state_mode_mux0001<24>)
+     LUT3:I0->O            1   0.648   0.000  manager_pm/clock_fill_cmp_eq00001_wg_lut<0> (manager_pm/clock_fill_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<0> (manager_pm/clock_fill_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<1> (manager_pm/clock_fill_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<2> (manager_pm/clock_fill_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<3> (manager_pm/clock_fill_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<4> (manager_pm/clock_fill_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<5> (manager_pm/clock_fill_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/clock_fill_cmp_eq00001_wg_cy<6> (manager_pm/clock_fill_cmp_eq00001_wg_cy<6>)
+     MUXCY:CI->O          10   0.269   0.914  manager_pm/clock_fill_cmp_eq00001_wg_cy<7> (manager_pm/clock_fill_cmp_eq00001_wg_cy<7>)
+     LUT3:I2->O            1   0.648   0.000  manager_pm/clock_bitcounter_mux00011 (manager_pm/clock_bitcounter_mux0001)
+     FDC:D                     0.252          manager_pm/clock_bitcounter
+    ----------------------------------------
+    Total                     13.380ns (9.571ns logic, 3.809ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'chaser_speed'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.436ns (Levels of Logic = 1)
+  Source:            chaser_rst (PAD)
+  Destination:       speed_5 (FF)
+  Destination Clock: chaser_speed rising
+
+  Data Path: chaser_rst to speed_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.275  chaser_rst_IBUF (chaser_rst_IBUF)
+     FDE:CE                    0.312          speed_5
+    ----------------------------------------
+    Total                      2.436ns (1.161ns logic, 1.275ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_pm/CLKDV_BUF'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.436ns (Levels of Logic = 1)
+  Source:            chaser_rst (PAD)
+  Destination:       clock_down_pm/clk_out (FF)
+  Destination Clock: dcm_pm/CLKDV_BUF rising
+
+  Data Path: chaser_rst to clock_down_pm/clk_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.275  chaser_rst_IBUF (chaser_rst_IBUF)
+     FDE:CE                    0.312          clock_down_pm/clk_out
+    ----------------------------------------
+    Total                      2.436ns (1.161ns logic, 1.275ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_7_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_7 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_7_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_7_mux00041 (manager_pm/fill_pm/generator_pm/basis_7_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_7
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_6_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_6 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_6_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_6_mux00041 (manager_pm/fill_pm/generator_pm/basis_6_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_6
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_5_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_5 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_5_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_5_mux00041 (manager_pm/fill_pm/generator_pm/basis_5_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_5
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_4_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_4 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_4_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_4_mux00041 (manager_pm/fill_pm/generator_pm/basis_4_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_4
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_3_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_3 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_3_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_3_mux00041 (manager_pm/fill_pm/generator_pm/basis_3_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_3
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_2_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_2 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_2_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_2_mux00041 (manager_pm/fill_pm/generator_pm/basis_2_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_2
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_1_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_1 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_1_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_1_mux00041 (manager_pm/fill_pm/generator_pm/basis_1_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_1
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_0_not0001'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              7.942ns (Levels of Logic = 20)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/fill_pm/generator_pm/basis_0 (LATCH)
+  Destination Clock: manager_pm/fill_pm/generator_pm/basis_0_not0001 falling
+
+  Data Path: chaser_rst to manager_pm/fill_pm/generator_pm/basis_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.105  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_0_mux00041 (manager_pm/fill_pm/generator_pm/basis_0_mux0004)
+     LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_0
+    ----------------------------------------
+    Total                      7.942ns (4.856ns logic, 3.086ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/clock_bitcounter1'
+  Total number of paths / destination ports: 1740 / 48
+-------------------------------------------------------------------------
+Offset:              9.114ns (Levels of Logic = 35)
+  Source:            chaser_toggle (PAD)
+  Destination:       manager_pm/bitcounter_pm/counter_pm/counter_31 (FF)
+  Destination Clock: manager_pm/clock_bitcounter1 rising
+
+  Data Path: chaser_toggle to manager_pm/bitcounter_pm/counter_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            91   0.849   1.424  chaser_toggle_IBUF (chaser_toggle_IBUF)
+     LUT2:I0->O            8   0.648   0.789  manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux00041011)
+     LUT3:I2->O            1   0.648   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<8> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<9> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<10> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<11> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<12> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<13> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<14> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<15> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<16> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<17> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<18> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<19> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<20> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<21> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<22> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<23> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<24> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<25> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<26> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<27> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<28> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<29> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<30> (manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.500  manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_xor<31> (manager_pm/bitcounter_pm/counter_pm/counter_share0000<31>)
+     LUT2:I1->O            1   0.643   0.000  manager_pm/bitcounter_pm/counter_pm/Mmux_counter_mux0002251 (manager_pm/bitcounter_pm/counter_pm/counter_mux0002<31>)
+     FDCP:D                    0.252          manager_pm/bitcounter_pm/counter_pm/counter_31
+    ----------------------------------------
+    Total                      9.114ns (6.401ns logic, 2.713ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/clock_fill1'
+  Total number of paths / destination ports: 3264 / 96
+-------------------------------------------------------------------------
+Offset:              9.129ns (Levels of Logic = 34)
+  Source:            chaser_toggle (PAD)
+  Destination:       manager_pm/fill_pm/counter_pm/counter_31 (FF)
+  Destination Clock: manager_pm/clock_fill1 rising
+
+  Data Path: chaser_toggle to manager_pm/fill_pm/counter_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            91   0.849   1.424  chaser_toggle_IBUF (chaser_toggle_IBUF)
+     LUT2:I0->O            7   0.648   0.708  manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011)
+     MULT_AND:I1->LO       0   0.654   0.000  manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand (manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand1)
+     MUXCY:DI->O           1   0.787   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<6> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<7> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<8> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<9> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<10> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<11> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<12> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<13> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<14> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<15> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<16> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<17> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<18> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<19> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<20> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<21> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<22> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<23> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<24> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<25> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<26> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<27> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<28> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<29> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<30> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.500  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_xor<31> (manager_pm/fill_pm/counter_pm/counter_share0000<31>)
+     LUT2:I1->O            2   0.643   0.000  manager_pm/fill_pm/counter_pm/Mmux_counter_mux0002251 (manager_pm/fill_pm/counter_pm/counter_mux0002<31>)
+     FDCP:D                    0.252          manager_pm/fill_pm/counter_pm/counter_31
+    ----------------------------------------
+    Total                      9.129ns (6.497ns logic, 2.632ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_down_pm/clk_out1'
+  Total number of paths / destination ports: 376 / 50
+-------------------------------------------------------------------------
+Offset:              10.681ns (Levels of Logic = 22)
+  Source:            chaser_rst (PAD)
+  Destination:       manager_pm/man_led_7 (FF)
+  Destination Clock: clock_down_pm/clk_out1 rising
+
+  Data Path: chaser_rst to manager_pm/man_led_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.418  chaser_rst_IBUF (chaser_rst_IBUF)
+     LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.134  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT3:I2->O            7   0.648   0.851  manager_pm/fill_pm/generator_pm/val_out<1>21 (manager_pm/fill_pm/generator_pm/N4)
+     LUT3:I0->O            1   0.648   0.563  manager_pm/man_led_mux0002<7>_SW0 (N01)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/man_led_mux0002<7> (manager_pm/man_led_mux0002<7>)
+     FDE:D                     0.252          manager_pm/man_led_7
+    ----------------------------------------
+    Total                     10.681ns (6.152ns logic, 4.529ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_down_pm/clk_out1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            manager_pm/man_led_0 (FF)
+  Destination:       chaser_led0 (PAD)
+  Source Clock:      clock_down_pm/clk_out1 rising
+
+  Data Path: manager_pm/man_led_0 to chaser_led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  manager_pm/man_led_0 (manager_pm/man_led_0)
+     OBUF:I->O                 4.520          chaser_led0_OBUF (chaser_led0)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               2.124ns (Levels of Logic = 1)
+  Source:            chaser_rst (PAD)
+  Destination:       dcm_pm/DCM_SP_INST:RST (PAD)
+
+  Data Path: chaser_rst to dcm_pm/DCM_SP_INST:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            73   0.849   1.275  chaser_rst_IBUF (chaser_rst_IBUF)
+    DCM_SP:RST                 0.000          dcm_pm/DCM_SP_INST
+    ----------------------------------------
+    Total                      2.124ns (0.849ns logic, 1.275ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 21.80 secs
  
 --> 
 
 
-Total memory usage is 210472 kilobytes
+Total memory usage is 215788 kilobytes
 
-Number of errors   :   16 (   0 filtered)
-Number of warnings :   55 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   81 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

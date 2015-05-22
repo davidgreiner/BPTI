@@ -73,7 +73,6 @@ begin
     --     marq_out    => man_led
     -- );
 
-
     manager_p : process (man_clk, man_rst)
     variable state_mode     : integer := 0;
     begin
@@ -81,8 +80,6 @@ begin
             state_mode := 0;
 				clock_bitcounter <= '0';
 				clock_fill <= '0';
-				led_bitcounter <= "00000000";
-				led_fill <= "00000000";
         elsif(man_clk'event and man_clk='1') then
 				if(man_mode='1') then
 					state_mode := (state_mode + 1);
