@@ -1,0 +1,224 @@
+Release 10.1.02 Map K.37 (lin)
+Xilinx Mapping Report File for Design 'entity_chaser'
+
+Design Information
+------------------
+Command Line   : map -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/p
+rakti01_03_lauflicht.ise -intstyle ise -p xc3sd1800a-fg676-4 -cm area -pr off -k
+4 -c 100 -o entity_chaser_map.ncd entity_chaser.ngd entity_chaser.pcf 
+Target Device  : xc3sd1800a
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
+Mapped Date    : Fri May 22 16:26:30 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    9
+Logic Utilization:
+  Total Number Slice Registers:         222 out of  33,280    1%
+    Number used as Flip Flops:          182
+    Number used as Latches:              40
+  Number of 4 input LUTs:               558 out of  33,280    1%
+Logic Distribution:
+  Number of occupied Slices:            387 out of  16,640    2%
+    Number of Slices containing only related logic:     387 out of     387 100%
+    Number of Slices containing unrelated logic:          0 out of     387   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         707 out of  33,280    2%
+    Number used as logic:               558
+    Number used as a route-thru:        149
+  Number of bonded IOBs:                 13 out of     519    2%
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         1 out of       8   12%
+
+Peak Memory Usage:  230 MB
+Total REAL time to MAP completion:  16 secs 
+Total CPU time to MAP completion:   9 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
+   slice components.  The resulting carry chain will have suboptimal timing.
+   	clock_down_pm/Mcompar_counter_cmp_ge0000_cy<20>
+   	clock_down_pm/Mcount_counter_cy<0>
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_0_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_1_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_2_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_3_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_4_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_5_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_6_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   manager_pm/fill_pm/generator_pm/basis_7_not0001 is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |             | Strength | Rate    |              |          | Delay    |                  |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| chaser_clk_in                      | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_led0                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led1                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led2                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led3                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led4                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led5                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led6                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_led7                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| chaser_mode                        | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_rst                         | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_speed                       | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_toggle                      | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                            |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| entity_chaser/     |           | 233/618       | 3/222         | 149/707       | 0/0           | 0/0       | 0/0       | 1/7   | 0/1   | entity_chaser                                     |
+| +clock_down_pm     |           | 44/44         | 33/33         | 47/47         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
+| +dcm_pm            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 1/1   | entity_chaser/dcm_pm                              |
+| +manager_pm        |           | 52/341        | 42/186        | 69/511        | 0/0           | 0/0       | 0/0       | 2/3   | 0/0   | entity_chaser/manager_pm                          |
+| ++bitcounter_pm    |           | 0/86          | 0/40          | 0/127         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm            |
+| +++counter_pm      |           | 86/86         | 40/40         | 127/127       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm/counter_pm |
+| ++fill_pm          |           | 0/203         | 0/104         | 0/315         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm/fill_pm                  |
+| +++counter_pm      |           | 95/95         | 64/64         | 121/121       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/fill_pm/counter_pm       |
+| +++generator_pm    |           | 108/108       | 40/40         | 194/194       | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/manager_pm/fill_pm/generator_pm     |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

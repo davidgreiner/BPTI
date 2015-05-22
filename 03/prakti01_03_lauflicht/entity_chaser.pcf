@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map K.37 on Fri May 22 16:26:39 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "chaser_clk_in" LOCATE = SITE "F13" LEVEL 1;
+COMP "chaser_led0" LOCATE = SITE "P18" LEVEL 1;
+COMP "chaser_led1" LOCATE = SITE "P25" LEVEL 1;
+COMP "chaser_led2" LOCATE = SITE "N19" LEVEL 1;
+COMP "chaser_led3" LOCATE = SITE "K22" LEVEL 1;
+COMP "chaser_led4" LOCATE = SITE "H20" LEVEL 1;
+COMP "chaser_led5" LOCATE = SITE "G21" LEVEL 1;
+COMP "chaser_led6" LOCATE = SITE "D24" LEVEL 1;
+COMP "chaser_led7" LOCATE = SITE "D25" LEVEL 1;
+COMP "chaser_mode" LOCATE = SITE "J17" LEVEL 1;
+COMP "chaser_rst" LOCATE = SITE "Y16" LEVEL 1;
+COMP "chaser_toggle" LOCATE = SITE "J15" LEVEL 1;
+SCHEMATIC END;
+

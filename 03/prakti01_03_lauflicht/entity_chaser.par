@@ -1,0 +1,260 @@
+Release 10.1.02 par K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+i82pc17::  Fri May 22 16:26:54 2015
+
+par -w -intstyle ise -ol std -t 1 entity_chaser_map.ncd entity_chaser.ncd
+entity_chaser.pcf 
+
+
+Constraints file: entity_chaser.pcf.
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+   "entity_chaser" is an NCD, version 3.2, device xc3sd1800a, package fg676, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.32 2008-05-28".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          13 out of 519     2%
+
+   Number of External Input IOBs                  5
+
+      Number of External Input IBUFs              5
+        Number of LOCed External Input IBUFs      4 out of 5      80%
+
+
+   Number of External Output IOBs                 8
+
+      Number of External Output IOBs              8
+        Number of LOCed External Output IOBs      8 out of 8     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        7 out of 24     29%
+   Number of DCMs                            1 out of 8      12%
+   Number of Slices                        387 out of 16640   2%
+      Number of SLICEMs                      0 out of 8320    0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:5d9f4) REAL time: 10 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:5d9f4) REAL time: 10 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:5d9f4) REAL time: 10 secs 
+
+Phase 4.2
+
+......
+...............
+Phase 4.2 (Checksum:7cc7f) REAL time: 17 secs 
+
+Phase 5.30
+Phase 5.30 (Checksum:7cc7f) REAL time: 17 secs 
+
+Phase 6.8
+...........................
+.
+..................
+..
+.
+Phase 6.8 (Checksum:75e419) REAL time: 18 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:75e419) REAL time: 18 secs 
+
+Phase 8.18
+Phase 8.18 (Checksum:767e1b) REAL time: 20 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:767e1b) REAL time: 20 secs 
+
+REAL time consumed by placer: 20 secs 
+CPU  time consumed by placer: 16 secs 
+Writing design to file entity_chaser.ncd
+
+
+Total REAL time to Placer completion: 20 secs 
+Total CPU time to Placer completion: 16 secs 
+
+Starting Router
+
+Phase 1: 2259 unrouted;       REAL time: 32 secs 
+
+Phase 2: 2111 unrouted;       REAL time: 33 secs 
+
+Phase 3: 393 unrouted;       REAL time: 34 secs 
+
+Phase 4: 393 unrouted; (46175)      REAL time: 34 secs 
+
+Phase 5: 398 unrouted; (2)      REAL time: 34 secs 
+
+Phase 6: 0 unrouted; (2)      REAL time: 34 secs 
+
+Phase 7: 0 unrouted; (2)      REAL time: 35 secs 
+
+Phase 8: 0 unrouted; (2)      REAL time: 35 secs 
+
+Phase 9: 0 unrouted; (2)      REAL time: 35 secs 
+
+Phase 10: 0 unrouted; (2)      REAL time: 35 secs 
+
+Phase 11: 0 unrouted; (0)      REAL time: 36 secs 
+
+
+Total REAL time to Router completion: 36 secs 
+Total CPU time to Router completion: 30 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/Mcompar_ |              |      |      |            |             |
+|count_to_cmp_eq0000_ |              |      |      |            |             |
+|              cy<15> |  BUFGMUX_X1Y1| No   |   17 |  0.040     |  1.658      |
++---------------------+--------------+------+------+------------+-------------+
+|                clck | BUFGMUX_X1Y10| No   |   17 |  0.123     |  1.711      |
++---------------------+--------------+------+------+------------+-------------+
+|clock_down_pm/clk_ou |              |      |      |            |             |
+|                   t |  BUFGMUX_X2Y0| No   |   22 |  0.048     |  1.531      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/clock_bit |              |      |      |            |             |
+|             counter |  BUFGMUX_X2Y1| No   |   20 |  0.059     |  1.525      |
++---------------------+--------------+------+------+------------+-------------+
+|  chaser_speed_BUFGP | BUFGMUX_X1Y11| No   |    3 |  0.000     |  1.645      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/clock_fil |              |      |      |            |             |
+|                   l | BUFGMUX_X2Y11| No   |   33 |  0.085     |  1.644      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_0_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  0.309      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_1_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  1.104      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_2_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  1.187      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_3_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  0.309      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_4_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  1.379      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_5_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  0.309      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_6_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  1.214      |
++---------------------+--------------+------+------+------------+-------------+
+|manager_pm/fill_pm/g |              |      |      |            |             |
+|enerator_pm/basis_7_ |              |      |      |            |             |
+|             not0001 |         Local|      |    1 |  0.000     |  1.130      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no
+   requested value.
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net man | SETUP   |         N/A|     9.619ns|     N/A|           0
+  ager_pm/fill_pm/generator_pm/Mcompar_coun | HOLD    |     2.030ns|            |       0|           0
+  t_to_cmp_eq0000_cy<15>                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clc | SETUP   |         N/A|    12.928ns|     N/A|           0
+  k                                         | HOLD    |     1.629ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|    14.461ns|     N/A|           0
+  ck_down_pm/clk_out                        | HOLD    |     1.245ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net man | SETUP   |         N/A|    15.759ns|     N/A|           0
+  ager_pm/clock_bitcounter                  | HOLD    |     2.711ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cha | SETUP   |         N/A|     1.541ns|     N/A|           0
+  ser_speed_BUFGP                           | HOLD    |     1.032ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net man | SETUP   |         N/A|    16.000ns|     N/A|           0
+  ager_pm/clock_fill                        | HOLD    |     2.468ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 46 secs 
+Total CPU time to PAR completion: 36 secs 
+
+Peak Memory Usage:  233 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file entity_chaser.ncd
+
+
+
+PAR done!
