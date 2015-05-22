@@ -8,16 +8,31 @@ entity entity_chaser is
         chaser_mode     : in std_logic;
         chaser_rst      : in std_logic;
         chaser_speed    : in std_logic;
-        chaser_toggle   : in std_logic
+        chaser_toggle   : in std_logic;
+        chase_led0      : out std_logic;
+        chase_led1      : out std_logic;
+        chase_led2      : out std_logic;
+        chase_led3      : out std_logic;
+        chase_led4      : out std_logic;
+        chase_led5      : out std_logic;
+        chase_led6      : out std_logic;
+        chase_led7      : out std_logic
     );
 end entity entity_chaser;
 
 architecture architecture_chaser of entity_chaser is
     constant speed_low      : integer := 25000000; -- 1 sec
     constant speed_high     : integer := 12500000; -- 1/2 sec
-    constant mode_amount    : integer := 3; --3 modes: fill, bit value, marquee
 
 
+component entity_dcm
+    port
+    (
+        CLKIN_IN    : in    std_logic;
+        RST_IN      : in    std_logic;
+        CLKDV_OUT   : out   std_logic
+    );
+end component;
 
 component entity_clock_down
     port
@@ -28,59 +43,57 @@ component entity_clock_down
         clk_out     : out std_logic
     );
 end component;
-component entity_bitcounter
+component entity_manager
     port
     (
-        bit_in      : in std_logic;
-        bit_mode    : in std_logic;
-        bit_rst     : in std_logic;
-        bit_out     : out std_logic_vector(7 downto 0)
-    );
-end component;
-component entity_fill
-    port
-    (
-        fill_in      : in std_logic;
-        fill_mode    : in std_logic;
-        fill_rst     : in std_logic;
-        fill_out     : out std_logic_vector(7 downto 0)
-    );
-end component;
-component entity_marquee
-    port
-    (
-        marq_in      : in std_logic;
-        marq_mode    : in std_logic;
-        marq_rst     : in std_logic;
-        marq_out     : out std_logic_vector(7 downto 0)
+        man_clk     : in std_logic;
+        man_mode    : in std_logic;
+        man_rst     : in std_logic;
+        man_toggle  : in std_logic;
+        man_led     : out std_logic_vector(7 downto 0)
     );
 end component;
 
 
 
 
-signal speed        : integer;
+signal speed        : integer := speed_low;
 signal downsample   : std_logic;
+signal clck         : std_logic;
+signal led          : std_logic_vector(7 downto 0);
 
 
 
 
 begin
+    dcm_pm : entity_dcm port map
+    (
+        CLKIN_IN    => chaser_clk_in;
+        RST_IN      => chaser_rst;
+        CLKDV_OUT   => clck
+    );
     clock_down_pm : entity_clock_down port map
     (
-        clk_in      => chaser_clk_in;
-        clk_rst     => chaser_clk_rst;
-        clk_limit   => speed
+        clk_in      => clck;
+        clk_rst     => chaser_rst;
+        clk_limit   => speed;
         clk_out     => downsample
+    );
+    manager_pm : entity_manager port map
+    (
+        man_clk     => downsample;
+        man_mode    => chaser_mode;
+        man_rst     => chaser_rst;
+        man_toggle  => chaser_toggle;
+        man_led     => led
     );
 
 
 
 
 
-    chaser_p : process (chaser_rst, chaser_speed, chaser_toggle)
+    chaser_p : process (chaser_rst, chaser_speed)
     variable state_speed    : std_logic := '0';
-    variable state_mode     : integer := 0;
     begin
         if(chaser_rst = '0') then
             state_speed := '0';
@@ -92,8 +105,6 @@ begin
                 state_speed = '0';
                 speed <= speed_high;
             end if;
-        elsif(chaser_toggle'event and chaser_toggle = '1') then
-            state_mode := (state_mode + 1) mod mode_amount;
         end if;
     end process;
 end architecture;
