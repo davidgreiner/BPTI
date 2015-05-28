@@ -43,8 +43,8 @@ end component;
 --     );
 -- end component;
 
-signal clock_bitcounter     : std_logic := '0';
-signal clock_fill           : std_logic := '0';
+signal clock_bitcounter			: std_logic := '0';
+signal clock_fill				: std_logic := '0';
 signal led_bitcounter			: std_logic_vector(7 downto 0) := "00000000";
 signal led_fill					: std_logic_vector(7 downto 0) := "00000000";-- signal clock_marquee        : std_logic;
 

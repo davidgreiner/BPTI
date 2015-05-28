@@ -35,8 +35,7 @@ begin
         cnt_out => convert
     );
 	 
-	 bitcounter_p : process(convert)
-	 begin
-		bit_out <= std_logic_vector(to_unsigned(convert, bit_out'length));
-	 end process;
+	
+	bit_out <= "00000000";--std_logic_vector(to_unsigned(convert, bit_out'length)) when bit_rst='0' else "00000000";
+	
 end architecture_bitcounter;

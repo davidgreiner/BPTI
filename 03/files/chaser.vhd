@@ -75,15 +75,15 @@ signal speed        : integer := speed_low;
 signal downsample   : std_logic;
 signal clck         : std_logic;
 signal led          : std_logic_vector(7 downto 0);
-
-
-
+signal rst 			: std_logic;
 
 begin
+    
+    rst <= not chaser_rst;
     dcm_pm : entity_dcm port map
     (
         CLKIN_IN    => chaser_clk_in,
-        RST_IN      => chaser_rst,
+        RST_IN      => rst,
         CLKDV_OUT   => clck
     );
     clock_down_pm : entity_clock_down port map
@@ -113,8 +113,6 @@ begin
         led_out6    => chaser_led6,
         led_out7    => chaser_led7
     );
-
-
 
 
     chaser_p : process (chaser_rst, chaser_speed)

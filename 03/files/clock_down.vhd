@@ -16,18 +16,28 @@ architecture architecture_clock_down of entity_clock_down is
 begin
     clock_down_p : process(clk_in, clk_rst)
     variable counter : integer := 0;
+    variable outsignal : std_logic := '0';
     begin
         if(clk_rst = '0') then
             counter := 0;
         elsif(clk_in'event and clk_in = '1') then
-            counter := counter + 1;
-
             if(counter >= clk_limit) then
-                counter := 0;
-                clk_out <= '1';
-            else
-                clk_out <= '0';
+            	outsignal := not outsignal;
+            	counter := 0;
             end if;
+            clk_out <= outsignal;
+            counter := counter + 1;
+            
+            
+            
+            --counter := counter + 1;
+
+            --if(counter >= clk_limit) then
+            --    counter := 0;
+            --    clk_out <= '1';
+            --else
+            --    clk_out <= '0';
+            --end if;
         end if;
     end process clock_down_p;
 end architecture;

@@ -23,6 +23,7 @@ begin
             else
                 counter := cnt_limit;
             end if;
+        	cnt_out <= 0;
         elsif(cnt_in'event and cnt_in = '1') then
             if(cnt_mode = '0') then
                 counter := counter + 1;
