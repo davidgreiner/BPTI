@@ -20,6 +20,7 @@ begin
     begin
         if(clk_rst = '0') then
             counter := 0;
+            clk_out <= '0';
         elsif(clk_in'event and clk_in = '1') then
             if(counter >= clk_limit) then
             	outsignal := not outsignal;
