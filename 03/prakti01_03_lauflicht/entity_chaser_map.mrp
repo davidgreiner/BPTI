@@ -11,25 +11,25 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri May 22 17:18:56 2015
+Mapped Date    : Fri May 29 14:58:27 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    9
+Number of warnings:    8
 Logic Utilization:
-  Total Number Slice Registers:         220 out of  33,280    1%
-    Number used as Flip Flops:          180
+  Total Number Slice Registers:         221 out of  33,280    1%
+    Number used as Flip Flops:          181
     Number used as Latches:              40
-  Number of 4 input LUTs:               555 out of  33,280    1%
+  Number of 4 input LUTs:               556 out of  33,280    1%
 Logic Distribution:
-  Number of occupied Slices:            385 out of  16,640    2%
-    Number of Slices containing only related logic:     385 out of     385 100%
-    Number of Slices containing unrelated logic:          0 out of     385   0%
+  Number of occupied Slices:            370 out of  16,640    2%
+    Number of Slices containing only related logic:     370 out of     370 100%
+    Number of Slices containing unrelated logic:          0 out of     370   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         705 out of  33,280    2%
-    Number used as logic:               555
-    Number used as a route-thru:        150
+  Total Number of 4 input LUTs:         675 out of  33,280    2%
+    Number used as logic:               556
+    Number used as a route-thru:        119
   Number of bonded IOBs:                 13 out of     519    2%
   Number of BUFGMUXs:                     5 out of      24   20%
   Number of DCMs:                         1 out of       8   12%
@@ -78,10 +78,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
-   slice components.  The resulting carry chain will have suboptimal timing.
-   	clock_down_pm/Mcompar_counter_cmp_ge0000_cy<20>
-   	clock_down_pm/Mcount_counter_cy<0>
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    manager_pm/fill_pm/generator_pm/basis_0_not0001 is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
@@ -203,8 +199,8 @@ Section 14 - Utilization by Hierarchy
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                            |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_chaser/     |           | 233/616       | 3/220         | 150/705       | 0/0           | 0/0       | 0/0       | 1/5   | 0/1   | entity_chaser                                     |
-| +clock_down_pm     |           | 44/44         | 33/33         | 47/47         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
+| entity_chaser/     |           | 217/585       | 3/221         | 119/675       | 0/0           | 0/0       | 0/0       | 1/5   | 0/1   | entity_chaser                                     |
+| +clock_down_pm     |           | 29/29         | 34/34         | 48/48         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
 | +dcm_pm            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 1/1   | entity_chaser/dcm_pm                              |
 | +manager_pm        |           | 50/339        | 40/184        | 66/508        | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm                          |
 | ++bitcounter_pm    |           | 0/86          | 0/40          | 0/127         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm            |

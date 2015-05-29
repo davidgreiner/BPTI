@@ -24,7 +24,7 @@ architecture architecture_bitcounter of entity_bitcounter is
         );
     end component;
 	 
-	 signal convert : integer;
+	 signal convert : integer := 0;
 begin
     counter_pm : entity_counter port map
     (
@@ -36,6 +36,6 @@ begin
     );
 	 
 	
-	bit_out <= "00000000";--std_logic_vector(to_unsigned(convert, bit_out'length)) when bit_rst='0' else "00000000";
+	bit_out <= std_logic_vector(to_unsigned(convert, bit_out'length));
 	
 end architecture_bitcounter;

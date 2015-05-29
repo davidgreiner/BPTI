@@ -1,7 +1,7 @@
 Release 10.1.02 par K.37 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-i82pc17::  Fri May 22 17:19:15 2015
+i82pc17::  Fri May 29 14:58:46 2015
 
 par -w -intstyle ise -ol std -t 1 entity_chaser_map.ncd entity_chaser.ncd
 entity_chaser.pcf 
@@ -44,7 +44,7 @@ Design Summary Report:
 
    Number of BUFGMUXs                        5 out of 24     20%
    Number of DCMs                            1 out of 8      12%
-   Number of Slices                        385 out of 16640   2%
+   Number of Slices                        370 out of 16640   2%
       Number of SLICEMs                      0 out of 8320    0%
 
 
@@ -58,41 +58,41 @@ Router effort level (-rl):    Standard
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:5d39e) REAL time: 9 secs 
+Phase 1.1 (Checksum:5bc6a) REAL time: 9 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:5d39e) REAL time: 9 secs 
+Phase 2.7 (Checksum:5bc6a) REAL time: 9 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:5d39e) REAL time: 9 secs 
+Phase 3.31 (Checksum:5bc6a) REAL time: 9 secs 
 
 Phase 4.2
 
 ......
 ................
-Phase 4.2 (Checksum:75b12) REAL time: 16 secs 
+Phase 4.2 (Checksum:743de) REAL time: 15 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:75b12) REAL time: 16 secs 
+Phase 5.30 (Checksum:743de) REAL time: 15 secs 
 
 Phase 6.8
-.............................
+......................................
 .
-..........................................................................
+...................................................
 .
 .
-Phase 6.8 (Checksum:7547f0) REAL time: 17 secs 
+Phase 6.8 (Checksum:6e63c6) REAL time: 17 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:7547f0) REAL time: 17 secs 
+Phase 7.5 (Checksum:6e63c6) REAL time: 17 secs 
 
 Phase 8.18
-Phase 8.18 (Checksum:75df8d) REAL time: 19 secs 
+Phase 8.18 (Checksum:6ece07) REAL time: 18 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:75df8d) REAL time: 19 secs 
+Phase 9.5 (Checksum:6ece07) REAL time: 18 secs 
 
-REAL time consumed by placer: 19 secs 
+REAL time consumed by placer: 18 secs 
 CPU  time consumed by placer: 16 secs 
 Writing design to file entity_chaser.ncd
 
@@ -102,30 +102,30 @@ Total CPU time to Placer completion: 16 secs
 
 Starting Router
 
-Phase 1: 2244 unrouted;       REAL time: 31 secs 
+Phase 1: 2202 unrouted;       REAL time: 30 secs 
 
-Phase 2: 2100 unrouted;       REAL time: 32 secs 
+Phase 2: 2057 unrouted;       REAL time: 31 secs 
 
-Phase 3: 378 unrouted;       REAL time: 32 secs 
+Phase 3: 393 unrouted;       REAL time: 31 secs 
 
-Phase 4: 378 unrouted; (36289)      REAL time: 32 secs 
+Phase 4: 393 unrouted; (30273)      REAL time: 31 secs 
 
-Phase 5: 383 unrouted; (2)      REAL time: 33 secs 
+Phase 5: 393 unrouted; (1)      REAL time: 32 secs 
 
-Phase 6: 0 unrouted; (2)      REAL time: 33 secs 
+Phase 6: 0 unrouted; (1)      REAL time: 32 secs 
 
-Phase 7: 0 unrouted; (2)      REAL time: 33 secs 
+Phase 7: 0 unrouted; (1)      REAL time: 32 secs 
 
-Phase 8: 0 unrouted; (2)      REAL time: 33 secs 
+Phase 8: 0 unrouted; (1)      REAL time: 32 secs 
 
-Phase 9: 0 unrouted; (2)      REAL time: 34 secs 
+Phase 9: 0 unrouted; (1)      REAL time: 33 secs 
 
-Phase 10: 0 unrouted; (2)      REAL time: 34 secs 
+Phase 10: 0 unrouted; (1)      REAL time: 33 secs 
 
-Phase 11: 0 unrouted; (0)      REAL time: 34 secs 
+Phase 11: 0 unrouted; (0)      REAL time: 33 secs 
 
 
-Total REAL time to Router completion: 35 secs 
+Total REAL time to Router completion: 33 secs 
 Total CPU time to Router completion: 31 secs 
 
 Partition Implementation Status
@@ -147,46 +147,46 @@ Generating Clock Report
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/Mcompar_ |              |      |      |            |             |
 |count_to_cmp_eq0000_ |              |      |      |            |             |
-|              cy<15> |  BUFGMUX_X2Y0| No   |   17 |  0.051     |  1.677      |
+|              cy<15> |  BUFGMUX_X2Y0| No   |   17 |  0.026     |  1.524      |
 +---------------------+--------------+------+------+------------+-------------+
-|                clck | BUFGMUX_X2Y10| No   |   17 |  0.138     |  1.737      |
+|                clck | BUFGMUX_X2Y10| No   |   18 |  0.136     |  1.737      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_down_pm/clk_ou |              |      |      |            |             |
-|                   t |  BUFGMUX_X1Y1| No   |   73 |  0.167     |  1.642      |
+|                   t |  BUFGMUX_X1Y1| No   |   73 |  0.182     |  1.650      |
 +---------------------+--------------+------+------+------------+-------------+
-|  chaser_speed_BUFGP | BUFGMUX_X1Y11| No   |    3 |  0.000     |  1.662      |
+|  chaser_speed_BUFGP | BUFGMUX_X1Y11| No   |    3 |  0.000     |  1.647      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_0_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.428      |
+|             not0001 |         Local|      |    1 |  0.000     |  0.309      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_1_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.167      |
+|             not0001 |         Local|      |    1 |  0.000     |  0.309      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_2_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.183      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.201      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_3_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.183      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.199      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_4_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.167      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.379      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_5_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.150      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.201      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_6_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.183      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.211      |
 +---------------------+--------------+------+------+------------+-------------+
 |manager_pm/fill_pm/g |              |      |      |            |             |
 |enerator_pm/basis_7_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.201      |
+|             not0001 |         Local|      |    1 |  0.000     |  1.214      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -205,18 +205,18 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net man | SETUP   |         N/A|    10.034ns|     N/A|           0
-  ager_pm/fill_pm/generator_pm/Mcompar_coun | HOLD    |     1.918ns|            |       0|           0
+  Autotimespec constraint for clock net man | SETUP   |         N/A|    10.338ns|     N/A|           0
+  ager_pm/fill_pm/generator_pm/Mcompar_coun | HOLD    |     2.046ns|            |       0|           0
   t_to_cmp_eq0000_cy<15>                    |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clc | SETUP   |         N/A|    12.443ns|     N/A|           0
-  k                                         | HOLD    |     1.626ns|            |       0|           0
+  Autotimespec constraint for clock net clc | SETUP   |         N/A|     9.355ns|     N/A|           0
+  k                                         | HOLD    |     1.298ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP   |         N/A|    15.451ns|     N/A|           0
-  ck_down_pm/clk_out                        | HOLD    |     1.245ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|    16.036ns|     N/A|           0
+  ck_down_pm/clk_out                        | HOLD    |     1.248ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cha | SETUP   |         N/A|     1.545ns|     N/A|           0
-  ser_speed_BUFGP                           | HOLD    |     1.032ns|            |       0|           0
+  Autotimespec constraint for clock net cha | SETUP   |         N/A|     1.527ns|     N/A|           0
+  ser_speed_BUFGP                           | HOLD    |     1.080ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -229,7 +229,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 43 secs 
+Total REAL time to PAR completion: 41 secs 
 Total CPU time to PAR completion: 36 secs 
 
 Peak Memory Usage:  233 MB
