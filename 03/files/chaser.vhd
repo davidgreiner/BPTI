@@ -25,6 +25,7 @@ architecture architecture_chaser of entity_chaser is
 	constant speed_step			: integer := 500000;
     constant speed_limit_high      : integer := 25000000; -- 1 sec
     constant speed_limit_low     : integer := 12500000; -- 1/2 sec
+    constant mode_amount    : integer := 2; --3 modes: fill, bit value
 
 
 component entity_dcm
@@ -50,7 +51,7 @@ component entity_manager
     port
     (
         man_clk     : in std_logic;
-        man_mode    : in std_logic;
+        man_mode    : in integer;
         man_rst     : in std_logic;
         man_toggle  : in std_logic;
         man_led     : out std_logic_vector(7 downto 0)
@@ -100,7 +101,7 @@ begin
     manager_pm : entity_manager port map
     (
         man_clk     => downsample,
-        man_mode    => chaser_mode,
+        man_mode    => mode,
         man_rst     => chaser_rst,
         man_toggle  => toggle,
         man_led     => led
@@ -127,9 +128,12 @@ begin
     
     variable speed_current : integer := speed_limit_high;
     variable toggle_current : std_logic := '0';
+    variable mode_current : integer := 0;
     begin
         if(chaser_rst = '0') then
             speed_current := speed_limit_high;
+            toggle_current := '0';
+            mode_current := 0;
         elsif(clck'event and clck = '1') then
         	-- Checking buttons here because other entities only receive downsampled clock
         
@@ -162,8 +166,22 @@ begin
             elsif(chaser_toggle = '0' and chaser_toggle_pressed = '1') then
             	chaser_toggle_pressed := '0';
             end if;
+            
+             
+            -- Change mode
+            if(chaser_mode = '1' and chaser_mode_pressed = '0') then
+            	if((mode_current + 1) > (mode_amount - 1)) then
+            		mode_current := 0;
+            	else
+            		mode_current := mode_current + 1;
+            	end if;
+            	chaser_mode_pressed := '1';
+            elsif(chaser_mode = '0' and chaser_mode_pressed = '1') then
+            	chaser_mode_pressed := '0';
+            end if;
         end if;
         speed <= speed_current;
         toggle <= toggle_current;
+        mode <= mode_current;
     end process;
 end architecture;

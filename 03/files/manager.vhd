@@ -5,7 +5,7 @@ entity entity_manager is
     port
     (
         man_clk     : in std_logic;
-        man_mode    : in std_logic;
+        man_mode    : in integer;
         man_rst     : in std_logic;
         man_toggle  : in std_logic;
         man_led     : out std_logic_vector(7 downto 0)
@@ -13,7 +13,6 @@ entity entity_manager is
 end entity entity_manager;
 
 architecture architecture_manager of entity_manager is
-    constant mode_amount    : integer := 2; --3 modes: fill, bit value
 
 component entity_bitcounter
     port
@@ -73,29 +72,6 @@ begin
     --     marq_out    => man_led
     -- );
 
-    manager_p : process (man_clk, man_rst)
-    variable state_mode     : integer := 0;
-    begin
-        if(man_rst = '0') then
-            state_mode := 0;
-				clock_bitcounter <= '0';
-				clock_fill <= '0';
-        elsif(man_clk'event and man_clk = '1') then
-				if(man_mode='1') then
-					state_mode := (state_mode + 1);
-					if (state_mode >= mode_amount) then
-						state_mode := 0;
-					end if;
-				end if;
-				
-            if(state_mode = 0) then
-					 man_led <= led_bitcounter;
-				elsif(state_mode = 1) then
-					 man_led <= led_fill;
-				else
-					 man_led <= "00000000";
-				 end if;
-        end if;
-    end process;
+    with man_mode select man_led <= led_bitcounter when 0, led_fill when 1, "00000000" when others;
 
 end architecture;

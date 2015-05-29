@@ -37,18 +37,57 @@ Setup/Hold to clock chaser_clk_in
                  |  Setup to  |  Hold to   |                  | Clock  |
 Source           | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 -----------------+------------+------------+------------------+--------+
-chaser_speed_down|   15.200(R)|   -3.099(R)|clck              |   0.000|
-chaser_speed_up  |    8.842(R)|   -2.841(R)|clck              |   0.000|
-chaser_toggle    |    5.308(R)|   -1.956(R)|clck              |   0.000|
+chaser_mode      |    6.006(R)|   -1.122(R)|clck              |   0.000|
+chaser_speed_down|   14.068(R)|   -3.293(R)|clck              |   0.000|
+chaser_speed_up  |    9.239(R)|   -2.301(R)|clck              |   0.000|
+chaser_toggle    |    5.245(R)|   -1.838(R)|clck              |   0.000|
 -----------------+------------+------------+------------------+--------+
+
+Clock chaser_clk_in to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+chaser_led0 |   12.461(R)|clck              |   0.000|
+chaser_led1 |   12.628(R)|clck              |   0.000|
+chaser_led2 |   12.434(R)|clck              |   0.000|
+chaser_led3 |   11.692(R)|clck              |   0.000|
+chaser_led4 |   13.852(R)|clck              |   0.000|
+chaser_led5 |   12.940(R)|clck              |   0.000|
+chaser_led6 |   12.952(R)|clck              |   0.000|
+chaser_led7 |   12.662(R)|clck              |   0.000|
+------------+------------+------------------+--------+
+
+Clock chaser_rst to Pad
+------------+------------+------------------------------------------------------------------+--------+
+            | clk (edge) |                                                                  | Clock  |
+Destination |   to PAD   |Internal Clock(s)                                                 | Phase  |
+------------+------------+------------------------------------------------------------------+--------+
+chaser_led0 |   34.016(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   21.680(F)|manager_pm/fill_pm/generator_pm/basis_0_not0001                   |   0.000|
+chaser_led1 |   34.234(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   21.002(F)|manager_pm/fill_pm/generator_pm/basis_1_not0001                   |   0.000|
+chaser_led2 |   33.562(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   21.175(F)|manager_pm/fill_pm/generator_pm/basis_2_not0001                   |   0.000|
+chaser_led3 |   32.848(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   19.446(F)|manager_pm/fill_pm/generator_pm/basis_3_not0001                   |   0.000|
+chaser_led4 |   34.552(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   21.493(F)|manager_pm/fill_pm/generator_pm/basis_4_not0001                   |   0.000|
+chaser_led5 |   33.813(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   20.611(F)|manager_pm/fill_pm/generator_pm/basis_5_not0001                   |   0.000|
+chaser_led6 |   33.876(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   21.241(F)|manager_pm/fill_pm/generator_pm/basis_6_not0001                   |   0.000|
+chaser_led7 |   33.674(F)|manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>|   0.000|
+            |   20.985(F)|manager_pm/fill_pm/generator_pm/basis_7_not0001                   |   0.000|
+------------+------------+------------------------------------------------------------------+--------+
 
 Clock to Setup on destination clock chaser_clk_in
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_clk_in  |   17.073|         |         |         |
-chaser_rst     |   10.871|   10.871|         |         |
+chaser_clk_in  |   17.765|         |         |         |
+chaser_rst     |   12.583|   12.583|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock chaser_rst
@@ -56,11 +95,25 @@ Clock to Setup on destination clock chaser_rst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_rst     |         |         |    6.211|   15.590|
+chaser_rst     |         |         |    4.964|   17.968|
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+chaser_rst     |chaser_led0    |   18.329|
+chaser_rst     |chaser_led1    |   18.547|
+chaser_rst     |chaser_led2    |   17.875|
+chaser_rst     |chaser_led3    |   17.161|
+chaser_rst     |chaser_led4    |   18.865|
+chaser_rst     |chaser_led5    |   18.126|
+chaser_rst     |chaser_led6    |   18.189|
+chaser_rst     |chaser_led7    |   17.987|
+---------------+---------------+---------+
 
-Analysis completed Fri May 29 16:07:36 2015 
+
+Analysis completed Fri May 29 17:01:51 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

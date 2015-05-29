@@ -4,14 +4,14 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
@@ -112,10 +112,10 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/counter.vhd" in Library work.
 Architecture architecture_counter of Entity entity_counter is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill_generator.vhd" in Library work.
-Architecture architecture_fill_generator of Entity entity_fill_generator is up to date.
+Entity <entity_fill_generator> compiled.
+Entity <entity_fill_generator> (Architecture <architecture_fill_generator>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_bitcounter.vhd" in Library work.
-Entity <entity_bitcounter> compiled.
-Entity <entity_bitcounter> (Architecture <architecture_bitcounter>) compiled.
+Architecture architecture_bitcounter of Entity entity_bitcounter is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill.vhd" in Library work.
 Architecture architecture_fill of Entity entity_fill is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/dcm.vhd" in Library work.
@@ -127,8 +127,7 @@ Architecture architecture_manager of Entity entity_manager is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/led.vhd" in Library work.
 Architecture architecture_led of Entity entity_led is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" in Library work.
-Entity <entity_chaser> compiled.
-Entity <entity_chaser> (Architecture <architecture_chaser>) compiled.
+Architecture architecture_chaser of Entity entity_chaser is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -156,9 +155,9 @@ Analyzing hierarchy for entity <entity_fill_generator> in library <work> (archit
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <entity_chaser> in library <work> (Architecture <architecture_chaser>).
-WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 87: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'entity_dcm'.
-WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 87: Unconnected output port 'CLK0_OUT' of component 'entity_dcm'.
-WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 87: Unconnected output port 'LOCKED_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 88: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 88: Unconnected output port 'CLK0_OUT' of component 'entity_dcm'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd" line 88: Unconnected output port 'LOCKED_OUT' of component 'entity_dcm'.
 Entity <entity_chaser> analyzed. Unit <entity_chaser> generated.
 
 Analyzing Entity <entity_dcm> in library <work> (Architecture <architecture_dcm>).
@@ -186,8 +185,6 @@ Analyzing Entity <entity_clock_down> in library <work> (Architecture <architectu
 Entity <entity_clock_down> analyzed. Unit <entity_clock_down> generated.
 
 Analyzing Entity <entity_manager> in library <work> (Architecture <architecture_manager>).
-INFO:Xst:2679 - Register <clock_bitcounter> in unit <entity_manager> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <clock_fill> in unit <entity_manager> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <entity_manager> analyzed. Unit <entity_manager> generated.
 
 Analyzing Entity <entity_bitcounter> in library <work> (Architecture <architecture_bitcounter>).
@@ -316,38 +313,32 @@ Unit <entity_fill> synthesized.
 
 Synthesizing Unit <entity_manager>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/manager.vhd".
-WARNING:Xst:646 - Signal <clock_fill> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <clock_bitcounter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 8-bit register for signal <man_led>.
-    Found 32-bit register for signal <state_mode>.
-    Found 32-bit adder for signal <state_mode$addsub0000> created at line 85.
-    Found 32-bit comparator greatequal for signal <state_mode$cmp_ge0000> created at line 86.
-    Found 32-bit 4-to-1 multiplexer for signal <state_mode$mux0001>.
-    Summary:
-	inferred  40 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
-	inferred  32 Multiplexer(s).
+WARNING:Xst:1780 - Signal <clock_fill> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clock_bitcounter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <entity_manager> synthesized.
 
 
 Synthesizing Unit <entity_chaser>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/chaser.vhd".
-WARNING:Xst:1780 - Signal <mode> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <chaser_mode_pressed>.
     Found 1-bit register for signal <chaser_speed_down_pressed>.
     Found 1-bit register for signal <chaser_speed_up_pressed>.
     Found 1-bit register for signal <chaser_toggle_pressed>.
+    Found 32-bit up counter for signal <mode_current>.
+    Found 32-bit adder for signal <mode_current$addsub0000> created at line 173.
+    Found 32-bit comparator greater for signal <mode_current$cmp_gt0000> created at line 173.
     Found 32-bit register for signal <speed_current>.
-    Found 32-bit adder for signal <speed_current$addsub0000> created at line 138.
-    Found 32-bit subtractor for signal <speed_current$addsub0001> created at line 148.
-    Found 32-bit comparator greatequal for signal <speed_current$cmp_ge0000> created at line 138.
-    Found 32-bit comparator lessequal for signal <speed_current$cmp_le0000> created at line 148.
+    Found 32-bit adder for signal <speed_current$addsub0000> created at line 142.
+    Found 32-bit subtractor for signal <speed_current$addsub0001> created at line 152.
+    Found 32-bit comparator greatequal for signal <speed_current$cmp_ge0000> created at line 142.
+    Found 32-bit comparator lessequal for signal <speed_current$cmp_le0000> created at line 152.
     Found 32-bit 4-to-1 multiplexer for signal <speed_current$mux0003>.
     Found 1-bit register for signal <toggle_current>.
     Summary:
-	inferred   4 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   2 Comparator(s).
+	inferred   1 Counter(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
 	inferred  32 Multiplexer(s).
 Unit <entity_chaser> synthesized.
 
@@ -361,21 +352,23 @@ Macro Statistics
  32-bit adder                                          : 5
  32-bit addsub                                         : 2
  32-bit subtractor                                     : 4
-# Registers                                            : 76
- 1-bit register                                        : 70
- 32-bit register                                       : 5
- 8-bit register                                        : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 75
+ 1-bit register                                        : 71
+ 32-bit register                                       : 4
 # Latches                                              : 9
  1-bit latch                                           : 8
  32-bit latch                                          : 1
 # Comparators                                          : 26
  32-bit comparator equal                               : 1
- 32-bit comparator greatequal                          : 13
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 1
  32-bit comparator less                                : 8
  32-bit comparator lessequal                           : 3
  32-bit comparator not equal                           : 1
-# Multiplexers                                         : 7
- 32-bit 4-to-1 multiplexer                             : 7
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
 
 =========================================================================
 
@@ -417,19 +410,22 @@ Macro Statistics
  32-bit adder                                          : 5
  32-bit addsub                                         : 2
  32-bit subtractor                                     : 4
-# Registers                                            : 238
- Flip-Flops                                            : 238
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 199
+ Flip-Flops                                            : 199
 # Latches                                              : 9
  1-bit latch                                           : 8
  32-bit latch                                          : 1
 # Comparators                                          : 26
  32-bit comparator equal                               : 1
- 32-bit comparator greatequal                          : 13
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 1
  32-bit comparator less                                : 8
  32-bit comparator lessequal                           : 3
  32-bit comparator not equal                           : 1
-# Multiplexers                                         : 7
- 32-bit 4-to-1 multiplexer                             : 7
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
 
 =========================================================================
 
@@ -460,7 +456,7 @@ WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_11> of sequential type
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_10> of sequential type is unconnected in block <entity_manager>.
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_9> of sequential type is unconnected in block <entity_manager>.
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_8> of sequential type is unconnected in block <entity_manager>.
-WARNING:Xst:2170 - Unit entity_fill_generator : the following signal(s) form a combinatorial loop: Mcompar_count_to_cmp_eq0000_cy<3>, Mcompar_count_to_cmp_eq0000_lut<0>, val_out<7>, Mcompar_count_to_cmp_eq0000_cy<6>, Mcompar_count_to_cmp_eq0000_cy<4>, Mcompar_count_to_cmp_eq0000_cy<9>, shift<0>, Mcompar_count_to_cmp_eq0000_cy<2>, Mcompar_count_to_cmp_eq0000_cy<1>, Mcompar_count_to_cmp_eq0000_cy<15>, Mcompar_count_to_cmp_eq0000_cy<5>, Mcompar_count_to_cmp_eq0000_cy<7>, Mcompar_count_to_cmp_eq0000_cy<14>, Mcompar_count_to_cmp_eq0000_cy<0>, Mcompar_count_to_cmp_eq0000_cy<8>, Mcompar_count_to_cmp_eq0000_cy<10>, Mcompar_count_to_cmp_eq0000_cy<13>, Mcompar_count_to_cmp_eq0000_cy<12>, Mcompar_count_to_cmp_eq0000_cy<11>.
+WARNING:Xst:2170 - Unit entity_fill_generator : the following signal(s) form a combinatorial loop: shift<0>, Mcompar_count_to_cmp_eq0000_cy<4>, Mcompar_count_to_cmp_eq0000_lut<0>, Mcompar_count_to_cmp_eq0000_cy<6>, Mcompar_count_to_cmp_eq0000_cy<2>, Mcompar_count_to_cmp_eq0000_cy<3>, Mcompar_count_to_cmp_eq0000_cy<11>, Mcompar_count_to_cmp_eq0000_cy<12>, Mcompar_count_to_cmp_eq0000_cy<10>, Mcompar_count_to_cmp_eq0000_cy<9>, Mcompar_count_to_cmp_eq0000_cy<5>, Mcompar_count_to_cmp_eq0000_cy<15>, Mcompar_count_to_cmp_eq0000_cy<8>, val_out<7>, Mcompar_count_to_cmp_eq0000_cy<13>, Mcompar_count_to_cmp_eq0000_cy<1>, Mcompar_count_to_cmp_eq0000_cy<7>, Mcompar_count_to_cmp_eq0000_cy<0>, Mcompar_count_to_cmp_eq0000_cy<14>.
 
 Optimizing unit <entity_chaser> ...
 WARNING:Xst:1293 - FF/Latch <speed_current_4> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
@@ -482,7 +478,7 @@ Optimizing unit <entity_manager> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block entity_chaser, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block entity_chaser, actual ratio is 2.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<2> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<3> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
@@ -499,8 +495,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 209
- Flip-Flops                                            : 209
+# Registers                                            : 202
+ Flip-Flops                                            : 202
 
 =========================================================================
 
@@ -529,26 +525,26 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 1797
+# BELS                             : 1865
 #      GND                         : 1
-#      INV                         : 139
-#      LUT1                        : 135
-#      LUT2                        : 173
+#      INV                         : 138
+#      LUT1                        : 134
+#      LUT2                        : 214
 #      LUT2_D                      : 2
 #      LUT2_L                      : 12
-#      LUT3                        : 100
+#      LUT3                        : 93
 #      LUT3_L                      : 15
-#      LUT4                        : 267
+#      LUT4                        : 235
 #      MULT_AND                    : 51
-#      MUXCY                       : 557
-#      MUXF5                       : 2
+#      MUXCY                       : 587
+#      MUXF5                       : 9
 #      VCC                         : 1
-#      XORCY                       : 342
-# FlipFlops/Latches                : 249
-#      FDC                         : 105
-#      FDCE                        : 15
+#      XORCY                       : 373
+# FlipFlops/Latches                : 242
+#      FDC                         : 73
+#      FDCE                        : 48
 #      FDCP                        : 64
-#      FDE                         : 13
+#      FDE                         : 5
 #      FDPE                        : 12
 #      LD                          : 8
 #      LDC                         : 29
@@ -577,8 +573,8 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                      484  out of  16640     2%  
- Number of Slice Flip Flops:            249  out of  33280     0%  
+ Number of Slices:                      481  out of  16640     2%  
+ Number of Slice Flip Flops:            242  out of  33280     0%  
  Number of 4 input LUTs:                843  out of  33280     2%  
  Number of IOs:                          14
  Number of bonded IOBs:                  14  out of    519     2%  
@@ -606,7 +602,7 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
 Clock Signal                                                                                                                             | Clock buffer(FF name)                              | Load  |
 -----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
-dcm_pm/CLKDV_BUF                                                                                                                         | BUFG                                               | 65    |
+dcm_pm/CLKDV_BUF                                                                                                                         | BUFG                                               | 98    |
 manager_pm/fill_pm/generator_pm/basis_7_not0001(manager_pm/fill_pm/generator_pm/basis_7_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_7)   | 1     |
 manager_pm/fill_pm/generator_pm/basis_6_not0001(manager_pm/fill_pm/generator_pm/basis_6_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_6)   | 1     |
 manager_pm/fill_pm/generator_pm/basis_5_not0001(manager_pm/fill_pm/generator_pm/basis_5_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_5)   | 1     |
@@ -616,7 +612,7 @@ manager_pm/fill_pm/generator_pm/basis_2_not0001(manager_pm/fill_pm/generator_pm/
 manager_pm/fill_pm/generator_pm/basis_1_not0001(manager_pm/fill_pm/generator_pm/basis_1_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_1)   | 1     |
 manager_pm/fill_pm/generator_pm/basis_0_not0001(manager_pm/fill_pm/generator_pm/basis_0_not00011:O)                                      | NONE(*)(manager_pm/fill_pm/generator_pm/basis_0)   | 1     |
 manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1(manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>:O)| BUFG(*)(manager_pm/fill_pm/generator_pm/count_to_0)| 32    |
-clock_down_pm/clk_out1                                                                                                                   | BUFG                                               | 144   |
+clock_down_pm/clk_out1                                                                                                                   | BUFG                                               | 104   |
 -----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
 (*) These 9 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -625,14 +621,14 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
-Control Signal                                                                                                 | Buffer(FF name)                                     | Load  |
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
-clock_down_pm/clk_rst_inv(rst1_INV_0:O)                                                                        | NONE(speed_current_22)                              | 217   |
-N0(XST_GND:G)                                                                                                  | NONE(manager_pm/bitcounter_pm/counter_pm/counter_29)| 53    |
-manager_pm/bitcounter_pm/counter_pm/counter_0_and0000(manager_pm/bitcounter_pm/counter_pm/counter_0_and00001:O)| NONE(manager_pm/fill_pm/counter_pm/counter_5)       | 11    |
-manager_pm/bitcounter_pm/counter_pm/counter_0_and0001(manager_pm/bitcounter_pm/counter_pm/counter_0_and00011:O)| NONE(manager_pm/fill_pm/counter_pm/counter_5)       | 11    |
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+Control Signal                                                                                                 | Buffer(FF name)                               | Load  |
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+chaser_rst_inv(manager_pm/fill_pm/generator_pm/count_to_0_0_not00001_INV_0:O)                                  | NONE(speed_current_9)                         | 218   |
+N0(XST_GND:G)                                                                                                  | NONE(manager_pm/fill_pm/counter_pm/counter_27)| 53    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0000(manager_pm/bitcounter_pm/counter_pm/counter_0_and00001:O)| NONE(manager_pm/fill_pm/counter_pm/counter_1) | 11    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0001(manager_pm/bitcounter_pm/counter_pm/counter_0_and00011:O)| NONE(manager_pm/fill_pm/counter_pm/counter_1) | 11    |
+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -640,8 +636,8 @@ Speed Grade: -4
 
    Minimum period: 16.732ns (Maximum Frequency: 59.767MHz)
    Minimum input arrival time before clock: 11.827ns
-   Maximum output required time after clock: 5.531ns
-   Maximum combinational path delay: 4.081ns
+   Maximum output required time after clock: 17.279ns
+   Maximum combinational path delay: 14.352ns
 
 Timing Detail:
 --------------
@@ -650,7 +646,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dcm_pm/CLKDV_BUF'
   Clock period: 16.732ns (frequency: 59.767MHz)
-  Total number of paths / destination ports: 4366307 / 97
+  Total number of paths / destination ports: 4679909 / 163
 -------------------------------------------------------------------------
 Delay:               16.732ns (Levels of Logic = 58)
   Source:            speed_current_6 (FF)
@@ -728,10 +724,10 @@ Delay:               16.732ns (Levels of Logic = 58)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1'
-  Clock period: 10.016ns (frequency: 99.838MHz)
+  Clock period: 10.084ns (frequency: 99.164MHz)
   Total number of paths / destination ports: 16896 / 32
 -------------------------------------------------------------------------
-Delay:               10.016ns (Levels of Logic = 35)
+Delay:               10.084ns (Levels of Logic = 35)
   Source:            manager_pm/fill_pm/generator_pm/count_to_0 (LATCH)
   Destination:       manager_pm/fill_pm/generator_pm/count_to_0 (LATCH)
   Source Clock:      manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1 falling
@@ -775,17 +771,17 @@ Delay:               10.016ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<4> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<5> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<6> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<6>)
-     MUXCY:CI->O          48   0.269   1.347  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<7> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001)
-     LUT2:I1->O            1   0.643   0.000  manager_pm/fill_pm/generator_pm/count_to_mux0002<9>1 (manager_pm/fill_pm/generator_pm/count_to_mux0002<9>)
+     MUXCY:CI->O          48   0.269   1.410  manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001_wg_cy<7> (manager_pm/fill_pm/generator_pm/count_to_cmp_eq0001)
+     LUT2:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/count_to_mux0002<9>1 (manager_pm/fill_pm/generator_pm/count_to_mux0002<9>)
      LDC:D                     0.252          manager_pm/fill_pm/generator_pm/count_to_22
     ----------------------------------------
-    Total                     10.016ns (7.116ns logic, 2.900ns route)
-                                       (71.0% logic, 29.0% route)
+    Total                     10.084ns (7.121ns logic, 2.963ns route)
+                                       (70.6% logic, 29.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_down_pm/clk_out1'
   Clock period: 15.393ns (frequency: 64.966MHz)
-  Total number of paths / destination ports: 1971281 / 144
+  Total number of paths / destination ports: 1814208 / 104
 -------------------------------------------------------------------------
 Delay:               15.393ns (Levels of Logic = 68)
   Source:            manager_pm/fill_pm/counter_pm/counter_0 (FF)
@@ -873,7 +869,7 @@ Delay:               15.393ns (Levels of Logic = 68)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_pm/CLKDV_BUF'
-  Total number of paths / destination ports: 17032 / 62
+  Total number of paths / destination ports: 17066 / 96
 -------------------------------------------------------------------------
 Offset:              11.827ns (Levels of Logic = 33)
   Source:            chaser_speed_down (PAD)
@@ -926,7 +922,7 @@ Offset:              11.827ns (Levels of Logic = 33)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_7_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_7 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_7_not0001 falling
@@ -935,7 +931,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -957,14 +953,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_7_mux00041 (manager_pm/fill_pm/generator_pm/basis_7_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_7
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_6_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_6 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_6_not0001 falling
@@ -973,7 +969,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -995,14 +991,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_6_mux00041 (manager_pm/fill_pm/generator_pm/basis_6_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_6
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_5_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_5 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_5_not0001 falling
@@ -1011,7 +1007,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1033,14 +1029,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_5_mux00041 (manager_pm/fill_pm/generator_pm/basis_5_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_5
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_4_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_4 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_4_not0001 falling
@@ -1049,7 +1045,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1071,14 +1067,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_4_mux00041 (manager_pm/fill_pm/generator_pm/basis_4_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_4
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_3_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_3 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_3_not0001 falling
@@ -1087,7 +1083,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1109,14 +1105,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_3_mux00041 (manager_pm/fill_pm/generator_pm/basis_3_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_3
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_2_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_2 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_2_not0001 falling
@@ -1125,7 +1121,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1147,14 +1143,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_2_mux00041 (manager_pm/fill_pm/generator_pm/basis_2_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_2
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_1_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_1 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_1_not0001 falling
@@ -1163,7 +1159,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1185,14 +1181,14 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_1_mux00041 (manager_pm/fill_pm/generator_pm/basis_1_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_1
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'manager_pm/fill_pm/generator_pm/basis_0_not0001'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              7.931ns (Levels of Logic = 20)
+Offset:              7.928ns (Levels of Logic = 20)
   Source:            chaser_rst (PAD)
   Destination:       manager_pm/fill_pm/generator_pm/basis_0 (LATCH)
   Destination Clock: manager_pm/fill_pm/generator_pm/basis_0_not0001 falling
@@ -1201,7 +1197,7 @@ Offset:              7.931ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1223,23 +1219,300 @@ Offset:              7.931ns (Levels of Logic = 20)
      LUT4:I3->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/basis_0_mux00041 (manager_pm/fill_pm/generator_pm/basis_0_mux0004)
      LD:D                      0.252          manager_pm/fill_pm/generator_pm/basis_0
     ----------------------------------------
-    Total                      7.931ns (4.856ns logic, 3.075ns route)
+    Total                      7.928ns (4.856ns logic, 3.072ns route)
                                        (61.2% logic, 38.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_down_pm/clk_out1'
-  Total number of paths / destination ports: 312 / 48
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_pm/CLKDV_BUF'
+  Total number of paths / destination ports: 473 / 8
 -------------------------------------------------------------------------
-Offset:              10.602ns (Levels of Logic = 22)
-  Source:            chaser_rst (PAD)
-  Destination:       manager_pm/man_led_7 (FF)
-  Destination Clock: clock_down_pm/clk_out1 rising
+Offset:              10.228ns (Levels of Logic = 12)
+  Source:            mode_current_23 (FF)
+  Destination:       chaser_led1 (PAD)
+  Source Clock:      dcm_pm/CLKDV_BUF rising
 
-  Data Path: chaser_rst to manager_pm/man_led_7
+  Data Path: mode_current_23 to chaser_led1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.407  chaser_rst_IBUF (chaser_rst_IBUF)
+     FDCE:C->Q             3   0.591   0.674  mode_current_23 (mode_current_23)
+     LUT3:I0->O            1   0.648   0.000  manager_pm/man_led_and0000_wg_lut<0> (manager_pm/man_led_and0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/man_led_and0000_wg_cy<0> (manager_pm/man_led_and0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<1> (manager_pm/man_led_and0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<2> (manager_pm/man_led_and0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<3> (manager_pm/man_led_and0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<4> (manager_pm/man_led_and0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<5> (manager_pm/man_led_and0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/man_led_and0000_wg_cy<6> (manager_pm/man_led_and0000_wg_cy<6>)
+     MUXCY:CI->O          15   0.269   1.160  manager_pm/man_led_and0000_wg_cy<7> (manager_pm/man_led_and0000)
+     LUT4:I0->O            1   0.648   0.000  manager_pm/man_led<7>1 (manager_pm/man_led<7>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<7>_f5 (chaser_led7_OBUF)
+     OBUF:I->O                 4.520          chaser_led7_OBUF (chaser_led7)
+    ----------------------------------------
+    Total                     10.228ns (7.974ns logic, 2.254ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_0_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.979ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_0 (LATCH)
+  Destination:       chaser_led0 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_0_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_0 to chaser_led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.563  manager_pm/fill_pm/generator_pm/basis_0 (manager_pm/fill_pm/generator_pm/basis_0)
+     LUT4:I0->O            1   0.648   0.452  manager_pm/man_led<0>_SW0 (N35)
+     LUT4:I2->O            1   0.648   0.420  manager_pm/man_led<0> (chaser_led0_OBUF)
+     OBUF:I->O                 4.520          chaser_led0_OBUF (chaser_led0)
+    ----------------------------------------
+    Total                      7.979ns (6.544ns logic, 1.435ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_down_pm/clk_out1'
+  Total number of paths / destination ports: 257 / 8
+-------------------------------------------------------------------------
+Offset:              10.789ns (Levels of Logic = 13)
+  Source:            manager_pm/fill_pm/counter_pm/cnt_out_3 (FF)
+  Destination:       chaser_led0 (PAD)
+  Source Clock:      clock_down_pm/clk_out1 rising
+
+  Data Path: manager_pm/fill_pm/counter_pm/cnt_out_3 to chaser_led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.591   0.900  manager_pm/fill_pm/counter_pm/cnt_out_3 (manager_pm/fill_pm/counter_pm/cnt_out_3)
+     LUT1:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<0>_4_rt (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<0>_4_rt)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<0>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<0>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<1>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<1>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<2>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<2>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<3>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<3>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<4>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<4>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<5>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<5>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<6>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<6>5)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<7>_4 (manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<7>5)
+     MUXCY:CI->O           3   0.269   0.611  manager_pm/fill_pm/generator_pm/Mcompar_basis_6_cmp_ge0000_cy<8>_4 (manager_pm/fill_pm/generator_pm/basis_0_cmp_ge0000)
+     LUT4:I1->O            1   0.643   0.452  manager_pm/man_led<0>_SW0 (N35)
+     LUT4:I2->O            1   0.648   0.420  manager_pm/man_led<0> (chaser_led0_OBUF)
+     OBUF:I->O                 4.520          chaser_led0_OBUF (chaser_led0)
+    ----------------------------------------
+    Total                     10.789ns (8.406ns logic, 2.383ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1'
+  Total number of paths / destination ports: 11648 / 8
+-------------------------------------------------------------------------
+Offset:              17.279ns (Levels of Logic = 31)
+  Source:            manager_pm/fill_pm/generator_pm/count_to_24 (LATCH)
+  Destination:       chaser_led1 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/count_to_24 to chaser_led1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.728   0.590  manager_pm/fill_pm/generator_pm/count_to_24 (manager_pm/fill_pm/generator_pm/count_to_24)
+     LUT3:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_lut<0> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<0> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<1> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<2> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<3> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<4> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<5> (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<5>)
+     MUXCY:CI->O           8   0.269   0.789  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321_wg_cy<6> (manager_pm/fill_pm/generator_pm/N11)
+     LUT4:I2->O            4   0.648   0.619  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq003251 (manager_pm/fill_pm/generator_pm/N24)
+     LUT3:I2->O            1   0.648   0.500  manager_pm/fill_pm/generator_pm/mux0000_cmp_eq00321 (manager_pm/fill_pm/generator_pm/mux0000_cmp_eq0032)
+     LUT4:I1->O            1   0.643   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
+     MUXCY:CI->O          20   0.269   1.134  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
+     LUT3:I2->O            7   0.648   0.788  manager_pm/fill_pm/generator_pm/val_out<1>21 (manager_pm/fill_pm/generator_pm/N4)
+     LUT4:I1->O            1   0.643   0.000  manager_pm/man_led<7>1 (manager_pm/man_led<7>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<7>_f5 (chaser_led7_OBUF)
+     OBUF:I->O                 4.520          chaser_led7_OBUF (chaser_led7)
+    ----------------------------------------
+    Total                     17.279ns (12.439ns logic, 4.840ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_1_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_1 (LATCH)
+  Destination:       chaser_led1 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_1_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_1 to chaser_led1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_1 (manager_pm/fill_pm/generator_pm/basis_1)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<1>1 (manager_pm/man_led<1>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<1>_f5 (chaser_led1_OBUF)
+     OBUF:I->O                 4.520          chaser_led1_OBUF (chaser_led1)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_2_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_2 (LATCH)
+  Destination:       chaser_led2 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_2_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_2 to chaser_led2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_2 (manager_pm/fill_pm/generator_pm/basis_2)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<2>1 (manager_pm/man_led<2>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<2>_f5 (chaser_led2_OBUF)
+     OBUF:I->O                 4.520          chaser_led2_OBUF (chaser_led2)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_3_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_3 (LATCH)
+  Destination:       chaser_led3 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_3_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_3 to chaser_led3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_3 (manager_pm/fill_pm/generator_pm/basis_3)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<3>1 (manager_pm/man_led<3>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<3>_f5 (chaser_led3_OBUF)
+     OBUF:I->O                 4.520          chaser_led3_OBUF (chaser_led3)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_4_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_4 (LATCH)
+  Destination:       chaser_led4 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_4_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_4 to chaser_led4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_4 (manager_pm/fill_pm/generator_pm/basis_4)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<4>1 (manager_pm/man_led<4>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<4>_f5 (chaser_led4_OBUF)
+     OBUF:I->O                 4.520          chaser_led4_OBUF (chaser_led4)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_5_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_5 (LATCH)
+  Destination:       chaser_led5 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_5_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_5 to chaser_led5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_5 (manager_pm/fill_pm/generator_pm/basis_5)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<5>1 (manager_pm/man_led<5>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<5>_f5 (chaser_led5_OBUF)
+     OBUF:I->O                 4.520          chaser_led5_OBUF (chaser_led5)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_6_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_6 (LATCH)
+  Destination:       chaser_led6 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_6_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_6 to chaser_led6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_6 (manager_pm/fill_pm/generator_pm/basis_6)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<6>1 (manager_pm/man_led<6>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<6>_f5 (chaser_led6_OBUF)
+     OBUF:I->O                 4.520          chaser_led6_OBUF (chaser_led6)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'manager_pm/fill_pm/generator_pm/basis_7_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.015ns (Levels of Logic = 3)
+  Source:            manager_pm/fill_pm/generator_pm/basis_7 (LATCH)
+  Destination:       chaser_led7 (PAD)
+  Source Clock:      manager_pm/fill_pm/generator_pm/basis_7_not0001 falling
+
+  Data Path: manager_pm/fill_pm/generator_pm/basis_7 to chaser_led7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.423  manager_pm/fill_pm/generator_pm/basis_7 (manager_pm/fill_pm/generator_pm/basis_7)
+     LUT4:I3->O            1   0.648   0.000  manager_pm/man_led<7>1 (manager_pm/man_led<7>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<7>_f5 (chaser_led7_OBUF)
+     OBUF:I->O                 4.520          chaser_led7_OBUF (chaser_led7)
+    ----------------------------------------
+    Total                      7.015ns (6.172ns logic, 0.843ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 19 / 11
+-------------------------------------------------------------------------
+Delay:               14.352ns (Levels of Logic = 23)
+  Source:            chaser_rst (PAD)
+  Destination:       chaser_led1 (PAD)
+
+  Data Path: chaser_rst to chaser_led1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.849   1.404  chaser_rst_IBUF (chaser_rst_IBUF)
      LUT2:I0->O            1   0.648   0.563  manager_pm/fill_pm/generator_pm/Mmux_shift_mux00011101 (manager_pm/fill_pm/generator_pm/shift<0>)
      LUT4:I0->O            1   0.648   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<0>)
@@ -1258,64 +1531,26 @@ Offset:              10.602ns (Levels of Logic = 22)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<13>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<14>)
      MUXCY:CI->O          20   0.269   1.134  manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15> (manager_pm/fill_pm/generator_pm/Mcompar_count_to_cmp_eq0000_cy<15>1)
-     LUT3:I2->O            7   0.648   0.851  manager_pm/fill_pm/generator_pm/val_out<1>21 (manager_pm/fill_pm/generator_pm/N4)
-     LUT3:I0->O            1   0.648   0.500  manager_pm/man_led_mux0002<4>_SW2 (N79)
-     LUT4:I1->O            1   0.643   0.000  manager_pm/man_led_mux0002<4> (manager_pm/man_led_mux0002<4>)
-     FDE:D                     0.252          manager_pm/man_led_4
+     LUT3:I2->O            7   0.648   0.788  manager_pm/fill_pm/generator_pm/val_out<1>21 (manager_pm/fill_pm/generator_pm/N4)
+     LUT4:I1->O            1   0.643   0.000  manager_pm/man_led<7>1 (manager_pm/man_led<7>)
+     MUXF5:I1->O           1   0.276   0.420  manager_pm/man_led<7>_f5 (chaser_led7_OBUF)
+     OBUF:I->O                 4.520          chaser_led7_OBUF (chaser_led7)
     ----------------------------------------
-    Total                     10.602ns (6.147ns logic, 4.455ns route)
-                                       (58.0% logic, 42.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_down_pm/clk_out1'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              5.531ns (Levels of Logic = 1)
-  Source:            manager_pm/man_led_0 (FF)
-  Destination:       chaser_led0 (PAD)
-  Source Clock:      clock_down_pm/clk_out1 rising
-
-  Data Path: manager_pm/man_led_0 to chaser_led0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.420  manager_pm/man_led_0 (manager_pm/man_led_0)
-     OBUF:I->O                 4.520          chaser_led0_OBUF (chaser_led0)
-    ----------------------------------------
-    Total                      5.531ns (5.111ns logic, 0.420ns route)
-                                       (92.4% logic, 7.6% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Delay:               4.081ns (Levels of Logic = 2)
-  Source:            chaser_rst (PAD)
-  Destination:       dcm_pm/DCM_SP_INST:RST (PAD)
-
-  Data Path: chaser_rst to dcm_pm/DCM_SP_INST:RST
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            37   0.849   1.264  chaser_rst_IBUF (chaser_rst_IBUF)
-     INV:I->O            217   0.648   1.321  rst1_INV_0 (clock_down_pm/clk_rst_inv)
-    DCM_SP:RST                 0.000          dcm_pm/DCM_SP_INST
-    ----------------------------------------
-    Total                      4.081ns (1.497ns logic, 2.584ns route)
-                                       (36.7% logic, 63.3% route)
+    Total                     14.352ns (10.043ns logic, 4.309ns route)
+                                       (70.0% logic, 30.0% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 23.56 secs
+Total CPU time to Xst completion: 23.80 secs
  
 --> 
 
 
-Total memory usage is 218052 kilobytes
+Total memory usage is 216720 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   76 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :   75 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 
