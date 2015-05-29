@@ -39,7 +39,7 @@ begin
         cnt_in      => fill_in,
         cnt_toggle    => fill_toggle,
         cnt_rst     => fill_rst,
-        cnt_limit   => 35,
+        cnt_limit   => 36,
         cnt_out		=> counter_to_generator
     );
 

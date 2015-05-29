@@ -4,15 +4,15 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/prakti01_03_lauflicht/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> 
 Reading design: entity_chaser.prj
@@ -112,12 +112,12 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/counter.vhd" in Library work.
 Architecture architecture_counter of Entity entity_counter is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill_generator.vhd" in Library work.
-Entity <entity_fill_generator> compiled.
-Entity <entity_fill_generator> (Architecture <architecture_fill_generator>) compiled.
+Architecture architecture_fill_generator of Entity entity_fill_generator is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_bitcounter.vhd" in Library work.
 Architecture architecture_bitcounter of Entity entity_bitcounter is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/mode_fill.vhd" in Library work.
-Architecture architecture_fill of Entity entity_fill is up to date.
+Entity <entity_fill> compiled.
+Entity <entity_fill> (Architecture <architecture_fill>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/dcm.vhd" in Library work.
 Architecture architecture_dcm of Entity entity_dcm is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/03/files/clock_down.vhd" in Library work.
@@ -456,7 +456,7 @@ WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_11> of sequential type
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_10> of sequential type is unconnected in block <entity_manager>.
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_9> of sequential type is unconnected in block <entity_manager>.
 WARNING:Xst:2677 - Node <bitcounter_pm/counter_pm/cnt_out_8> of sequential type is unconnected in block <entity_manager>.
-WARNING:Xst:2170 - Unit entity_fill_generator : the following signal(s) form a combinatorial loop: shift<0>, Mcompar_count_to_cmp_eq0000_cy<4>, Mcompar_count_to_cmp_eq0000_lut<0>, Mcompar_count_to_cmp_eq0000_cy<6>, Mcompar_count_to_cmp_eq0000_cy<2>, Mcompar_count_to_cmp_eq0000_cy<3>, Mcompar_count_to_cmp_eq0000_cy<11>, Mcompar_count_to_cmp_eq0000_cy<12>, Mcompar_count_to_cmp_eq0000_cy<10>, Mcompar_count_to_cmp_eq0000_cy<9>, Mcompar_count_to_cmp_eq0000_cy<5>, Mcompar_count_to_cmp_eq0000_cy<15>, Mcompar_count_to_cmp_eq0000_cy<8>, val_out<7>, Mcompar_count_to_cmp_eq0000_cy<13>, Mcompar_count_to_cmp_eq0000_cy<1>, Mcompar_count_to_cmp_eq0000_cy<7>, Mcompar_count_to_cmp_eq0000_cy<0>, Mcompar_count_to_cmp_eq0000_cy<14>.
+WARNING:Xst:2170 - Unit entity_fill_generator : the following signal(s) form a combinatorial loop: Mcompar_count_to_cmp_eq0000_cy<14>, Mcompar_count_to_cmp_eq0000_cy<1>, Mcompar_count_to_cmp_eq0000_cy<8>, Mcompar_count_to_cmp_eq0000_cy<9>, Mcompar_count_to_cmp_eq0000_cy<7>, Mcompar_count_to_cmp_eq0000_cy<5>, Mcompar_count_to_cmp_eq0000_cy<15>, Mcompar_count_to_cmp_eq0000_cy<3>, Mcompar_count_to_cmp_eq0000_cy<0>, val_out<7>, Mcompar_count_to_cmp_eq0000_cy<12>, Mcompar_count_to_cmp_eq0000_cy<4>, Mcompar_count_to_cmp_eq0000_cy<13>, Mcompar_count_to_cmp_eq0000_cy<6>, Mcompar_count_to_cmp_eq0000_lut<0>, shift<0>, Mcompar_count_to_cmp_eq0000_cy<11>, Mcompar_count_to_cmp_eq0000_cy<10>, Mcompar_count_to_cmp_eq0000_cy<2>.
 
 Optimizing unit <entity_chaser> ...
 WARNING:Xst:1293 - FF/Latch <speed_current_4> has a constant value of 0 in block <entity_chaser>. This FF/Latch will be trimmed during the optimization process.
@@ -486,7 +486,7 @@ PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share000
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<6> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<7> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
-PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<2> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 
 Final Macro Processing ...
@@ -525,21 +525,21 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 1865
+# BELS                             : 1863
 #      GND                         : 1
 #      INV                         : 138
-#      LUT1                        : 134
-#      LUT2                        : 214
+#      LUT1                        : 135
+#      LUT2                        : 213
 #      LUT2_D                      : 2
 #      LUT2_L                      : 12
-#      LUT3                        : 93
+#      LUT3                        : 92
 #      LUT3_L                      : 15
 #      LUT4                        : 235
-#      MULT_AND                    : 51
+#      MULT_AND                    : 52
 #      MUXCY                       : 587
 #      MUXF5                       : 9
 #      VCC                         : 1
-#      XORCY                       : 373
+#      XORCY                       : 371
 # FlipFlops/Latches                : 242
 #      FDC                         : 73
 #      FDCE                        : 48
@@ -565,7 +565,7 @@ PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share000
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<6> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_lut<7> driving carry manager_pm/bitcounter_pm/counter_pm/Maddsub_counter_share0000_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
-PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<1> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<2> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_lut<5> driving carry manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
 
 Device utilization summary:
@@ -575,7 +575,7 @@ Selected Device : 3sd1800afg676-4
 
  Number of Slices:                      481  out of  16640     2%  
  Number of Slice Flip Flops:            242  out of  33280     0%  
- Number of 4 input LUTs:                843  out of  33280     2%  
+ Number of 4 input LUTs:                842  out of  33280     2%  
  Number of IOs:                          14
  Number of bonded IOBs:                  14  out of    519     2%  
  Number of GCLKs:                         4  out of     24    16%  
@@ -621,14 +621,14 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
-Control Signal                                                                                                 | Buffer(FF name)                               | Load  |
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
-chaser_rst_inv(manager_pm/fill_pm/generator_pm/count_to_0_0_not00001_INV_0:O)                                  | NONE(speed_current_9)                         | 218   |
-N0(XST_GND:G)                                                                                                  | NONE(manager_pm/fill_pm/counter_pm/counter_27)| 53    |
-manager_pm/bitcounter_pm/counter_pm/counter_0_and0000(manager_pm/bitcounter_pm/counter_pm/counter_0_and00001:O)| NONE(manager_pm/fill_pm/counter_pm/counter_1) | 11    |
-manager_pm/bitcounter_pm/counter_pm/counter_0_and0001(manager_pm/bitcounter_pm/counter_pm/counter_0_and00011:O)| NONE(manager_pm/fill_pm/counter_pm/counter_1) | 11    |
----------------------------------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+Control Signal                                                                                                 | Buffer(FF name)                                    | Load  |
+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+chaser_rst_inv(manager_pm/fill_pm/generator_pm/count_to_0_0_not00001_INV_0:O)                                  | NONE(speed_current_12)                             | 219   |
+N0(XST_GND:G)                                                                                                  | NONE(manager_pm/fill_pm/counter_pm/counter_3)      | 54    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0000(manager_pm/bitcounter_pm/counter_pm/counter_0_and00001:O)| NONE(manager_pm/bitcounter_pm/counter_pm/counter_0)| 10    |
+manager_pm/bitcounter_pm/counter_pm/counter_0_and0001(manager_pm/bitcounter_pm/counter_pm/counter_0_and00011:O)| NONE(manager_pm/bitcounter_pm/counter_pm/counter_0)| 10    |
+---------------------------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -780,10 +780,10 @@ Delay:               10.084ns (Levels of Logic = 35)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_down_pm/clk_out1'
-  Clock period: 15.393ns (frequency: 64.966MHz)
-  Total number of paths / destination ports: 1814208 / 104
+  Clock period: 15.477ns (frequency: 64.612MHz)
+  Total number of paths / destination ports: 1814016 / 104
 -------------------------------------------------------------------------
-Delay:               15.393ns (Levels of Logic = 68)
+Delay:               15.477ns (Levels of Logic = 70)
   Source:            manager_pm/fill_pm/counter_pm/counter_0 (FF)
   Destination:       manager_pm/fill_pm/counter_pm/counter_31 (FF)
   Source Clock:      clock_down_pm/clk_out1 rising
@@ -828,10 +828,12 @@ Delay:               15.393ns (Levels of Logic = 68)
      XORCY:CI->O           1   0.844   0.452  manager_pm/fill_pm/counter_pm/Msub_counter_addsub0001_xor<30> (manager_pm/fill_pm/counter_pm/counter_addsub0001<30>)
      LUT3:I2->O            1   0.648   0.000  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7> (manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_lut<7>)
      MUXCY:S->O            1   0.632   0.000  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7> (manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<7>)
-     MUXCY:CI->O           5   0.269   0.713  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<8> (manager_pm/fill_pm/counter_pm/counter_cmp_le0000)
-     LUT2:I1->O           30   0.643   1.262  manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011)
-     MULT_AND:I1->LO       0   0.654   0.000  manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand (manager_pm/fill_pm/counter_pm/counter_mux0004<2>_mand1)
-     MUXCY:DI->O           1   0.787   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
+     MUXCY:CI->O           4   0.269   0.667  manager_pm/fill_pm/counter_pm/Mcompar_counter_cmp_le0000_cy<8> (manager_pm/fill_pm/counter_pm/counter_cmp_le0000)
+     LUT2:I1->O           31   0.643   1.262  manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011_1 (manager_pm/fill_pm/counter_pm/Mmux_counter_mux00041011)
+     MULT_AND:I1->LO       0   0.654   0.000  manager_pm/fill_pm/counter_pm/counter_mux0004<0>_mand (manager_pm/fill_pm/counter_pm/counter_mux0004<0>_mand1)
+     MUXCY:DI->O           1   0.787   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<0> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5> (manager_pm/fill_pm/counter_pm/Maddsub_counter_share0000_cy<5>)
@@ -864,8 +866,8 @@ Delay:               15.393ns (Levels of Logic = 68)
      LUT2:I1->O            2   0.643   0.000  manager_pm/fill_pm/counter_pm/Mmux_counter_mux0002251 (manager_pm/fill_pm/counter_pm/counter_mux0002<31>)
      FDCP:D                    0.252          manager_pm/fill_pm/counter_pm/counter_31
     ----------------------------------------
-    Total                     15.393ns (11.792ns logic, 3.601ns route)
-                                       (76.6% logic, 23.4% route)
+    Total                     15.477ns (11.922ns logic, 3.555ns route)
+                                       (77.0% logic, 23.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_pm/CLKDV_BUF'
@@ -1542,13 +1544,13 @@ Delay:               14.352ns (Levels of Logic = 23)
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 23.80 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 22.76 secs
  
 --> 
 
 
-Total memory usage is 216720 kilobytes
+Total memory usage is 216712 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   75 (   0 filtered)

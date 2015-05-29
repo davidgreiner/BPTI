@@ -11,7 +11,7 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri May 29 17:00:36 2015
+Mapped Date    : Fri May 29 17:14:36 2015
 
 Design Summary
 --------------
@@ -21,21 +21,21 @@ Logic Utilization:
   Total Number Slice Registers:         242 out of  33,280    1%
     Number used as Flip Flops:          202
     Number used as Latches:              40
-  Number of 4 input LUTs:               701 out of  33,280    2%
+  Number of 4 input LUTs:               699 out of  33,280    2%
 Logic Distribution:
-  Number of occupied Slices:            450 out of  16,640    2%
-    Number of Slices containing only related logic:     450 out of     450 100%
-    Number of Slices containing unrelated logic:          0 out of     450   0%
+  Number of occupied Slices:            451 out of  16,640    2%
+    Number of Slices containing only related logic:     451 out of     451 100%
+    Number of Slices containing unrelated logic:          0 out of     451   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         839 out of  33,280    2%
-    Number used as logic:               701
-    Number used as a route-thru:        138
+  Total Number of 4 input LUTs:         838 out of  33,280    2%
+    Number used as logic:               699
+    Number used as a route-thru:        139
   Number of bonded IOBs:                 14 out of     519    2%
   Number of BUFGMUXs:                     4 out of      24   16%
   Number of DCMs:                         1 out of       8   12%
 
 Peak Memory Usage:  230 MB
-Total REAL time to MAP completion:  12 secs 
+Total REAL time to MAP completion:  13 secs 
 Total CPU time to MAP completion:   9 secs 
 
 NOTES:
@@ -200,14 +200,14 @@ Section 14 - Utilization by Hierarchy
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                            |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_chaser/     |           | 303/635       | 64/242        | 310/839       | 0/0           | 0/0       | 0/0       | 0/4   | 0/1   | entity_chaser                                     |
+| entity_chaser/     |           | 303/636       | 64/242        | 311/838       | 0/0           | 0/0       | 0/0       | 0/4   | 0/1   | entity_chaser                                     |
 | +clock_down_pm     |           | 34/34         | 34/34         | 66/66         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
 | +dcm_pm            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 1/1   | entity_chaser/dcm_pm                              |
-| +manager_pm        |           | 12/298        | 0/144         | 24/463        | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm                          |
+| +manager_pm        |           | 12/299        | 0/144         | 24/461        | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm                          |
 | ++bitcounter_pm    |           | 0/85          | 0/40          | 0/126         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm            |
 | +++counter_pm      |           | 85/85         | 40/40         | 126/126       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm/counter_pm |
-| ++fill_pm          |           | 0/201         | 0/104         | 0/313         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm/fill_pm                  |
-| +++counter_pm      |           | 94/94         | 64/64         | 119/119       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/fill_pm/counter_pm       |
+| ++fill_pm          |           | 0/202         | 0/104         | 0/311         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm/fill_pm                  |
+| +++counter_pm      |           | 95/95         | 64/64         | 117/117       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/fill_pm/counter_pm       |
 | +++generator_pm    |           | 107/107       | 40/40         | 194/194       | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/manager_pm/fill_pm/generator_pm     |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
