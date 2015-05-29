@@ -11,30 +11,30 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri May 29 15:10:32 2015
+Mapped Date    : Fri May 29 15:36:03 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    8
 Logic Utilization:
-  Total Number Slice Registers:         221 out of  33,280    1%
-    Number used as Flip Flops:          181
+  Total Number Slice Registers:         245 out of  33,280    1%
+    Number used as Flip Flops:          205
     Number used as Latches:              40
-  Number of 4 input LUTs:               556 out of  33,280    1%
+  Number of 4 input LUTs:               678 out of  33,280    2%
 Logic Distribution:
-  Number of occupied Slices:            370 out of  16,640    2%
-    Number of Slices containing only related logic:     370 out of     370 100%
-    Number of Slices containing unrelated logic:          0 out of     370   0%
+  Number of occupied Slices:            438 out of  16,640    2%
+    Number of Slices containing only related logic:     438 out of     438 100%
+    Number of Slices containing unrelated logic:          0 out of     438   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         675 out of  33,280    2%
-    Number used as logic:               556
-    Number used as a route-thru:        119
-  Number of bonded IOBs:                 13 out of     519    2%
-  Number of BUFGMUXs:                     5 out of      24   20%
+  Total Number of 4 input LUTs:         817 out of  33,280    2%
+    Number used as logic:               678
+    Number used as a route-thru:        139
+  Number of bonded IOBs:                 14 out of     519    2%
+  Number of BUFGMUXs:                     4 out of      24   16%
   Number of DCMs:                         1 out of       8   12%
 
-Peak Memory Usage:  229 MB
+Peak Memory Usage:  230 MB
 Total REAL time to MAP completion:  12 secs 
 Total CPU time to MAP completion:   9 secs 
 
@@ -150,7 +150,8 @@ Section 6 - IOB Properties
 | chaser_led7                        | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | chaser_mode                        | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
 | chaser_rst                         | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
-| chaser_speed                       | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_speed_down                  | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| chaser_speed_up                    | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
 | chaser_toggle                      | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -199,14 +200,14 @@ Section 14 - Utilization by Hierarchy
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                            |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_chaser/     |           | 217/585       | 3/221         | 119/675       | 0/0           | 0/0       | 0/0       | 1/5   | 0/1   | entity_chaser                                     |
-| +clock_down_pm     |           | 29/29         | 34/34         | 48/48         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
+| entity_chaser/     |           | 274/645       | 27/245        | 246/817       | 0/0           | 0/0       | 0/0       | 0/4   | 0/1   | entity_chaser                                     |
+| +clock_down_pm     |           | 34/34         | 34/34         | 66/66         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/clock_down_pm                       |
 | +dcm_pm            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 1/1   | entity_chaser/dcm_pm                              |
-| +manager_pm        |           | 50/339        | 40/184        | 66/508        | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm                          |
-| ++bitcounter_pm    |           | 0/86          | 0/40          | 0/127         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm            |
-| +++counter_pm      |           | 86/86         | 40/40         | 127/127       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm/counter_pm |
-| ++fill_pm          |           | 0/203         | 0/104         | 0/315         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm/fill_pm                  |
-| +++counter_pm      |           | 95/95         | 64/64         | 121/121       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/fill_pm/counter_pm       |
+| +manager_pm        |           | 50/337        | 40/184        | 66/505        | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm                          |
+| ++bitcounter_pm    |           | 0/85          | 0/40          | 0/126         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm            |
+| +++counter_pm      |           | 85/85         | 40/40         | 126/126       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/bitcounter_pm/counter_pm |
+| ++fill_pm          |           | 0/202         | 0/104         | 0/313         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_chaser/manager_pm/fill_pm                  |
+| +++counter_pm      |           | 94/94         | 64/64         | 119/119       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_chaser/manager_pm/fill_pm/counter_pm       |
 | +++generator_pm    |           | 108/108       | 40/40         | 194/194       | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_chaser/manager_pm/fill_pm/generator_pm     |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 

@@ -32,14 +32,22 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock chaser_clk_in
+-----------------+------------+------------+------------------+--------+
+                 |  Setup to  |  Hold to   |                  | Clock  |
+Source           | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-----------------+------------+------------+------------------+--------+
+chaser_speed_down|    6.529(R)|   -2.223(R)|clck              |   0.000|
+chaser_speed_up  |   13.069(R)|   -3.301(R)|clck              |   0.000|
+-----------------+------------+------------+------------------+--------+
+
 Clock to Setup on destination clock chaser_clk_in
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_clk_in  |    9.355|         |         |         |
-chaser_rst     |    7.539|    7.539|         |         |
-chaser_speed   |   10.072|         |         |         |
+chaser_clk_in  |   17.560|         |         |         |
+chaser_rst     |    9.679|    9.679|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock chaser_rst
@@ -47,27 +55,18 @@ Clock to Setup on destination clock chaser_rst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_rst     |         |         |    5.483|   17.388|
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock chaser_speed
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-chaser_rst     |    6.145|    6.145|         |         |
-chaser_speed   |    1.527|         |         |         |
+chaser_rst     |         |         |    4.379|   16.171|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri May 29 14:59:38 2015 
+Analysis completed Fri May 29 15:37:12 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 172 MB
+Peak Memory Usage: 173 MB
 
 
 

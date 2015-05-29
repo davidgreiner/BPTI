@@ -10,3 +10,5 @@ NET "chaser_led7" LOC = D25;
 NET "chaser_mode" LOC = J17;
 NET "chaser_toggle" LOC = J15;
 NET "chaser_rst" LOC = Y16;
+NET "chaser_speed_down" LOC = J13;
+NET "chaser_speed_up" LOC = J10;

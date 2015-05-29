@@ -4,25 +4,27 @@ use ieee.std_logic_1164.all;
 entity entity_chaser is
     port
     (
-        chaser_clk_in   : in std_logic;
-        chaser_mode     : in std_logic;
-        chaser_rst      : in std_logic;
-        chaser_speed    : in std_logic;
-        chaser_toggle   : in std_logic;
-        chaser_led0      : out std_logic;
-        chaser_led1      : out std_logic;
-        chaser_led2      : out std_logic;
-        chaser_led3      : out std_logic;
-        chaser_led4      : out std_logic;
-        chaser_led5      : out std_logic;
-        chaser_led6      : out std_logic;
-        chaser_led7      : out std_logic
+        chaser_clk_in		: in std_logic;
+        chaser_mode			: in std_logic;
+        chaser_rst			: in std_logic;
+        chaser_speed_up		: in std_logic;
+        chaser_speed_down	: in std_logic;
+        chaser_toggle		: in std_logic;
+        chaser_led0			: out std_logic;
+        chaser_led1			: out std_logic;
+        chaser_led2			: out std_logic;
+        chaser_led3			: out std_logic;
+        chaser_led4			: out std_logic;
+        chaser_led5			: out std_logic;
+        chaser_led6			: out std_logic;
+        chaser_led7			: out std_logic
     );
 end entity entity_chaser;
 
 architecture architecture_chaser of entity_chaser is
-    constant speed_low      : integer := 25000000; -- 1 sec
-    constant speed_high     : integer := 12500000; -- 1/2 sec
+	constant speed_step			: integer := 500000;
+    constant speed_limit_high      : integer := 25000000; -- 1 sec
+    constant speed_limit_low     : integer := 12500000; -- 1/2 sec
 
 
 component entity_dcm
@@ -71,7 +73,7 @@ component entity_led
 end component;
 
 
-signal speed        : integer := speed_low;
+signal speed        : integer := speed_limit_high;
 signal downsample   : std_logic;
 signal clck         : std_logic;
 signal led          : std_logic_vector(7 downto 0);
@@ -115,19 +117,33 @@ begin
     );
 
 
-    chaser_p : process (chaser_rst, chaser_speed)
-    variable state_speed    : std_logic := '0';
+    chaser_p : process (chaser_rst, clck)
+    variable chaser_speed_up_pressed : std_logic := '0';
+    variable chaser_speed_down_pressed : std_logic := '0';
+    variable speed_current : integer := speed_limit_high;
     begin
         if(chaser_rst = '0') then
-            state_speed := '0';
-        elsif(chaser_speed'event and chaser_speed = '1') then
-            if(state_speed = '0') then
-                state_speed := '1';
-                speed <= speed_low;
-            else
-                state_speed := '0';
-                speed <= speed_high;
+            speed_current := speed_limit_high;
+        elsif(clck'event and clck = '1') then
+            if(chaser_speed_down = '1' and chaser_speed_down_pressed = '0') then
+            	if((speed_current + speed_step) >= speed_limit_high) then
+            		speed_current := speed_limit_high;
+            	else
+            		speed_current := speed_current + speed_step;
+            	end if;
+            elsif(chaser_speed_down = '1' and chaser_speed_down_pressed = '1') then
+            	chaser_speed_up_pressed := '0';
+            end if;
+            if(chaser_speed_up = '1' and chaser_speed_up_pressed = '0') then
+            	if((speed_current - speed_step) <= speed_limit_low) then
+            		speed_current := speed_limit_low;
+            	else
+            		speed_current := speed_current - speed_step;
+            	end if;
+            elsif(chaser_speed_up = '1' and chaser_speed_up_pressed = '1') then
+            	chaser_speed_down_pressed := '0';
             end if;
         end if;
+        speed <= speed_current;
     end process;
 end architecture;
