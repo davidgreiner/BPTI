@@ -5,7 +5,7 @@ entity entity_fill is
     port
     (
         fill_in    : in std_logic;
-        fill_mode  : in std_logic;
+        fill_toggle  : in std_logic;
         fill_rst   : in std_logic;
         fill_out   : out std_logic_vector(7 downto 0)
     );
@@ -16,7 +16,7 @@ component entity_counter
     port
     (
         cnt_in      : in std_logic;
-        cnt_mode    : in std_logic;
+        cnt_toggle    : in std_logic;
         cnt_rst     : in std_logic;
         cnt_limit   : in integer;
         cnt_out     : out integer
@@ -37,7 +37,7 @@ begin
     counter_pm : entity_counter port map
     (
         cnt_in      => fill_in,
-        cnt_mode    => fill_mode,
+        cnt_toggle    => fill_toggle,
         cnt_rst     => fill_rst,
         cnt_limit   => 35,
         cnt_out		=> counter_to_generator

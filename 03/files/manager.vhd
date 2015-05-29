@@ -19,7 +19,7 @@ component entity_bitcounter
     port
     (
         bit_in      : in std_logic;
-        bit_mode    : in std_logic;
+        bit_toggle    : in std_logic;
         bit_rst     : in std_logic;
         bit_out     : out std_logic_vector(7 downto 0)
     );
@@ -28,7 +28,7 @@ component entity_fill
     port
     (
         fill_in      : in std_logic;
-        fill_mode    : in std_logic;
+        fill_toggle    : in std_logic;
         fill_rst     : in std_logic;
         fill_out     : out std_logic_vector(7 downto 0)
     );
@@ -52,7 +52,7 @@ begin
     bitcounter_pm : entity_bitcounter port map
     (
         bit_in     => man_clk,
-        bit_mode   => man_toggle,
+        bit_toggle   => man_toggle,
         bit_rst    => man_rst,
         bit_out    => led_bitcounter
     );
@@ -60,7 +60,7 @@ begin
     fill_pm : entity_fill port map
     (
         fill_in     => man_clk,
-        fill_mode   => man_toggle,
+        fill_toggle   => man_toggle,
         fill_rst    => man_rst,
         fill_out    => led_fill
     );

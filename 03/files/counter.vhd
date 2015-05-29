@@ -5,7 +5,7 @@ entity entity_counter is
     port
     (
         cnt_in    : in std_logic;
-        cnt_mode  : in std_logic;
+        cnt_toggle  : in std_logic;
         cnt_limit : in integer;
         cnt_rst   : in std_logic;
         cnt_out   : out integer
@@ -18,14 +18,14 @@ begin
     variable counter : integer := 0;
     begin
         if(cnt_rst = '0') then
-            if(cnt_mode = '0') then
+            if(cnt_toggle = '0') then
                 counter := 0;
             else
                 counter := cnt_limit;
             end if;
         	cnt_out <= 0;
         elsif(cnt_in'event and cnt_in = '1') then
-            if(cnt_mode = '0') then
+            if(cnt_toggle = '0') then
                 counter := counter + 1;
                 if(counter >= cnt_limit) then
                     counter := 0;

@@ -11,7 +11,7 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Fri May 29 14:58:27 2015
+Mapped Date    : Fri May 29 15:10:32 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -42,7 +42,7 @@ Logic Distribution:
   Number of DCMs:                         1 out of       8   12%
 
 Peak Memory Usage:  229 MB
-Total REAL time to MAP completion:  13 secs 
+Total REAL time to MAP completion:  12 secs 
 Total CPU time to MAP completion:   9 secs 
 
 NOTES:
