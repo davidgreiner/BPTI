@@ -37,8 +37,9 @@ Setup/Hold to clock chaser_clk_in
                  |  Setup to  |  Hold to   |                  | Clock  |
 Source           | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 -----------------+------------+------------+------------------+--------+
-chaser_speed_down|    6.529(R)|   -2.223(R)|clck              |   0.000|
-chaser_speed_up  |   13.069(R)|   -3.301(R)|clck              |   0.000|
+chaser_speed_down|   15.200(R)|   -3.099(R)|clck              |   0.000|
+chaser_speed_up  |    8.842(R)|   -2.841(R)|clck              |   0.000|
+chaser_toggle    |    5.308(R)|   -1.956(R)|clck              |   0.000|
 -----------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock chaser_clk_in
@@ -46,8 +47,8 @@ Clock to Setup on destination clock chaser_clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_clk_in  |   17.560|         |         |         |
-chaser_rst     |    9.679|    9.679|         |         |
+chaser_clk_in  |   17.073|         |         |         |
+chaser_rst     |   10.871|   10.871|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock chaser_rst
@@ -55,11 +56,11 @@ Clock to Setup on destination clock chaser_rst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-chaser_rst     |         |         |    4.379|   16.171|
+chaser_rst     |         |         |    6.211|   15.590|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri May 29 15:37:12 2015 
+Analysis completed Fri May 29 16:07:36 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

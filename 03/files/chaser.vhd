@@ -74,6 +74,8 @@ end component;
 
 
 signal speed        : integer := speed_limit_high;
+signal mode			: integer := 0;
+signal toggle		: std_logic := '0';
 signal downsample   : std_logic;
 signal clck         : std_logic;
 signal led          : std_logic_vector(7 downto 0);
@@ -100,7 +102,7 @@ begin
         man_clk     => downsample,
         man_mode    => chaser_mode,
         man_rst     => chaser_rst,
-        man_toggle  => chaser_toggle,
+        man_toggle  => toggle,
         man_led     => led
     );
     led_pm : entity_led port map
@@ -120,18 +122,26 @@ begin
     chaser_p : process (chaser_rst, clck)
     variable chaser_speed_up_pressed : std_logic := '0';
     variable chaser_speed_down_pressed : std_logic := '0';
+    variable chaser_mode_pressed : std_logic := '0';
+    variable chaser_toggle_pressed : std_logic := '0';
+    
     variable speed_current : integer := speed_limit_high;
+    variable toggle_current : std_logic := '0';
     begin
         if(chaser_rst = '0') then
             speed_current := speed_limit_high;
         elsif(clck'event and clck = '1') then
+        	-- Checking buttons here because other entities only receive downsampled clock
+        
+        	-- Change speed depending on button pressed
             if(chaser_speed_down = '1' and chaser_speed_down_pressed = '0') then
             	if((speed_current + speed_step) >= speed_limit_high) then
             		speed_current := speed_limit_high;
             	else
             		speed_current := speed_current + speed_step;
             	end if;
-            elsif(chaser_speed_down = '1' and chaser_speed_down_pressed = '1') then
+            	chaser_speed_down_pressed := '1';
+            elsif(chaser_speed_down = '0' and chaser_speed_down_pressed = '1') then
             	chaser_speed_up_pressed := '0';
             end if;
             if(chaser_speed_up = '1' and chaser_speed_up_pressed = '0') then
@@ -140,10 +150,20 @@ begin
             	else
             		speed_current := speed_current - speed_step;
             	end if;
-            elsif(chaser_speed_up = '1' and chaser_speed_up_pressed = '1') then
+            	chaser_speed_up_pressed := '1';
+            elsif(chaser_speed_up = '0' and chaser_speed_up_pressed = '1') then
             	chaser_speed_down_pressed := '0';
+            end if;
+            
+            -- Change direction
+            if(chaser_toggle = '1' and chaser_toggle_pressed = '0') then
+            	toggle_current := not toggle_current;
+            	chaser_toggle_pressed := '1';
+            elsif(chaser_toggle = '0' and chaser_toggle_pressed = '1') then
+            	chaser_toggle_pressed := '0';
             end if;
         end if;
         speed <= speed_current;
+        toggle <= toggle_current;
     end process;
 end architecture;

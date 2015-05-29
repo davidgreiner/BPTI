@@ -17,7 +17,7 @@ architecture architecture_bitcounter of entity_bitcounter is
         port
         (
             cnt_in      : in std_logic;
-            cnt_toggle    : in std_logic;
+            cnt_toggle  : in std_logic;
             cnt_rst     : in std_logic;
             cnt_limit   : in integer;
             cnt_out     : out integer
