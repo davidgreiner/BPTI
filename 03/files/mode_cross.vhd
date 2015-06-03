@@ -1,13 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity entity_cross is
     port
     (
-        fill_in    : in std_logic;
-        fill_toggle  : in std_logic;
-        fill_rst   : in std_logic;
-        fill_out   : out std_logic_vector(7 downto 0)
+        cross_in    : in std_logic;
+        cross_toggle  : in std_logic;
+        cross_rst   : in std_logic;
+        cross_out   : out std_logic_vector(7 downto 0)
     );
 end entity entity_cross;
 
@@ -22,31 +23,23 @@ component entity_counter
         cnt_out     : out integer
     );
 end component;
-component entity_cross_generator
-    port
-    (
-        val_in  : in std_logic_vector(7 downto 0);
-        val_rst : in std_logic;
-        val_out : out std_logic_vector(7 downto 0)
-    );
-end component;
 
-signal counter_to_generator : std_logic_vector(7 downto 0);
+signal magic : integer := 0;
+signal rot1 : std_logic_vector(7 downto 0);
+signal rot2 : std_logic_vector(7 downto 0);
 
 begin
     counter_pm : entity_counter port map
     (
-        cnt_in      => fill_in;
-        cnt_toggle    => fill_toggle;
-        cnt_rst     => fill_rst;
-        cnt_limit   => 35;
-        std_logic_vector(to_unsigned(cnt_out, counter_to_generator'length)) => counter_to_generator
+        cnt_in      => cross_in,
+        cnt_toggle  => cross_toggle,
+        cnt_rst     => cross_rst,
+        cnt_limit   => 7,
+        cnt_out		=> magic
     );
-
-    generator_pm : entity_cross_generator port map
-    (
-        counter_to_generator => val_in;
-        val_rst => fill_rst;
-        val_out => fill_out
-    );
+    
+    rot1 <= std_logic_vector(to_unsigned(2**magic, cross_out'length));
+    rot2 <= std_logic_vector(to_unsigned(2**(7-magic), cross_out'length));
+    
+    cross_out <=  rot1 or rot2;
 end architecture;

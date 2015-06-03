@@ -19,6 +19,7 @@ end entity entity_scrambler;
 
 
 architecture architecture_scrambler of entity_scrambler is
+begin
     scrambler_p : process(scrambler_in)
     variable temp : std_logic_vector(7 downto 0) := "00000000";
     begin

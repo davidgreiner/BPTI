@@ -16,52 +16,51 @@ begin
     fill_generator_p : process(val_in, val_rst)
     variable basis : std_logic_vector(7 downto 0) := "00000000";
     variable shift : integer := 1;
-    variable count_to : integer := 7;
     begin
         if(val_rst = '0') then
             basis := "00000000";
             shift := 1;
-            count_to := 7;
         else
-			if(val_in >= 8) then
+        	basis := "00000000";
+        	shift := val_in;
+        	
+        	if(val_in >= 8) then
             basis(0) := '1';
+            shift := shift - 8;
 			end if;
 			if(val_in >= 15) then
             basis(1) := '1';
+            shift := shift - 7;
 			end if;
 			if(val_in >= 21) then
             basis(2) := '1';
+            shift := shift - 6;
 			end if;
 			if(val_in >= 26) then
             basis(3) := '1';
+            shift := shift - 5;
 			end if;
 			if(val_in >= 30) then
             basis(4) := '1';
+            shift := shift - 4;
 			end if;
 			if(val_in >= 33) then
             basis(5) := '1';
+            shift := shift - 3;
 			end if;
 			if(val_in >= 35) then
             basis(6) := '1';
+            shift := shift - 2;
 			end if;
 			if(val_in >= 36) then
             basis(7) := '1';
-			end if;
-
-            if(shift = 2**count_to) then
-                shift := 1;
-                count_to := count_to - 1;
-
-                -- Reset after maximum
-                if(count_to = -1) then
-                    count_to := 8;
-                    basis := "00000000";
-                    shift := 1;
-                end if;
-            else
-                shift := shift*2;
-            end if;
+            shift := shift - 1;
+			end if; 
+			
+			shift := 7 - shift;
+			basis(shift) := '1';        	
         end if;
-        val_out <= basis or std_logic_vector(to_unsigned(shift, val_out'length));
+        
+           	val_out <= basis;
     end process;
 end architecture_fill_generator;

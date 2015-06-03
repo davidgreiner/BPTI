@@ -1,7 +1,7 @@
 Release 10.1.02 par K.37 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-i82pc17::  Fri May 29 17:14:57 2015
+i82pc17::  Wed Jun 03 15:47:03 2015
 
 par -w -intstyle ise -ol std -t 1 entity_chaser_map.ncd entity_chaser.ncd
 entity_chaser.pcf 
@@ -25,12 +25,12 @@ Device speed data version:  "PRODUCTION 1.32 2008-05-28".
 
 Design Summary Report:
 
- Number of External IOBs                          14 out of 519     2%
+ Number of External IOBs                          22 out of 519     4%
 
-   Number of External Input IOBs                  6
+   Number of External Input IOBs                 14
 
-      Number of External Input IBUFs              6
-        Number of LOCed External Input IBUFs      6 out of 6     100%
+      Number of External Input IBUFs             14
+        Number of LOCed External Input IBUFs     14 out of 14    100%
 
 
    Number of External Output IOBs                 8
@@ -42,9 +42,9 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        4 out of 24     16%
+   Number of BUFGMUXs                        3 out of 24     12%
    Number of DCMs                            1 out of 8      12%
-   Number of Slices                        451 out of 16640   2%
+   Number of Slices                        782 out of 16640   4%
       Number of SLICEMs                      0 out of 8320    0%
 
 
@@ -58,72 +58,72 @@ Router effort level (-rl):    Standard
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:66e49) REAL time: 9 secs 
+Phase 1.1 (Checksum:ba536) REAL time: 9 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:66e49) REAL time: 9 secs 
+Phase 2.7 (Checksum:ba536) REAL time: 9 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:66e49) REAL time: 9 secs 
+Phase 3.31 (Checksum:ba536) REAL time: 9 secs 
 
 Phase 4.2
 
 ......
-Phase 4.2 (Checksum:783ef) REAL time: 10 secs 
+Phase 4.2 (Checksum:c8356) REAL time: 10 secs 
 
 Phase 5.30
-Phase 5.30 (Checksum:783ef) REAL time: 10 secs 
+Phase 5.30 (Checksum:c8356) REAL time: 10 secs 
 
 Phase 6.8
-.......................................
+................................................
 .
-.........................
+...................................................
 .
 .
-Phase 6.8 (Checksum:7d0e1d) REAL time: 16 secs 
+Phase 6.8 (Checksum:cf1337) REAL time: 18 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:7d0e1d) REAL time: 16 secs 
+Phase 7.5 (Checksum:cf1337) REAL time: 18 secs 
 
 Phase 8.18
-Phase 8.18 (Checksum:7de33d) REAL time: 18 secs 
+Phase 8.18 (Checksum:cfa913) REAL time: 21 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:7de33d) REAL time: 19 secs 
+Phase 9.5 (Checksum:cfa913) REAL time: 21 secs 
 
-REAL time consumed by placer: 19 secs 
-CPU  time consumed by placer: 16 secs 
+REAL time consumed by placer: 21 secs 
+CPU  time consumed by placer: 18 secs 
 Writing design to file entity_chaser.ncd
 
 
-Total REAL time to Placer completion: 19 secs 
-Total CPU time to Placer completion: 16 secs 
+Total REAL time to Placer completion: 21 secs 
+Total CPU time to Placer completion: 18 secs 
 
 Starting Router
 
-Phase 1: 2762 unrouted;       REAL time: 29 secs 
+Phase 1: 4726 unrouted;       REAL time: 33 secs 
 
-Phase 2: 2588 unrouted;       REAL time: 30 secs 
+Phase 2: 4524 unrouted;       REAL time: 34 secs 
 
-Phase 3: 436 unrouted;       REAL time: 31 secs 
+Phase 3: 826 unrouted;       REAL time: 35 secs 
 
-Phase 4: 436 unrouted; (89229)      REAL time: 31 secs 
+Phase 4: 826 unrouted; (108375)      REAL time: 35 secs 
 
-Phase 5: 440 unrouted; (0)      REAL time: 31 secs 
+Phase 5: 827 unrouted; (0)      REAL time: 36 secs 
 
-Phase 6: 0 unrouted; (0)      REAL time: 32 secs 
+Phase 6: 0 unrouted; (0)      REAL time: 36 secs 
 
-Phase 7: 0 unrouted; (0)      REAL time: 32 secs 
+Phase 7: 0 unrouted; (0)      REAL time: 37 secs 
 
-Phase 8: 0 unrouted; (0)      REAL time: 32 secs 
+Phase 8: 0 unrouted; (0)      REAL time: 37 secs 
 
-Phase 9: 0 unrouted; (0)      REAL time: 32 secs 
+Phase 9: 0 unrouted; (0)      REAL time: 37 secs 
 
-Phase 10: 0 unrouted; (0)      REAL time: 33 secs 
+Phase 10: 0 unrouted; (0)      REAL time: 37 secs 
 
 
-Total REAL time to Router completion: 33 secs 
-Total CPU time to Router completion: 30 secs 
+Total REAL time to Router completion: 38 secs 
+Total CPU time to Router completion: 33 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -141,47 +141,10 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|                clck | BUFGMUX_X1Y11| No   |   67 |  0.177     |  1.685      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/Mcompar_ |              |      |      |            |             |
-|count_to_cmp_eq0000_ |              |      |      |            |             |
-|              cy<15> | BUFGMUX_X2Y11| No   |   17 |  0.083     |  1.678      |
+|                clck | BUFGMUX_X2Y11| No   |   68 |  0.167     |  1.671      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_down_pm/clk_ou |              |      |      |            |             |
-|                   t | BUFGMUX_X2Y10| No   |   54 |  0.209     |  1.704      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_0_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.180      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_1_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.183      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_2_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  0.305      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_3_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.150      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_4_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.183      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_5_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.505      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_6_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.123      |
-+---------------------+--------------+------+------+------------+-------------+
-|manager_pm/fill_pm/g |              |      |      |            |             |
-|enerator_pm/basis_7_ |              |      |      |            |             |
-|             not0001 |         Local|      |    1 |  0.000     |  1.097      |
+|                   t | BUFGMUX_X2Y10| No   |   87 |  0.221     |  1.711      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -200,15 +163,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clc | SETUP   |         N/A|    17.368ns|     N/A|           0
-  k                                         | HOLD    |     0.998ns|            |       0|           0
+  Autotimespec constraint for clock net clc | SETUP   |         N/A|    16.232ns|     N/A|           0
+  k                                         | HOLD    |     1.140ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net man | SETUP   |         N/A|    10.183ns|     N/A|           0
-  ager_pm/fill_pm/generator_pm/Mcompar_coun | HOLD    |     1.985ns|            |       0|           0
-  t_to_cmp_eq0000_cy<15>                    |         |            |            |        |            
-------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP   |         N/A|    17.076ns|     N/A|           0
-  ck_down_pm/clk_out                        | HOLD    |     2.418ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|    16.530ns|     N/A|           0
+  ck_down_pm/clk_out                        | HOLD    |     2.256ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -221,10 +180,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 41 secs 
-Total CPU time to PAR completion: 37 secs 
+Total REAL time to PAR completion: 45 secs 
+Total CPU time to PAR completion: 38 secs 
 
-Peak Memory Usage:  235 MB
+Peak Memory Usage:  237 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

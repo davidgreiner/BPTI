@@ -844,10 +844,12 @@ proc restore { { project_dir "" } } {
       "../files/led.vhd" 
       "../files/manager.vhd" 
       "../files/mode_bitcounter.vhd" 
+      "../files/mode_cross.vhd" 
       "../files/mode_fill.vhd" 
       "../files/mode_fill_generator.vhd" 
       "../files/mode_marquee.vhd" 
       "../files/mode_marquee_generator.vhd" 
+      "../files/scrambler.vhd" 
       "entity_chaser.ucf"}
 
   HandleException {

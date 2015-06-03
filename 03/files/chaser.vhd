@@ -10,6 +10,14 @@ entity entity_chaser is
         chaser_speed_up		: in std_logic;
         chaser_speed_down	: in std_logic;
         chaser_toggle		: in std_logic;
+        chaser_dip0			: in std_logic;
+        chaser_dip1			: in std_logic;
+        chaser_dip2			: in std_logic;
+        chaser_dip3			: in std_logic;
+        chaser_dip4			: in std_logic;
+        chaser_dip5			: in std_logic;
+        chaser_dip6			: in std_logic;
+        chaser_dip7			: in std_logic;
         chaser_led0			: out std_logic;
         chaser_led1			: out std_logic;
         chaser_led2			: out std_logic;
@@ -23,9 +31,9 @@ end entity entity_chaser;
 
 architecture architecture_chaser of entity_chaser is
 	constant speed_step			: integer := 500000;
-    constant speed_limit_high      : integer := 25000000; -- 1 sec
-    constant speed_limit_low     : integer := 12500000; -- 1/2 sec
-    constant mode_amount    : integer := 2; --3 modes: fill, bit value
+    constant speed_limit_high      : integer := 12500000; -- 1/2 sec
+    constant speed_limit_low     : integer := 6250000; -- 1/4 sec
+    constant mode_amount    : integer := 3; --3 modes: fill, bit value, cross
 
 
 component entity_dcm
@@ -58,6 +66,22 @@ component entity_manager
     );
 end component;
 
+component entity_scrambler
+	port
+	(
+		scrambler_in	: in std_logic_vector(7 downto 0);
+		scrambler_dip0	: in std_logic;
+		scrambler_dip1	: in std_logic;
+		scrambler_dip2	: in std_logic;
+		scrambler_dip3	: in std_logic;
+		scrambler_dip4	: in std_logic;
+		scrambler_dip5	: in std_logic;
+		scrambler_dip6	: in std_logic;
+		scrambler_dip7	: in std_logic;
+		scrambler_out	: out std_logic_vector(7 downto 0)
+	);
+end component;
+
 component entity_led
     port
     (
@@ -80,6 +104,7 @@ signal toggle		: std_logic := '0';
 signal downsample   : std_logic;
 signal clck         : std_logic;
 signal led          : std_logic_vector(7 downto 0);
+signal scramble		: std_logic_vector(7 downto 0);
 signal rst 			: std_logic;
 
 begin
@@ -104,7 +129,21 @@ begin
         man_mode    => mode,
         man_rst     => chaser_rst,
         man_toggle  => toggle,
-        man_led     => led
+        man_led     => scramble
+    );
+    scramble_pm : entity_scrambler port map
+    (
+    	scrambler_in	=> scramble,
+    	scrambler_dip0	=> chaser_dip0,
+		scrambler_dip1	=> chaser_dip1,
+		scrambler_dip2	=> chaser_dip2,
+		scrambler_dip3	=> chaser_dip3,
+		scrambler_dip4	=> chaser_dip4,
+		scrambler_dip5	=> chaser_dip5,
+		scrambler_dip6	=> chaser_dip6,
+		scrambler_dip7	=> chaser_dip7,
+		scrambler_out	=> led
+    	
     );
     led_pm : entity_led port map
     (
@@ -125,8 +164,8 @@ begin
     variable chaser_speed_down_pressed : std_logic := '0';
     variable chaser_mode_pressed : std_logic := '0';
     variable chaser_toggle_pressed : std_logic := '0';
-    
     variable speed_current : integer := speed_limit_high;
+    
     variable toggle_current : std_logic := '0';
     variable mode_current : integer := 0;
     begin

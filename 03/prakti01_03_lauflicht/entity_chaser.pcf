@@ -1,18 +1,26 @@
 //! **************************************************************************
-// Written by: Map K.37 on Fri May 29 17:14:45 2015
+// Written by: Map K.37 on Wed Jun 03 15:46:54 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "chaser_clk_in" LOCATE = SITE "F13" LEVEL 1;
+COMP "chaser_dip0" LOCATE = SITE "A7" LEVEL 1;
+COMP "chaser_dip1" LOCATE = SITE "G16" LEVEL 1;
+COMP "chaser_dip2" LOCATE = SITE "E9" LEVEL 1;
+COMP "chaser_dip3" LOCATE = SITE "D15" LEVEL 1;
+COMP "chaser_dip4" LOCATE = SITE "D19" LEVEL 1;
+COMP "chaser_dip5" LOCATE = SITE "B24" LEVEL 1;
+COMP "chaser_dip6" LOCATE = SITE "A5" LEVEL 1;
+COMP "chaser_dip7" LOCATE = SITE "A23" LEVEL 1;
 COMP "chaser_speed_down" LOCATE = SITE "J13" LEVEL 1;
 COMP "chaser_led0" LOCATE = SITE "P18" LEVEL 1;
 COMP "chaser_led1" LOCATE = SITE "P25" LEVEL 1;
-COMP "chaser_led2" LOCATE = SITE "N19" LEVEL 1;
 COMP "chaser_led3" LOCATE = SITE "K22" LEVEL 1;
 COMP "chaser_led4" LOCATE = SITE "H20" LEVEL 1;
 COMP "chaser_led5" LOCATE = SITE "G21" LEVEL 1;
 COMP "chaser_led6" LOCATE = SITE "D24" LEVEL 1;
 COMP "chaser_led7" LOCATE = SITE "D25" LEVEL 1;
+COMP "chaser_led2" LOCATE = SITE "N19" LEVEL 1;
 COMP "chaser_speed_up" LOCATE = SITE "J10" LEVEL 1;
 COMP "chaser_mode" LOCATE = SITE "J17" LEVEL 1;
 COMP "chaser_rst" LOCATE = SITE "Y16" LEVEL 1;
