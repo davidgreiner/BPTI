@@ -1,9 +1,9 @@
 entity entity_vsyncgenerator is
 	port
 	(
-		clk_in	: in std_logic;
-		vsync	: out std_logic;
-		col	: out integer
+		vync_clk_in	: in std_logic;
+		vsync_out	: out std_logic;
+		vsync_col	: out integer
 	);
 end entity;
 		
