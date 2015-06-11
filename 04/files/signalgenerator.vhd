@@ -29,7 +29,7 @@ architecture architecture_signalgenerator of entity_signalgenerator is
 		);
 	end component;
 
-signal hsync, vsync : std_logic;
+signal hsync : std_logic;
 
 begin
 	hsync_pm : entity_hsyncgenerator port map
@@ -41,7 +41,12 @@ begin
 	vsync_pm : entity_vsyncgenerator port map
 	(
 		vsync_clk_in	=> hsync,
-		vsync_out	=> vsync,
+		vsync_out	=> siggen_vsync,
 		vsync_col	=> siggen_col
 	);
+
+	hsync_p : process (hsync)
+	begin
+		siggen_hsync <= hsync;
+	end process;
 end architecture architecture_signalgenerator;
