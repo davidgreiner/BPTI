@@ -13,4 +13,34 @@ architecture architecture_hsyncgenerator of entity_hsyncgenerator is
 	constant postvalid	: integer := 20;
 	constant invalid	: integer := 96;
 
-
+begin
+	hsyncgen_p : process (hsync_clk_in)
+	variable counter 	: integer := 1;
+	variable rowcounter	: integer := 0;
+	begin
+		if(hsync_clk_in = '1')
+			if(counter <= prevalid) then
+				-- prevalid for 44 ticks
+				hsync_out <= '1';
+				hsync_row <= -1;
+			elsif(counter <= (prevalid + valid)) then
+				-- valid for 640 ticks
+				hsync_out <= '1';
+				hsync_row <= rowcounter;
+				rowcounter := rowcounter + 1;
+			elsif(counter <= (prevalid + valid + postvalid)) then
+				-- postvalid for 20 ticks
+				hsync_out <= '1';
+				hsync_row <= -1;
+			elsif(counter <= (prevalid + valid + postvalid + invalid) then		
+				-- invalid for 96 ticks
+				hsync_out <= '0';
+				hsync_row <= -1;
+			else
+				rowcounter := 0;
+				counter := 0;
+			end if;
+			counter := counter + 1;
+		end if;
+	end process;
+end architecture architecture_hsyncgenerator;
