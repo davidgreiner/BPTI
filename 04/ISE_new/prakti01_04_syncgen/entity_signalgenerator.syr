@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.35 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.35 secs
  
 --> Reading design: entity_signalgenerator.prj
 
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -109,7 +109,8 @@ Compiling vhdl file "G:/Development/github/BPTI/04/files/siggen_hsyncgenerator.v
 Entity <entity_hsyncgenerator> compiled.
 Entity <entity_hsyncgenerator> (Architecture <architecture_hsyncgenerator>) compiled.
 Compiling vhdl file "G:/Development/github/BPTI/04/files/siggen_vsyncgenerator.vhd" in Library work.
-Architecture architecture_vsyncgenerator of Entity entity_vsyncgenerator is up to date.
+Entity <entity_vsyncgenerator> compiled.
+Entity <entity_vsyncgenerator> (Architecture <architecture_vsyncgenerator>) compiled.
 Compiling vhdl file "G:/Development/github/BPTI/04/files/signalgenerator.vhd" in Library work.
 Entity <entity_signalgenerator> compiled.
 Entity <entity_signalgenerator> (Architecture <architecture_signalgenerator>) compiled.
@@ -148,7 +149,7 @@ Synthesizing Unit <entity_hsyncgenerator>.
 WARNING:Xst:737 - Found 32-bit latch for signal <rowcounter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 32-bit latch for signal <counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <hsync_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <hsync_row>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 11-bit latch for signal <hsync_row>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 32-bit adder for signal <counter$add0000> created at line 47.
     Found 32-bit comparator lessequal for signal <counter$cmp_le0000> created at line 26.
     Found 32-bit comparator lessequal for signal <counter$cmp_le0001> created at line 29.
@@ -165,7 +166,7 @@ Synthesizing Unit <entity_vsyncgenerator>.
     Related source file is "G:/Development/github/BPTI/04/files/siggen_vsyncgenerator.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <vsync_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 32-bit latch for signal <colcounter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <vsync_col>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 10-bit latch for signal <vsync_col>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 32-bit latch for signal <counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 32-bit adder for signal <colcounter$addsub0000> created at line 35.
     Found 32-bit adder for signal <counter$add0000> created at line 48.
@@ -192,7 +193,9 @@ Macro Statistics
  32-bit adder                                          : 4
 # Latches                                              : 8
  1-bit latch                                           : 2
- 32-bit latch                                          : 6
+ 10-bit latch                                          : 1
+ 11-bit latch                                          : 1
+ 32-bit latch                                          : 4
 # Comparators                                          : 8
  32-bit comparator lessequal                           : 8
 
@@ -211,7 +214,9 @@ Macro Statistics
  32-bit adder                                          : 4
 # Latches                                              : 8
  1-bit latch                                           : 2
- 32-bit latch                                          : 6
+ 10-bit latch                                          : 1
+ 11-bit latch                                          : 1
+ 32-bit latch                                          : 4
 # Comparators                                          : 8
  32-bit comparator lessequal                           : 8
 
@@ -220,6 +225,49 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <rowcounter_11> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_12> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_13> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_14> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_15> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_16> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_17> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_18> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_19> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_20> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_21> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_22> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_23> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_24> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_25> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_26> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_27> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_28> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_29> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_30> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <rowcounter_31> of sequential type is unconnected in block <entity_hsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_10> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_11> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_12> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_13> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_14> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_15> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_16> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_17> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_18> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_19> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_20> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_21> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_22> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_23> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_24> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_25> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_26> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_27> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_28> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_29> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_30> of sequential type is unconnected in block <entity_vsyncgenerator>.
+WARNING:Xst:2677 - Node <colcounter_31> of sequential type is unconnected in block <entity_vsyncgenerator>.
 
 Optimizing unit <entity_signalgenerator> ...
 
@@ -229,7 +277,7 @@ Optimizing unit <entity_vsyncgenerator> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block entity_signalgenerator, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block entity_signalgenerator, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -261,29 +309,29 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 67
+# IOs                              : 24
 
 Cell Usage :
-# BELS                             : 711
+# BELS                             : 500
 #      GND                         : 1
 #      INV                         : 29
-#      LUT1                        : 70
+#      LUT1                        : 27
 #      LUT2                        : 61
 #      LUT2_D                      : 2
 #      LUT3_D                      : 2
-#      LUT4                        : 198
-#      LUT4_D                      : 4
-#      MUXCY                       : 215
+#      LUT4                        : 114
+#      LUT4_D                      : 2
+#      MUXCY                       : 176
 #      VCC                         : 1
-#      XORCY                       : 128
-# FlipFlops/Latches                : 194
-#      LD                          : 130
-#      LDE                         : 64
+#      XORCY                       : 85
+# FlipFlops/Latches                : 108
+#      LD                          : 87
+#      LDE                         : 21
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 66
-#      OBUF                        : 66
+# IO Buffers                       : 23
+#      OBUF                        : 23
 =========================================================================
 
 Device utilization summary:
@@ -291,11 +339,11 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                      212  out of  16640     1%  
- Number of Slice Flip Flops:            194  out of  33280     0%  
- Number of 4 input LUTs:                366  out of  33280     1%  
- Number of IOs:                          67
- Number of bonded IOBs:                  67  out of    519    12%  
+ Number of Slices:                      143  out of  16640     0%  
+ Number of Slice Flip Flops:            108  out of  33280     0%  
+ Number of 4 input LUTs:                237  out of  33280     0%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    519     4%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -319,8 +367,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-siggen_clk_in                      | BUFGP                  | 97    |
-hsync_pm/hsync_out1                | BUFG                   | 97    |
+siggen_clk_in                      | BUFGP                  | 55    |
+hsync_pm/hsync_out1                | BUFG                   | 53    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -331,7 +379,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 11.482ns (Maximum Frequency: 87.091MHz)
+   Minimum period: 10.528ns (Maximum Frequency: 94.985MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 5.779ns
    Maximum combinational path delay: No path found
@@ -342,10 +390,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'siggen_clk_in'
-  Clock period: 10.505ns (frequency: 95.193MHz)
-  Total number of paths / destination ports: 81541 / 129
+  Clock period: 10.384ns (frequency: 96.304MHz)
+  Total number of paths / destination ports: 74086 / 66
 -------------------------------------------------------------------------
-Delay:               10.505ns (Levels of Logic = 39)
+Delay:               10.384ns (Levels of Logic = 40)
   Source:            hsync_pm/counter_0 (LATCH)
   Destination:       hsync_pm/counter_31 (LATCH)
   Source Clock:      siggen_clk_in falling
@@ -369,9 +417,10 @@ Delay:               10.505ns (Levels of Logic = 39)
      MUXCY:CI->O           1   0.065   0.000  hsync_pm/Mcompar_counter_cmp_le0000_cy<9>_0 (hsync_pm/Mcompar_counter_cmp_le0000_cy<9>1)
      MUXCY:CI->O           1   0.065   0.000  hsync_pm/Mcompar_counter_cmp_le0000_cy<10>_0 (hsync_pm/Mcompar_counter_cmp_le0000_cy<10>1)
      MUXCY:CI->O           1   0.065   0.000  hsync_pm/Mcompar_counter_cmp_le0000_cy<11>_0 (hsync_pm/Mcompar_counter_cmp_le0000_cy<11>)
-     MUXCY:CI->O           1   0.269   0.423  hsync_pm/Mcompar_counter_cmp_le0000_cy<12> (hsync_pm/Mcompar_counter_cmp_le0000_cy<12>)
-     LUT4_D:I3->LO         1   0.648   0.103  hsync_pm/Mcompar_counter_cmp_le0000_cy<14>1 (N46)
-     LUT4:I3->O           22   0.648   1.244  hsync_pm/counter_mux0003<0>11 (hsync_pm/N01)
+     MUXCY:CI->O           1   0.065   0.000  hsync_pm/Mcompar_counter_cmp_le0000_cy<12> (hsync_pm/Mcompar_counter_cmp_le0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  hsync_pm/Mcompar_counter_cmp_le0000_cy<13> (hsync_pm/Mcompar_counter_cmp_le0000_cy<13>)
+     MUXCY:CI->O          37   0.269   1.267  hsync_pm/Mcompar_counter_cmp_le0000_cy<14> (hsync_pm/counter_cmp_le0001)
+     LUT4:I3->O            9   0.648   0.900  hsync_pm/counter_mux0003<0>11_1 (hsync_pm/counter_mux0003<0>11)
      LUT2:I1->O            1   0.643   0.000  hsync_pm/counter_mux0003<10>1 (hsync_pm/counter_mux0003<10>)
      MUXCY:S->O            1   0.632   0.000  hsync_pm/Madd_counter_add0000_cy<10> (hsync_pm/Madd_counter_add0000_cy<10>)
      MUXCY:CI->O           1   0.065   0.000  hsync_pm/Madd_counter_add0000_cy<11> (hsync_pm/Madd_counter_add0000_cy<11>)
@@ -397,15 +446,15 @@ Delay:               10.505ns (Levels of Logic = 39)
      XORCY:CI->O           1   0.844   0.000  hsync_pm/Madd_counter_add0000_xor<31> (hsync_pm/counter_add0000<31>)
      LD:D                      0.252          hsync_pm/counter_31
     ----------------------------------------
-    Total                     10.505ns (7.959ns logic, 2.546ns route)
-                                       (75.8% logic, 24.2% route)
+    Total                     10.384ns (7.441ns logic, 2.943ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hsync_pm/hsync_out1'
-  Clock period: 11.482ns (frequency: 87.091MHz)
-  Total number of paths / destination ports: 80948 / 129
+  Clock period: 10.528ns (frequency: 94.985MHz)
+  Total number of paths / destination ports: 73193 / 63
 -------------------------------------------------------------------------
-Delay:               11.482ns (Levels of Logic = 43)
+Delay:               10.528ns (Levels of Logic = 44)
   Source:            vsync_pm/counter_1 (LATCH)
   Destination:       vsync_pm/counter_31 (LATCH)
   Source Clock:      hsync_pm/hsync_out1 falling
@@ -423,8 +472,9 @@ Delay:               11.482ns (Levels of Logic = 43)
      MUXCY:CI->O           1   0.065   0.000  vsync_pm/Mcompar_counter_cmp_le0000_cy<4>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<4>1)
      MUXCY:CI->O           1   0.065   0.000  vsync_pm/Mcompar_counter_cmp_le0000_cy<5>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<5>1)
      MUXCY:CI->O           1   0.065   0.000  vsync_pm/Mcompar_counter_cmp_le0000_cy<6>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<6>1)
-     MUXCY:CI->O           1   0.269   0.423  vsync_pm/Mcompar_counter_cmp_le0000_cy<7>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<7>1)
-     LUT4_D:I3->O         67   0.648   1.353  vsync_pm/Mcompar_counter_cmp_le0000_cy<9>_01 (vsync_pm/counter_cmp_le0001)
+     MUXCY:CI->O           1   0.065   0.000  vsync_pm/Mcompar_counter_cmp_le0000_cy<7>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<7>1)
+     MUXCY:CI->O           1   0.065   0.000  vsync_pm/Mcompar_counter_cmp_le0000_cy<8>_0 (vsync_pm/Mcompar_counter_cmp_le0000_cy<8>1)
+     MUXCY:CI->O          25   0.269   1.340  vsync_pm/Mcompar_counter_cmp_le0000_cy<9>_0 (vsync_pm/counter_cmp_le0001)
      LUT2_D:I1->O          7   0.643   0.711  vsync_pm/vsync_out_mux0004_SW0 (N2)
      LUT4:I3->O            1   0.648   0.000  vsync_pm/Madd_counter_add0000_lut<0> (vsync_pm/Madd_counter_add0000_lut<0>)
      MUXCY:S->O            1   0.632   0.000  vsync_pm/Madd_counter_add0000_cy<0> (vsync_pm/Madd_counter_add0000_cy<0>)
@@ -461,12 +511,12 @@ Delay:               11.482ns (Levels of Logic = 43)
      XORCY:CI->O           1   0.844   0.000  vsync_pm/Madd_counter_add0000_xor<31> (vsync_pm/counter_add0000<31>)
      LD:D                      0.252          vsync_pm/counter_31
     ----------------------------------------
-    Total                     11.482ns (8.219ns logic, 3.263ns route)
-                                       (71.6% logic, 28.4% route)
+    Total                     10.528ns (7.701ns logic, 2.827ns route)
+                                       (73.1% logic, 26.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'hsync_pm/hsync_out1'
-  Total number of paths / destination ports: 33 / 33
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
 Offset:              5.695ns (Levels of Logic = 1)
   Source:            vsync_pm/vsync_out (LATCH)
@@ -485,7 +535,7 @@ Offset:              5.695ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'siggen_clk_in'
-  Total number of paths / destination ports: 33 / 33
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
 Offset:              5.779ns (Levels of Logic = 1)
   Source:            hsync_pm/hsync_out (LATCH)
@@ -505,14 +555,14 @@ Offset:              5.779ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.14 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.06 secs
  
 --> 
 
-Total memory usage is 276344 kilobytes
+Total memory usage is 274936 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :   51 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

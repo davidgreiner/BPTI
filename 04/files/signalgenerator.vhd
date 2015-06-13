@@ -8,8 +8,8 @@ entity entity_signalgenerator is
 		siggen_clk_in	: in std_logic;
 		siggen_hsync	: out std_logic;
 		siggen_vsync	: out std_logic;
-		siggen_col		: out integer;
-		siggen_row		: out integer
+		siggen_col		: out integer range -1 to 480;
+		siggen_row		: out integer range -1 to 640
 	);
 end entity;
 
@@ -20,7 +20,7 @@ architecture architecture_signalgenerator of entity_signalgenerator is
 		(
 			hsync_clk_in	: in std_logic;
 			hsync_out		: out std_logic;
-			hsync_row		: out integer
+			hsync_row		: out integer range -1 to 640
 		);
 	end component;
 
@@ -29,7 +29,7 @@ architecture architecture_signalgenerator of entity_signalgenerator is
 		(
 			vsync_clk_in	: in std_logic;
 			vsync_out		: out std_logic;
-			vsync_col		: out integer
+			vsync_col		: out integer range -1 to 480
 		);
 	end component;
 

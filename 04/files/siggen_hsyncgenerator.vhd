@@ -7,7 +7,7 @@ entity entity_hsyncgenerator is
 	(
 		hsync_clk_in	: in std_logic;
 		hsync_out		: out std_logic;
-		hsync_row		: out integer
+		hsync_row		: out integer range -1 to 640
 	);
 end entity;
 
