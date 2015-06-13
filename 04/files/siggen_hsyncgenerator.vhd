@@ -1,9 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
 entity entity_hsyncgenerator is
 	port
 	(
 		hsync_clk_in	: in std_logic;
-		hsync_out	: out std_logic;
-		hsync_row	: out std_logic
+		hsync_out		: out std_logic;
+		hsync_row		: out integer
 	);
 end entity;
 
@@ -18,7 +22,7 @@ begin
 	variable counter 	: integer := 1;
 	variable rowcounter	: integer := 0;
 	begin
-		if(hsync_clk_in = '1')
+		if(hsync_clk_in = '1') then
 			if(counter <= prevalid) then
 				-- prevalid for 44 ticks
 				hsync_out <= '1';
@@ -32,7 +36,7 @@ begin
 				-- postvalid for 20 ticks
 				hsync_out <= '1';
 				hsync_row <= -1;
-			elsif(counter <= (prevalid + valid + postvalid + invalid) then		
+			elsif(counter <= (prevalid + valid + postvalid + invalid)) then
 				-- invalid for 96 ticks
 				hsync_out <= '0';
 				hsync_row <= -1;

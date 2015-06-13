@@ -1,0 +1,3 @@
+vhdl work "../../files/siggen_vsyncgenerator.vhd"
+vhdl work "../../files/siggen_hsyncgenerator.vhd"
+vhdl work "../../files/signalgenerator.vhd"
