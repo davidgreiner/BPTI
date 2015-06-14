@@ -24,7 +24,7 @@ constant border_top     : integer := 0;
 constant border_left    : integer := 0;
 constant border_bottom  : integer := 480;
 constant border_right   : integer := 640;
-constant colour_white   : std_logic_vector(3 downto 0) := "1111";
+constant colour_max     : std_logic_vector(3 downto 0) := "1111";
 
 component entity_colourcombiner
     port
@@ -48,9 +48,9 @@ begin
     whiteboard_p : process(col_in, row_in)
     begin
         if(col_in = border_bottom or col_in = border_top or row_in = border_left or row_in = border_right) then
-            red_gen     <= colour_white;
-            green_gen   <= colour_white;
-            blue_gen    <= colour_white;
+            red_gen     <= colour_max;
+            green_gen   <= colour_max;
+            blue_gen    <= colour_max;
         end if;
     end process;
 
