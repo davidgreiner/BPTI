@@ -22,8 +22,20 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="prakti01_04_syncgen.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="entity_colourcombiner.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="entity_colourcombiner.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="entity_colourcombiner.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="entity_gradient.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="entity_gradient.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="entity_gradient.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="entity_pixelgenerator_whiteborder.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="entity_pixelgenerator_whiteborder.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="entity_pixelgenerator_whiteborder.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="entity_rectangle.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="entity_rectangle.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="entity_rectangle.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="entity_signalgenerator.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="entity_signalgenerator.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="entity_signalgenerator.ngc"/>
@@ -72,13 +84,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1434194833" xil_pn:in_ck="-2073978574336102117" xil_pn:name="TRANEXT_xstsynthesize_spartan3adsp" xil_pn:prop_ck="-7036565215815545223" xil_pn:start_ts="1434194814">
+    <transform xil_pn:end_ts="1434388262" xil_pn:in_ck="2581198294344740950" xil_pn:name="TRANEXT_xstsynthesize_spartan3adsp" xil_pn:prop_ck="-7036565215815545223" xil_pn:start_ts="1434388247">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="entity_signalgenerator.lso"/>
       <outfile xil_pn:name="entity_signalgenerator.ngc"/>

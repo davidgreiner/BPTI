@@ -1,2 +1,3 @@
 vhdl work "../../files/colourcombiner.vhd"
 vhdl work "../../files/pxlgen_whiteborder.vhd"
+vhdl work "../../files/pixelgenerator_whiteborder.vhd"

@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-
-entity entity_whiteborder is
+entity entity_gradient is
     port
     (
         col_in      : in integer range -1 to 480;
@@ -17,15 +17,9 @@ entity entity_whiteborder is
         green_out   : out std_logic_vector(3 downto 0);
         blue_out    : out std_logic_vector(3 downto 0)
     );
-end entity;
+end entity_gradient;
 
-architecture architecture_whiteborder of entity_whiteborder is
-constant border_top     : integer := 0;
-constant border_left    : integer := 0;
-constant border_bottom  : integer := 480;
-constant border_right   : integer := 640;
-constant colour_white   : std_logic_vector(3 downto 0) := "1111";
-
+architecture architecture_gradient of entity_gradient is
 component entity_colourcombiner
     port
     (
@@ -45,25 +39,20 @@ end component;
 signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
 
 begin
-    whiteboard_p : process(col_in, row_in)
+    gradient_p : process(col_in, row_in)
+    variable fract_col, fract_row : integer := 0;
+    variable red, green : std_logic_vector(3 downto 0) := "0000";
     begin
-        if(col_in = border_bottom or col_in = border_top or row_in = border_left or row_in = border_right) then
-            red_gen     <= colour_white;
-            green_gen   <= colour_white;
-            blue_gen    <= colour_white;
-        end if;
-    end process;
+        fract_col := col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
+        fract_row := row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
 
-    colourcombiner_pm : entity_colourcombiner port map
-    (
-        red1_in     => red_gen,
-        red2_in     => red_in,
-        green1_in   => green_gen,
-        green2_in   => green_in,
-        blue1_in    => blue_gen,
-        blue2_in    => blue_in,
-        red_out     => red_out,
-        green_out   => green_out,
-        blue_out    => blue_out
-    );
-end architecture architecture_whiteborder;
+        red := std_logic_vector(to_unsigned(fract_col, 4));
+        green := std_logic_vector(to_unsigned(fract_row, 4));
+        blue_gen <= red or green;
+        red_gen <= red;
+        green_gen <= green;
+
+        row_out <= row_in;
+        col_out <= col_in;
+    end process;
+end architecture architecture_gradient;
