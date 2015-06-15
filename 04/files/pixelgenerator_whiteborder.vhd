@@ -36,13 +36,13 @@ end component;
 begin
     whiteborder_pm : entity_whiteborder port map
     (
-        wb_col_in       => col_in;
-        wb_row_in       => row_in;
-        red_in          => colour_min;
-        green_in        => colour_min;
-        blue_in         => colour_min;
-        wb_red_out      => red_out;
-        wb_green_out    => green_out;
+        wb_col_in       => col_in,
+        wb_row_in       => row_in,
+        red_in          => colour_min,
+        green_in        => colour_min,
+        blue_in         => colour_min,
+        wb_red_out      => red_out,
+        wb_green_out    => green_out,
         wb_blue_out     => blue_out
     );
 end architecture architecture_pixelgenerator_whiteborder;

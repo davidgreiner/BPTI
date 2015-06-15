@@ -36,10 +36,6 @@ architecture architecture_rectangle of entity_rectangle is
 constant rect_colour_red    : std_logic_vector(3 downto 0) := "1111";
 constant rect_colour_green  : std_logic_vector(3 downto 0) := "1000";
 constant rect_colour_blue   : std_logic_vector(3 downto 0) := "0000";
-variable top_left_x         : integer range 0 to 640;
-variable top_left_y         : integer range 0 to 480;
-variable bottom_right_x     : integer range 0 to 640;
-variable bottom_right_y     : integer range 0 to 480;
 
 component entity_colourcombiner
     port
@@ -58,6 +54,10 @@ component entity_colourcombiner
 end component;
 
 signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
+signal top_left_x         : integer range 0 to 640;
+signal top_left_y         : integer range 0 to 480;
+signal bottom_right_x     : integer range 0 to 640;
+signal bottom_right_y     : integer range 0 to 480;
 
 begin
     rectangle_p : process(col_in, row_in)
@@ -75,26 +75,26 @@ begin
     leftright_p : process(btn_left, btn_right)
     begin
         if(btn_left = '1') then
-            top_left_x := top_left_x + 1;
-            bottom_right_x := bottom_right_x + 1;
+            top_left_x <= top_left_x + 1;
+            bottom_right_x <= bottom_right_x + 1;
         end if;
 
         if(btn_right = '1') then
-            top_left_x := top_left_x - 1;
-            bottom_right_x := bottom_right_x - 1;
+            top_left_x <= top_left_x - 1;
+            bottom_right_x <= bottom_right_x - 1;
         end if;
     end process;
 
     updown_p : process(btn_up, btn_down)
     begin
         if(btn_up = '1') then
-            top_left_y := top_left_y + 1;
-            bottom_right_y := bottom_right_y + 1;
+            top_left_y <= top_left_y + 1;
+            bottom_right_y <= bottom_right_y + 1;
         end if;
 
         if(btn_down = '1') then
-            top_left_y := top_left_y - 1;
-            bottom_right_y := bottom_right_y - 1;
+            top_left_y <= top_left_y - 1;
+            bottom_right_y <= bottom_right_y - 1;
         end if;
     end process;
 

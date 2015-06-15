@@ -1,2 +1,3 @@
 vhdl work "G:\Development\github\BPTI\04\files\colourcombiner.vhd"
 vhdl work "G:\Development\github\BPTI\04\files\pxlgen_whiteborder.vhd"
+vhdl work "G:\Development\github\BPTI\04\files\pixelgenerator_whiteborder.vhd"

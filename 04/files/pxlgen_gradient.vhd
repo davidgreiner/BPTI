@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity entity_gradient is
     port
@@ -42,11 +43,11 @@ begin
     variable fract_col, fract_row : integer := 0;
     variable red, green : std_logic_vector(3 downto 0) := "0000";
     begin
-        fract_col = col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
-        fract_row = row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
+        fract_col := col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
+        fract_row := row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
 
-        red := std_logic_vector(to_unsigned(fract_col, bit_out'length));
-        green := std_logic_vector(to_unsigned(fract_row, bit_out'length));
+        red := std_logic_vector(to_unsigned(fract_col, 4));
+        green := std_logic_vector(to_unsigned(fract_row, 4));
         blue_gen <= red or green;
         red_gen <= red;
         green_gen <= green;
