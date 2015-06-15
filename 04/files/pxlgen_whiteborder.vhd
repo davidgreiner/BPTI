@@ -51,6 +51,9 @@ begin
             red_gen     <= colour_max;
             green_gen   <= colour_max;
             blue_gen    <= colour_max;
+
+            col_out <= col_in;
+            row_out <= row_in;
         end if;
     end process;
 
