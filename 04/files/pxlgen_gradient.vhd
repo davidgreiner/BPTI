@@ -17,3 +17,41 @@ entity entity_gradient is
         blue_out    : out std_logic_vector(3 downto 0)
     );
 end entity_gradient;
+
+architecture architecture_gradient of entity_gradient is
+component entity_colourcombiner
+    port
+    (
+        red1_in     : in std_logic_vector(3 downto 0);
+        green1_in   : in std_logic_vector(3 downto 0);
+        blue1_in    : in std_logic_vector(3 downto 0);
+        red2_in     : in std_logic_vector(3 downto 0);
+        green2_in   : in std_logic_vector(3 downto 0);
+        blue2_in    : in std_logic_vector(3 downto 0);
+
+        red_out     : out std_logic_vector(3 downto 0);
+        green_out   : out std_logic_vector(3 downto 0);
+        blue_out    : out std_logic_vector(3 downto 0)
+    );
+end component;
+
+signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
+
+begin
+    gradient_p : process(col_in, row_in)
+    variable fract_col, fract_row : integer := 0;
+    variable red, green : std_logic_vector(3 downto 0) := "0000";
+    begin
+        fract_col = col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
+        fract_row = row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
+
+        red := std_logic_vector(to_unsigned(fract_col, bit_out'length));
+        green := std_logic_vector(to_unsigned(fract_row, bit_out'length));
+        blue_gen <= red or green;
+        red_gen <= red;
+        green_gen <= green;
+
+        row_out <= row_in;
+        col_out <= col_in;
+    end process;
+end architecture architecture_gradient;
