@@ -33,6 +33,14 @@ begin
     pixelgenerator_test_p : process
     variable colour_max : std_logic_vector(3 downto 0) := "1111";
     begin
-
+        for i in 0 to 4 loop
+            for j in 0 to 4 loop
+                if(i = 0 or j = 0 or i = 4 or j = 4) then
+                    assert(red = colour_max)    report "Assert failure: Border (red) was not white."
+                    assert(green = colour_max)  report "Assert failure: Border (green) was not white."
+                    assert(blue = colour_max)   report "Assert failure: Border (blue) was not white."
+                end if;
+            end loop;
+        end loop;
     end process;
 end architecture architecture_tb_pixelgenerator;
