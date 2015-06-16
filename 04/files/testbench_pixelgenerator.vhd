@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity entity_pixelgenerator is
+entity entity_tb_pixelgenerator is
 end entity;
 
-architecture architecture_tb_pixelgenerator of entity_tb_signalgenerator is
+architecture architecture_tb_pixelgenerator of entity_tb_pixelgenerator is
 component entity_pixelgenerator_whiteborder
 port
 (
@@ -35,10 +35,14 @@ begin
     begin
         for i in 0 to 4 loop
             for j in 0 to 4 loop
+                col <= i;
+                row <= j;
+                wait for 1 ns;
+
                 if(i = 0 or j = 0 or i = 4 or j = 4) then
-                    assert(red = colour_max)    report "Assert failure: Border (red) was not white."
-                    assert(green = colour_max)  report "Assert failure: Border (green) was not white."
-                    assert(blue = colour_max)   report "Assert failure: Border (blue) was not white."
+                    assert(red = colour_max)    report "Assert failure: Border (red) was not white.";
+                    assert(green = colour_max)  report "Assert failure: Border (green) was not white.";
+                    assert(blue = colour_max)   report "Assert failure: Border (blue) was not white.";
                 end if;
             end loop;
         end loop;

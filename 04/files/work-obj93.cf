@@ -1,31 +1,34 @@
 v 3
-file . "vgagenerator.vhd" "20150616094001.000" "20150616140312.276":
+file . "vgagenerator.vhd" "20150616124854.000" "20150616144901.063":
   entity entity_vgagenerator at 1( 0) + 0 on 4;
-  architecture architecture_vgagenerator of entity_vgagenerator at 17( 360) + 0 on 4;
-file . "testbench_signalgenerator.vhd" "20150616102530.000" "20150616140312.338":
-  entity entity_tb_signalgenerator at 1( 0) + 0 on 11;
-  architecture architecture_tb_signalgenerator of entity_tb_signalgenerator at 7( 93) + 0 on 12;
-file . "signalgenerator.vhd" "20150616091934.000" "20150616140312.371":
-  entity entity_signalgenerator at 1( 0) + 0 on 13;
-  architecture architecture_signalgenerator of entity_signalgenerator at 17( 290) + 0 on 14;
-file . "siggen_vsyncgenerator.vhd" "20150616120105.000" "20150616140312.426":
-  entity entity_vsyncgenerator at 1( 0) + 0 on 17;
-  architecture architecture_vsyncgenerator of entity_vsyncgenerator at 15( 208) + 0 on 18;
-file . "siggen_hsyncgenerator.vhd" "20150616104632.000" "20150616140312.398":
-  entity entity_hsyncgenerator at 1( 0) + 0 on 15;
-  architecture architecture_hsyncgenerator of entity_hsyncgenerator at 14( 207) + 0 on 16;
-file . "pxlgen_whiteborder.vhd" "20150616100001.000" "20150616140312.272":
+  architecture architecture_vgagenerator of entity_vgagenerator at 17( 384) + 0 on 4;
+file . "testbench_signalgenerator.vhd" "20150616102530.000" "20150616144901.062":
+  entity entity_tb_signalgenerator at 1( 0) + 0 on 4;
+  architecture architecture_tb_signalgenerator of entity_tb_signalgenerator at 7( 93) + 0 on 4;
+file . "testbench_pixelgenerator.vhd" "20150616123250.000" "20150616144901.061":
+  entity entity_tb_pixelgenerator at 1( 0) + 0 on 4;
+  architecture architecture_tb_pixelgenerator of entity_tb_pixelgenerator at 7( 92) + 0 on 4;
+file . "signalgenerator.vhd" "20150616091934.000" "20150616144901.060":
+  entity entity_signalgenerator at 1( 0) + 0 on 4;
+  architecture architecture_signalgenerator of entity_signalgenerator at 17( 290) + 0 on 4;
+file . "siggen_vsyncgenerator.vhd" "20150616120658.000" "20150616144901.058":
+  entity entity_vsyncgenerator at 1( 0) + 0 on 4;
+  architecture architecture_vsyncgenerator of entity_vsyncgenerator at 15( 208) + 0 on 4;
+file . "siggen_hsyncgenerator.vhd" "20150616120700.000" "20150616144901.057":
+  entity entity_hsyncgenerator at 1( 0) + 0 on 4;
+  architecture architecture_hsyncgenerator of entity_hsyncgenerator at 14( 207) + 0 on 4;
+file . "pxlgen_whiteborder.vhd" "20150616123731.000" "20150616144901.055":
   entity entity_whiteborder at 1( 0) + 0 on 4;
-  architecture architecture_whiteborder of entity_whiteborder at 22( 644) + 0 on 4;
-file . "pxlgen_rectangle.vhd" "20150616095955.000" "20150616140312.271":
+  architecture architecture_whiteborder of entity_whiteborder at 22( 674) + 0 on 4;
+file . "pxlgen_rectangle.vhd" "20150616124729.000" "20150616144901.038":
   entity entity_rectangle at 1( 0) + 0 on 4;
-  architecture architecture_rectangle of entity_rectangle at 35( 1035) + 0 on 4;
-file . "pxlgen_gradient.vhd" "20150616102004.000" "20150616140312.270":
+  architecture architecture_rectangle of entity_rectangle at 35( 1187) + 0 on 4;
+file . "pxlgen_gradient.vhd" "20150616124039.000" "20150616144901.037":
   entity entity_gradient at 1( 0) + 0 on 4;
   architecture architecture_gradient of entity_gradient at 22( 675) + 0 on 4;
-file . "pixelgenerator_whiteborder.vhd" "20150616091934.000" "20150616140312.269":
+file . "pixelgenerator_whiteborder.vhd" "20150616124003.000" "20150616144901.036":
   entity entity_pixelgenerator_whiteborder at 1( 0) + 0 on 4;
-  architecture architecture_pixelgenerator_whiteborder of entity_pixelgenerator_whiteborder at 16( 389) + 0 on 4;
-file . "colourcombiner.vhd" "20150616091934.000" "20150616140312.268":
+  architecture architecture_pixelgenerator_whiteborder of entity_pixelgenerator_whiteborder at 16( 424) + 0 on 4;
+file . "colourcombiner.vhd" "20150616123841.000" "20150616144901.034":
   entity entity_colourcombiner at 1( 0) + 0 on 4;
-  architecture architecture_colourcombiner of entity_colourcombiner at 20( 609) + 0 on 4;
+  architecture architecture_colourcombiner of entity_colourcombiner at 20( 636) + 0 on 4;

@@ -23,16 +23,16 @@ architecture architecture_gradient of entity_gradient is
 component entity_colourcombiner
     port
     (
-        red1_in     : in std_logic_vector(3 downto 0);
-        green1_in   : in std_logic_vector(3 downto 0);
-        blue1_in    : in std_logic_vector(3 downto 0);
-        red2_in     : in std_logic_vector(3 downto 0);
-        green2_in   : in std_logic_vector(3 downto 0);
-        blue2_in    : in std_logic_vector(3 downto 0);
+        cc_red1_in     : in std_logic_vector(3 downto 0);
+        cc_green1_in   : in std_logic_vector(3 downto 0);
+        cc_blue1_in    : in std_logic_vector(3 downto 0);
+        cc_red2_in     : in std_logic_vector(3 downto 0);
+        cc_green2_in   : in std_logic_vector(3 downto 0);
+        cc_blue2_in    : in std_logic_vector(3 downto 0);
 
-        red_out     : out std_logic_vector(3 downto 0);
-        green_out   : out std_logic_vector(3 downto 0);
-        blue_out    : out std_logic_vector(3 downto 0)
+        cc_red_out     : out std_logic_vector(3 downto 0);
+        cc_green_out   : out std_logic_vector(3 downto 0);
+        cc_blue_out    : out std_logic_vector(3 downto 0)
     );
 end component;
 

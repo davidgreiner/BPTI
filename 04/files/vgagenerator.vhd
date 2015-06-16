@@ -4,13 +4,13 @@ use ieee.std_logic_1164.all;
 entity entity_vgagenerator is
     port
     (
-        clk_in  : std_logic;
+        vga_clk_in  : std_logic;
 
-        hsync   : out std_logic;
-        vsync   : out std_logic;
-        red     : out std_logic_vector(3 downto 0);
-        green   : out std_logic_vector(3 downto 0);
-        blue    : out std_logic_vector(3 downto 0)
+        vga_hsync   : out std_logic;
+        vga_vsync   : out std_logic;
+        vga_red     : out std_logic_vector(3 downto 0);
+        vga_green   : out std_logic_vector(3 downto 0);
+        vga_blue    : out std_logic_vector(3 downto 0)
     );
 end entity;
 
@@ -46,9 +46,9 @@ signal row          : integer range -1 to 640;
 begin
     signalgenerator_pm : entity_signalgenerator port map
     (
-        siggen_clk_in   => clk_in,
-        siggen_hsync	=> hsync,
-        siggen_vsync	=> vsync,
+        siggen_clk_in   => vga_clk_in,
+        siggen_hsync	=> vga_hsync,
+        siggen_vsync	=> vga_vsync,
         siggen_col		=> col,
         siggen_row		=> row
     );
@@ -57,8 +57,8 @@ begin
     (
         col_in      => col,
         row_in      => row,
-        red_out     => red,
-        green_out   => green,
-        blue_out    => blue
+        red_out     => vga_red,
+        green_out   => vga_green,
+        blue_out    => vga_blue
     );
 end architecture architecture_vgagenerator;
