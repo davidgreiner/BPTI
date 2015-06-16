@@ -13,9 +13,9 @@ end entity;
 
 
 architecture architecture_vsyncgenerator of entity_vsyncgenerator is
-	constant prevalid 	: integer := 30;
-	constant valid		: integer := 480;
-	constant postvalid	: integer := 14;
+	constant prevalid 	: integer := 1;--30;
+	constant valid		: integer := 4; --480;
+	constant postvalid	: integer := 2; --14;
 	constant invalid	: integer := 1;
 
 begin
@@ -23,7 +23,7 @@ begin
 	variable counter 	: integer := 1;
 	variable colcounter	: integer := 0;
 	begin
-		if(vsync_clk_in = '1') then
+		if(vsync_clk_in = '0') then
 			if(counter <= prevalid) then
 				-- prevalid for 30 ticks
 				vsync_out <= '0';
