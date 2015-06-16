@@ -12,10 +12,10 @@ entity entity_hsyncgenerator is
 end entity;
 
 architecture architecture_hsyncgenerator of entity_hsyncgenerator is
-	constant prevalid 	: integer := 44;
-	constant valid		: integer := 640;
-	constant postvalid	: integer := 20;
-	constant invalid	: integer := 96;
+	constant prevalid 	: integer := 2; --44;
+	constant valid		: integer := 10; --640;
+	constant postvalid	: integer := 3; --20;
+	constant invalid	: integer := 5; --96;
 
 begin
 	hsyncgen_p : process (hsync_clk_in)
@@ -36,7 +36,7 @@ begin
 				-- postvalid for 20 ticks
 				hsync_out <= '0';
 				hsync_row <= -1;
-			elsif(counter <= (prevalid + valid + postvalid + invalid)) then
+			elsif(counter <= (prevalid + valid + postvalid + invalid) - 1) then
 				-- invalid for 96 ticks
 				hsync_out <= '1';
 				hsync_row <= -1;

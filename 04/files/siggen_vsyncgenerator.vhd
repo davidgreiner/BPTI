@@ -37,7 +37,7 @@ begin
 				-- postvalid for 14 ticks
 				vsync_out <= '0';
 				vsync_col <= -1;
-			elsif(counter <= (prevalid + valid + postvalid + invalid)) then
+			elsif(counter <= (prevalid + valid + postvalid + invalid) - 1) then
 				-- invalid for 1 ticks
 				vsync_out <= '1';
 				vsync_col <= -1;
