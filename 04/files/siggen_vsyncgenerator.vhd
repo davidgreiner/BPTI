@@ -14,7 +14,7 @@ end entity;
 
 architecture architecture_vsyncgenerator of entity_vsyncgenerator is
 	constant prevalid 	: integer := 1;--30;
-	constant valid		: integer := 4; --480;
+	constant valid		: integer := 5; --480;
 	constant postvalid	: integer := 2; --14;
 	constant invalid	: integer := 1;
 

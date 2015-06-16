@@ -19,8 +19,8 @@ component entity_vgagenerator
     );
 end component;
 
-signal tb_clk_in, tb_hsync, tb_vsync : std_logic;
-signal tb_red, tb_green, tb_blue : std_logic_vector(3 downto 0);
+signal tb_clk_in, tb_hsync, tb_vsync : std_logic := '0';
+signal tb_red, tb_green, tb_blue : std_logic_vector(3 downto 0) := "0000";
 
 begin
 	vgagenerator_pm : entity_vgagenerator port map
@@ -38,8 +38,8 @@ begin
 	variable colour_max : std_logic_vector(3 downto 0) := "1111";
 	variable colour_min : std_logic_vector(3 downto 0) := "0000";
 	begin
-		for j in 0 to 7 loop
-			for i in 0 to 19 loop
+		for j in 0 to 8 loop
+			for i in 0 to 14 loop
 				tb_clk_in <= '0';
                 wait for 1 ns;
                 tb_clk_in <= '1';
@@ -49,7 +49,7 @@ begin
 					assert(tb_red = colour_max)		report "Assert failure: Border not white (red)";
 					assert(tb_green = colour_max) 	report "Assert failure: Border not white (green)";
                     assert(tb_blue = colour_max)	report "Assert failure: Border not white (blue)";
-				else
+				elsif(i>-1 and j>-1) then
 					assert(tb_red = colour_min)		report "Assert failure: Center not black (red)";
 					assert(tb_green = colour_min) 	report "Assert failure: Center not black (green)";
                     assert(tb_blue = colour_min)	report "Assert failure: Center not black (blue)";
