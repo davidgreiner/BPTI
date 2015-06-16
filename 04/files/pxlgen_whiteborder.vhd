@@ -47,14 +47,16 @@ signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
 begin
     whiteboard_p : process(col_in, row_in)
     begin
-        if(col_in = border_bottom or col_in = border_top or row_in = border_left or row_in = border_right) then
-            red_gen     <= colour_max;
-            green_gen   <= colour_max;
-            blue_gen    <= colour_max;
-
-            col_out <= col_in;
-            row_out <= row_in;
+        if(col_in > -1 and row_in > -1) then
+            if(col_in = border_bottom or col_in = border_top or row_in = border_left or row_in = border_right) then
+                red_gen     <= colour_max;
+                green_gen   <= colour_max;
+                blue_gen    <= colour_max;
+            end if;
         end if;
+
+        col_out <= col_in;
+        row_out <= row_in;
     end process;
 
     colourcombiner_pm : entity_colourcombiner port map

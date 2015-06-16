@@ -62,10 +62,12 @@ signal bottom_right_y     : integer range 0 to 480;
 begin
     rectangle_p : process(col_in, row_in)
     begin
-        if((col_in >= top_left_y and col_in <= top_left_y + rect_width) or (col_in <= bottom_right_y and col_in >= bottom_right_y - rect_width) or (row_in >= top_left_x and row_in <= top_left_x + rect_width) or (row_in <= bottom_right_x and row_in >= bottom_right_x - rect_width)) then
-            red_gen     <= rect_colour_red;
-            green_gen   <= rect_colour_green;
-            blue_gen    <= rect_colour_blue;
+        if(col_in > -1 and row_in > -1) then
+            if((col_in >= top_left_y and col_in <= top_left_y + rect_width) or (col_in <= bottom_right_y and col_in >= bottom_right_y - rect_width) or (row_in >= top_left_x and row_in <= top_left_x + rect_width) or (row_in <= bottom_right_x and row_in >= bottom_right_x - rect_width)) then
+                red_gen     <= rect_colour_red;
+                green_gen   <= rect_colour_green;
+                blue_gen    <= rect_colour_blue;
+            end if;
         end if;
 
         col_out <= col_in;
