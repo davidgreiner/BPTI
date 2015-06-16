@@ -30,12 +30,12 @@ end component;
 component entity_pixelgenerator_whiteborder
 port
     (
-        col_in      : in integer range 0 to 480;
-        row_in      : in integer range 0 to 640;
+        pxl_wb_col_in      : in integer range 0 to 480;
+        pxl_wb_row_in      : in integer range 0 to 640;
 
-        red_out     : out std_logic_vector(3 downto 0);
-        green_out   : out std_logic_vector(3 downto 0);
-        blue_out    : out std_logic_vector(3 downto 0)
+        pxl_wb_red_out     : out std_logic_vector(3 downto 0);
+        pxl_wb_green_out   : out std_logic_vector(3 downto 0);
+        pxl_wb_blue_out    : out std_logic_vector(3 downto 0)
     );
 end component;
 
@@ -55,10 +55,10 @@ begin
 
     pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
     (
-        col_in      => col,
-        row_in      => row,
-        red_out     => vga_red,
-        green_out   => vga_green,
-        blue_out    => vga_blue
+        pxl_wb_col_in      => col,
+        pxl_wb_row_in      => row,
+        pxl_wb_red_out     => vga_red,
+        pxl_wb_green_out   => vga_green,
+        pxl_wb_blue_out    => vga_blue
     );
 end architecture architecture_vgagenerator;
