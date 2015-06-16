@@ -5,29 +5,30 @@ entity entity_tb_pixelgenerator is
 end entity;
 
 architecture architecture_tb_pixelgenerator of entity_tb_pixelgenerator is
+
 component entity_pixelgenerator_whiteborder
 port
 (
-    col_in      : in integer range 0 to 480;
-    row_in      : in integer range 0 to 640;
+    pxl_wb_col_in      : in integer range 0 to 480;
+    pxl_wb_row_in      : in integer range 0 to 640;
 
-    red_out     : out std_logic_vector(3 downto 0);
-    green_out   : out std_logic_vector(3 downto 0);
-    blue_out    : out std_logic_vector(3 downto 0)
+    pxl_wb_red_out     : out std_logic_vector(3 downto 0);
+    pxl_wb_green_out   : out std_logic_vector(3 downto 0);
+    pxl_wb_blue_out    : out std_logic_vector(3 downto 0)
 );
 end component;
 
-signal col, row : integer;
+signal col, row : integer := 0;
 signal red, green, blue : std_logic_vector(3 downto 0);
 
 begin
     pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
     (
-        col_in      => col,
-        row_in      => row,
-        red_out     => red,
-        green_out   => green,
-        blue_out    => blue
+        pxl_wb_col_in      => col,
+        pxl_wb_row_in      => row,
+        pxl_wb_red_out     => red,
+        pxl_wb_green_out   => green,
+        pxl_wb_blue_out    => blue
     );
 
     pixelgenerator_test_p : process

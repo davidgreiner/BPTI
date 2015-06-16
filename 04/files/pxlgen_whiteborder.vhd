@@ -13,6 +13,7 @@ entity entity_whiteborder is
 
         wb_col_out     : out integer range -1 to 480;
         wb_row_out     : out integer range -1 to 640;
+
         wb_red_out     : out std_logic_vector(3 downto 0);
         wb_green_out   : out std_logic_vector(3 downto 0);
         wb_blue_out    : out std_logic_vector(3 downto 0)
@@ -52,6 +53,10 @@ begin
                 red_gen     <= colour_max;
                 green_gen   <= colour_max;
                 blue_gen    <= colour_max;
+            else
+                red_gen     <= wb_red_in;
+                green_gen   <= wb_green_in;
+                blue_gen    <= wb_blue_in;
             end if;
         end if;
 

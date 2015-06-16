@@ -67,6 +67,10 @@ begin
                 red_gen     <= rect_colour_red;
                 green_gen   <= rect_colour_green;
                 blue_gen    <= rect_colour_blue;
+            else
+                red_gen     <= pxl_rect_red_in;
+                green_gen   <= pxl_rect_green_in;
+                blue_gen    <= pxl_rect_blue_in;
             end if;
         end if;
 
