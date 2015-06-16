@@ -25,20 +25,20 @@ begin
 		if(hsync_clk_in = '1') then
 			if(counter <= prevalid) then
 				-- prevalid for 44 ticks
-				hsync_out <= '1';
+				hsync_out <= '0';
 				hsync_row <= -1;
 			elsif(counter <= (prevalid + valid)) then
 				-- valid for 640 ticks
-				hsync_out <= '1';
+				hsync_out <= '0';
 				hsync_row <= rowcounter;
 				rowcounter := rowcounter + 1;
 			elsif(counter <= (prevalid + valid + postvalid)) then
 				-- postvalid for 20 ticks
-				hsync_out <= '1';
+				hsync_out <= '0';
 				hsync_row <= -1;
 			elsif(counter <= (prevalid + valid + postvalid + invalid)) then
 				-- invalid for 96 ticks
-				hsync_out <= '0';
+				hsync_out <= '1';
 				hsync_row <= -1;
 			else
 				rowcounter := 0;
