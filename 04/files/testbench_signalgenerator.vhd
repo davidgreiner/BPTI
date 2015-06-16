@@ -18,8 +18,8 @@ port
 end component;
 
 signal clk_in, hsync, vsync : std_logic;
-signal row  : out integer range -1 to 640;
-signal col  : out integer range -1 to 480;
+signal row  : integer range -1 to 640;
+signal col  : integer range -1 to 480;
 
 begin
     signalgenerator_pm : entity_signalgenerator port map
@@ -69,3 +69,5 @@ begin
                 end if;
             end loop;
         end loop;
+    end process;
+end architecture architecture_tb_signalgenerator;

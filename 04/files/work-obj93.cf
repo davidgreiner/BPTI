@@ -1,0 +1,4 @@
+v 3
+file . "testbench_signalgenerator.vhd" "20150616100715.000" "20150616120721.376":
+  entity entity_tb_signalgenerator at 1( 0) + 0 on 11;
+  architecture architecture_tb_signalgenerator of entity_tb_signalgenerator at 7( 93) + 0 on 12;
