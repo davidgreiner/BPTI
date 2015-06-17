@@ -12,7 +12,6 @@ entity entity_rectangle is
         pxl_rct_py1         : in integer range 0 to 480;
         pxl_rct_px2         : in integer range 0 to 640;
         pxl_rct_py2         : in integer range 0 to 480;
-        pxl_rct_width       : in integer range 1 to 239;
 
         pxl_rct_btn_left    : in std_logic;
         pxl_rct_btn_right   : in std_logic;
@@ -63,7 +62,7 @@ begin
     rectangle_p : process(pxl_rct_col_in, pxl_rct_row_in)
     begin
         if(pxl_rct_col_in > -1 and pxl_rct_row_in > -1) then
-            if((pxl_rct_col_in >= top_left_y and pxl_rct_col_in <= top_left_y + pxl_rct_width) or (pxl_rct_col_in <= bottom_right_y and pxl_rct_col_in >= bottom_right_y - pxl_rct_width) or (pxl_rct_row_in >= top_left_x and pxl_rct_row_in <= top_left_x + pxl_rct_width) or (pxl_rct_row_in <= bottom_right_x and pxl_rct_row_in >= bottom_right_x - pxl_rct_width)) then
+            if(pxl_rct_col_in >= top_left_y and pxl_rct_col_in <= bottom_right_y and pxl_rct_row_in >= top_left_x and pxl_rct_row_in <= bottom_right_x) then
                 red_gen     <= rect_colour_red;
                 green_gen   <= rect_colour_green;
                 blue_gen    <= rect_colour_blue;

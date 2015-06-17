@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity entity_vgagenerator is
     port
     (
-        vga_clk_in  : std_logic;
+        vga_clk_in  : in std_logic;
 
         vga_hsync   : out std_logic;
         vga_vsync   : out std_logic;

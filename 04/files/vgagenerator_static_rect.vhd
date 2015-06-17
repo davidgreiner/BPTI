@@ -28,16 +28,26 @@ port
     );
 end component;
 
-component entity_pixelgenerator_gradient
+component entity_pixelgenerator_rect
 port
     port
     (
-        pxl_grad_col_in      : in integer range 0 to 480;
-        pxl_grad_row_in      : in integer range 0 to 640;
+        pxl_rect_col_in      : in integer range 0 to 480;
+        pxl_rect_row_in      : in integer range 0 to 640;
 
-        pxl_grad_red_out     : out std_logic_vector(3 downto 0);
-        pxl_grad_green_out   : out std_logic_vector(3 downto 0);
-        pxl_grad_blue_out    : out std_logic_vector(3 downto 0)
+        pxl_rect_px1        : in integer;
+        pxl_rect_px2        : in integer;
+        pxl_rect_py1        : in integer;
+        pxl_rect_py2        : in integer;
+
+        pxl_rect_btn_left   : in std_logic;
+        pxl_rect_btn_right  : in std_logic;
+        pxl_rect_btn_up     : in std_logic;
+        pxl_rect_btn_down   : in std_logic;
+
+        pxl_rect_red_out     : out std_logic_vector(3 downto 0);
+        pxl_rect_green_out   : out std_logic_vector(3 downto 0);
+        pxl_rect_blue_out    : out std_logic_vector(3 downto 0)
     );
 end component;
 
@@ -57,10 +67,19 @@ begin
 
     pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
     (
-        pxl_grad_col_in      => col,
-        pxl_grad_row_in      => row,
-        pxl_grad_red_out     => vga_red,
-        pxl_grad_green_out   => vga_green,
-        pxl_grad_blue_out    => vga_blue
+        pxl_rect_col_in      => col,
+        pxl_rect_row_in      => row,
+        pxl_rect_red_out     => vga_red,
+        pxl_rect_green_out   => vga_green,
+        pxl_rect_blue_out    => vga_blue,
+        pxl_rect_px1         => 140,
+        pxl_rect_px2         => 360,
+        pxl_rect_py1         => 70,
+        pxl_rect_py2         => 340,
+
+        pxl_rect_btn_left    => '0',
+        pxl_rect_btn_right   => '0',
+        pxl_rect_btn_up      => '0',
+        pxl_rect_btn_down    => '0'
     );
 end architecture architecture_vgagenerator;
