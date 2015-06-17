@@ -5,14 +5,14 @@ use ieee.std_logic_1164.all;
 entity entity_whiteborder is
     port
     (
-        wb_col_in      : in integer range -1 to 480;
-        wb_row_in      : in integer range -1 to 640;
+        wb_col_in      : in integer range -1 to 479;
+        wb_row_in      : in integer range -1 to 639;
         wb_red_in      : in std_logic_vector(3 downto 0);
         wb_green_in    : in std_logic_vector(3 downto 0);
         wb_blue_in     : in std_logic_vector(3 downto 0);
 
-        wb_col_out     : out integer range -1 to 480;
-        wb_row_out     : out integer range -1 to 640;
+        wb_col_out     : out integer range -1 to 479;
+        wb_row_out     : out integer range -1 to 639;
 
         wb_red_out     : out std_logic_vector(3 downto 0);
         wb_green_out   : out std_logic_vector(3 downto 0);
@@ -21,11 +21,12 @@ entity entity_whiteborder is
 end entity;
 
 architecture architecture_whiteborder of entity_whiteborder is
-constant border_top     : integer := 0;
-constant border_left    : integer := 0;
-constant border_bottom  : integer := 480;
-constant border_right   : integer := 640;
+constant border_top     : integer := 40;
+constant border_left    : integer := 40;
+constant border_bottom  : integer := 439;
+constant border_right   : integer := 609;
 constant colour_max     : std_logic_vector(3 downto 0) := "1111";
+constant colour_min		 : std_logic_vector(3 downto 0) := "0000";
 
 component entity_colourcombiner
     port
@@ -46,10 +47,10 @@ end component;
 signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
 
 begin
-    whiteboard_p : process(wb_col_in, wb_row_in)
+    whiteborerd_p : process(wb_col_in, wb_row_in, wb_red_in, wb_green_in, wb_blue_in)
     begin
         if(wb_col_in > -1 and wb_row_in > -1) then
-            if(wb_col_in = border_bottom or wb_col_in = border_top or wb_row_in = border_left or wb_row_in = border_right) then
+            if((wb_col_in <= border_bottom and wb_col_in >= border_bottom - 20) or (wb_col_in <= border_top and wb_col_in >= border_top - 20) or (wb_row_in >= border_left and wb_row_in <= border_left + 20) or (wb_row_in <= border_right and wb_row_in >= border_right - 20)) then
                 red_gen     <= colour_max;
                 green_gen   <= colour_max;
                 blue_gen    <= colour_max;
@@ -59,11 +60,10 @@ begin
                 blue_gen    <= wb_blue_in;
             end if;
         else
-            red_gen     <= wb_red_in;
-            green_gen   <= wb_green_in;
-            blue_gen    <= wb_blue_in;
+            red_gen     <= colour_min;
+            green_gen   <= colour_min;
+            blue_gen    <= colour_min;
         end if;
-
 
         wb_col_out <= wb_col_in;
         wb_row_out <= wb_row_in;

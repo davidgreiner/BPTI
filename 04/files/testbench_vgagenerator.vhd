@@ -6,7 +6,7 @@ end entity;
 
 architecture architecture_tb_vgagenerator of entity_tb_vgagenerator is
 
-component entity_vgagenerator
+component entity_vgagenerator_wb
 	port
     (
         vga_clk_in  : std_logic;
@@ -23,7 +23,7 @@ signal tb_clk_in, tb_hsync, tb_vsync : std_logic := '0';
 signal tb_red, tb_green, tb_blue : std_logic_vector(3 downto 0) := "0000";
 
 begin
-	vgagenerator_pm : entity_vgagenerator port map
+	vgagenerator_pm : entity_vgagenerator_wb port map
 	(
 		vga_clk_in	=> tb_clk_in,
 

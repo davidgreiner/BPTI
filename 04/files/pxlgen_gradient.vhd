@@ -5,14 +5,14 @@ use ieee.numeric_std.all;
 entity entity_gradient is
     port
     (
-        grad_col_in      : in integer range -1 to 480;
-        grad_row_in      : in integer range -1 to 640;
+        grad_col_in      : in integer range -1 to 479;
+        grad_row_in      : in integer range -1 to 639;
         grad_red_in      : in std_logic_vector(3 downto 0);
         grad_green_in    : in std_logic_vector(3 downto 0);
         grad_blue_in     : in std_logic_vector(3 downto 0);
 
-        grad_col_out     : out integer range -1 to 480;
-        grad_row_out     : out integer range -1 to 640;
+        grad_col_out     : out integer range -1 to 479;
+        grad_row_out     : out integer range -1 to 639;
         grad_red_out     : out std_logic_vector(3 downto 0);
         grad_green_out   : out std_logic_vector(3 downto 0);
         grad_blue_out    : out std_logic_vector(3 downto 0)
@@ -20,6 +20,8 @@ entity entity_gradient is
 end entity_gradient;
 
 architecture architecture_gradient of entity_gradient is
+constant colour_min : std_logic_vector(3 downto 0) := "0000";
+
 component entity_colourcombiner
     port
     (
@@ -45,7 +47,7 @@ begin
     begin
         if(grad_col_in > -1 and grad_row_in > -1) then
             fract_col := grad_col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
-            fract_row := grad_row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
+            fract_row := grad_row_in  / 64;  -- (128/3) interpolates values between 0 and 15 (for range 0 to 640)
 
             red := std_logic_vector(to_unsigned(fract_col, 4));
             green := std_logic_vector(to_unsigned(fract_row, 4));
@@ -53,9 +55,9 @@ begin
             red_gen <= red;
             green_gen <= green;
         else
-            red_gen <= grad_red_in;
-            green_gen <= grad_green_in;
-            blue_gen <= grad_blue_in;
+            red_gen <= colour_min;
+            green_gen <= colour_min;
+            blue_gen <= colour_min;
         end if;
 
         grad_row_out <= grad_row_in;

@@ -1,0 +1,4 @@
+set -tmpdir "./xst/projnav.tmp"
+elaborate
+-ifn entity_vsyncgenerator.prj
+-ifmt mixed

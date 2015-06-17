@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map K.37 on Wed Jun 17 20:17:09 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "vga_blue<0>" LOCATE = SITE "L22" LEVEL 1;
+COMP "vga_blue<1>" LOCATE = SITE "K21" LEVEL 1;
+COMP "vga_blue<2>" LOCATE = SITE "G23" LEVEL 1;
+COMP "vga_blue<3>" LOCATE = SITE "G24" LEVEL 1;
+COMP "vga_hsync" LOCATE = SITE "K26" LEVEL 1;
+COMP "vga_green<0>" LOCATE = SITE "M19" LEVEL 1;
+COMP "vga_green<1>" LOCATE = SITE "M18" LEVEL 1;
+COMP "vga_clk_in" LOCATE = SITE "P26" LEVEL 1;
+COMP "vga_green<2>" LOCATE = SITE "J23" LEVEL 1;
+COMP "vga_green<3>" LOCATE = SITE "J22" LEVEL 1;
+COMP "vga_red<0>" LOCATE = SITE "L20" LEVEL 1;
+COMP "vga_red<1>" LOCATE = SITE "K20" LEVEL 1;
+COMP "vga_vsync" LOCATE = SITE "K25" LEVEL 1;
+COMP "vga_red<2>" LOCATE = SITE "F25" LEVEL 1;
+COMP "vga_red<3>" LOCATE = SITE "F24" LEVEL 1;
+SCHEMATIC END;
+

@@ -4,8 +4,8 @@ use ieee.std_logic_1164.all;
 entity entity_pixelgenerator_gradient is
     port
     (
-        pxl_grad_col_in      : in integer range 0 to 480;
-        pxl_grad_row_in      : in integer range 0 to 640;
+        pxl_grad_col_in      : in integer range 0 to 479;
+        pxl_grad_row_in      : in integer range 0 to 639;
 
         pxl_grad_red_out     : out std_logic_vector(3 downto 0);
         pxl_grad_green_out   : out std_logic_vector(3 downto 0);
@@ -19,14 +19,14 @@ constant colour_min : std_logic_vector(3 downto 0) := "0000";
 component entity_whiteborder
     port
     (
-        wb_col_in       : in integer range -1 to 480;
-        wb_row_in       : in integer range -1 to 640;
+        wb_col_in       : in integer range -1 to 479;
+        wb_row_in       : in integer range -1 to 639;
         wb_red_in       : in std_logic_vector(3 downto 0);
         wb_green_in     : in std_logic_vector(3 downto 0);
         wb_blue_in      : in std_logic_vector(3 downto 0);
 
-        wb_col_out      : out integer range -1 to 480;
-        wb_row_out      : out integer range -1 to 640;
+        wb_col_out      : out integer range -1 to 479;
+        wb_row_out      : out integer range -1 to 639;
         wb_red_out      : out std_logic_vector(3 downto 0);
         wb_green_out    : out std_logic_vector(3 downto 0);
         wb_blue_out     : out std_logic_vector(3 downto 0)
@@ -36,14 +36,14 @@ end component;
 component entity_gradient is
     port
     (
-        grad_col_in      : in integer range -1 to 480;
-        grad_row_in      : in integer range -1 to 640;
+        grad_col_in      : in integer range -1 to 479;
+        grad_row_in      : in integer range -1 to 639;
         grad_red_in      : in std_logic_vector(3 downto 0);
         grad_green_in    : in std_logic_vector(3 downto 0);
         grad_blue_in     : in std_logic_vector(3 downto 0);
 
-        grad_col_out     : out integer range -1 to 480;
-        grad_row_out     : out integer range -1 to 640;
+        grad_col_out     : out integer range -1 to 479;
+        grad_row_out     : out integer range -1 to 639;
         grad_red_out     : out std_logic_vector(3 downto 0);
         grad_green_out   : out std_logic_vector(3 downto 0);
         grad_blue_out    : out std_logic_vector(3 downto 0)

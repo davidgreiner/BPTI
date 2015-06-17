@@ -32,16 +32,36 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Clock vga_clk_in to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+vga_blue<0> |   12.901(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<1> |   12.635(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<2> |   12.876(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<3> |   12.356(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<0>|   13.153(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<1>|   13.153(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<2>|   12.883(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<3>|   12.635(R)|vga_clk_in_BUFGP  |   0.000|
+vga_hsync   |    8.406(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<0>  |   12.625(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<1>  |   12.356(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<2>  |   12.625(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<3>  |   12.606(R)|vga_clk_in_BUFGP  |   0.000|
+------------+------------+------------------+--------+
+
 Clock to Setup on destination clock vga_clk_in
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-vga_clk_in     |    8.671|         |         |         |
+vga_clk_in     |    9.950|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Jun 16 17:39:31 2015 
+Analysis completed Wed Jun 17 19:31:55 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

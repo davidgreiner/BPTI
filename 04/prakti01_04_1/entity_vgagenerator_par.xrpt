@@ -5,18 +5,18 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue Jun 16 17:38:52 2015">
+  <application stringID="par" timeStamp="Wed Jun 17 19:31:22 2015">
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DESIGN_SUMMARY"></section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="29 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="26 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="26 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="25 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="36 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="30 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="32 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="28 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -25,7 +25,6 @@
         <table stringID="PAR_CLOCK_TABLE">
           <row stringID="row" value="1"></row>
           <row stringID="row" value="2"></row>
-          <row stringID="row" value="3"></row>
         </table>
       </section>
       <section stringID="PAR_PAD_PIN_REPORT"></section>

@@ -1,7 +1,7 @@
 Release 10.1.02 par K.37 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-i82pc17::  Tue Jun 16 17:38:46 2015
+i82pc25::  Wed Jun 17 19:31:17 2015
 
 par -w -intstyle ise -ol std -t 1 entity_vgagenerator_map.ncd
 entity_vgagenerator.ncd entity_vgagenerator.pcf 
@@ -42,8 +42,8 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        3 out of 24     12%
-   Number of Slices                        108 out of 16640   1%
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of Slices                        114 out of 16640   1%
       Number of SLICEMs                      0 out of 8320    0%
 
 
@@ -57,13 +57,13 @@ Router effort level (-rl):    Standard
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:69d01) REAL time: 8 secs 
+Phase 1.1 (Checksum:69f81) REAL time: 7 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:69d01) REAL time: 8 secs 
+Phase 2.7 (Checksum:69f81) REAL time: 7 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:69d01) REAL time: 8 secs 
+Phase 3.31 (Checksum:69f81) REAL time: 7 secs 
 
 Phase 4.2
 
@@ -73,66 +73,64 @@ WARNING:Place:619 - This design is using a Side-BUFG site due to placement const
    regions on the same side of the device and also preclude the use of certain Top and Bottom BUFGs in the same clock
    region.
 ......
-Phase 4.2 (Checksum:77b24) REAL time: 8 secs 
+Phase 4.2 (Checksum:7461e) REAL time: 7 secs 
 
-.
+................
 Phase 5.30
-Phase 5.30 (Checksum:77b24) REAL time: 14 secs 
+Phase 5.30 (Checksum:7461e) REAL time: 12 secs 
 
 Phase 6.8
-........................
+...............................................................
 .
-...................
+............................
 .
 .
-Phase 6.8 (Checksum:2829b9) REAL time: 14 secs 
+Phase 6.8 (Checksum:2f6c68) REAL time: 13 secs 
 
 Phase 7.5
-Phase 7.5 (Checksum:2829b9) REAL time: 14 secs 
+Phase 7.5 (Checksum:2f6c68) REAL time: 13 secs 
 
 Phase 8.18
-Phase 8.18 (Checksum:2791dc) REAL time: 15 secs 
+Phase 8.18 (Checksum:2fc616) REAL time: 14 secs 
 
 Phase 9.5
-Phase 9.5 (Checksum:2791dc) REAL time: 15 secs 
+Phase 9.5 (Checksum:2fc616) REAL time: 14 secs 
 
-REAL time consumed by placer: 15 secs 
+REAL time consumed by placer: 14 secs 
 CPU  time consumed by placer: 13 secs 
 Writing design to file entity_vgagenerator.ncd
 
 
-Total REAL time to Placer completion: 16 secs 
+Total REAL time to Placer completion: 14 secs 
 Total CPU time to Placer completion: 13 secs 
 
 Starting Router
 
-Phase 1: 713 unrouted;       REAL time: 27 secs 
+Phase 1: 768 unrouted;       REAL time: 24 secs 
 
-Phase 2: 645 unrouted;       REAL time: 28 secs 
+Phase 2: 697 unrouted;       REAL time: 25 secs 
 
-Phase 3: 129 unrouted;       REAL time: 28 secs 
+Phase 3: 163 unrouted;       REAL time: 25 secs 
 
-Phase 4: 129 unrouted; (17212)      REAL time: 28 secs 
+Phase 4: 163 unrouted; (4699)      REAL time: 25 secs 
 
-Phase 5: 134 unrouted; (0)      REAL time: 28 secs 
+Phase 5: 169 unrouted; (0)      REAL time: 25 secs 
 
-Phase 6: 0 unrouted; (252)      REAL time: 28 secs 
+Phase 6: 0 unrouted; (0)      REAL time: 26 secs 
 
-Phase 7: 0 unrouted; (252)      REAL time: 29 secs 
+Phase 7: 0 unrouted; (39)      REAL time: 26 secs 
 
-Phase 8: 0 unrouted; (252)      REAL time: 29 secs 
+Phase 8: 0 unrouted; (39)      REAL time: 26 secs 
 
-Phase 9: 0 unrouted; (0)      REAL time: 29 secs 
+Phase 9: 0 unrouted; (39)      REAL time: 26 secs 
 
-Phase 10: 0 unrouted; (0)      REAL time: 29 secs 
+Phase 10: 0 unrouted; (39)      REAL time: 26 secs 
 
-Phase 11: 0 unrouted; (0)      REAL time: 29 secs 
-
-Phase 12: 0 unrouted; (0)      REAL time: 29 secs 
+Phase 11: 0 unrouted; (0)      REAL time: 26 secs 
 
 
-Total REAL time to Router completion: 29 secs 
-Total CPU time to Router completion: 26 secs 
+Total REAL time to Router completion: 26 secs 
+Total CPU time to Router completion: 25 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,13 +148,10 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|    vga_clk_in_BUFGP |  BUFGMUX_X3Y8| No   |   18 |  0.115     |  0.947      |
+|    vga_clk_in_BUFGP |  BUFGMUX_X3Y8| No   |   28 |  0.133     |  1.009      |
 +---------------------+--------------+------+------+------------+-------------+
 |signalgenerator_pm/h |              |      |      |            |             |
-|   sync_pm/hsync_out | BUFGMUX_X1Y10| No   |   17 |  0.023     |  1.621      |
-+---------------------+--------------+------+------+------------+-------------+
-|signalgenerator_pm/c |              |      |      |            |             |
-| lockdown_pm/clk_out | BUFGMUX_X2Y10| No   |   17 |  0.051     |  1.667      |
+|   sync_pm/hsync_out | BUFGMUX_X2Y10| No   |   27 |  0.208     |  1.699      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -175,14 +170,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net vga | SETUP   |         N/A|     8.671ns|     N/A|           0
-  _clk_in_BUFGP                             | HOLD    |     1.188ns|            |       0|           0
+  Autotimespec constraint for clock net vga | SETUP   |         N/A|     9.950ns|     N/A|           0
+  _clk_in_BUFGP                             | HOLD    |     0.946ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net sig | SETUP   |         N/A|    10.178ns|     N/A|           0
-  nalgenerator_pm/hsync_pm/hsync_out        | HOLD    |     1.639ns|            |       0|           0
-------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net sig | SETUP   |         N/A|    10.714ns|     N/A|           0
-  nalgenerator_pm/clockdown_pm/clk_out      | HOLD    |     1.842ns|            |       0|           0
+  Autotimespec constraint for clock net sig | SETUP   |         N/A|     9.160ns|     N/A|           0
+  nalgenerator_pm/hsync_pm/hsync_out        | HOLD    |     1.393ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -195,8 +187,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 36 secs 
-Total CPU time to PAR completion: 30 secs 
+Total REAL time to PAR completion: 32 secs 
+Total CPU time to PAR completion: 28 secs 
 
 Peak Memory Usage:  226 MB
 

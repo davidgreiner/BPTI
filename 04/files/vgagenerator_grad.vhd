@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity entity_vgagenerator is
+entity entity_vgagenerator_grad is
     port
     (
         vga_clk_in  : in std_logic;
@@ -15,7 +15,7 @@ entity entity_vgagenerator is
 end entity;
 
 
-architecture architecture_vgagenerator of entity_vgagenerator is
+architecture architecture_vgagenerator_grad of entity_vgagenerator_grad is
 
 component entity_signalgenerator
 port
@@ -23,16 +23,16 @@ port
         siggen_clk_in	: in std_logic;
         siggen_hsync	: out std_logic;
         siggen_vsync	: out std_logic;
-        siggen_col		: out integer range -1 to 480;
-        siggen_row		: out integer range -1 to 640
+        siggen_col		: out integer range -1 to 479;
+        siggen_row		: out integer range -1 to 639
     );
 end component;
 
 component entity_pixelgenerator_gradient
     port
     (
-        pxl_grad_col_in      : in integer range 0 to 480;
-        pxl_grad_row_in      : in integer range 0 to 640;
+        pxl_grad_col_in      : in integer range 0 to 479;
+        pxl_grad_row_in      : in integer range 0 to 639;
 
         pxl_grad_red_out     : out std_logic_vector(3 downto 0);
         pxl_grad_green_out   : out std_logic_vector(3 downto 0);
@@ -41,8 +41,8 @@ component entity_pixelgenerator_gradient
 end component;
 
 
-signal col          : integer range -1 to 480;
-signal row          : integer range -1 to 640;
+signal col          : integer range -1 to 479;
+signal row          : integer range -1 to 639;
 
 begin
     signalgenerator_pm : entity_signalgenerator port map
@@ -54,7 +54,7 @@ begin
         siggen_row		=> row
     );
 
-    pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
+    pixelgenerator_pm : entity_pixelgenerator_gradient port map
     (
         pxl_grad_col_in      => col,
         pxl_grad_row_in      => row,
@@ -62,4 +62,4 @@ begin
         pxl_grad_green_out   => vga_green,
         pxl_grad_blue_out    => vga_blue
     );
-end architecture architecture_vgagenerator;
+end architecture architecture_vgagenerator_grad;

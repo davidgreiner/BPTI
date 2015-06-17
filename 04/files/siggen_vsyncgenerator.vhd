@@ -7,7 +7,7 @@ entity entity_vsyncgenerator is
 	(
 		vsync_clk_in	: in std_logic;
 		vsync_out		: out std_logic;
-		vsync_col		: out integer range -1 to 480
+		vsync_col		: out integer range -1 to 479
 	);
 end entity;
 
@@ -21,7 +21,7 @@ architecture architecture_vsyncgenerator of entity_vsyncgenerator is
 begin
 	vsyncgen_p : process (vsync_clk_in)
 	variable counter 	: integer := 1;
-	variable colcounter	: integer := 0;
+	variable colcounter	: integer range 0 to 480 := 0;
 	begin
 		if(vsync_clk_in = '0') then
 			if(counter <= prevalid) then
@@ -37,7 +37,7 @@ begin
 				-- postvalid for 14 ticks
 				vsync_out <= '0';
 				vsync_col <= -1;
-			elsif(counter <= (prevalid + valid + postvalid + invalid)) then
+			else --(counter <= (prevalid + valid + postvalid + invalid)) then
 				-- invalid for 1 ticks
 				vsync_out <= '1';
 				vsync_col <= -1;

@@ -1,0 +1,8 @@
+vhdl work "../files/colourcombiner.vhd"
+vhdl work "../files/siggen_vsyncgenerator.vhd"
+vhdl work "../files/siggen_hsyncgenerator.vhd"
+vhdl work "../files/pxlgen_whiteborder.vhd"
+vhdl work "../files/pxlgen_rectangle.vhd"
+vhdl work "../files/signalgenerator.vhd"
+vhdl work "../files/pixelgenerator_rect.vhd"
+vhdl work "../files/vgagenerator_static_rect.vhd"
