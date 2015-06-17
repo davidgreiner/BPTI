@@ -36,9 +36,9 @@ begin
         for j in 0 to 524 loop
             for i in 0 to 799 loop
                 clk_in <= '0';
-                wait for 1 ns;
+                wait for 20 ns;
                 clk_in <= '1';
-                wait for 1 ns;
+                wait for 20 ns;
 
                 if(i <= 43) then
                     assert(hsync = '0') report "Assert failure: hsync not low in first cycle.";
