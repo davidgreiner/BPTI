@@ -29,7 +29,6 @@ port
 end component;
 
 component entity_pixelgenerator_rect
-port
     port
     (
         pxl_rect_col_in      : in integer range 0 to 480;

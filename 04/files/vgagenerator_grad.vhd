@@ -29,7 +29,6 @@ port
 end component;
 
 component entity_pixelgenerator_gradient
-port
     port
     (
         pxl_grad_col_in      : in integer range 0 to 480;
