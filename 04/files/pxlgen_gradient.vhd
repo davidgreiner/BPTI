@@ -5,10 +5,10 @@ use ieee.numeric_std.all;
 entity entity_gradient is
     port
     (
-        col_in      : in integer range -1 to 480;
-        row_in      : in integer range -1 to 640;
-        red_in      : in std_logic_vector(3 downto 0);
-        green_in    : in std_logic_vector(3 downto 0);
+        pxl_grad_col_in      : in integer range -1 to 480;
+        pxl_grad_row_in      : in integer range -1 to 640;
+        pxl_grad_red_in      : in std_logic_vector(3 downto 0);
+        pxl_grad_green_in    : in std_logic_vector(3 downto 0);
         blue_in     : in std_logic_vector(3 downto 0);
 
         col_out     : out integer range -1 to 480;
@@ -39,13 +39,13 @@ end component;
 signal red_gen, green_gen, blue_gen : std_logic_vector(3 downto 0);
 
 begin
-    gradient_p : process(col_in, row_in)
+    gradient_p : process(pxl_grad_col_in, pxl_grad_row_in)
     variable fract_col, fract_row : integer := 0;
     variable red, green : std_logic_vector(3 downto 0) := "0000";
     begin
-        if(col_in > -1 and row_in > -1) then
-            fract_col := col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
-            fract_row := row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
+        if(pxl_grad_col_in > -1 and pxl_grad_row_in > -1) then
+            fract_col := pxl_grad_col_in  / 32;       -- interpolates values between 0 and 15 (for range 0 to 480)
+            fract_row := pxl_grad_row_in  / (128/3);  -- interpolates values between 0 and 15 (for range 0 to 640)
 
             red := std_logic_vector(to_unsigned(fract_col, 4));
             green := std_logic_vector(to_unsigned(fract_row, 4));
@@ -54,7 +54,7 @@ begin
             green_gen <= green;
         end if;
 
-        row_out <= row_in;
-        col_out <= col_in;
+        row_out <= pxl_grad_row_in;
+        col_out <= pxl_grad_col_in;
     end process;
 end architecture architecture_gradient;
