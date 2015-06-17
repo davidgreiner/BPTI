@@ -23,8 +23,8 @@ end entity;
 architecture architecture_whiteborder of entity_whiteborder is
 constant border_top     : integer := 0;
 constant border_left    : integer := 0;
-constant border_bottom  : integer := 4; --480;
-constant border_right   : integer := 4; --640;
+constant border_bottom  : integer := 480;
+constant border_right   : integer := 640;
 constant colour_max     : std_logic_vector(3 downto 0) := "1111";
 
 component entity_colourcombiner
@@ -58,7 +58,12 @@ begin
                 green_gen   <= wb_green_in;
                 blue_gen    <= wb_blue_in;
             end if;
+        else
+            red_gen     <= wb_red_in;
+            green_gen   <= wb_green_in;
+            blue_gen    <= wb_blue_in;
         end if;
+
 
         wb_col_out <= wb_col_in;
         wb_row_out <= wb_row_in;

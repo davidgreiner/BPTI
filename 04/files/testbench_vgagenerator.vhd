@@ -38,21 +38,25 @@ begin
 	variable colour_max : std_logic_vector(3 downto 0) := "1111";
 	variable colour_min : std_logic_vector(3 downto 0) := "0000";
 	begin
-		for j in 0 to 8 loop
-			for i in 0 to 14 loop
+		for j in 0 to 524 loop
+			for i in 0 to 799 loop
 				tb_clk_in <= '0';
-                wait for 1 ns;
+                wait for 20 ns;
                 tb_clk_in <= '1';
-                wait for 1 ns;
-				
-				if(i = 3 or j = 2 or i = 12 or j = 5) then
-					assert(tb_red = colour_max)		report "Assert failure: Border not white (red)";
-					assert(tb_green = colour_max) 	report "Assert failure: Border not white (green)";
-                    assert(tb_blue = colour_max)	report "Assert failure: Border not white (blue)";
-				elsif(i>-1 and j>-1) then
-					assert(tb_red = colour_min)		report "Assert failure: Center not black (red)";
-					assert(tb_green = colour_min) 	report "Assert failure: Center not black (green)";
-                    assert(tb_blue = colour_min)	report "Assert failure: Center not black (blue)";
+                wait for 20 ns;
+
+				if(tb_hsync = '0' and tb_vsync = '0') then
+					if(j = 30 or j = 510) then
+						if(i = 44 or i = 684) then
+							assert(tb_red = colour_max)		report "Assert failure: Border not white (red)";
+							assert(tb_green = colour_max) 	report "Assert failure: Border not white (green)";
+		                    assert(tb_blue = colour_max)	report "Assert failure: Border not white (blue)";
+						else
+							assert(tb_red = colour_min)		report "Assert failure: Center not black (red)";
+							assert(tb_green = colour_min) 	report "Assert failure: Center not black (green)";
+		                    assert(tb_blue = colour_min)	report "Assert failure: Center not black (blue)";
+						end if;
+					end if;
 				end if;
 			end loop;
 		end loop;

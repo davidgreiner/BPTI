@@ -33,6 +33,7 @@ begin
 
     pixelgenerator_test_p : process
     variable colour_max : std_logic_vector(3 downto 0) := "1111";
+    variable colour_min : std_logic_vector(3 downto 0) := "0000";
     begin
         for i in 0 to 4 loop
             for j in 0 to 4 loop
@@ -44,6 +45,10 @@ begin
                     assert(red = colour_max)    report "Assert failure: Border (red) was not white.";
                     assert(green = colour_max)  report "Assert failure: Border (green) was not white.";
                     assert(blue = colour_max)   report "Assert failure: Border (blue) was not white.";
+                else
+                    assert(red = colour_min)    report "Assert failure: Border (red) was not white.";
+                    assert(green = colour_min)  report "Assert failure: Border (green) was not white.";
+                    assert(blue = colour_min)   report "Assert failure: Border (blue) was not white.";
                 end if;
             end loop;
         end loop;
