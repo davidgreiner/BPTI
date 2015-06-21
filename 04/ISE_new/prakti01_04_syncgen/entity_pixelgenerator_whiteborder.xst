@@ -1,5 +1,0 @@
-set -tmpdir "G:/Development/github/BPTI/04/ISE_new/prakti01_04_syncgen/xst/projnav.tmp"
-set -xsthdpdir "G:/Development/github/BPTI/04/ISE_new/prakti01_04_syncgen/xst"
-elaborate
--ifn entity_pixelgenerator_whiteborder.prj
--ifmt mixed

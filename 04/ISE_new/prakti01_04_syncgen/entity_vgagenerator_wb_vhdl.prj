@@ -1,0 +1,6 @@
+vhdl work "G:\Development\github\BPTI\04\files_new\siggen_vsyncgenerator.vhd"
+vhdl work "G:\Development\github\BPTI\04\files_new\siggen_hsyncgenerator.vhd"
+vhdl work "G:\Development\github\BPTI\04\files_new\pxlgen_whiteborder.vhd"
+vhdl work "G:\Development\github\BPTI\04\files_new\signalgenerator.vhd"
+vhdl work "G:\Development\github\BPTI\04\files_new\pixelgenerator_whiteborder.vhd"
+vhdl work "G:\Development\github\BPTI\04\files_new\vgagenerator_wb.vhd"

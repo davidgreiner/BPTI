@@ -1,0 +1,18 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "vga_clk_in" LOC = P26;
+NET "vga_vsync" LOC = K25;
+NET "vga_hsync" LOC = K26;
+NET "vga_red[0]" LOC = L20;
+NET "vga_red[1]" LOC = K20;
+NET "vga_red[2]" LOC = F25;
+NET "vga_red[3]" LOC = F24;
+NET "vga_green[0]" LOC = M19;
+NET "vga_green[1]" LOC = M18;
+NET "vga_green[2]" LOC = J23;
+NET "vga_green[3]" LOC = J22;
+NET "vga_blue[0]" LOC = L22;
+NET "vga_blue[1]" LOC = K21;
+NET "vga_blue[2]" LOC = G23;
+NET "vga_blue[3]" LOC = G24;
