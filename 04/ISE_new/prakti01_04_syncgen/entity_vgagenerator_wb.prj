@@ -1,0 +1,6 @@
+vhdl work "../../files_new/siggen_vsyncgenerator.vhd"
+vhdl work "../../files_new/siggen_hsyncgenerator.vhd"
+vhdl work "../../files_new/pxlgen_whiteborder.vhd"
+vhdl work "../../files_new/signalgenerator.vhd"
+vhdl work "../../files_new/pixelgenerator_whiteborder.vhd"
+vhdl work "../../files_new/vgagenerator_wb.vhd"

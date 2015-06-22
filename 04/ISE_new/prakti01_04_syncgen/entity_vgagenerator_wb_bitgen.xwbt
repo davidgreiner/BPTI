@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Development\github\BPTI\04\ISE_new\prakti01_04_syncgen\entity_vgagenerator_wb.ncd
+OUTFILE=G:\Development\github\BPTI\04\ISE_new\prakti01_04_syncgen\entity_vgagenerator_wb.bit
+FAMILY=Spartan-3A DSP
+PART=xc3sd1800a-4fg676
+WORKINGDIR=G:\Development\github\BPTI\04\ISE_new\prakti01_04_syncgen
+LICENSE=WebPack
+USER_INFO=211048648_0_0_776
