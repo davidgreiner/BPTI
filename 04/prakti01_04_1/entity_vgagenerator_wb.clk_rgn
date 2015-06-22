@@ -1,0 +1,65 @@
+Release 10.1.02 - reportgen K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Fri Jun 19 12:15:32 2015
+
+SUMMARY
+-------
+There are 4 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of      DIFFMLR:     1 used out of    33     3%
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 2
+List of global clocks in this region:
+   signalgenerator_pm/hsync_pm/hsync_out driven by BUFGMUX_X2Y10 
+   vga_clk_in_BUFGP driven by BUFGMUX_X3Y8 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of      BUFGMUX:     2 used out of     6    33%
+Number of      DIFFMLR:     7 used out of    33    21%
+Number of      DIFFSLR:     7 used out of    33    21%
+Number of       SLICEL:    73 used out of  2080     3%
+Number of       SLICEM:    49 used out of  2080     2%
+

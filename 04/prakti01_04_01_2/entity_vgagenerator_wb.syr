@@ -1,0 +1,567 @@
+Release 10.1.02 - xst K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_01_2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_01_2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: entity_vgagenerator_wb.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "entity_vgagenerator_wb.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "entity_vgagenerator_wb"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : entity_vgagenerator_wb
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : entity_vgagenerator_wb.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/siggen_hsyncgenerator.vhd" in Library work.
+Architecture architecture_hsyncgenerator of Entity entity_hsyncgenerator is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/siggen_vsyncgenerator.vhd" in Library work.
+Entity <entity_vsyncgenerator> compiled.
+Entity <entity_vsyncgenerator> (Architecture <architecture_vsyncgenerator>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/signalgenerator.vhd" in Library work.
+Architecture architecture_signalgenerator of Entity entity_signalgenerator is up to date.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/vgagenerator_wb.vhd" in Library work.
+Entity <entity_vgagenerator_wb> compiled.
+Entity <entity_vgagenerator_wb> (Architecture <architecture_vgagenerator_wb>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <entity_vgagenerator_wb> in library <work> (architecture <architecture_vgagenerator_wb>).
+
+Analyzing hierarchy for entity <entity_signalgenerator> in library <work> (architecture <architecture_signalgenerator>).
+
+Analyzing hierarchy for entity <entity_hsyncgenerator> in library <work> (architecture <architecture_hsyncgenerator>).
+
+Analyzing hierarchy for entity <entity_vsyncgenerator> in library <work> (architecture <architecture_vsyncgenerator>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <entity_vgagenerator_wb> in library <work> (Architecture <architecture_vgagenerator_wb>).
+Entity <entity_vgagenerator_wb> analyzed. Unit <entity_vgagenerator_wb> generated.
+
+Analyzing Entity <entity_signalgenerator> in library <work> (Architecture <architecture_signalgenerator>).
+Entity <entity_signalgenerator> analyzed. Unit <entity_signalgenerator> generated.
+
+Analyzing Entity <entity_hsyncgenerator> in library <work> (Architecture <architecture_hsyncgenerator>).
+Entity <entity_hsyncgenerator> analyzed. Unit <entity_hsyncgenerator> generated.
+
+Analyzing Entity <entity_vsyncgenerator> in library <work> (Architecture <architecture_vsyncgenerator>).
+Entity <entity_vsyncgenerator> analyzed. Unit <entity_vsyncgenerator> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <entity_hsyncgenerator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/siggen_hsyncgenerator.vhd".
+    Found 10-bit register for signal <hsync_x>.
+    Found 1-bit register for signal <hsync_out>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter$add0000> created at line 49.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0000> created at line 26.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0001> created at line 29.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0002> created at line 38.
+    Found 32-bit comparator lessequal for signal <hsync_out$or0000>.
+    Found 10-bit adder for signal <hsync_x$add0000> created at line 33.
+    Found 10-bit register for signal <rowcounter>.
+    Found 32-bit comparator greater for signal <rowcounter$cmp_gt0000> created at line 29.
+    Summary:
+	inferred  53 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <entity_hsyncgenerator> synthesized.
+
+
+Synthesizing Unit <entity_vsyncgenerator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/siggen_vsyncgenerator.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <vsync_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 9-bit latch for signal <vsync_y>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 9-bit latch for signal <colcounter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit adder for signal <counter$add0000> created at line 47.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0000> created at line 27.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0001> created at line 30.
+    Found 32-bit comparator lessequal for signal <counter$cmp_le0002> created at line 35.
+    Found 9-bit adder for signal <vsync_y$add0000> created at line 34.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <entity_vsyncgenerator> synthesized.
+
+
+Synthesizing Unit <entity_signalgenerator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/signalgenerator.vhd".
+Unit <entity_signalgenerator> synthesized.
+
+
+Synthesizing Unit <entity_vgagenerator_wb>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/files_new/vgagenerator_wb.vhd".
+Unit <entity_vgagenerator_wb> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 9-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 10-bit register                                       : 2
+ 32-bit register                                       : 1
+# Latches                                              : 4
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 1
+ 9-bit latch                                           : 2
+# Comparators                                          : 8
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 9-bit adder                                           : 1
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+# Latches                                              : 4
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 1
+ 9-bit latch                                           : 2
+# Comparators                                          : 8
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <entity_vgagenerator_wb> ...
+
+Optimizing unit <entity_hsyncgenerator> ...
+
+Optimizing unit <entity_vsyncgenerator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block entity_vgagenerator_wb, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : entity_vgagenerator_wb.ngr
+Top Level Output File Name         : entity_vgagenerator_wb
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 449
+#      GND                         : 1
+#      INV                         : 23
+#      LUT1                        : 22
+#      LUT2                        : 46
+#      LUT3                        : 13
+#      LUT4                        : 100
+#      MUXCY                       : 159
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 83
+# FlipFlops/Latches                : 104
+#      FD                          : 32
+#      FDE                         : 10
+#      FDR                         : 10
+#      FDS                         : 1
+#      LD                          : 42
+#      LDE                         : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                      126  out of  16640     0%  
+ Number of Slice Flip Flops:            104  out of  33280     0%  
+ Number of 4 input LUTs:                204  out of  33280     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    519     2%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)  | Load  |
+--------------------------------------+------------------------+-------+
+vga_clk_in                            | BUFGP                  | 53    |
+signalgenerator_pm/hsync_pm/hsync_out1| BUFG                   | 51    |
+--------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.126ns (Maximum Frequency: 98.756MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 9.565ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga_clk_in'
+  Clock period: 10.126ns (frequency: 98.756MHz)
+  Total number of paths / destination ports: 69657 / 73
+-------------------------------------------------------------------------
+Delay:               10.126ns (Levels of Logic = 40)
+  Source:            signalgenerator_pm/hsync_pm/counter_0 (FF)
+  Destination:       signalgenerator_pm/hsync_pm/counter_31 (FF)
+  Source Clock:      vga_clk_in rising
+  Destination Clock: vga_clk_in rising
+
+  Data Path: signalgenerator_pm/hsync_pm/counter_0 to signalgenerator_pm/hsync_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.591   0.730  signalgenerator_pm/hsync_pm/counter_0 (signalgenerator_pm/hsync_pm/counter_0)
+     LUT2:I0->O            1   0.648   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_lut<0>3 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_lut<0>3)
+     MUXCY:S->O            1   0.632   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<0>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<0>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<1>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<1>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<2>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<2>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<3>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<3>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<4>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<4>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<5>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<5>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<6>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<6>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<7>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<7>3)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<8>_2 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<8>2)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<9>_1 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<9>2)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<10>_1 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<10>2)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<11>_1 (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<12> (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<13> (signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<13>)
+     MUXCY:CI->O          24   0.269   1.255  signalgenerator_pm/hsync_pm/Mcompar_hsync_out_or0000_cy<14> (signalgenerator_pm/hsync_pm/counter_cmp_le0001)
+     LUT4:I3->O            8   0.648   0.837  signalgenerator_pm/hsync_pm/counter_mux0000<0>11_1 (signalgenerator_pm/hsync_pm/counter_mux0000<0>11)
+     LUT2:I1->O            1   0.643   0.000  signalgenerator_pm/hsync_pm/counter_mux0000<10>1 (signalgenerator_pm/hsync_pm/counter_mux0000<10>)
+     MUXCY:S->O            1   0.632   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<10> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<11> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<12> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<13> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<14> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<15> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<16> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<17> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<18> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<19> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<20> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<21> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<22> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<23> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<24> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<25> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<26> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<27> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<28> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<29> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<30> (signalgenerator_pm/hsync_pm/Madd_counter_add0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  signalgenerator_pm/hsync_pm/Madd_counter_add0000_xor<31> (signalgenerator_pm/hsync_pm/counter_add0000<31>)
+     FD:D                      0.252          signalgenerator_pm/hsync_pm/counter_31
+    ----------------------------------------
+    Total                     10.126ns (7.304ns logic, 2.822ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'signalgenerator_pm/hsync_pm/hsync_out1'
+  Clock period: 9.251ns (frequency: 108.092MHz)
+  Total number of paths / destination ports: 54483 / 60
+-------------------------------------------------------------------------
+Delay:               9.251ns (Levels of Logic = 46)
+  Source:            signalgenerator_pm/vsync_pm/counter_0 (LATCH)
+  Destination:       signalgenerator_pm/vsync_pm/counter_31 (LATCH)
+  Source Clock:      signalgenerator_pm/hsync_pm/hsync_out1 falling
+  Destination Clock: signalgenerator_pm/hsync_pm/hsync_out1 falling
+
+  Data Path: signalgenerator_pm/vsync_pm/counter_0 to signalgenerator_pm/vsync_pm/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.728   0.730  signalgenerator_pm/vsync_pm/counter_0 (signalgenerator_pm/vsync_pm/counter_0)
+     LUT2:I0->O            1   0.648   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_lut<0> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<0> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<1> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<2> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<3> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<4> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<5> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<6> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<7> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<8> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<9> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<10> (signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<10>)
+     MUXCY:CI->O          42   0.269   1.268  signalgenerator_pm/vsync_pm/Mcompar_counter_cmp_le0002_cy<11> (signalgenerator_pm/vsync_pm/counter_cmp_le0002)
+     LUT4:I3->O            1   0.648   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_lut<0> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<0> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<1> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<2> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<3> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<4> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<5> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<6> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<7> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<8> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<9> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<10> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<11> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<12> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<13> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<14> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<15> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<16> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<17> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<18> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<19> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<20> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<21> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<22> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<23> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<24> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<25> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<26> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<27> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<28> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<29> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<30> (signalgenerator_pm/vsync_pm/Madd_counter_add0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  signalgenerator_pm/vsync_pm/Madd_counter_add0000_xor<31> (signalgenerator_pm/vsync_pm/counter_add0000<31>)
+     LD:D                      0.252          signalgenerator_pm/vsync_pm/counter_31
+    ----------------------------------------
+    Total                      9.251ns (7.253ns logic, 1.998ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_clk_in'
+  Total number of paths / destination ports: 121 / 13
+-------------------------------------------------------------------------
+Offset:              9.565ns (Levels of Logic = 4)
+  Source:            signalgenerator_pm/hsync_pm/hsync_x_2 (FF)
+  Destination:       vga_blue<3> (PAD)
+  Source Clock:      vga_clk_in rising
+
+  Data Path: signalgenerator_pm/hsync_pm/hsync_x_2 to vga_blue<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.563  signalgenerator_pm/hsync_pm/hsync_x_2 (signalgenerator_pm/hsync_pm/hsync_x_2)
+     LUT3:I0->O            1   0.648   0.423  vga_blue<0>32_SW0 (N22)
+     LUT4:I3->O            1   0.648   0.563  vga_blue<0>32 (vga_blue<0>32)
+     LUT4:I0->O           12   0.648   0.961  vga_blue<0>47 (vga_blue_0_OBUF)
+     OBUF:I->O                 4.520          vga_blue_3_OBUF (vga_blue<3>)
+    ----------------------------------------
+    Total                      9.565ns (7.055ns logic, 2.510ns route)
+                                       (73.8% logic, 26.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'signalgenerator_pm/hsync_pm/hsync_out1'
+  Total number of paths / destination ports: 109 / 13
+-------------------------------------------------------------------------
+Offset:              8.839ns (Levels of Logic = 4)
+  Source:            signalgenerator_pm/vsync_pm/vsync_y_1 (LATCH)
+  Destination:       vga_blue<3> (PAD)
+  Source Clock:      signalgenerator_pm/hsync_pm/hsync_out1 falling
+
+  Data Path: signalgenerator_pm/vsync_pm/vsync_y_1 to vga_blue<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.728   0.563  signalgenerator_pm/vsync_pm/vsync_y_1 (signalgenerator_pm/vsync_pm/vsync_y_1)
+     LUT4:I0->O            1   0.648   0.000  vga_blue<0>111 (vga_blue<0>111)
+     MUXF5:I0->O           1   0.276   0.500  vga_blue<0>11_f5 (vga_blue<0>11)
+     LUT4:I1->O           12   0.643   0.961  vga_blue<0>47 (vga_blue_0_OBUF)
+     OBUF:I->O                 4.520          vga_blue_3_OBUF (vga_blue<3>)
+    ----------------------------------------
+    Total                      8.839ns (6.815ns logic, 2.024ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 13.44 secs
+ 
+--> 
+
+
+Total memory usage is 202012 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

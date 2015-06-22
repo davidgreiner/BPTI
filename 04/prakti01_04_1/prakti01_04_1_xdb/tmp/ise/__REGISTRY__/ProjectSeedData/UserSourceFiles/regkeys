@@ -1,5 +1,5 @@
 NUM_USER_FILES
-9
+8
 s
 user_file_1
 ../files/colourcombiner.vhd
@@ -17,14 +17,11 @@ user_file_5
 ../files/siggen_vsyncgenerator.vhd
 s
 user_file_6
-../files/signalgenerator.vhd
+../files/vgagenerator_wb.vhd
 s
 user_file_7
-../files/vgagenerator.vhd
+entity_vgagenerator_wb.ucf
 s
 user_file_8
-entity_vgagenerator.ucf
-s
-user_file_9
-../files/clock_down.vhd
+../files/signalgenerator.vhd
 s

@@ -2,7 +2,7 @@ CommandLine-Map
 
 s
 CommandLine-Ngdbuild
-/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/ngdbuild -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_1/prakti01_04_1.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-fg676-4 entity_vgagenerator.ngc entity_vgagenerator.ngd
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/ngdbuild -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_1/prakti01_04_1.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-fg676-4 entity_vgagenerator_wb.ngc entity_vgagenerator_wb.ngd
 s
 CommandLine-Par
 
@@ -11,7 +11,7 @@ CommandLine-Xst
 
 s
 Previous-NGD
-entity_vgagenerator_prev_built.ngd
+entity_vgagenerator_wb_prev_built.ngd
 s
 Previous-NGM
 

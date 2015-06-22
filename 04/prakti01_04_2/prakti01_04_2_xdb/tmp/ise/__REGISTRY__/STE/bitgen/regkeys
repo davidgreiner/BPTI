@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/bitgen -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_2/prakti01_04_2.ise -intstyle ise -f entity_vgagenerator_grad.ut entity_vgagenerator_grad.ncd
+s
+FormatString
+bitgen [-d] [-j] [-b] [-w] [-l] [-m] [-t] [-n] [-u] [-a] [--p] [-r <bitFile>] [-intstyle ise|xflow|silent] [-ise <projectrepositoryfile>] {-bd <BRAM_data_file> [tag <tagname>]} {-g <setting_value>} <infile[.ncd]> [<outfile>] [<pcffile[.pcf]>]
+s

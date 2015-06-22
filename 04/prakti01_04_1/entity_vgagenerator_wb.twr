@@ -6,7 +6,7 @@ Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_1/prakti01_04_1.ise
 -intstyle ise -v 3 -s 4 -xml entity_vgagenerator_wb entity_vgagenerator_wb.ncd
 -o entity_vgagenerator_wb.twr entity_vgagenerator_wb.pcf -ucf
-entity_vgagenerator.ucf
+entity_vgagenerator_wb.ucf
 
 Design file:              entity_vgagenerator_wb.ncd
 Physical constraint file: entity_vgagenerator_wb.pcf
@@ -38,19 +38,19 @@ Clock vga_clk_in to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-vga_blue<0> |   16.836(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<1> |   16.844(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<2> |   16.836(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<3> |   16.844(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<0>|   17.093(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<1>|   16.280(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<2>|   16.550(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<3>|   16.558(R)|vga_clk_in_BUFGP  |   0.000|
-vga_hsync   |    8.270(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<0>  |   17.113(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<1>  |   17.121(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<2>  |   17.390(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<3>  |   17.390(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<0> |   12.873(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<1> |   12.915(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<2> |   12.629(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<3> |   13.204(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<0>|   13.175(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<1>|   13.175(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<2>|   12.906(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<3>|   12.898(R)|vga_clk_in_BUFGP  |   0.000|
+vga_hsync   |    8.517(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<0>  |   13.473(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<1>  |   13.481(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<2>  |   13.748(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<3>  |   12.908(R)|vga_clk_in_BUFGP  |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock vga_clk_in
@@ -58,11 +58,11 @@ Clock to Setup on destination clock vga_clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-vga_clk_in     |   10.016|         |         |         |
+vga_clk_in     |   10.528|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jun 17 19:50:16 2015 
+Analysis completed Fri Jun 19 13:14:57 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

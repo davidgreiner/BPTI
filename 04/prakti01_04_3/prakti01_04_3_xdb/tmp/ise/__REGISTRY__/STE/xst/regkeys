@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/xst -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_3/prakti01_04_3.ise -intstyle ise -ifn /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_3/entity_vgagenerator_srect.xst -ofn /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_3/entity_vgagenerator_srect.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

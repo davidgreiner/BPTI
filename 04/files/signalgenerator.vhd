@@ -49,8 +49,8 @@ begin
 		vsync_col		=> siggen_col
 	);
 
-	hsync_p : process(hsync)
-	begin
-		siggen_hsync <= hsync;
-	end process;
+--	hsync_p : process(hsync)
+--	begin
+	siggen_hsync <= hsync;
+--	end process;
 end architecture architecture_signalgenerator;

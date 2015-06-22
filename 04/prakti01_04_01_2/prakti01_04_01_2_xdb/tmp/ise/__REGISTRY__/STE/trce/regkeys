@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_01_2/prakti01_04_01_2.ise -intstyle ise -v 3 -s 4 -xml entity_vgagenerator_wb entity_vgagenerator_wb.ncd -o entity_vgagenerator_wb.twr entity_vgagenerator_wb.pcf -ucf entity_vgagenerator_wb.ucf
+s
+FormatString
+trce ([-e|-v [<limit:0,2000000000>]] [-l <limit:0,2000000000>] [-n [<limit:0,2000000000>]] [-u [<limit:0,2000000000>]] [-skew] [-a] [--p] [-s <speed>] [-o <report[.twr]>] [--m] [-stamp <stampfile>] [-tsi <tsifile[.tsi]>] [-xml <report[.twx]>] [-nodatasheet] [-timegroups] [-fastpaths] [-intstyle ise|xflow|silent] [-ise <projectfile>] [--ucf <constraint[.ucf]>] <design[.ncd]> [<constraint[.pcf]>]) | ([-run <macro[.xtm]> [<design[.ncd]> [<constraint[.pcf]>]]] [-intstyle ise|xflow|silent] [-ise <projectfile>])
+s

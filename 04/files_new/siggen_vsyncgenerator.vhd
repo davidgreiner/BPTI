@@ -21,7 +21,7 @@ architecture architecture_vsyncgenerator of entity_vsyncgenerator is
 begin
 	vsyncgen_p : process (vsync_clk_in)
 	variable counter 	: integer := 1;
-	variable colcounter	: integer range 1 to 480 := 1;
+	variable colcounter	: integer range 0 to 480 := 0;
 	begin
 		if(vsync_clk_in = '1') then
 			if(counter <= prevalid) then
@@ -31,8 +31,8 @@ begin
 			elsif(counter <= (prevalid + valid)) then
 				-- valid for 480 ticks
 				vsync_out <= '1';
-				vsync_y	 <= colcounter;
 				colcounter := colcounter + 1;
+				vsync_y	 <= colcounter;
 			elsif(counter <= (prevalid + valid + postvalid)) then
 				-- postvalid for 14 ticks
 				vsync_out <= '1';
@@ -41,13 +41,10 @@ begin
 				-- invalid for 1 ticks
 				vsync_out <= '0';
 				vsync_y	 <= 0;
-				colcounter := 1;
+				colcounter := 0;
 				counter := 0;
 			end if;
 			counter := counter + 1;
-		else
-			vsync_out <= '1';
-			vsync_y <= 0;
 		end if;
 	end process;
 end architecture architecture_vsyncgenerator;

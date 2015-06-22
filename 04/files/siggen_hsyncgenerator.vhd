@@ -6,8 +6,8 @@ entity entity_hsyncgenerator is
 	port
 	(
 		hsync_clk_in	: in std_logic;
-		hsync_out		: out std_logic;
-		hsync_row		: out integer range -1 to 639
+		hsync_out		: out std_logic := '1';
+		hsync_row		: out integer range -1 to 639 := -1
 	);
 end entity;
 
@@ -37,7 +37,7 @@ begin
 				hsync_out <= '1';
 				hsync_row <= -1;
 			elsif(counter <= (prevalid + valid + postvalid + invalid) - 1) then
-				-- invalid for 96 ticks
+				-- invalid for 95 ticks
 				hsync_out <= '0';
 				hsync_row <= -1;
 			else

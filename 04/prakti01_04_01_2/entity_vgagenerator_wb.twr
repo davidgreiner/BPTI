@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 10.1.02 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_01_2/prakti01_04_01_2.ise
+-intstyle ise -v 3 -s 4 -xml entity_vgagenerator_wb entity_vgagenerator_wb.ncd
+-o entity_vgagenerator_wb.twr entity_vgagenerator_wb.pcf -ucf
+entity_vgagenerator_wb.ucf
+
+Design file:              entity_vgagenerator_wb.ncd
+Physical constraint file: entity_vgagenerator_wb.pcf
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock vga_clk_in to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+vga_blue<0> |   11.754(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<1> |   11.777(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<2> |   11.765(R)|vga_clk_in_BUFGP  |   0.000|
+vga_blue<3> |   12.062(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<0>|   11.467(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<1>|   10.913(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<2>|   11.476(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<3>|   11.465(R)|vga_clk_in_BUFGP  |   0.000|
+vga_hsync   |    9.123(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<0>  |   12.044(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<1>  |   12.331(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<2>  |   12.044(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<3>  |   12.260(R)|vga_clk_in_BUFGP  |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock vga_clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+vga_clk_in     |   10.361|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Jun 22 16:18:53 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 164 MB
+
+
+

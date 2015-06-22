@@ -9,7 +9,7 @@ entity_vgagenerator_wb.ngc entity_vgagenerator_wb.ngd
 Reading NGO file
 "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/04/prakti01_04_1/entity_v
 gagenerator_wb.ngc" ...
-Reading in constraint information from 'entity_vgagenerator.ucf'...
+Reading in constraint information from 'entity_vgagenerator_wb.ucf'...
 Gathering constraint information from source properties...
 Done.
 
@@ -31,7 +31,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 73684 kilobytes
+Total memory usage is 73636 kilobytes
 
 Writing NGD file "entity_vgagenerator_wb.ngd" ...
 

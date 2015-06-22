@@ -20,7 +20,7 @@ architecture architecture_hsyncgenerator of entity_hsyncgenerator is
 begin
 	hsyncgen_p : process (hsync_clk_in)
 	variable counter 	: integer := 1;
-	variable rowcounter	: integer range 1 to 640 := 1;
+	variable rowcounter	: integer range 0 to 640 := 0;
 	begin
 		if(hsync_clk_in'event and hsync_clk_in = '1') then
 			if(counter <= prevalid) then
@@ -30,8 +30,8 @@ begin
 			elsif(counter <= (prevalid + valid)) then
 				-- valid for 640 ticks
 				hsync_out 	<= '1';
-				hsync_x 	<= rowcounter;
 				rowcounter := rowcounter + 1;
+				hsync_x 	<= rowcounter;
 			elsif(counter <= (prevalid + valid + postvalid)) then
 				-- postvalid for 20 ticks
 				hsync_out 	<= '1';
@@ -43,7 +43,7 @@ begin
 			else
 				hsync_out 	<= '0';
 				hsync_x 	<= 0;
-				rowcounter := 1;
+				rowcounter := 0;
 				counter := 0;
 			end if;
 			counter := counter + 1;
