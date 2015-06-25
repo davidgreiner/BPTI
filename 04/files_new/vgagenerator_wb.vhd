@@ -53,25 +53,25 @@ begin
         siggen_pos_y	=> pos_y
     );
 
-	 test_p : process(pos_x, pos_y)
-	 begin
-		if(pos_x = 0 or pos_y = 0) then
-			vga_red <= "0000";
-			vga_green <= "0000";
-			vga_blue <= "0000";
-		else
-			vga_red <= "1111";
-			vga_green <= "1111";
-			vga_blue <= "1111";
-		end if;
-	 end process;
+--	 test_p : process(pos_x, pos_y)
+--	 begin
+--		if(pos_x = 0 or pos_y = 0) then
+--			vga_red <= "0000";
+--			vga_green <= "0000";
+--			vga_blue <= "0000";
+--		else
+--			vga_red <= "1111";
+--			vga_green <= "1010";
+--			vga_blue <= "0000";
+--		end if;
+--	 end process;
 
---    pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
---    (
---        pxl_wb_pos_x_in    => pos_x,
---        pxl_wb_pos_y_in    => pos_y,
---        pxl_wb_red_out     => vga_red,
---        pxl_wb_green_out   => vga_green,
---        pxl_wb_blue_out    => vga_blue
---    );
+    pixelgenerator_pm : entity_pixelgenerator_whiteborder port map
+    (
+        pxl_wb_pos_x_in    => pos_x,
+        pxl_wb_pos_y_in    => pos_y,
+        pxl_wb_red_out     => vga_red,
+        pxl_wb_green_out   => vga_green,
+        pxl_wb_blue_out    => vga_blue
+    );
 end architecture architecture_vgagenerator_wb;

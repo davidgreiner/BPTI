@@ -839,9 +839,7 @@ proc restore { { project_dir "" } } {
       "../files/colourcombiner.vhd" 
       "../files_new/pixelgenerator_whiteborder.vhd" 
       "../files_new/pxlgen_whiteborder.vhd" 
-      "../files_new/siggen_hsyncgenerator.vhd" 
-      "../files_new/siggen_vsyncgenerator.vhd" 
-      "../files_new/signalgenerator.vhd" 
+      "../files_new/siggen_test.vhd" 
       "../files_new/vgagenerator_wb.vhd" 
       "entity_vgagenerator_wb.ucf"}
 

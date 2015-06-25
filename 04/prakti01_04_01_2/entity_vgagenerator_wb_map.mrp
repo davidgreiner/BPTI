@@ -12,31 +12,29 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Mon Jun 22 16:17:47 2015
+Mapped Date    : Thu Jun 25 14:50:05 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Total Number Slice Registers:         104 out of  33,280    1%
-    Number used as Flip Flops:           53
-    Number used as Latches:              51
-  Number of 4 input LUTs:               182 out of  33,280    1%
+  Number of Slice Flip Flops:            41 out of  33,280    1%
+  Number of 4 input LUTs:                77 out of  33,280    1%
 Logic Distribution:
-  Number of occupied Slices:            106 out of  16,640    1%
-    Number of Slices containing only related logic:     106 out of     106 100%
-    Number of Slices containing unrelated logic:          0 out of     106   0%
+  Number of occupied Slices:             63 out of  16,640    1%
+    Number of Slices containing only related logic:      63 out of      63 100%
+    Number of Slices containing unrelated logic:          0 out of      63   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         205 out of  33,280    1%
-    Number used as logic:               182
-    Number used as a route-thru:         23
+  Total Number of 4 input LUTs:         113 out of  33,280    1%
+    Number used as logic:                77
+    Number used as a route-thru:         36
   Number of bonded IOBs:                 15 out of     519    2%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BUFGMUXs:                     1 out of      24    4%
 
-Peak Memory Usage:  225 MB
-Total REAL time to MAP completion:  11 secs 
-Total CPU time to MAP completion:   8 secs 
+Peak Memory Usage:  224 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
 
 NOTES:
 
@@ -166,14 +164,14 @@ No control set information for this architecture.
 
 Section 14 - Utilization by Hierarchy
 -------------------------------------
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                             |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_vgagenerator_wb |           | 85/187        | 0/104         | 30/205        | 0/0           | 0/0       | 0/0       | 1/2   | 0/0   | entity_vgagenerator_wb                             |
-| +signalgenerator_pm    |           | 0/102         | 0/104         | 0/175         | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | entity_vgagenerator_wb/signalgenerator_pm          |
-| ++hsync_pm             |           | 55/55         | 53/53         | 92/92         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_vgagenerator_wb/signalgenerator_pm/hsync_pm |
-| ++vsync_pm             |           | 47/47         | 51/51         | 83/83         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_vgagenerator_wb/signalgenerator_pm/vsync_pm |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                                  |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| entity_vgagenerator_wb |           | 22/85         | 0/41          | 38/113        | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_vgagenerator_wb                                  |
+| +pixelgenerator_pm     |           | 0/8           | 0/0           | 0/14          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_vgagenerator_wb/pixelgenerator_pm                |
+| ++whiteborder_pm       |           | 8/8           | 0/0           | 14/14         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_vgagenerator_wb/pixelgenerator_pm/whiteborder_pm |
+| +signalgenerator_pm    |           | 55/55         | 41/41         | 61/61         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_vgagenerator_wb/signalgenerator_pm               |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.
   Therefore, a slice will be counted in every hierarchical module

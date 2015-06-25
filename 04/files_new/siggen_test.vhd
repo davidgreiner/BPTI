@@ -17,31 +17,32 @@ architecture architecture_signalgenerator of entity_signalgenerator is
 
 begin
 	siggen_p : process(siggen_clk_in)
-	variable hsync_counter : integer range 0 to 800 := 0;
-	variable vsync_counter : integer range 0 to 525 := 0;
+	variable hsync_counter : integer range 1 to 801 := 1;
+	variable vsync_counter : integer range 1 to 526 := 1;
 	begin
 		if(siggen_clk_in'event and siggen_clk_in = '1') then
-			if(hsync_counter < 704) then
+		
+			if(hsync_counter <= 704) then
 				siggen_hsync <= '1';
 			else
 				siggen_hsync <= '0';
 			end if;
 
-			if(vsync_counter < 524) then
+			if(vsync_counter <= 524) then
 				siggen_vsync <= '1';
 			else
-				siggne_vsync <= '0';
+				siggen_vsync <= '0';
 			end if;
 
 
-			if(hsync_counter >= 44 and hsync_counter < 684) then
-				siggen_pos_x <= hsync_counter - 43;
+			if(hsync_counter > 44 and hsync_counter <= 684) then
+				siggen_pos_x <= hsync_counter - 44;
 			else
 				siggen_pos_x <= 0;
 			end if;
 
-			if(vsync_counter >= 30 and vsync_counter < 510) then
-				siggen_pos_y <= vsync_counter - 29;
+			if(vsync_counter > 30 and vsync_counter <= 510) then
+				siggen_pos_y <= vsync_counter - 30;
 			else
 				siggen_pos_y <= 0;
 			end if;
@@ -50,11 +51,11 @@ begin
 			hsync_counter := hsync_counter + 1;
 
 			if(hsync_counter = 800) then
-				hsync_counter := 0;
+				hsync_counter := 1;
 				vsync_counter := vsync_counter + 1;
 
-				if(vsync_counter = 525) then
-					vsync_counter := 0;
+				if(vsync_counter = 526) then
+					vsync_counter := 2;
 				end if;
 			end if;
 		end if;

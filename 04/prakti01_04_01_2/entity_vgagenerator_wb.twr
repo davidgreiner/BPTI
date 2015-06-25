@@ -38,19 +38,16 @@ Clock vga_clk_in to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-vga_blue<0> |   11.754(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<1> |   11.777(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<2> |   11.765(R)|vga_clk_in_BUFGP  |   0.000|
-vga_blue<3> |   12.062(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<0>|   11.467(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<1>|   10.913(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<2>|   11.476(R)|vga_clk_in_BUFGP  |   0.000|
-vga_green<3>|   11.465(R)|vga_clk_in_BUFGP  |   0.000|
-vga_hsync   |    9.123(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<0>  |   12.044(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<1>  |   12.331(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<2>  |   12.044(R)|vga_clk_in_BUFGP  |   0.000|
-vga_red<3>  |   12.260(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<0>|   14.644(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<1>|   14.913(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<2>|   14.643(R)|vga_clk_in_BUFGP  |   0.000|
+vga_green<3>|   14.623(R)|vga_clk_in_BUFGP  |   0.000|
+vga_hsync   |    7.855(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<0>  |   14.649(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<1>  |   14.935(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<2>  |   14.649(R)|vga_clk_in_BUFGP  |   0.000|
+vga_red<3>  |   15.491(R)|vga_clk_in_BUFGP  |   0.000|
+vga_vsync   |    8.376(R)|vga_clk_in_BUFGP  |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock vga_clk_in
@@ -58,18 +55,18 @@ Clock to Setup on destination clock vga_clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-vga_clk_in     |   10.361|         |         |         |
+vga_clk_in     |    8.019|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jun 22 16:18:53 2015 
+Analysis completed Thu Jun 25 14:50:48 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 164 MB
+Peak Memory Usage: 162 MB
 
 
 

@@ -21,10 +21,10 @@ entity entity_whiteborder is
 end entity;
 
 architecture architecture_whiteborder of entity_whiteborder is
-constant border_top     : integer := 40;
-constant border_left    : integer := 40;
-constant border_bottom  : integer := 439;
-constant border_right   : integer := 609;
+constant border_top     : integer := 1;
+constant border_left    : integer := 1;
+constant border_bottom  : integer := 480;
+constant border_right   : integer := 640;
 constant colour_max     : std_logic_vector(3 downto 0) := "1111";
 constant colour_min		 : std_logic_vector(3 downto 0) := "0000";
 
@@ -57,7 +57,7 @@ begin
 
                 red_gen     <= colour_max;
                 green_gen   <= colour_max;
-                blue_gen    <= colour_min;
+                blue_gen    <= colour_max;
             else
                 red_gen     <= wb_red_in;
                 green_gen   <= wb_green_in;
