@@ -39,7 +39,81 @@ architecture architecture_ponglogic of entity_ponglogic is
 
     --## Border
     constant border_width : integer := 1;
+
+    --## Helper Clocks
+    signal pong_ball_clck_counter : integer range 0 to 1000000 := 0;
+    signal pong_ball_clck : STD_LOGIC := '0';
+    signal pong_paddle_clck_counter : integer range 0 to 1000000 := 0;
+    signal pong_paddle_clck : STD_LOGIC := '0';
 begin
+    --## Scale down clock for ball movement
+    pong_ball_clck_p : process(pong_clckin)
+    begin
+        if pong_clckin'event and pong_clckin = '1' then
+			pong_ball_clck_counter <= pong_ball_clck_counter + 1;
+
+			if (pong_ball_clck_counter = 500000) then
+				pong_ball_clck <= not pong_ball_clck;
+                pong_ball_clck_counter <= 0;
+			end if;
+		end if;
+    end process pong_ball_clck_p;
+
+    --## Scale down clock for paddle movement
+    pong_paddle_clck_p : process(pong_clckin)
+    begin
+        if pong_clckin'event and pong_clckin = '1' then
+			pong_paddle_clck_counter <= pong_paddle_clck_counter + 1;
+
+			if (pong_paddle_clck_counter = 100000) then
+				pong_paddle_clck <= not pong_paddle_clck;
+                pong_paddle_clck_counter <= 0;
+			end if;
+		end if;
+    end process pong_paddle_clck_p;
+
+    --## Logic for moving the ball
+    pong_ball_movement_p : process(pong_ball_clck)
+
+    variable ball_x : integer range 0 to screen_dimension.width;
+    variable ball_y : integer range 0 to screen_dimension.height;
+    variable ball_vector_x : integer range 0 to 10;
+    variable ball_vector_y : integer range 0 to 10;
+
+    begin
+        if pong_ball_clck'event and pong_ball_clck='1' then
+            -- Check collision with paddle on x axis
+            if ball_x - pong_ball_radius  < pong_paddle_position.x + pong_paddle_dimension.width and ball_x + pong_ball_radius > pong_paddle_position.x then
+                ball_vector_x := -ball_vector_x;
+            -- Check collision border left
+            elsif ball_x - ball_radius < 0 then
+                -- TODO: DIE
+            -- Check collision border right
+            elsif ball_x + ball_radius > screen_width then
+                ball_x := screen_width - ball_radius;
+                ball_vector_x := -ball_vector_x;
+            else
+                ball_x <= ball_x + ball_vector_x;
+            end if;
+
+            -- Check collision with paddle on y axis
+            if pong_ball_position.y - pong_ball_radius < pong_paddle_position.y + pong_paddle_dimension.height and pong_ball_position.y + pong_ball_radius > pong_paddle_position.y then
+                ball_vector_y := -ball_vector_y;
+            -- Check collision border top
+            elsif((ball_y + ball_radius) > screen_height) then
+                ball_y := screen_height - pong_ball_radius;
+                ball_vector_y := -ball_vector_y;
+            -- Check collision border bottom
+            elsif ((ball_y - ball_radius) < 0) then
+                pong_ball_position.y := 0 + pong_ball_radius;
+                ball_vector_y := -ball_vector_y;
+            -- Move ball y
+            else
+                ball_y := ball_y + ball_vector_y;
+            end if;
+        end if;
+    end process pong_ball_movement_p;
+
     gamelogic_p : process(pong_clckin, pong_reset)
     --#### Input
     variable paddle_up_counter : integer range 0 to 10;
@@ -47,13 +121,6 @@ begin
 
     --#### Paddle
     variable paddle_y : integer range 0 to (screen_dimension.height - paddle_dimension.height);
-
-    --#### Ball
-    variable ball_x : integer range 0 to screen_dimension.width;
-    variable ball_y : integer range 0 to screen_dimension.height;
-    variable ball_vector_x : integer range 0 to 10;
-    variable ball_vector_y : integer range 0 to 10;
-
     begin
         if(pong_reset = '0') then
             paddle_y := (screen_dimension.height  / 2) - (paddle_dimension.height / 2);
@@ -87,23 +154,6 @@ begin
                 paddle_down_counter := 0;
             end if;
 
-            --#### Ball tick
-
-
-
-            -- Check collision border top
-            if((ball_y + ball_radius) > screen_height) then
-                ball_y := screen_height - ball_radius;
-                ball_vector_y := -ball_vector_y;
-            -- Check collision border bottom
-            elsif ((ball_y - ball_radius) < 0) then
-                ball_y := 0 + ball_radius;
-                ball_vector_y := -ball_vector_y;
-            -- Move ball y
-            else
-                ball_y := ball_y + ball_vector_y;
-            end if;
-
         end if;
-end process
+    end process gamelogic_p;
 end architecture architecture_ponglogic;
