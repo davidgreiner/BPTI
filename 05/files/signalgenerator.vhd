@@ -5,6 +5,7 @@ entity entity_signalgenerator is
 	port
 	(
 		siggen_clk_in	: in std_logic;
+		siggen_rst		: in std_logic;
 		siggen_hsync	: out std_logic;
 		siggen_vsync	: out std_logic;
 		siggen_pos_x	: out integer range 0 to 640;
@@ -33,11 +34,14 @@ architecture architecture_signalgenerator of entity_signalgenerator is
     --          total:      525 ticks;
 
 begin
-	siggen_p : process(siggen_clk_in)
+	siggen_p : process(siggen_clk_in, siggen_rst)
 	variable hsync_counter : integer range 1 to 801 := 1;
 	variable vsync_counter : integer range 1 to 526 := 1;
 	begin
-		if(siggen_clk_in'event and siggen_clk_in = '1') then
+		if(siggen_rst = '0') then
+			hsync_counter := 1;
+			vsync_counter := 1;
+		elsif(siggen_clk_in'event and siggen_clk_in = '1') then
 
 			if(hsync_counter = 801) then
 				hsync_counter := 1;
