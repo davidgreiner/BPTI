@@ -19,12 +19,17 @@ entity entity_pixelgenerator is
 
         --#### Border
         pxlgen_border_width         : in integer;
-        pxlgen_border_colour        : in color
+        pxlgen_border_colour        : in color;
+
+        pxlgen_colour_out           : out color
     );
 end entity;
 
 
 architecture architecture_pixelgenerator of entity_pixelgenerator is
+
+constant min_colour : color := (red => "0000", green => "0000", blue => "0000");
+
 
 -- #### COMPONENTS ####
 component entity_ball
@@ -93,9 +98,13 @@ end component;
 
 
 -- #### SIGNALS ####
-signal ball2paddle_colour   : colour;
+signal ball2paddle_colour   : color;
 signal ball2paddle_pos_x    : integer range 0 to 640;
 signal ball2paddle_pos_y    : integer range 0 to 480;
+
+signal paddle2border_colour : color;
+signal paddle2border_pos_x  : integer range 0 to 640;
+signal paddle2border_pos_y  : integer range 0 to 480;
 -- #### END SIGNALS ####
 
 
@@ -104,9 +113,15 @@ begin
 -- #### PORT MAPS ####
     --
     -- Paint order:
-    --         |----------|      |----------|      |----------|
-    --    ---> |   BALL   | ---> |  PADDLE  | ---> |  BORDER  | --->
-    --         |----------|      |----------|      |----------|
+
+    --       |--------------------------------------------------------------|
+    --       |                                                              |
+    --       |       |----------|      |----------|      |----------|       |
+    --  -----------> |   BALL   | ---> |  PADDLE  | ---> |  BORDER  | ----------->
+    --       |       |----------|      |----------|      |----------|       |
+    --       |                                                              |
+    --       |--------------------------------------------------------------|
+
 
     -- Ball gets painted first, then the paddle and finally the border.
 
@@ -121,7 +136,7 @@ begin
         ball_in_pos_x	=> pxlgen_pos_x,
         ball_in_pos_y	=> pxlgen_pos_y,
 
-        ball_mix_colour	=> -- TODO
+        ball_mix_colour	=> min_colour,
 
 
         -- Output
@@ -133,12 +148,38 @@ begin
 
     paddle_pm : entity_paddle port map
     (
+        paddle_pos_x_in     =>  ball2paddle_pos_x,
+        paddle_pos_y_in     =>  ball2paddle_pos_y,
 
+        paddle_position     => pxlgen_paddle_position,
+        paddle_dimension    => pxlgen_paddle_dimension,
+        paddle_colour_in    => pxlgen_paddle_colour,
+
+        paddle_colour_mix   => ball2paddle_colour,
+
+        -- Output
+        padddle_colour_out  => paddle2border_colour,
+
+        paddle_pos_x_out    => paddle2border_pos_x,
+        paddle_pos_y_out    => paddle2border_pos_y
     );
 
     border_pm : entity_border port map
     (
+        -- Input
+        border_width        => pxlgen_border_width,
+        border_colour_in    => pxlgen_border_colour,
+        border_colour_mix   => paddle2border_colour,
 
+        border_pos_x_in     => paddle2border_pos_x,
+        border_pos_y_in     => paddle2border_pos_y,
+
+
+        -- Output
+        border_colour_out   => pxlgen_colour_out,
+
+        border_pos_x_out    => OPEN
+        border_pos_y_out    => OPEN
     );
 -- #### END PORT MAPS ####
 
