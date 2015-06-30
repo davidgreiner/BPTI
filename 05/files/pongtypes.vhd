@@ -19,6 +19,10 @@ package pongtypes is
         blue : std_logic_vector(3 downto 0);
     end record;
 
+    type number is record
+        pixelmap : std_logic_vector(11 downto 0)
+    end record;
+
 end pongtypes;
 
 
