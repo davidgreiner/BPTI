@@ -78,7 +78,7 @@ component entity_border
     border_colour_mix   : in color;
 
     border_pos_x_in     : in integer range 0 to 640;
-    border pos_y_in     : in integer range 0 to 480;
+    border_pos_y_in     : in integer range 0 to 480;
 
 
     -- Output
@@ -91,5 +91,5 @@ end component;
 
 
 begin
-    
+
 end architecture architecture_pixelgenerator;

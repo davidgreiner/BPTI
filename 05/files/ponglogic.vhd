@@ -23,7 +23,7 @@ entity entity_ponglogic is
 
         --#### Border
         pong_border_width : out integer;
-        pong_border_color : out color;
+        pong_border_color : out color
     );
 end entity;
 

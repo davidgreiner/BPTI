@@ -10,7 +10,7 @@ entity entity_border is
         border_colour_mix   : in color;
 
         border_pos_x_in     : in integer range 0 to 640;
-        border pos_y_in     : in integer range 0 to 480;
+        border_pos_y_in     : in integer range 0 to 480;
 
 
         -- Output
@@ -57,6 +57,6 @@ begin
 
     cc_colour_1_in <= mix_colour;
     cc_colour2_in <= border_colour_in;
-    cc_colour_out <= border+_colour_out;
+    cc_colour_out <= border_colour_out;
 
 end architecture architecture_border;
