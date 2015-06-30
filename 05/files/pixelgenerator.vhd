@@ -26,6 +26,7 @@ end entity;
 
 architecture architecture_pixelgenerator of entity_pixelgenerator is
 
+-- #### COMPONENTS ####
 component entity_ball
     port
     (
@@ -88,8 +89,58 @@ component entity_border
     border_pos_y_out    : out integer range 0 to 480
     );
 end component;
+-- #### END COMPONENTS ####
+
+
+-- #### SIGNALS ####
+signal ball2paddle_colour   : colour;
+signal ball2paddle_pos_x    : integer range 0 to 640;
+signal ball2paddle_pos_y    : integer range 0 to 480;
+-- #### END SIGNALS ####
 
 
 begin
+
+-- #### PORT MAPS ####
+    --
+    -- Paint order:
+    --         |----------|      |----------|      |----------|
+    --    ---> |   BALL   | ---> |  PADDLE  | ---> |  BORDER  | --->
+    --         |----------|      |----------|      |----------|
+
+    -- Ball gets painted first, then the paddle and finally the border.
+
+
+    ball_pm : entity_ball port map
+    (
+        -- Input
+        ball_position   => pxlgen_ball_position,
+        ball_radius		=> pxlgen_ball_radius,
+        ball_colour		=> pxlgen_ball_colour,
+
+        ball_in_pos_x	=> pxlgen_pos_x,
+        ball_in_pos_y	=> pxlgen_pos_y,
+
+        ball_mix_colour	=> -- TODO
+
+
+        -- Output
+        ball_colour		=> ball2paddle_colour,
+
+        ball_out_pos_x	=> ball2paddle_pos_x,
+        ball_out_pos_y	=> ball2paddle_pos_y
+    );
+
+    paddle_pm : entity_paddle port map
+    (
+
+    );
+
+    border_pm : entity_border port map
+    (
+
+    );
+-- #### END PORT MAPS ####
+
 
 end architecture architecture_pixelgenerator;
