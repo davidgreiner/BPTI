@@ -13,32 +13,26 @@ entity entity_ponglogic is
 
         --#### Ball
         pong_ball_position : out position;
-        pong_ball_radius : out integer;
-        pong_ball_color : out color;
+        pong_ball_radius : out integer := 2;
+        pong_ball_color : out color := ("1111","1111","1111");
 
         --#### Paddle
         pong_paddle_position : out position;
-        pong_paddle_dimension : out dimension;
-        pong_paddle_color : out color;
+        pong_paddle_dimension : out dimension := (5, 20);
+        pong_paddle_color : out color := ("1111","1111","1111");
 
         --#### Border
-        pong_border_width : out integer;
-        pong_border_color : out color
+        pong_border_width : out integer := 1;
+        pong_border_color : out color := ("1111","1111","1111");
+
+        --### Score
+        pong_score : out integer := 0
     );
 end entity;
 
 architecture architecture_ponglogic of entity_ponglogic is
     --#### Screen
     constant screen_dimension : dimesion := (639, 479);
-
-    --#### Paddle
-    constant paddle_dimension : dimension := (5, 20);
-
-    --#### Ball
-    constant ball_radius : integer := 2;
-
-    --## Border
-    constant border_width : integer := 1;
 
     --## Helper Clocks
     signal pong_ball_clck_counter : integer range 0 to 1000000 := 0;
@@ -73,21 +67,33 @@ begin
     end process pong_paddle_clck_p;
 
     --## Logic for moving the ball
-    pong_ball_movement_p : process(pong_ball_clck)
+    pong_ball_movement_p : process(pong_ball_clck, pong_reset)
 
-    variable ball_x : integer range 0 to screen_dimension.width;
-    variable ball_y : integer range 0 to screen_dimension.height;
-    variable ball_vector_x : integer range 0 to 10;
-    variable ball_vector_y : integer range 0 to 10;
+    variable score : integer := 0;
+
+    variable ball_x : integer range 0 to screen_dimension.width := 320;
+    variable ball_y : integer range 0 to screen_dimension.height := 240;
+    variable ball_vector_x : integer range 0 to 10 := 1;
+    variable ball_vector_y : integer range 0 to 10 := 1;
 
     begin
-        if pong_ball_clck'event and pong_ball_clck='1' then
+        if(pong_reset = '0') then
+            ball_x := 320;
+            ball_y := 240;
+            ball_vector_x := 1;
+            ball_vector_y := 1;
+            score := 0;
+        elsif pong_ball_clck'event and pong_ball_clck='1' then
             -- Check collision with paddle on x axis
             if ball_x - pong_ball_radius  < pong_paddle_position.x + pong_paddle_dimension.width and ball_x + pong_ball_radius > pong_paddle_position.x then
                 ball_vector_x := -ball_vector_x;
+                score := score + 1;
             -- Check collision border left
             elsif ball_x - ball_radius < 0 then
-                -- TODO: DIE
+                ball_x := 320;
+                ball_y := 240;
+                ball_vector_x := 1;
+                ball_vector_y := 1;
             -- Check collision border right
             elsif ball_x + ball_radius > screen_width then
                 ball_x := screen_width - ball_radius;
@@ -99,6 +105,7 @@ begin
             -- Check collision with paddle on y axis
             if pong_ball_position.y - pong_ball_radius < pong_paddle_position.y + pong_paddle_dimension.height and pong_ball_position.y + pong_ball_radius > pong_paddle_position.y then
                 ball_vector_y := -ball_vector_y;
+                score := score + 1;
             -- Check collision border top
             elsif((ball_y + ball_radius) > screen_height) then
                 ball_y := screen_height - pong_ball_radius;
@@ -112,48 +119,31 @@ begin
                 ball_y := ball_y + ball_vector_y;
             end if;
         end if;
+        pong_ball_position.x <= ball_x;
+        pong_ball_position.y <= ball.y;
+        pong_score <= score;
     end process pong_ball_movement_p;
 
-    gamelogic_p : process(pong_clckin, pong_reset)
-    --#### Input
-    variable paddle_up_counter : integer range 0 to 10;
-    variable paddle_down_counter : integer range 0 to 10;
-
-    --#### Paddle
+    pong_paddle_movement_p : process(pong_paddle_clck)
     variable paddle_y : integer range 0 to (screen_dimension.height - paddle_dimension.height);
     begin
-        if(pong_reset = '0') then
-            paddle_y := (screen_dimension.height  / 2) - (paddle_dimension.height / 2);
-            ball_x := screen_width / 3;
-            ball_y := (screen_dimension.height / 2) - ball_radius;
-        elsif(pong_clckin'event and pong_clckin = '1') then
+        if(pong_paddle_clck'event and pong_paddle_clkc='1') then
             --#### Input
-            -- Paddle up button pressed down sample counter 0
-            if(pong_paddle_up = '1' and paddle_up_counter = 0) then
+            -- Paddle up button pressed
+            if(pong_paddle_up = '1') then
                 if(paddle_y > 0) then
                     paddle_y := paddle_y - 1;
                 end if;
-            -- Wait a couple ticks before we move again
-            elsif(pong_paddle_up = '1') then
-                paddle_up_counter := paddle_up_counter + 1;
-            -- Reset counter when button released
-            else
-                paddle_up_counter := 0;
             end if;
 
-            -- Paddle down button pressed down sample counter 0
-            if(pong_paddle_down = '1' and paddle_down_counter = 0) then
+            -- Paddle down button pressed
+            if(pong_paddle_down = '1') then
                 if(paddle_y < (screen_dimension.height - paddle_dimension.height)) then
                     paddle_y := paddle_y + 1;
                 end if;
-            -- Wait a couple ticks before we move again
-            elsif(pong_paddle_down = '1') then
-                paddle_down_counter := paddle_down_counter + 1;
-            -- Reset counter when button released
-            else
-                paddle_down_counter := 0;
             end if;
-
+            pong_paddle_position.y <= paddle_y;
         end if;
-    end process gamelogic_p;
+    end process pong_paddle_movement_p;
+
 end architecture architecture_ponglogic;
