@@ -51,6 +51,9 @@ begin
                 mix_colour <= paddle_colour_mix;
             end if;
         end if;
+        
+        paddle_pos_x_out <= paddle_pos_x_in;
+        paddle_pos_y_out <= paddle_pos_y_in;
     end process;
 
     combiner_p : entity_colourcombiner port map

@@ -38,7 +38,7 @@ component entity_ponglogic is
 
         --#### Ball
         pong_ball_position      : out position;
-        pong_ball_radius        : out integer;
+        pong_ball_radius        : out integer range 1 to 10;
         pong_ball_color         : out color;
 
         --#### Paddle
@@ -48,7 +48,10 @@ component entity_ponglogic is
 
         --#### Border
         pong_border_width       : out integer;
-        pong_border_color       : out color
+        pong_border_color       : out color;
+        
+       	pong_score				: out score
+    
     );
 end component;
 
@@ -56,6 +59,7 @@ component entity_signalgenerator is
     port
     (
         siggen_clk_in	: in std_logic;
+        siggen_rst		: in std_logic;
         siggen_hsync	: out std_logic;
         siggen_vsync	: out std_logic;
         siggen_pos_x	: out integer range 0 to 640;
@@ -66,12 +70,14 @@ end component;
 component entity_pixelgenerator is
     port
     (
+    	pxlgen_score				: in score;
+    
         pxlgen_pos_x                : in integer range 0 to 640;
         pxlgen_pos_y                : in integer range 0 to 480;
 
         --#### Ball
         pxlgen_ball_position        : in position;
-        pxlgen_ball_radius          : in integer;
+        pxlgen_ball_radius          : in integer range 1 to 10;
         pxlgen_ball_colour          : in color;
 
         --#### Paddle
@@ -107,7 +113,7 @@ signal pos_x            : integer range 0 to 640;
 signal pos_y            : integer range 0 to 480;
 
 signal ball_position    : position;
-signal ball_radius      : integer;
+signal ball_radius      : integer range 1 to 10;
 signal ball_colour      : color;
 
 signal paddle_position  : position;
@@ -116,6 +122,8 @@ signal paddle_colour    : color;
 
 signal border_width     : integer;
 signal border_colour    : color;
+
+signal points			: score;
 -- #### END SIGNALS ####
 
 begin
@@ -157,12 +165,15 @@ begin
 
         --#### Border
         pong_border_width       => border_width,
-        pong_border_color       => border_colour
+        pong_border_color       => border_colour,
+        
+        pong_score				=> points
     );
 
     sgnal_pm : entity_signalgenerator port map
     (
         siggen_clk_in	=> clk_in,
+        siggen_rst		=> rst,
         siggen_hsync	=> hsync,
         siggen_vsync	=> vsync,
         siggen_pos_x	=> pos_x,
@@ -173,6 +184,8 @@ begin
     (
         pxlgen_pos_x                => pos_x,
         pxlgen_pos_y                => pos_y,
+        
+        pxlgen_score				=> points,
 
         --#### Ball
         pxlgen_ball_position        => ball_position,

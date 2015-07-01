@@ -10,7 +10,7 @@ entity entity_pixelgenerator is
 
         --#### Ball
         pxlgen_ball_position        : in position;
-        pxlgen_ball_radius          : in integer;
+        pxlgen_ball_radius          : in integer range 1 to 10;
         pxlgen_ball_colour          : in color;
 
         --#### Paddle
@@ -40,7 +40,7 @@ component entity_ball
     (
         -- Input
         ball_position 		: in position;
-        ball_radius			: in integer range 2 to 10;
+        ball_radius			: in integer range 1 to 10;
         ball_colour_in		: in color;
 
         ball_in_pos_x		: in integer range 0 to 640;

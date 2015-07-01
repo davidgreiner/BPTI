@@ -13,7 +13,7 @@ entity entity_ponglogic is
 
         --#### Ball
         pong_ball_position : out position;
-        pong_ball_radius : out integer;
+        pong_ball_radius : out integer range 1 to 10;
         pong_ball_color : out color;
 
         --#### Paddle
@@ -153,23 +153,20 @@ begin
                     paddle_position.y := paddle_position.y + 1;
                 end if;
             end if;
-            
-            
-
-			
-		    pong_ball_position <= ball_position;
-		    pong_ball_radius <= ball_radius;
-		    pong_ball_color <= ball_colour;
-		    
-		    pong_paddle_position <= paddle_position;
-		    pong_paddle_dimension <= paddle_dimension;
-		    pong_paddle_color <= paddle_colour;
-		    
-		    pong_border_width <= border_width;
-        	pong_border_color <= border_colour;
-		    
-		    pong_score <= points;
 		end if;
+		
+		pong_ball_position <= ball_position;
+	    pong_ball_radius <= ball_radius;
+	    pong_ball_color <= ball_colour;
+	    
+	    pong_paddle_position <= paddle_position;
+	    pong_paddle_dimension <= paddle_dimension;
+	    pong_paddle_color <= paddle_colour;
+	    
+	    pong_border_width <= border_width;
+    	pong_border_color <= border_colour;
+	    
+	    pong_score <= points;
     end process;   
 
 end architecture architecture_ponglogic;

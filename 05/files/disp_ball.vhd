@@ -6,7 +6,7 @@ entity entity_ball is
 	(
 		-- Input
 		ball_position 		: in position;
-		ball_radius			: in integer range 2 to 10;
+		ball_radius			: in integer range 1 to 10;
 		ball_colour_in		: in color;
 
 		ball_in_pos_x		: in integer range 0 to 640;
@@ -57,6 +57,9 @@ begin
 				mix_colour <= ball_mix_colour;
 			end if;
 		end if;
+		
+		ball_out_pos_x <= ball_in_pos_x;
+		ball_out_pos_y <= ball_in_pos_y;
 	end process;
 	
 	combiner_p : entity_colourcombiner port map

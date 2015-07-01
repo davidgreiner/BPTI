@@ -53,6 +53,9 @@ begin
                 mix_colour <= border_colour_mix;
             end if;
         end if;
+        
+        border_pos_x_out <= border_pos_x_in;
+        border_pos_y_out <= border_pos_y_in;
     end process;
 
 	combiner_p : entity_colourcombiner port map
