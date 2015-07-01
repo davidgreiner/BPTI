@@ -96,6 +96,8 @@ end component;
 component entity_colourresolver is
     port
     (
+    	rslv_clk_in			 : in std_logic;
+    	
         rslv_colour_in       : in color;
 
         rslv_colour_red      : out std_logic_vector(3 downto 0);
@@ -210,6 +212,8 @@ begin
 
     rslve_pm : entity_colourresolver port map
     (
+    	rslv_clk_in			 => clk_in,
+    
         rslv_colour_in       => final_colour,
 
         rslv_colour_red      => colour_red,
@@ -217,13 +221,15 @@ begin
         rslv_colour_blue     => colour_blue
     );
     
-    colour_checker : process(pos_x, pos_y)
+    colour_checker : process(clk_in)
     begin
+    if(clk_in'event and clk_in = '1') then
     	if(pos_x = 0 or pos_y = 0) then
     		final_colour <= ("0000", "0000", "0000");
 		else
-			final_colour <= ("1111", "1010", "0000");
+			final_colour <= colour_out;
 		end if;
+	end if;
     end process;
     
     vsync <= logic_clock;

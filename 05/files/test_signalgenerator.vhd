@@ -34,19 +34,14 @@ architecture architecture_test_signalgenerator of entity_test_signalgenerator is
 
 begin
 	siggen_p : process(siggen_clk_in)
-	variable hsync_counter : integer range 1 to 16 := 1;
-	variable vsync_counter : integer range 1 to 11 := 1;
+	variable hsync_counter : integer range 1 to 15 := 1;
+	variable vsync_counter : integer range 1 to 10 := 1;
 	begin
+	
+	
+	
 		if(siggen_clk_in'event and siggen_clk_in = '1') then
-            if(hsync_counter = 16) then
-                hsync_counter := 1;
-                vsync_counter := vsync_counter + 1;
-
-                if(vsync_counter = 11) then
-                    vsync_counter := 1;
-                end if;
-            end if;
-
+		
 			if(hsync_counter <= 3+5+3) then
 				siggen_hsync <= '1';
 			else
@@ -71,8 +66,19 @@ begin
 			else
 				siggen_pos_y <= 0;
 			end if;
-
-            hsync_counter := hsync_counter + 1;
+			
+			        
+            if(hsync_counter = 15) then
+                hsync_counter := 1;
+                
+                if(vsync_counter = 10) then
+                    vsync_counter := 1;
+                else
+                    vsync_counter := vsync_counter + 1;
+                end if;
+            else
+            	hsync_counter := hsync_counter + 1;
+            end if;
 		end if;
 	end process;
 end architecture architecture_test_signalgenerator;

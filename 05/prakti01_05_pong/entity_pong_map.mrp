@@ -11,29 +11,29 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Jul  1 16:50:06 2015
+Mapped Date    : Wed Jul  1 18:10:57 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    4
 Logic Utilization:
-  Number of Slice Flip Flops:            41 out of  33,280    1%
-  Number of 4 input LUTs:               118 out of  33,280    1%
+  Number of Slice Flip Flops:           163 out of  33,280    1%
+  Number of 4 input LUTs:             1,371 out of  33,280    4%
 Logic Distribution:
-  Number of occupied Slices:             68 out of  16,640    1%
-    Number of Slices containing only related logic:      68 out of      68 100%
-    Number of Slices containing unrelated logic:          0 out of      68   0%
+  Number of occupied Slices:            807 out of  16,640    4%
+    Number of Slices containing only related logic:     807 out of     807 100%
+    Number of Slices containing unrelated logic:          0 out of     807   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         133 out of  33,280    1%
-    Number used as logic:               118
-    Number used as a route-thru:         15
+  Total Number of 4 input LUTs:       1,590 out of  33,280    4%
+    Number used as logic:             1,371
+    Number used as a route-thru:        219
   Number of bonded IOBs:                 18 out of     519    3%
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of BUFGMUXs:                     2 out of      24    8%
 
-Peak Memory Usage:  225 MB
-Total REAL time to MAP completion:  11 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  234 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   10 secs 
 
 NOTES:
 
@@ -75,15 +75,22 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:LIT:243 - Logical network paddle_up_IBUF has no load.
-WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1
-   more times for the following (max. 5 shown):
-   paddle_down_IBUF
-   To see the details of these warning messages, please use the -detail switch.
-WARNING:PhysDesignRules:367 - The signal <paddle_up_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <paddle_down_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
+WARNING:Pack:266 - The function generator paint_pm/score_pm/Mmux_num_mux0007_113
+   failed to merge with F5 multiplexer
+   paint_pm/score_pm/Mmux_num_mux0007_10_f5_0.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator paint_pm/score_pm/Mmux_num_mux0001_113
+   failed to merge with F5 multiplexer
+   paint_pm/score_pm/Mmux_num_mux0001_10_f5_0.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator paint_pm/score_pm/Mmux_num_mux0005_113
+   failed to merge with F5 multiplexer
+   paint_pm/score_pm/Mmux_num_mux0005_10_f5_0.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator paint_pm/score_pm/Mmux_num_mux0003_113
+   failed to merge with F5 multiplexer
+   paint_pm/score_pm/Mmux_num_mux0003_10_f5_0.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
 
 Section 3 - Informational
 -------------------------
@@ -93,7 +100,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   5 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -102,6 +109,9 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+MUXCY 		paint_pm/ball_pm/Madd_mix_colour.green_add0000_cy<0>
+MUXCY 		paint_pm/ball_pm/Madd_mix_colour.green_add0001_cy<0>
+MUXCY 		paint_pm/paddle_pm/Madd_mix_colour.green_add0001_cy<0>
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -175,12 +185,21 @@ No control set information for this architecture.
 
 Section 14 - Utilization by Hierarchy
 -------------------------------------
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Na |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_pong/       |           | 15/79         | 0/41          | 23/133        | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_pong          |
-| +sgnal_pm          |           | 64/64         | 41/41         | 110/110       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/sgnal_pm |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name                    |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| entity_pong/       |           | 318/1136      | 2/163         | 232/1590      | 0/0           | 0/0       | 0/0       | 1/2   | 0/0   | entity_pong                               |
+| +logic_pm          |           | 365/365       | 118/118       | 620/620       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/logic_pm                      |
+| +paint_pm          |           | 0/405         | 0/0           | 0/669         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm                      |
+| ++ball_pm          |           | 104/104       | 0/0           | 138/138       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/ball_pm              |
+| ++border_pm        |           | 9/10          | 0/0           | 11/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/border_pm            |
+| +++combiner_p      |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/border_pm/combiner_p |
+| ++paddle_pm        |           | 42/44         | 0/0           | 50/52         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/paddle_pm            |
+| +++combiner_p      |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/paddle_pm/combiner_p |
+| ++score_pm         |           | 247/247       | 0/0           | 467/467       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/score_pm             |
+| +rslve_pm          |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/rslve_pm                      |
+| +sgnal_pm          |           | 46/46         | 41/41         | 69/69         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_pong/sgnal_pm                      |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.
   Therefore, a slice will be counted in every hierarchical module

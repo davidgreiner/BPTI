@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: entity_pong.prj
@@ -183,7 +183,7 @@ Entity <entity_colourcombiner> analyzed. Unit <entity_colourcombiner> generated.
 
 Analyzing Entity <entity_paddle> in library <work> (Architecture <architecture_paddle>).
 WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <paddle_colour_mix.red>, <paddle_colour_mix.green>, <paddle_colour_mix.blue>, <paddle_position.x>, <paddle_dimension.width>, <paddle_position.y>, <paddle_colour_in.red>, <paddle_colour_in.green>, <paddle_colour_in.blue>
+   <paddle_colour_mix.red>, <paddle_colour_mix.green>, <paddle_colour_mix.blue>, <paddle_position.x>, <paddle_dimension.width>, <paddle_position.y>, <paddle_dimension.height>, <paddle_colour_in.red>, <paddle_colour_in.green>, <paddle_colour_in.blue>
 Entity <entity_paddle> analyzed. Unit <entity_paddle> generated.
 
 Analyzing Entity <entity_border> in library <work> (Architecture <architecture_border>).
@@ -270,27 +270,31 @@ Synthesizing Unit <entity_signalgenerator>.
     Found 9-bit register for signal <siggen_pos_y>.
     Found 1-bit register for signal <siggen_vsync>.
     Found 1-bit register for signal <siggen_hsync>.
-    Found 10-bit register for signal <hsync_counter>.
-    Found 10-bit adder for signal <hsync_counter$add0000> created at line 80.
-    Found 10-bit comparator lessequal for signal <siggen_hsync$cmp_le0000> created at line 55.
-    Found 10-bit subtractor for signal <siggen_pos_x$addsub0000> created at line 69.
-    Found 10-bit comparator greater for signal <siggen_pos_x$cmp_gt0000> created at line 68.
-    Found 10-bit comparator lessequal for signal <siggen_pos_x$cmp_le0000> created at line 68.
-    Found 9-bit subtractor for signal <siggen_pos_y$addsub0000> created at line 75.
-    Found 10-bit comparator greater for signal <siggen_pos_y$cmp_gt0000> created at line 74.
-    Found 10-bit comparator lessequal for signal <siggen_pos_y$cmp_le0000> created at line 74.
-    Found 10-bit comparator lessequal for signal <siggen_vsync$cmp_le0000> created at line 61.
-    Found 10-bit register for signal <vsync_counter>.
-    Found 10-bit adder for signal <vsync_counter$addsub0000> created at line 48.
+    Found 10-bit up counter for signal <hsync_counter>.
+    Found 10-bit comparator lessequal for signal <siggen_hsync$cmp_le0000> created at line 49.
+    Found 10-bit subtractor for signal <siggen_pos_x$addsub0000> created at line 63.
+    Found 10-bit comparator greater for signal <siggen_pos_x$cmp_gt0000> created at line 62.
+    Found 10-bit comparator lessequal for signal <siggen_pos_x$cmp_le0000> created at line 62.
+    Found 9-bit subtractor for signal <siggen_pos_y$addsub0000> created at line 69.
+    Found 10-bit comparator greater for signal <siggen_pos_y$cmp_gt0000> created at line 68.
+    Found 10-bit comparator lessequal for signal <siggen_pos_y$cmp_le0000> created at line 68.
+    Found 10-bit comparator lessequal for signal <siggen_vsync$cmp_le0000> created at line 55.
+    Found 10-bit up counter for signal <vsync_counter>.
     Summary:
+	inferred   2 Counter(s).
 	inferred  21 D-type flip-flop(s).
-	inferred   4 Adder/Subtractor(s).
+	inferred   2 Adder/Subtractor(s).
 	inferred   6 Comparator(s).
 Unit <entity_signalgenerator> synthesized.
 
 
 Synthesizing Unit <entity_colourresolver>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourresolver.vhd".
+    Found 4-bit register for signal <rslv_colour_green>.
+    Found 4-bit register for signal <rslv_colour_blue>.
+    Found 4-bit register for signal <rslv_colour_red>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
 Unit <entity_colourresolver> synthesized.
 
 
@@ -351,14 +355,14 @@ Unit <entity_ball> synthesized.
 
 Synthesizing Unit <entity_paddle>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd".
-WARNING:Xst:647 - Input <paddle_dimension.height> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit adder for signal <mix_colour.green$add0000> created at line 47.
+    Found 32-bit adder for signal <mix_colour.green$add0001> created at line 47.
     Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0000> created at line 47.
     Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0001> created at line 47.
     Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0000> created at line 47.
     Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0001> created at line 47.
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
 Unit <entity_paddle> synthesized.
 
@@ -384,9 +388,11 @@ Unit <entity_pixelgenerator> synthesized.
 
 Synthesizing Unit <entity_pong>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd".
-WARNING:Xst:646 - Signal <colour_out.red> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <colour_out.green> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <colour_out.blue> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <final_colour.blue>.
+    Found 4-bit register for signal <final_colour.green>.
+    Found 4-bit register for signal <final_colour.red>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
 Unit <entity_pong> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -398,21 +404,21 @@ Macro Statistics
 # ROMs                                                 : 8
  16x56-bit ROM                                         : 4
  8x32-bit ROM                                          : 4
-# Adders/Subtractors                                   : 34
- 10-bit adder                                          : 2
+# Adders/Subtractors                                   : 33
  10-bit subtractor                                     : 2
  11-bit subtractor                                     : 1
- 32-bit adder                                          : 13
+ 32-bit adder                                          : 14
  32-bit subtractor                                     : 5
  4-bit adder                                           : 10
  9-bit subtractor                                      : 1
-# Counters                                             : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
  32-bit down counter                                   : 1
-# Registers                                            : 14
+# Registers                                            : 18
  1-bit register                                        : 2
- 10-bit register                                       : 3
+ 10-bit register                                       : 1
  32-bit register                                       : 2
- 4-bit register                                        : 6
+ 4-bit register                                        : 12
  9-bit register                                        : 1
 # Latches                                              : 2
  10-bit latch                                          : 1
@@ -440,12 +446,6 @@ Macro Statistics
 =========================================================================
 
 Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
-WARNING:Xst:1290 - Hierarchical block <combiner_p> is unconnected in block <ball_pm>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <combiner_p> is unconnected in block <paddle_pm>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <combiner_p> is unconnected in block <border_pm>.
-   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -454,19 +454,19 @@ Macro Statistics
 # ROMs                                                 : 8
  16x56-bit ROM                                         : 4
  8x32-bit ROM                                          : 4
-# Adders/Subtractors                                   : 34
- 10-bit adder                                          : 2
+# Adders/Subtractors                                   : 33
  10-bit subtractor                                     : 1
  3-bit subtractor                                      : 1
- 32-bit adder                                          : 13
+ 32-bit adder                                          : 14
  32-bit subtractor                                     : 5
  4-bit adder                                           : 10
  4-bit subtractor                                      : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
  32-bit down counter                                   : 1
-# Registers                                            : 129
- Flip-Flops                                            : 129
+# Registers                                            : 133
+ Flip-Flops                                            : 133
 # Latches                                              : 2
  10-bit latch                                          : 1
  9-bit latch                                           : 1
@@ -494,6 +494,8 @@ Macro Statistics
 
 Optimizing unit <entity_pong> ...
 
+Optimizing unit <entity_signalgenerator> ...
+
 Optimizing unit <entity_ball> ...
 
 Optimizing unit <entity_paddle> ...
@@ -503,128 +505,8 @@ Optimizing unit <entity_border> ...
 Optimizing unit <entity_ponglogic> ...
 WARNING:Xst:1293 - FF/Latch <ball_vector_x_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <entity_signalgenerator> ...
-
 Optimizing unit <entity_number> ...
 WARNING:Xst:1293 - FF/Latch <ball_vector_y_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_4> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_5> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_6> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_7> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_8> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_9> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_10> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_11> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_12> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_13> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_14> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_15> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_16> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_17> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_18> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_19> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_20> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_21> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_22> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_23> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_24> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_25> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_26> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_27> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_28> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_29> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_30> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.x_31> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_4> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_5> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_6> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_7> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_8> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_9> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_10> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_11> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_12> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_13> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_14> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_15> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_16> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_17> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_18> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_19> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_20> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_21> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_22> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_23> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_24> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_25> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_26> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_27> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_28> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_29> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_30> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_position.y_31> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_31> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_30> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_29> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_28> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_27> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_26> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_25> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_24> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_23> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_22> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_21> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_20> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_19> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_18> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_17> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_16> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_15> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_14> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_13> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_12> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_11> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_10> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_9> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_8> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_7> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_6> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_5> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_4> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_3_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_3_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_3_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_3_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_2_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_2_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_2_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_2_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_1_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_1_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_1_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_1_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_0_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_0_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_0_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <logic_pm/points_0_0> of sequential type is unconnected in block <entity_pong>.
 WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_9> of sequential type is unconnected in block <entity_pong>.
 WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_8> of sequential type is unconnected in block <entity_pong>.
 WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_7> of sequential type is unconnected in block <entity_pong>.
@@ -647,7 +529,11 @@ WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_0> of sequential typ
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 0.
+INFO:Xst:2261 - The FF/Latch <final_colour.red_0> in Unit <entity_pong> is equivalent to the following 3 FFs/Latches, which will be removed : <final_colour.red_1> <final_colour.red_2> <final_colour.red_3> 
+INFO:Xst:2261 - The FF/Latch <final_colour.blue_0> in Unit <entity_pong> is equivalent to the following 7 FFs/Latches, which will be removed : <final_colour.blue_1> <final_colour.blue_2> <final_colour.blue_3> <final_colour.green_0> <final_colour.green_1> <final_colour.green_2> <final_colour.green_3> 
+INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_3> in Unit <entity_pong> is equivalent to the following 7 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_green_2> <rslve_pm/rslv_colour_green_1> <rslve_pm/rslv_colour_green_0> <rslve_pm/rslv_colour_blue_3> <rslve_pm/rslv_colour_blue_2> <rslve_pm/rslv_colour_blue_1> <rslve_pm/rslv_colour_blue_0> 
+INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_red_3> in Unit <entity_pong> is equivalent to the following 3 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_red_2> <rslve_pm/rslv_colour_red_1> <rslve_pm/rslv_colour_red_0> 
+Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 6.
 
 Final Macro Processing ...
 
@@ -655,8 +541,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 41
- Flip-Flops                                            : 41
+# Registers                                            : 163
+ Flip-Flops                                            : 163
 
 =========================================================================
 
@@ -685,33 +571,40 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 181
+# BELS                             : 3027
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 15
-#      LUT2                        : 10
+#      INV                         : 181
+#      LUT1                        : 213
+#      LUT2                        : 270
 #      LUT2_D                      : 1
-#      LUT2_L                      : 1
-#      LUT3                        : 20
-#      LUT3_D                      : 4
-#      LUT3_L                      : 6
-#      LUT4                        : 54
-#      LUT4_D                      : 9
-#      LUT4_L                      : 9
-#      MUXCY                       : 18
-#      MUXF5                       : 9
+#      LUT2_L                      : 32
+#      LUT3                        : 334
+#      LUT3_D                      : 3
+#      LUT3_L                      : 4
+#      LUT4                        : 501
+#      LUT4_D                      : 32
+#      LUT4_L                      : 10
+#      MULT_AND                    : 5
+#      MUXCY                       : 770
+#      MUXF5                       : 131
+#      MUXF6                       : 40
+#      MUXF7                       : 4
 #      VCC                         : 1
-#      XORCY                       : 20
-# FlipFlops/Latches                : 41
+#      XORCY                       : 494
+# FlipFlops/Latches                : 163
+#      FD                          : 2
 #      FDC                         : 9
-#      FDCE                        : 9
-#      FDE                         : 21
+#      FDCE                        : 89
+#      FDE                         : 53
 #      FDP                         : 1
-#      FDPE                        : 1
-# Clock Buffers                    : 1
+#      FDPE                        : 7
+#      FDR                         : 1
+#      FDRS                        : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 15
-#      IBUF                        : 1
+# IO Buffers                       : 17
+#      IBUF                        : 3
 #      OBUF                        : 14
 =========================================================================
 
@@ -720,12 +613,12 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                       70  out of  16640     0%  
- Number of Slice Flip Flops:             41  out of  33280     0%  
- Number of 4 input LUTs:                132  out of  33280     0%  
+ Number of Slices:                      881  out of  16640     5%  
+ Number of Slice Flip Flops:            163  out of  33280     0%  
+ Number of 4 input LUTs:               1581  out of  33280     4%  
  Number of IOs:                          18
- Number of bonded IOBs:                  16  out of    519     3%  
- Number of GCLKs:                         1  out of     24     4%  
+ Number of bonded IOBs:                  18  out of    519     3%  
+ Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
 Partition Resource Summary:
@@ -748,24 +641,25 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | BUFGP                  | 41    |
+clk_in                             | BUFGP                  | 45    |
+sgnal_pm/siggen_vsync1             | BUFG                   | 118   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------------------------+-------------------------------+-------+
-Control Signal                                                           | Buffer(FF name)               | Load  |
--------------------------------------------------------------------------+-------------------------------+-------+
-sgnal_pm/hsync_counter_Acst_inv(sgnal_pm/hsync_counter_Acst_inv1_INV_0:O)| NONE(sgnal_pm/hsync_counter_5)| 20    |
--------------------------------------------------------------------------+-------------------------------+-------+
+-------------------------------------------------------------------+-------------------------------+-------+
+Control Signal                                                     | Buffer(FF name)               | Load  |
+-------------------------------------------------------------------+-------------------------------+-------+
+logic_pm/ball_position.x_Acst_inv(sgnal_pm/siggen_rst_inv1_INV_0:O)| NONE(sgnal_pm/vsync_counter_0)| 106   |
+-------------------------------------------------------------------+-------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 11.368ns (Maximum Frequency: 87.966MHz)
-   Minimum input arrival time before clock: 2.325ns
-   Maximum output required time after clock: 9.409ns
+   Minimum period: 21.254ns (Maximum Frequency: 47.051MHz)
+   Minimum input arrival time before clock: 12.466ns
+   Maximum output required time after clock: 5.868ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -774,39 +668,131 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
-  Clock period: 11.368ns (frequency: 87.966MHz)
-  Total number of paths / destination ports: 12604 / 51
+  Clock period: 10.877ns (frequency: 91.938MHz)
+  Total number of paths / destination ports: 1984 / 57
 -------------------------------------------------------------------------
-Delay:               11.368ns (Levels of Logic = 9)
-  Source:            sgnal_pm/vsync_counter_2 (FF)
-  Destination:       sgnal_pm/siggen_pos_y_8 (FF)
+Delay:               10.877ns (Levels of Logic = 10)
+  Source:            sgnal_pm/siggen_pos_x_0 (FF)
+  Destination:       final_colour.red_0 (FF)
   Source Clock:      clk_in rising
   Destination Clock: clk_in rising
 
-  Data Path: sgnal_pm/vsync_counter_2 to sgnal_pm/siggen_pos_y_8
+  Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.red_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             9   0.591   0.963  sgnal_pm/vsync_counter_2 (sgnal_pm/vsync_counter_2)
-     LUT1:I0->O            1   0.648   0.000  sgnal_pm/Madd_vsync_counter_addsub0000_cy<2>_rt (sgnal_pm/Madd_vsync_counter_addsub0000_cy<2>_rt)
-     MUXCY:S->O            1   0.632   0.000  sgnal_pm/Madd_vsync_counter_addsub0000_cy<2> (sgnal_pm/Madd_vsync_counter_addsub0000_cy<2>)
-     XORCY:CI->O           7   0.844   0.740  sgnal_pm/Madd_vsync_counter_addsub0000_xor<3> (sgnal_pm/vsync_counter_addsub0000<3>)
-     LUT4_D:I2->O          6   0.648   0.701  sgnal_pm/vsync_counter_cmp_eq000132_SW0 (N6)
-     LUT4:I2->O            9   0.648   0.823  sgnal_pm/vsync_counter_cmp_eq000132 (sgnal_pm/vsync_counter_cmp_eq0001)
-     LUT4_L:I3->LO         1   0.648   0.103  sgnal_pm/siggen_pos_y_and000010 (sgnal_pm/siggen_pos_y_and000010)
-     LUT4:I3->O            8   0.648   0.760  sgnal_pm/siggen_pos_y_and000015 (sgnal_pm/siggen_pos_y_and000015)
-     LUT4_D:I3->O          1   0.648   0.423  sgnal_pm/siggen_pos_y_and0000106 (sgnal_pm/siggen_pos_y_and0000)
-     LUT4:I3->O            1   0.648   0.000  sgnal_pm/siggen_pos_y_mux0001<8>1 (sgnal_pm/siggen_pos_y_mux0001<8>)
-     FDE:D                     0.252          sgnal_pm/siggen_pos_y_8
+     FDE:C->Q             72   0.591   1.418  sgnal_pm/siggen_pos_x_0 (sgnal_pm/siggen_pos_x_0)
+     LUT3:I0->O          120   0.648   1.433  paint_pm/score_pm/Msub_num_sub0000_Madd_xor<2>11 (paint_pm/score_pm/num_sub0000<2>)
+     LUT3:I0->O            1   0.648   0.000  paint_pm/score_pm/Mmux_num_mux0003_10 (paint_pm/score_pm/Mmux_num_mux0003_10)
+     MUXF5:I1->O           1   0.276   0.000  paint_pm/score_pm/Mmux_num_mux0003_9_f5 (paint_pm/score_pm/Mmux_num_mux0003_9_f5)
+     MUXF6:I1->O           1   0.291   0.500  paint_pm/score_pm/Mmux_num_mux0003_8_f6 (paint_pm/score_pm/Mmux_num_mux0003_8_f6)
+     LUT3:I1->O            1   0.643   0.000  paint_pm/score_pm/Mmux_num_mux0003_5 (paint_pm/score_pm/Mmux_num_mux0003_5)
+     MUXF5:I1->O           1   0.276   0.000  paint_pm/score_pm/Mmux_num_mux0003_4_f5 (paint_pm/score_pm/Mmux_num_mux0003_4_f5)
+     MUXF6:I1->O           1   0.291   0.000  paint_pm/score_pm/Mmux_num_mux0003_3_f6 (paint_pm/score_pm/Mmux_num_mux0003_3_f6)
+     MUXF7:I1->O           1   0.291   0.563  paint_pm/score_pm/Mmux_num_mux0003_2_f7 (paint_pm/score_pm/num_mux0003)
+     LUT4:I0->O            1   0.648   0.423  paint_pm/score_pm/number_colour_out_blue<0>1245 (paint_pm/score_pm/number_colour_out_blue<0>1245)
+     LUT4:I3->O            1   0.648   0.420  paint_pm/score_pm/number_colour_out_blue<0>1269 (paint_pm/score_pm/N31)
+     FDRS:S                    0.869          final_colour.red_0
     ----------------------------------------
-    Total                     11.368ns (6.855ns logic, 4.513ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                     10.877ns (6.120ns logic, 4.757ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sgnal_pm/siggen_vsync1'
+  Clock period: 21.254ns (frequency: 47.051MHz)
+  Total number of paths / destination ports: 187772789 / 236
+-------------------------------------------------------------------------
+Delay:               21.254ns (Levels of Logic = 70)
+  Source:            logic_pm/ball_position.x_1 (FF)
+  Destination:       logic_pm/ball_position.y_0 (FF)
+  Source Clock:      sgnal_pm/siggen_vsync1 rising
+  Destination Clock: sgnal_pm/siggen_vsync1 rising
+
+  Data Path: logic_pm/ball_position.x_1 to logic_pm/ball_position.y_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.776  logic_pm/ball_position.x_1 (logic_pm/ball_position.x_1)
+     LUT1:I0->O            1   0.648   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<1>_rt (logic_pm/Msub_ball_vector_y_sub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<1> (logic_pm/Msub_ball_vector_y_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<2> (logic_pm/Msub_ball_vector_y_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<3> (logic_pm/Msub_ball_vector_y_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<4> (logic_pm/Msub_ball_vector_y_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<5> (logic_pm/Msub_ball_vector_y_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<6> (logic_pm/Msub_ball_vector_y_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<7> (logic_pm/Msub_ball_vector_y_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<8> (logic_pm/Msub_ball_vector_y_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<9> (logic_pm/Msub_ball_vector_y_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<10> (logic_pm/Msub_ball_vector_y_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<11> (logic_pm/Msub_ball_vector_y_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<12> (logic_pm/Msub_ball_vector_y_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<13> (logic_pm/Msub_ball_vector_y_sub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<14> (logic_pm/Msub_ball_vector_y_sub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<15> (logic_pm/Msub_ball_vector_y_sub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<16> (logic_pm/Msub_ball_vector_y_sub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<17> (logic_pm/Msub_ball_vector_y_sub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<18> (logic_pm/Msub_ball_vector_y_sub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<19> (logic_pm/Msub_ball_vector_y_sub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<20> (logic_pm/Msub_ball_vector_y_sub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<21> (logic_pm/Msub_ball_vector_y_sub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<22> (logic_pm/Msub_ball_vector_y_sub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<23> (logic_pm/Msub_ball_vector_y_sub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<24> (logic_pm/Msub_ball_vector_y_sub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<25> (logic_pm/Msub_ball_vector_y_sub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<26> (logic_pm/Msub_ball_vector_y_sub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<27> (logic_pm/Msub_ball_vector_y_sub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<28> (logic_pm/Msub_ball_vector_y_sub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<29> (logic_pm/Msub_ball_vector_y_sub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<30> (logic_pm/Msub_ball_vector_y_sub0000_cy<30>)
+     XORCY:CI->O          41   0.844   1.265  logic_pm/Msub_ball_vector_y_sub0000_xor<31> (logic_pm/ball_vector_y_sub0000<31>)
+     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector_y_cmp_lt0000_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector_y_cmp_lt0000_lut<10>)
+     MUXCY:S->O           19   0.836   1.117  logic_pm/Mcompar_ball_vector_y_cmp_lt0000_cy<10> (logic_pm/Mcompar_ball_vector_y_cmp_lt0000_cy<10>)
+     LUT3:I2->O           11   0.648   1.013  logic_pm/Mmux_ball_position.y_mux00001101_1 (logic_pm/Mmux_ball_position.y_mux00001101)
+     LUT2:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_position.y_mux00001211 (logic_pm/Mmux_ball_position.y_mux0000121)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_points_0_sub0000_cy<1> (logic_pm/Msub_points_0_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<2> (logic_pm/Msub_points_0_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<3> (logic_pm/Msub_points_0_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<4> (logic_pm/Msub_points_0_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<5> (logic_pm/Msub_points_0_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<6> (logic_pm/Msub_points_0_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<7> (logic_pm/Msub_points_0_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<8> (logic_pm/Msub_points_0_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<9> (logic_pm/Msub_points_0_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<10> (logic_pm/Msub_points_0_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<11> (logic_pm/Msub_points_0_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<12> (logic_pm/Msub_points_0_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<13> (logic_pm/Msub_points_0_sub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<14> (logic_pm/Msub_points_0_sub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<15> (logic_pm/Msub_points_0_sub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<16> (logic_pm/Msub_points_0_sub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<17> (logic_pm/Msub_points_0_sub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<18> (logic_pm/Msub_points_0_sub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<19> (logic_pm/Msub_points_0_sub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<20> (logic_pm/Msub_points_0_sub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<21> (logic_pm/Msub_points_0_sub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<22> (logic_pm/Msub_points_0_sub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<23> (logic_pm/Msub_points_0_sub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<24> (logic_pm/Msub_points_0_sub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<25> (logic_pm/Msub_points_0_sub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<26> (logic_pm/Msub_points_0_sub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<27> (logic_pm/Msub_points_0_sub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<28> (logic_pm/Msub_points_0_sub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<29> (logic_pm/Msub_points_0_sub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<30> (logic_pm/Msub_points_0_sub0000_cy<30>)
+     XORCY:CI->O          35   0.844   1.343  logic_pm/Msub_points_0_sub0000_xor<31> (logic_pm/points_0_sub0000<31>)
+     LUT2:I1->O            1   0.643   0.000  logic_pm/Mcompar_points_0_cmp_lt0000_lut<31> (logic_pm/Mcompar_points_0_cmp_lt0000_lut<31>)
+     MUXCY:S->O           57   0.836   1.302  logic_pm/Mcompar_points_0_cmp_lt0000_cy<31> (logic_pm/Mcompar_points_0_cmp_lt0000_cy<31>)
+     LUT3:I2->O           32   0.648   1.262  logic_pm/ball_position_y_not00011 (logic_pm/ball_position_y_not0001)
+     FDCE:CE                   0.312          logic_pm/ball_position.y_0
+    ----------------------------------------
+    Total                     21.254ns (13.175ns logic, 8.079ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
   Total number of paths / destination ports: 21 / 21
 -------------------------------------------------------------------------
-Offset:              2.325ns (Levels of Logic = 1)
+Offset:              2.363ns (Levels of Logic = 1)
   Source:            rst (PAD)
   Destination:       sgnal_pm/siggen_vsync (FF)
   Destination Clock: clk_in rising
@@ -815,47 +801,110 @@ Offset:              2.325ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            22   0.849   1.164  rst_IBUF (rst_IBUF)
+     IBUF:I->O            23   0.849   1.202  rst_IBUF (rst_IBUF)
      FDE:CE                    0.312          sgnal_pm/siggen_pos_x_0
     ----------------------------------------
-    Total                      2.325ns (1.161ns logic, 1.164ns route)
-                                       (49.9% logic, 50.1% route)
+    Total                      2.363ns (1.161ns logic, 1.202ns route)
+                                       (49.1% logic, 50.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
-  Total number of paths / destination ports: 116 / 8
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sgnal_pm/siggen_vsync1'
+  Total number of paths / destination ports: 24064 / 64
 -------------------------------------------------------------------------
-Offset:              9.409ns (Levels of Logic = 5)
-  Source:            sgnal_pm/siggen_pos_y_1 (FF)
-  Destination:       colour_red<3> (PAD)
-  Source Clock:      clk_in rising
+Offset:              12.466ns (Levels of Logic = 49)
+  Source:            paddle_up (PAD)
+  Destination:       logic_pm/paddle_position.y_31 (FF)
+  Destination Clock: sgnal_pm/siggen_vsync1 rising
 
-  Data Path: sgnal_pm/siggen_pos_y_1 to colour_red<3>
+  Data Path: paddle_up to logic_pm/paddle_position.y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.563  sgnal_pm/siggen_pos_y_1 (sgnal_pm/siggen_pos_y_1)
-     LUT4:I0->O            1   0.648   0.000  final_colour_green<1>111 (final_colour_green<1>111)
-     MUXF5:I0->O           1   0.276   0.423  final_colour_green<1>11_f5 (final_colour_green<1>11)
-     LUT4:I3->O            1   0.648   0.423  final_colour_green<1>47_SW0 (N74)
-     LUT4:I3->O            6   0.648   0.669  final_colour_green<1>47 (final_colour_green<1>)
-     OBUF:I->O                 4.520          colour_red_3_OBUF (colour_red<3>)
+     IBUF:I->O            68   0.849   1.417  paddle_up_IBUF (paddle_up_IBUF)
+     LUT2:I0->O            2   0.648   0.527  logic_pm/Mmux_paddle_position.y_mux00001101 (logic_pm/N0)
+     LUT4:I1->O            1   0.643   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<0> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<0> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<1> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<2> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<10> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<10>)
+     MUXCY:CI->O          32   0.269   1.405  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>)
+     LUT3:I0->O            1   0.648   0.452  logic_pm/paddle_position_y_mux0002<0>1 (logic_pm/paddle_position_y_mux0002<0>)
+     LUT3:I2->O            1   0.648   0.000  logic_pm/Mcount_paddle_position.y_lut<0> (logic_pm/Mcount_paddle_position.y_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcount_paddle_position.y_cy<0> (logic_pm/Mcount_paddle_position.y_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<1> (logic_pm/Mcount_paddle_position.y_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<2> (logic_pm/Mcount_paddle_position.y_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<3> (logic_pm/Mcount_paddle_position.y_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<4> (logic_pm/Mcount_paddle_position.y_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<5> (logic_pm/Mcount_paddle_position.y_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<6> (logic_pm/Mcount_paddle_position.y_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<7> (logic_pm/Mcount_paddle_position.y_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<8> (logic_pm/Mcount_paddle_position.y_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<9> (logic_pm/Mcount_paddle_position.y_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<10> (logic_pm/Mcount_paddle_position.y_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<11> (logic_pm/Mcount_paddle_position.y_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<12> (logic_pm/Mcount_paddle_position.y_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<13> (logic_pm/Mcount_paddle_position.y_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<14> (logic_pm/Mcount_paddle_position.y_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<15> (logic_pm/Mcount_paddle_position.y_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<16> (logic_pm/Mcount_paddle_position.y_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<17> (logic_pm/Mcount_paddle_position.y_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<18> (logic_pm/Mcount_paddle_position.y_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<19> (logic_pm/Mcount_paddle_position.y_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<20> (logic_pm/Mcount_paddle_position.y_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<21> (logic_pm/Mcount_paddle_position.y_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<22> (logic_pm/Mcount_paddle_position.y_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<23> (logic_pm/Mcount_paddle_position.y_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<24> (logic_pm/Mcount_paddle_position.y_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<25> (logic_pm/Mcount_paddle_position.y_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<26> (logic_pm/Mcount_paddle_position.y_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<27> (logic_pm/Mcount_paddle_position.y_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<28> (logic_pm/Mcount_paddle_position.y_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<29> (logic_pm/Mcount_paddle_position.y_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<30> (logic_pm/Mcount_paddle_position.y_cy<30>)
+     XORCY:CI->O           1   0.844   0.000  logic_pm/Mcount_paddle_position.y_xor<31> (logic_pm/Mcount_paddle_position.y31)
+     FDE:D                     0.252          logic_pm/paddle_position.y_31
     ----------------------------------------
-    Total                      9.409ns (7.331ns logic, 2.078ns route)
-                                       (77.9% logic, 22.1% route)
+    Total                     12.466ns (8.665ns logic, 3.801ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              5.868ns (Levels of Logic = 1)
+  Source:            rslve_pm/rslv_colour_green_3 (FF)
+  Destination:       colour_green<3> (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: rslve_pm/rslv_colour_green_3 to colour_green<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.591   0.757  rslve_pm/rslv_colour_green_3 (rslve_pm/rslv_colour_green_3)
+     OBUF:I->O                 4.520          colour_blue_0_OBUF (colour_blue<0>)
+    ----------------------------------------
+    Total                      5.868ns (5.111ns logic, 0.757ns route)
+                                       (87.1% logic, 12.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 25.54 secs
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 38.67 secs
  
 --> 
 
 
-Total memory usage is 217152 kilobytes
+Total memory usage is 217868 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  155 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

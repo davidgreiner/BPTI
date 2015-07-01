@@ -35,22 +35,16 @@ architecture architecture_signalgenerator of entity_signalgenerator is
 
 begin
 	siggen_p : process(siggen_clk_in, siggen_rst)
-	variable hsync_counter : integer range 1 to 801 := 1;
-	variable vsync_counter : integer range 1 to 526 := 1;
+	variable hsync_counter : integer range 1 to 800 := 1;
+	variable vsync_counter : integer range 1 to 525 := 1;
+	
+	variable pos_x : integer range 0 to 640;
+	variable pos_y : integer range 0 to 480;
 	begin
 		if(siggen_rst = '0') then
 			hsync_counter := 1;
 			vsync_counter := 1;
 		elsif(siggen_clk_in'event and siggen_clk_in = '1') then
-
-			if(hsync_counter = 801) then
-				hsync_counter := 1;
-				vsync_counter := vsync_counter + 1;
-
-				if(vsync_counter = 526) then
-					vsync_counter := 1;
-				end if;
-			end if;
 
 			if(hsync_counter <= 704) then
 				siggen_hsync <= '1';
@@ -66,18 +60,32 @@ begin
 
 
 			if(hsync_counter > 44 and hsync_counter <= 684) then
-				siggen_pos_x <= hsync_counter - 44;
+				pos_x := hsync_counter - 44;
 			else
-				siggen_pos_x <= 0;
+				pos_x := 0;
 			end if;
 
 			if(vsync_counter > 30 and vsync_counter <= 510) then
-				siggen_pos_y <= vsync_counter - 30;
+				pos_y := vsync_counter - 30;
 			else
-				siggen_pos_y <= 0;
+				pos_y := 0;
 			end if;
-
-			hsync_counter := hsync_counter + 1;
+			
+			
+			if(hsync_counter = 800) then
+				hsync_counter := 1;
+				
+				if(vsync_counter = 525) then
+					vsync_counter := 1;
+				else
+					vsync_counter := vsync_counter + 1;
+				end if;
+			else
+				hsync_counter := hsync_counter + 1;
+			end if;
+			
+			siggen_pos_x <= pos_x;
+			siggen_pos_y <= pos_y;
 		end if;
 	end process;
 end architecture architecture_signalgenerator;
