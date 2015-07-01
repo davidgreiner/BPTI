@@ -1,0 +1,865 @@
+Release 10.1.02 - xst K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: entity_pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "entity_pong.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "entity_pong"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : entity_pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : entity_pong.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pongtypes.vhd" in Library work.
+Package <pongtypes> compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourcombiner.vhd" in Library work.
+Entity <entity_colourcombiner> compiled.
+Entity <entity_colourcombiner> (Architecture <architecture_colourcombiner>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd" in Library work.
+Entity <entity_ball> compiled.
+Entity <entity_ball> (Architecture <architecture_ball>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" in Library work.
+Entity <entity_paddle> compiled.
+Entity <entity_paddle> (Architecture <architecture_paddle>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd" in Library work.
+Entity <entity_border> compiled.
+Entity <entity_border> (Architecture <architecture_border>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" in Library work.
+Entity <entity_number> compiled.
+Entity <entity_number> (Architecture <architecture_number>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" in Library work.
+Entity <entity_ponglogic> compiled.
+Entity <entity_ponglogic> (Architecture <architecture_ponglogic>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/signalgenerator.vhd" in Library work.
+Entity <entity_signalgenerator> compiled.
+Entity <entity_signalgenerator> (Architecture <architecture_signalgenerator>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" in Library work.
+Entity <entity_pixelgenerator> compiled.
+Entity <entity_pixelgenerator> (Architecture <architecture_pixelgenerator>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourresolver.vhd" in Library work.
+Entity <entity_colourresolver> compiled.
+Entity <entity_colourresolver> (Architecture <architecture_colourresolver>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd" in Library work.
+Entity <entity_pong> compiled.
+Entity <entity_pong> (Architecture <architecture_pong>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <entity_pong> in library <work> (architecture <architecture_pong>).
+
+Analyzing hierarchy for entity <entity_ponglogic> in library <work> (architecture <architecture_ponglogic>).
+
+Analyzing hierarchy for entity <entity_signalgenerator> in library <work> (architecture <architecture_signalgenerator>).
+
+Analyzing hierarchy for entity <entity_pixelgenerator> in library <work> (architecture <architecture_pixelgenerator>).
+
+Analyzing hierarchy for entity <entity_colourresolver> in library <work> (architecture <architecture_colourresolver>).
+
+Analyzing hierarchy for entity <entity_ball> in library <work> (architecture <architecture_ball>).
+
+Analyzing hierarchy for entity <entity_paddle> in library <work> (architecture <architecture_paddle>).
+
+Analyzing hierarchy for entity <entity_border> in library <work> (architecture <architecture_border>).
+
+Analyzing hierarchy for entity <entity_number> in library <work> (architecture <architecture_number>).
+
+Analyzing hierarchy for entity <entity_colourcombiner> in library <work> (architecture <architecture_colourcombiner>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <entity_pong> in library <work> (Architecture <architecture_pong>).
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd" line 139: Unconnected output port 'pong_score' of component 'entity_ponglogic'.
+WARNING:Xst:752 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd" line 163: Unconnected input port 'siggen_rst' of component 'entity_signalgenerator' is tied to default value.
+WARNING:Xst:752 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd" line 172: Unconnected input port 'pxlgen_score' of component 'entity_pixelgenerator' is tied to default value.
+Entity <entity_pong> analyzed. Unit <entity_pong> generated.
+
+Analyzing Entity <entity_ponglogic> in library <work> (Architecture <architecture_ponglogic>).
+INFO:Xst:2679 - Register <pong_ball_radius> in unit <entity_ponglogic> has a constant value of 00000000000000000000000000000010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_ball_color.red> in unit <entity_ponglogic> has a constant value of 1111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_ball_color.green> in unit <entity_ponglogic> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_ball_color.blue> in unit <entity_ponglogic> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_paddle_dimension.width> in unit <entity_ponglogic> has a constant value of 00000000000000000000000000000101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_paddle_dimension.height> in unit <entity_ponglogic> has a constant value of 00000000000000000000000000010100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_paddle_color.red> in unit <entity_ponglogic> has a constant value of 1111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_paddle_color.green> in unit <entity_ponglogic> has a constant value of 1010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_paddle_color.blue> in unit <entity_ponglogic> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_border_width> in unit <entity_ponglogic> has a constant value of 00000000000000000000000000000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_border_color.red> in unit <entity_ponglogic> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_border_color.green> in unit <entity_ponglogic> has a constant value of 1111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <pong_border_color.blue> in unit <entity_ponglogic> has a constant value of 1111 during circuit operation. The register is replaced by logic.
+Entity <entity_ponglogic> analyzed. Unit <entity_ponglogic> generated.
+
+Analyzing Entity <entity_signalgenerator> in library <work> (Architecture <architecture_signalgenerator>).
+Entity <entity_signalgenerator> analyzed. Unit <entity_signalgenerator> generated.
+
+Analyzing Entity <entity_pixelgenerator> in library <work> (Architecture <architecture_pixelgenerator>).
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" line 211: Unconnected output port 'number_pos_x_out' of component 'entity_number'.
+WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" line 211: Unconnected output port 'number_pos_y_out' of component 'entity_number'.
+Entity <entity_pixelgenerator> analyzed. Unit <entity_pixelgenerator> generated.
+
+Analyzing Entity <entity_ball> in library <work> (Architecture <architecture_ball>).
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ball_mix_colour.red>, <ball_mix_colour.green>, <ball_mix_colour.blue>, <ball_position.x>, <ball_radius>, <ball_position.y>, <ball_colour_in.red>, <ball_colour_in.green>, <ball_colour_in.blue>
+Entity <entity_ball> analyzed. Unit <entity_ball> generated.
+
+Analyzing Entity <entity_colourcombiner> in library <work> (Architecture <architecture_colourcombiner>).
+Entity <entity_colourcombiner> analyzed. Unit <entity_colourcombiner> generated.
+
+Analyzing Entity <entity_paddle> in library <work> (Architecture <architecture_paddle>).
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <paddle_colour_mix.red>, <paddle_colour_mix.green>, <paddle_colour_mix.blue>, <paddle_position.x>, <paddle_dimension.width>, <paddle_position.y>, <paddle_colour_in.red>, <paddle_colour_in.green>, <paddle_colour_in.blue>
+Entity <entity_paddle> analyzed. Unit <entity_paddle> generated.
+
+Analyzing Entity <entity_border> in library <work> (Architecture <architecture_border>).
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <border_colour_mix.red>, <border_colour_mix.green>, <border_colour_mix.blue>, <border_width>, <border_colour_in.red>, <border_colour_in.green>, <border_colour_in.blue>
+Entity <entity_border> analyzed. Unit <entity_border> generated.
+
+Analyzing Entity <entity_number> in library <work> (Architecture <architecture_number>).
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" line 159: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <number_colour_in.red>, <number_colour_in.green>, <number_colour_in.blue>, <number_score_in>, <number_start_x_in>, <number_start_y_in>
+Entity <entity_number> analyzed. Unit <entity_number> generated.
+
+Analyzing Entity <entity_colourresolver> in library <work> (Architecture <architecture_colourresolver>).
+Entity <entity_colourresolver> analyzed. Unit <entity_colourresolver> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <siggen_hsync> in unit <entity_signalgenerator> has a constant value of X during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <siggen_pos_x> in unit <entity_signalgenerator> has a constant value of XXXXXXXXXX during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <siggen_pos_y> in unit <entity_signalgenerator> has a constant value of XXXXXXXXX during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <siggen_vsync> in unit <entity_signalgenerator> has a constant value of X during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <entity_ponglogic>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd".
+WARNING:Xst:653 - Signal <paddle_position.x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
+    Found 32-bit register for signal <pong_paddle_position.y>.
+    Found 32-bit register for signal <pong_ball_position.x>.
+    Found 32-bit register for signal <pong_ball_position.y>.
+    Found 16-bit register for signal <pong_score>.
+    Found 32-bit register for signal <pong_paddle_position.x>.
+    Found 32-bit register for signal <ball_position.x>.
+    Found 32-bit adder for signal <ball_position.x$addsub0000> created at line 100.
+    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0000> created at line 94.
+    Found 32-bit register for signal <ball_position.y>.
+    Found 32-bit adder for signal <ball_position.y$addsub0000> created at line 138.
+    Found 32-bit comparator less for signal <ball_position.y$cmp_lt0000> created at line 86.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_position.y$mux0000>.
+    Found 32-bit 8-to-1 multiplexer for signal <ball_position.y$mux0003> created at line 104.
+    Found 4-bit register for signal <ball_vector_x>.
+    Found 32-bit comparator greater for signal <ball_vector_x$cmp_gt0000> created at line 65.
+    Found 4-bit adder for signal <ball_vector_x$share0000>.
+    Found 4-bit register for signal <ball_vector_y>.
+    Found 32-bit adder for signal <ball_vector_y$add0000> created at line 65.
+    Found 32-bit adder for signal <ball_vector_y$add0001> created at line 65.
+    Found 32-bit comparator greatequal for signal <ball_vector_y$cmp_ge0000> created at line 86.
+    Found 32-bit comparator greater for signal <ball_vector_y$cmp_gt0000> created at line 65.
+    Found 32-bit comparator greater for signal <ball_vector_y$cmp_gt0001> created at line 125.
+    Found 32-bit comparator less for signal <ball_vector_y$cmp_lt0000> created at line 65.
+    Found 32-bit comparator less for signal <ball_vector_y$cmp_lt0001> created at line 131.
+    Found 4-bit adder for signal <ball_vector_y$share0000>.
+    Found 32-bit subtractor for signal <ball_vector_y$sub0000> created at line 65.
+    Found 32-bit register for signal <paddle_position.y>.
+    Found 32-bit adder for signal <paddle_position.y$addsub0000> created at line 153.
+    Found 32-bit comparator greater for signal <paddle_position.y$cmp_gt0000> created at line 145.
+    Found 32-bit comparator less for signal <paddle_position.y$cmp_lt0000> created at line 152.
+    Found 32-bit 4-to-1 multiplexer for signal <paddle_position.y$mux0000>.
+    Found 32-bit 8-to-1 multiplexer for signal <paddle_position.y$mux0002> created at line 151.
+    Found 32-bit subtractor for signal <paddle_position.y$sub0000> created at line 146.
+    Found 16-bit register for signal <points>.
+    Found 4-bit adder for signal <points_0$addsub0000> created at line 74.
+    Found 4-bit adder for signal <points_0$addsub0001> created at line 113.
+    Found 4-bit adder for signal <points_1$addsub0000> created at line 78.
+    Found 4-bit adder for signal <points_1$addsub0001> created at line 117.
+    Found 4-bit adder for signal <points_2$addsub0000> created at line 82.
+    Found 4-bit adder for signal <points_2$addsub0001> created at line 121.
+    Found 32-bit adder for signal <points_3$add0000> created at line 104.
+    Found 32-bit adder for signal <points_3$add0001> created at line 104.
+    Found 4-bit adder for signal <points_3$addsub0000> created at line 86.
+    Found 4-bit adder for signal <points_3$addsub0001> created at line 125.
+    Found 32-bit comparator greater for signal <points_3$cmp_gt0000> created at line 104.
+    Found 32-bit comparator less for signal <points_3$cmp_lt0000> created at line 104.
+    Found 32-bit subtractor for signal <points_3$sub0000> created at line 104.
+    Summary:
+	inferred 192 D-type flip-flop(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+	inferred 128 Multiplexer(s).
+Unit <entity_ponglogic> synthesized.
+
+
+Synthesizing Unit <entity_signalgenerator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/signalgenerator.vhd".
+Unit <entity_signalgenerator> synthesized.
+
+
+Synthesizing Unit <entity_colourresolver>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourresolver.vhd".
+Unit <entity_colourresolver> synthesized.
+
+
+Synthesizing Unit <entity_number>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd".
+WARNING:Xst:737 - Found 10-bit latch for signal <number_pos_x_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 9-bit latch for signal <number_pos_y_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 12x32-bit ROM for signal <$rom0000>.
+    Found 1-bit 8-to-1 multiplexer for signal <num$mux0001> created at line 197.
+    Found 1-bit 8-to-1 multiplexer for signal <num$mux0003> created at line 197.
+    Found 1-bit 8-to-1 multiplexer for signal <num$mux0005> created at line 197.
+    Found 1-bit 8-to-1 multiplexer for signal <num$mux0007> created at line 197.
+    Found 11-bit subtractor for signal <num$sub0000> created at line 197.
+    Found 10-bit subtractor for signal <num$sub0001> created at line 197.
+    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0000> created at line 196.
+    Found 9-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0001> created at line 196.
+    Found 10-bit comparator less for signal <number_colour_out.blue$cmp_lt0000> created at line 196.
+    Found 9-bit comparator less for signal <number_colour_out.blue$cmp_lt0001> created at line 196.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <entity_number> synthesized.
+
+
+Synthesizing Unit <entity_colourcombiner>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourcombiner.vhd".
+Unit <entity_colourcombiner> synthesized.
+
+
+Synthesizing Unit <entity_ball>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd".
+WARNING:Xst:1305 - Output <ball_out_pos_x> is never assigned. Tied to value 0000000000.
+WARNING:Xst:1305 - Output <ball_out_pos_y> is never assigned. Tied to value 000000000.
+    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 49.
+    Found 32-bit adder for signal <mix_colour.green$add0001> created at line 49.
+    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0000> created at line 49.
+    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0001> created at line 49.
+    Found 32-bit comparator lessequal for signal <mix_colour.green$cmp_le0000> created at line 49.
+    Found 32-bit comparator lessequal for signal <mix_colour.green$cmp_le0001> created at line 49.
+    Found 32-bit subtractor for signal <mix_colour.green$sub0000> created at line 49.
+    Found 32-bit subtractor for signal <mix_colour.green$sub0001> created at line 49.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <entity_ball> synthesized.
+
+
+Synthesizing Unit <entity_paddle>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd".
+WARNING:Xst:647 - Input <paddle_dimension.height> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <paddle_pos_x_out> is never assigned. Tied to value 0000000000.
+WARNING:Xst:1305 - Output <paddle_pos_y_out> is never assigned. Tied to value 000000000.
+    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 47.
+    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0000> created at line 47.
+    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0001> created at line 47.
+    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0000> created at line 47.
+    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0001> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <entity_paddle> synthesized.
+
+
+Synthesizing Unit <entity_border>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd".
+WARNING:Xst:1305 - Output <border_pos_y_out> is never assigned. Tied to value 000000000.
+WARNING:Xst:1305 - Output <border_pos_x_out> is never assigned. Tied to value 0000000000.
+    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 49.
+    Found 32-bit comparator greater for signal <mix_colour.green$cmp_gt0000> created at line 49.
+    Found 32-bit comparator greater for signal <mix_colour.green$cmp_gt0001> created at line 49.
+    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0000> created at line 49.
+    Found 32-bit adder for signal <mix_colour.green$sub0000> created at line 49.
+    Found 32-bit adder for signal <mix_colour.green$sub0001> created at line 49.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <entity_border> synthesized.
+
+
+Synthesizing Unit <entity_pixelgenerator>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd".
+WARNING:Xst:647 - Input <pxlgen_ball_radius<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <entity_pixelgenerator> synthesized.
+
+
+Synthesizing Unit <entity_pong>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd".
+Unit <entity_pong> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 12x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 30
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 1
+ 32-bit adder                                          : 13
+ 32-bit subtractor                                     : 5
+ 4-bit adder                                           : 10
+# Registers                                            : 17
+ 32-bit register                                       : 7
+ 4-bit register                                        : 10
+# Latches                                              : 2
+ 10-bit latch                                          : 1
+ 9-bit latch                                           : 1
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+ 32-bit comparator greatequal                          : 5
+ 32-bit comparator greater                             : 8
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 2
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 8
+ 1-bit 8-to-1 multiplexer                              : 4
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+WARNING:Xst:2404 -  FFs/Latches <pong_paddle_position.x<31:3>> (without init value) have a constant value of 0 in block <entity_ponglogic>.
+WARNING:Xst:1710 - FF/Latch <pong_paddle_position.x_0> (without init value) has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pong_paddle_position.x_1> (without init value) has a constant value of 0 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pong_paddle_position.x_2> (without init value) has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_11> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_11> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_12> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_12> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_13> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_13> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_14> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_14> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_20> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_20> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_15> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_15> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_16> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_16> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_21> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_21> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_17> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_17> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_22> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_22> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_18> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_18> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_23> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_23> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_19> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_19> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_24> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_24> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_25> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_25> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_30> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_30> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_26> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_26> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_31> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_31> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_27> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_27> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_28> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_28> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_29> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_29> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_0> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_0> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_1> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_1> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_2> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_2> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_3> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_3> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_4> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_4> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_5> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_5> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_6> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_6> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_7> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_7> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_8> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_8> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_9> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_9> 
+INFO:Xst:2261 - The FF/Latch <paddle_position.y_10> in Unit <entity_ponglogic> is equivalent to the following FF/Latch, which will be removed : <pong_paddle_position.y_10> 
+WARNING:Xst:2677 - Node <pong_score_0_0> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_0_1> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_0_2> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_0_3> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_1_0> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_1_1> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_1_2> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_1_3> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_2_0> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_2_1> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_2_2> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_2_3> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_3_0> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_3_1> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_3_2> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:2677 - Node <pong_score_3_3> of sequential type is unconnected in block <logic_pm>.
+WARNING:Xst:1290 - Hierarchical block <ball_pm> is unconnected in block <paint_pm>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <paddle_pm> is unconnected in block <paint_pm>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <border_pm> is unconnected in block <paint_pm>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 12x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 30
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 13
+ 32-bit subtractor                                     : 5
+ 4-bit adder                                           : 10
+ 4-bit subtractor                                      : 1
+# Registers                                            : 200
+ Flip-Flops                                            : 200
+# Latches                                              : 2
+ 10-bit latch                                          : 1
+ 9-bit latch                                           : 1
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator less                                : 1
+ 32-bit comparator greatequal                          : 5
+ 32-bit comparator greater                             : 8
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 2
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+# Multiplexers                                         : 8
+ 1-bit 8-to-1 multiplexer                              : 4
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <entity_pong> ...
+
+Optimizing unit <entity_paddle> ...
+
+Optimizing unit <entity_border> ...
+
+Optimizing unit <entity_ponglogic> ...
+WARNING:Xst:1293 - FF/Latch <ball_vector_x_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <entity_number> ...
+WARNING:Xst:1293 - FF/Latch <ball_vector_y_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_10> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_11> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_12> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_13> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_14> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_15> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_16> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_17> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_18> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_19> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_20> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_21> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_22> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_23> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_24> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_25> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_26> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_27> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_28> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_29> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_30> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.x_31> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_10> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_11> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_12> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_13> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_14> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_15> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_16> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_17> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_18> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_19> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_20> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_21> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_22> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_23> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_24> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_25> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_26> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_27> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_28> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_29> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_30> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_position.y_31> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_x_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/ball_vector_y_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_31> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_30> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_29> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_28> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_27> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_26> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_25> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_24> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_23> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_22> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_21> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_20> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_19> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_18> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_17> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_16> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_15> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_14> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_13> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_12> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_11> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_10> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.y_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_31> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_30> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_29> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_28> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_27> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_26> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_25> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_24> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_23> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_22> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_21> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_20> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_19> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_18> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_17> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_16> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_15> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_14> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_13> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_12> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_11> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_10> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_ball_position.x_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_3_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_3_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_3_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_3_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_2_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_2_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_2_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_2_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_1_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_1_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_1_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_1_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_0_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_0_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_0_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/pong_score_0_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_3_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_3_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_3_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_3_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_2_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_2_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_2_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_2_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_1_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_1_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_1_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_1_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_0_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_0_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_0_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/points_0_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_0> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_31> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_30> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_29> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_28> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_27> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_26> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_25> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_24> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_23> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_22> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_21> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_20> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_19> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_18> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_17> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_16> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_15> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_14> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_13> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_12> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_11> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_10> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_9> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_8> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_7> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_6> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_5> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_4> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_3> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_2> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_1> of sequential type is unconnected in block <entity_pong>.
+WARNING:Xst:2677 - Node <logic_pm/paddle_position.y_0> of sequential type is unconnected in block <entity_pong>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : entity_pong.ngr
+Top Level Output File Name         : entity_pong
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# IO Buffers                       : 14
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                        0  out of  16640     0%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  14  out of    519     2%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 17.87 secs
+ 
+--> 
+
+
+Total memory usage is 213592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  262 (   0 filtered)
+Number of infos    :   50 (   0 filtered)
+

@@ -7,7 +7,7 @@ entity entity_ball is
 		-- Input
 		ball_position 		: in position;
 		ball_radius			: in integer range 2 to 10;
-		ball_colour			: in color;
+		ball_colour_in		: in color;
 
 		ball_in_pos_x		: in integer range 0 to 640;
 		ball_in_pos_y		: in integer range 0 to 480;
@@ -16,7 +16,7 @@ entity entity_ball is
 
 
 		-- Output
-		ball_colour			: out color;
+		ball_colour_out		: out color;
 
 		ball_out_pos_x		: out integer range 0 to 640;
 		ball_out_pos_y		: out integer range 0 to 480
@@ -46,21 +46,24 @@ begin
 			mix_colour <= ball_mix_colour;
 		else
 			-- Valid location, check for pixel hit
-			if(ball_in_pos_x >= ball_position.x - radius
-			and ball_in_pos_x <= ball_position.x + radius
-			and ball_in_pos_y >= ball_position.y - radius
-			and ball_in_pos_y <= ball_posotion.y + radius) then
+			if(ball_in_pos_x >= ball_position.x - ball_radius
+			and ball_in_pos_x <= ball_position.x + ball_radius
+			and ball_in_pos_y >= ball_position.y - ball_radius
+			and ball_in_pos_y <= ball_position.y + ball_radius) then
 				-- Use input colour
-				mix_colour <= ball_colour;
+				mix_colour <= ball_colour_in;
 			else
 				-- Don't generate colour at all, just use the pass through colour
 				mix_colour <= ball_mix_colour;
 			end if;
 		end if;
 	end process;
-
-	cc_colour_1_in <= mix_colour;
-	cc_colour2_in <= ball_mix_colour;
-	cc_colour_out <= ball_colour;
+	
+	combiner_p : entity_colourcombiner port map
+	(
+		cc_colour_1_in => mix_colour,
+		cc_colour_2_in => ball_mix_colour,
+		cc_colour_out => ball_colour_out
+	);
 
 end architecture architecture_ball;

@@ -10,12 +10,12 @@ entity entity_paddle is
 
         paddle_position     : in position;
         paddle_dimension    : in dimension;
-        paddle_colour_in    : in colour;
+        paddle_colour_in    : in color;
 
-        paddle_colour_mix   : in colour;
+        paddle_colour_mix   : in color;
 
         -- Output
-        padddle_colour_out  : out colour;
+        paddle_colour_out   : out color;
 
         paddle_pos_x_out    : out integer range 0 to 640;
         paddle_pos_y_out    : out integer range 0 to 480
@@ -44,17 +44,20 @@ begin
             -- Invalid location, do not paint
 			mix_colour <= paddle_colour_mix;
         else
-            if(paddle_pos_x_in >= paddle_position.x and paddle_pos_x_in < paddle_position.x + paddle_dimension.width and paddle_pos_y_in >= paddle_position.y and paddle_pos_y_in < paddle_position.y + paddle_position.height) then
+            if(paddle_pos_x_in >= paddle_position.x and paddle_pos_x_in < paddle_position.x + paddle_dimension.width and paddle_pos_y_in >= paddle_position.y and paddle_pos_y_in < paddle_position.y + paddle_position.y) then
                 -- Paint paddle
-                mix_colour <= paddel_colour_in;
+                mix_colour <= paddle_colour_in;
             else
                 mix_colour <= paddle_colour_mix;
             end if;
         end if;
     end process;
 
-    cc_colour_1_in <= mix_colour;
-    cc_colour2_in <= paddle_colour_in;
-    cc_colour_out <= paddle_colour_out;
+    combiner_p : entity_colourcombiner port map
+	(
+		cc_colour_1_in => mix_colour,
+		cc_colour_2_in => paddle_colour_mix,
+		cc_colour_out => paddle_colour_out
+	);
 
 end architecture architecture_paddle;

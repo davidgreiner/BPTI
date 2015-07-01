@@ -20,10 +20,7 @@ package pongtypes is
     end record;
 
     type number is array (0 to 11, 0 to 7) of std_logic;
-
-end pongtypes;
-
-
-package body pongtypes is
+    
+    type score is array(0 to 3) of integer range 0 to 9;
 
 end pongtypes;

@@ -1,4 +1,4 @@
-use ieee;
+library ieee;
 use work.pongtypes.all;
 
 entity entity_border is
@@ -55,8 +55,11 @@ begin
         end if;
     end process;
 
-    cc_colour_1_in <= mix_colour;
-    cc_colour2_in <= border_colour_in;
-    cc_colour_out <= border_colour_out;
+	combiner_p : entity_colourcombiner port map
+	(
+		cc_colour_1_in => mix_colour,
+		cc_colour_2_in => border_colour_in,
+		cc_colour_out => border_colour_out
+	);
 
 end architecture architecture_border;

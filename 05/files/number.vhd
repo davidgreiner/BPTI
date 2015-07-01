@@ -1,4 +1,5 @@
 library ieee;
+use ieee.std_logic_1164.all;
 use work.pongtypes.all;
 
 entity entity_number is
@@ -11,21 +12,17 @@ entity entity_number is
         number_start_y_in   : in integer range 0 to 480;
 
         number_colour_in    : in color;
-        number_score_in     : in integer range 0 to 9999;
+        number_score_in     : in score;
 
 
-        number_colour_out   : out color
+        number_colour_out   : out color;
         number_pos_x_out    : out integer range 0 to 640;
-        number_pos_y_out    : out integer range 0 to 480;
-
-        number_next_x       : out integer range 0 to 640;
-        number_next_y       : out integer range 0 to 480;
-        number_score_out    : out integer range 0 to 9999
+        number_pos_y_out    : out integer range 0 to 480
         );
 end entity;
 
 
-architecture architecture_zero of entity_zero is
+architecture architecture_number of entity_number is
     constant zero : number := ( ('0', '0', '1', '1', '1', '1', '0', '0'),
                                 ('0', '1', '1', '0', '0', '1', '1', '0'),
                                 ('1', '1', '0', '0', '0', '0', '1', '1'),
@@ -89,7 +86,7 @@ architecture architecture_zero of entity_zero is
                                 ('1', '1', '1', '1', '1', '1', '1', '1'),
                                 ('0', '0', '0', '0', '0', '1', '1', '0'),
                                 ('0', '0', '0', '0', '0', '1', '1', '0'),
-                                ('0', '0', '0', '1', '1', '1', '1', '1'),
+                                ('0', '0', '0', '1', '1', '1', '1', '1'));
 
     constant five : number := ( ('1', '1', '1', '1', '1', '1', '1', '0'),
                                 ('1', '1', '0', '0', '0', '0', '0', '0'),
@@ -162,49 +159,54 @@ begin
     number_p : process(number_pos_x_in, number_pos_y_in)
     variable value : integer range 0 to 9;
     variable num : number;
+    variable shift_x : integer range 0 to 50 := 0;
     begin
         if(number_pos_x_in = 0 or number_pos_y_in = 0) then
-            number_colour_out <= number_colour_in;
+            number_colour_out <= number_colour_in;            
         else
-            value := number_score_in mod 10;
+        	
+        	shift_x := 0;
+        	
+		    for i in 0 to 3 loop
+		        value := number_score_in(i);
 
-            if(value = 0) then
-                num := zero;
-            elsif(value = 1) then
-                num := one;
-            elsif(value = 2) then
-                num := two;
-            elsif(value = 3) then
-                num := three;
-            elsif(value = 4) then
-                num := four;
-            elsif(value = 5) then
-                num := five;
-            elsif(value = 6) then
-                num := six;
-            elsif(value = 7) then
-                num := seven;
-            elsif(value = 8) then
-                num := eight;
-            else
-                num := nine;
-            end if;
 
-            if(number_pos_x_in >= number_start_x_in and number_pos_y_in >= number_start_y_in and number_pos_x_in < number_start_x_in + 8 and number_pos_y_in < number_start_y_in + 12) then
-                if(num(number_pos_x_in - number_start_x_in, number_pos_y_in - number_start_y_in) = '1') then
-                    number_colour_out <= colour_max;
-                else
-                    number_colour_out <= number_colour_in;
-                end if;
-            else
-                number_colour_out <= number_colour_in;
-            end if;
+		        if(value = 0) then
+		            num := zero;
+		        elsif(value = 1) then
+		            num := one;
+		        elsif(value = 2) then
+		            num := two;
+		        elsif(value = 3) then
+		            num := three;
+		        elsif(value = 4) then
+		            num := four;
+		        elsif(value = 5) then
+		            num := five;
+		        elsif(value = 6) then
+		            num := six;
+		        elsif(value = 7) then
+		            num := seven;
+		        elsif(value = 8) then
+		            num := eight;
+		        else
+		            num := nine;
+		        end if;
+
+		        if(number_pos_x_in >= number_start_x_in + shift_x and number_pos_y_in >= number_start_y_in and number_pos_x_in < number_start_x_in + 8 + shift_x and number_pos_y_in < number_start_y_in + 12) then
+		            if(num(number_pos_x_in - number_start_x_in, number_pos_y_in - number_start_y_in) = '1') then
+		                number_colour_out <= colour_max;
+		            else
+		                number_colour_out <= number_colour_in;
+		                exit;
+		            end if;
+		        else
+		            number_colour_out <= number_colour_in;
+		        end if;
+	        end loop;
 
             number_pos_x_out <= number_pos_x_in;
-            number_pos_y_out <= number_pos_y_out;
-
-            number_score_out <= score / 10;
-            number_next_x <= number_start_x_in + 11;
-            number_next_y <= number_start_y_in;
+            number_pos_y_out <= number_pos_y_in;
         end if;
     end process;
+end architecture architecture_number;

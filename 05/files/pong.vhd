@@ -1,4 +1,5 @@
 library ieee;
+use ieee.std_logic_1164.all;
 use work.pongtypes.all;
 
 
@@ -17,7 +18,7 @@ port
 
         colour_red      : out std_logic_vector(3 downto 0);
         colour_green    : out std_logic_vector(3 downto 0);
-        colour_red      : out std_logic_vector(3 downto 0)
+        colour_blue     : out std_logic_vector(3 downto 0)
     );
 end entity;
 
@@ -62,7 +63,7 @@ component entity_signalgenerator is
     );
 end component;
 
-component entity_pixelgenereator is
+component entity_pixelgenerator is
     port
     (
         pxlgen_pos_x                : in integer range 0 to 640;
@@ -80,7 +81,7 @@ component entity_pixelgenereator is
 
         --#### Border
         pxlgen_border_width         : in integer;
-        pxlgen_border_colour        : in color,
+        pxlgen_border_colour        : in color;
 
         pxlgen_colour_out           : out color
     );
