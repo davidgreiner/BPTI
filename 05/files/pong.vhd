@@ -12,6 +12,8 @@ port
         paddle_up       : in std_logic;
         paddle_down     : in std_logic;
 
+        hardcore        : in std_logic;
+
 
         hsync           : out std_logic;
         vsync           : out std_logic;
@@ -29,6 +31,8 @@ architecture architecture_pong of entity_pong is
 component entity_ponglogic is
     port
     (
+        pong_hardcore           : in std_logic;
+
         pong_clckin             : in std_logic;
         pong_reset              : in std_logic;
 
@@ -49,9 +53,9 @@ component entity_ponglogic is
         --#### Border
         pong_border_width       : out integer;
         pong_border_color       : out color;
-        
+
        	pong_score				: out score
-    
+
     );
 end component;
 
@@ -71,7 +75,7 @@ component entity_pixelgenerator is
     port
     (
     	pxlgen_score				: in score;
-    
+
         pxlgen_pos_x                : in integer range 0 to 640;
         pxlgen_pos_y                : in integer range 0 to 480;
 
@@ -97,7 +101,7 @@ component entity_colourresolver is
     port
     (
     	rslv_clk_in			 : in std_logic;
-    	
+
         rslv_colour_in       : in color;
 
         rslv_colour_red      : out std_logic_vector(3 downto 0);
@@ -152,6 +156,8 @@ begin
 
     logic_pm : entity_ponglogic port map
     (
+        pong_hardcore           => hardcore,
+
         pong_clckin             => logic_clock,
         pong_reset              => rst,
 
@@ -172,7 +178,7 @@ begin
         --#### Border
         pong_border_width       => border_width,
         pong_border_color       => border_colour,
-        
+
         pong_score				=> points
     );
 
@@ -190,7 +196,7 @@ begin
     (
         pxlgen_pos_x                => pos_x,
         pxlgen_pos_y                => pos_y,
-        
+
         pxlgen_score				=> points,
 
         --#### Ball
@@ -213,14 +219,14 @@ begin
     rslve_pm : entity_colourresolver port map
     (
     	rslv_clk_in			 => clk_in,
-    
+
         rslv_colour_in       => final_colour,
 
         rslv_colour_red      => colour_red,
         rslv_colour_green    => colour_green,
         rslv_colour_blue     => colour_blue
     );
-    
+
     colour_checker : process(clk_in)
     begin
     if(clk_in'event and clk_in = '1') then
@@ -231,7 +237,7 @@ begin
 		end if;
 	end if;
     end process;
-    
+
     vsync <= logic_clock;
 
     -- #### END PORT MAPS ####

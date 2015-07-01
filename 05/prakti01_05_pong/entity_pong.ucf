@@ -1,4 +1,5 @@
 NET "clk_in" LOC = P26;
+NET "hardcore" LOC = A7;
 NET "colour_blue<0>" LOC = L22;
 NET "colour_blue<1>" LOC = K21;
 NET "colour_blue<2>" LOC = G23;
