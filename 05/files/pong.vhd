@@ -124,6 +124,10 @@ signal border_width     : integer;
 signal border_colour    : color;
 
 signal points			: score;
+
+signal logic_clock		: std_logic;
+
+signal final_colour		: color;
 -- #### END SIGNALS ####
 
 begin
@@ -146,7 +150,7 @@ begin
 
     logic_pm : entity_ponglogic port map
     (
-        pong_clckin             => clk_in,
+        pong_clckin             => logic_clock,
         pong_reset              => rst,
 
         --#### Input
@@ -175,7 +179,7 @@ begin
         siggen_clk_in	=> clk_in,
         siggen_rst		=> rst,
         siggen_hsync	=> hsync,
-        siggen_vsync	=> vsync,
+        siggen_vsync	=> logic_clock,
         siggen_pos_x	=> pos_x,
         siggen_pos_y	=> pos_y
     );
@@ -206,12 +210,23 @@ begin
 
     rslve_pm : entity_colourresolver port map
     (
-        rslv_colour_in       => colour_out,
+        rslv_colour_in       => final_colour,
 
         rslv_colour_red      => colour_red,
         rslv_colour_green    => colour_green,
         rslv_colour_blue     => colour_blue
     );
+    
+    colour_checker : process(pos_x, pos_y)
+    begin
+    	if(pos_x = 0 or pos_y = 0) then
+    		final_colour <= ("0000", "0000", "0000");
+		else
+			final_colour <= ("1111", "1010", "0000");
+		end if;
+    end process;
+    
+    vsync <= logic_clock;
 
     -- #### END PORT MAPS ####
 end architecture architecture_pong;

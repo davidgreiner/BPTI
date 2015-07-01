@@ -1,0 +1,83 @@
+--------------------------------------------------------------------------------
+Release 10.1.02 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/prakti01_05_pong.ise
+-intstyle ise -v 3 -s 4 -xml entity_pong entity_pong.ncd -o entity_pong.twr
+entity_pong.pcf -ucf entity_pong.ucf
+
+Design file:              entity_pong.ncd
+Physical constraint file: entity_pong.pcf
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_in
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+rst         |    1.963(R)|   -0.440(R)|clk_in_BUFGP      |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk_in to Pad
+---------------+------------+------------------+--------+
+               | clk (edge) |                  | Clock  |
+Destination    |   to PAD   |Internal Clock(s) | Phase  |
+---------------+------------+------------------+--------+
+colour_blue<0> |   15.165(R)|clk_in_BUFGP      |   0.000|
+colour_blue<1> |   15.706(R)|clk_in_BUFGP      |   0.000|
+colour_blue<2> |   15.973(R)|clk_in_BUFGP      |   0.000|
+colour_blue<3> |   15.431(R)|clk_in_BUFGP      |   0.000|
+colour_green<0>|   15.166(R)|clk_in_BUFGP      |   0.000|
+colour_green<1>|   15.158(R)|clk_in_BUFGP      |   0.000|
+colour_green<2>|   15.191(R)|clk_in_BUFGP      |   0.000|
+colour_green<3>|   15.162(R)|clk_in_BUFGP      |   0.000|
+colour_red<0>  |   27.256(R)|clk_in_BUFGP      |   0.000|
+colour_red<1>  |   27.007(R)|clk_in_BUFGP      |   0.000|
+colour_red<2>  |   27.256(R)|clk_in_BUFGP      |   0.000|
+colour_red<3>  |   27.008(R)|clk_in_BUFGP      |   0.000|
+hsync          |    9.474(R)|clk_in_BUFGP      |   0.000|
+vsync          |    9.396(R)|clk_in_BUFGP      |   0.000|
+---------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |   12.258|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Jul  1 16:42:26 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 175 MB
+
+
+

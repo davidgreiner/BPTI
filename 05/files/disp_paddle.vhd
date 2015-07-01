@@ -44,7 +44,10 @@ begin
             -- Invalid location, do not paint
 			mix_colour <= paddle_colour_mix;
         else
-            if(paddle_pos_x_in >= paddle_position.x and paddle_pos_x_in < paddle_position.x + paddle_dimension.width and paddle_pos_y_in >= paddle_position.y and paddle_pos_y_in < paddle_position.y + paddle_position.y) then
+            if(paddle_pos_x_in >= paddle_position.x
+             and paddle_pos_x_in < paddle_position.x + paddle_dimension.width
+             and paddle_pos_y_in >= paddle_position.y
+             and paddle_pos_y_in < paddle_position.y + paddle_dimension.height) then
                 -- Paint paddle
                 mix_colour <= paddle_colour_in;
             else

@@ -46,7 +46,9 @@ begin
             --Invalid
             mix_colour <= border_colour_mix;
         else
-            if(border_pos_x_in > border_right - border_width or border_pos_y_in > border_bottom - border_width or border_pos_y_in < border_top + border_width) then
+            if(border_pos_x_in > border_right - border_width
+            or border_pos_y_in > border_bottom - border_width
+            or border_pos_y_in < border_top + border_width) then
                 --Paint border
                 mix_colour <= border_colour_in;
             else

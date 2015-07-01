@@ -1,0 +1,192 @@
+Release 10.1.02 Map K.37 (lin)
+Xilinx Mapping Report File for Design 'entity_pong'
+
+Design Information
+------------------
+Command Line   : map -ise
+/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/prakti
+01_05_pong.ise -intstyle ise -p xc3sd1800a-fg676-4 -cm area -pr off -k 4 -c 100
+-o entity_pong_map.ncd entity_pong.ngd entity_pong.pcf 
+Target Device  : xc3sd1800a
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
+Mapped Date    : Wed Jul  1 16:50:06 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    4
+Logic Utilization:
+  Number of Slice Flip Flops:            41 out of  33,280    1%
+  Number of 4 input LUTs:               118 out of  33,280    1%
+Logic Distribution:
+  Number of occupied Slices:             68 out of  16,640    1%
+    Number of Slices containing only related logic:      68 out of      68 100%
+    Number of Slices containing unrelated logic:          0 out of      68   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         133 out of  33,280    1%
+    Number used as logic:               118
+    Number used as a route-thru:         15
+  Number of bonded IOBs:                 18 out of     519    3%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Peak Memory Usage:  225 MB
+Total REAL time to MAP completion:  11 secs 
+Total CPU time to MAP completion:   7 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network paddle_up_IBUF has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 1
+   more times for the following (max. 5 shown):
+   paddle_down_IBUF
+   To see the details of these warning messages, please use the -detail switch.
+WARNING:PhysDesignRules:367 - The signal <paddle_up_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <paddle_down_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |             | Strength | Rate    |              |          | Delay    |                  |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_in                             | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| colour_blue<0>                     | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_blue<1>                     | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_blue<2>                     | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_blue<3>                     | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_green<0>                    | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_green<1>                    | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_green<2>                    | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_green<3>                    | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_red<0>                      | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_red<1>                      | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_red<2>                      | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| colour_red<3>                      | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| hsync                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| paddle_down                        | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| paddle_up                          | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| rst                                | IBUF             | INPUT     | LVCMOS25    |          |         |              |          | 0 / 0    |                  |
+| vsync                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Na |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| entity_pong/       |           | 15/79         | 0/41          | 23/133        | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_pong          |
+| +sgnal_pm          |           | 64/64         | 41/41         | 110/110       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/sgnal_pm |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

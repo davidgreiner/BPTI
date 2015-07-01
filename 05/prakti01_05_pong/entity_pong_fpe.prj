@@ -1,0 +1,2 @@
+vhdl work "../files/pongtypes.vhd"
+vhdl work "../files/pong.vhd"

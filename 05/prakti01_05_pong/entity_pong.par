@@ -1,0 +1,80 @@
+Release 10.1.02 par K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+i82pc17::  Wed Jul 01 16:50:23 2015
+
+par -w -intstyle ise -ol std -t 1 entity_pong_map.ncd entity_pong.ncd
+entity_pong.pcf 
+
+
+Constraints file: entity_pong.pcf.
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+   "entity_pong" is an NCD, version 3.2, device xc3sd1800a, package fg676, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For
+   the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high". For a
+   balance between the fastest runtime and best performance, set the effort level to "med".
+
+Device speed data version:  "PRODUCTION 1.32 2008-05-28".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          18 out of 519     3%
+
+   Number of External Input IOBs                  4
+
+      Number of External Input IBUFs              4
+        Number of LOCed External Input IBUFs      4 out of 4     100%
+
+
+   Number of External Output IOBs                14
+
+      Number of External Output IOBs             14
+        Number of LOCed External Output IOBs     14 out of 14    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                         68 out of 16640   1%
+      Number of SLICEMs                      0 out of 8320    0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+WARNING:Par:288 - The signal paddle_up_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal paddle_down_IBUF has no load.  PAR will not attempt to route this signal.
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:73340) REAL time: 9 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:73340) REAL time: 9 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:73340) REAL time: 9 secs 
+
+Phase 4.2
+
+WARNING:Place:619 - This design is using a Side-BUFG site due to placement constraints on a BUFG, DCM, clock IOB or the
+   loads of these components. It is recommended that Top and Bottom BUFG sites be used instead of Side-BUFG sites
+   whenever possible because they can reach every clock region on the device. Side-BUFG sites can reach only clock
+   regions on the same side of the device and also preclude the use of certain Top and Bottom BUFGs in the same clock
+   region.
+......
+Phase 4.2 (Checksum:7a253) REAL time: 9 secs 
+
+........
