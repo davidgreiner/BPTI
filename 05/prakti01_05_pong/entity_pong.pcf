@@ -1,25 +1,45 @@
 //! **************************************************************************
-// Written by: Map K.37 on Wed Jul 01 18:11:05 2015
+// Written by: Map K.39 on Thu Jul 02 15:11:42 2015
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "paddle_down" LOCATE = SITE "J17" LEVEL 1;
-COMP "colour_blue<0>" LOCATE = SITE "L22" LEVEL 1;
-COMP "colour_blue<1>" LOCATE = SITE "K21" LEVEL 1;
-COMP "colour_blue<2>" LOCATE = SITE "G23" LEVEL 1;
-COMP "colour_blue<3>" LOCATE = SITE "G24" LEVEL 1;
-COMP "hsync" LOCATE = SITE "K26" LEVEL 1;
-COMP "clk_in" LOCATE = SITE "P26" LEVEL 1;
 COMP "paddle_up" LOCATE = SITE "J10" LEVEL 1;
-COMP "colour_green<0>" LOCATE = SITE "M19" LEVEL 1;
-COMP "colour_green<1>" LOCATE = SITE "M18" LEVEL 1;
-COMP "colour_green<2>" LOCATE = SITE "J23" LEVEL 1;
-COMP "colour_green<3>" LOCATE = SITE "J22" LEVEL 1;
-COMP "vsync" LOCATE = SITE "K25" LEVEL 1;
+COMP "hsync" LOCATE = SITE "K26" LEVEL 1;
 COMP "colour_red<0>" LOCATE = SITE "L20" LEVEL 1;
 COMP "colour_red<1>" LOCATE = SITE "K20" LEVEL 1;
 COMP "colour_red<2>" LOCATE = SITE "F25" LEVEL 1;
 COMP "colour_red<3>" LOCATE = SITE "F24" LEVEL 1;
+COMP "colour_green<0>" LOCATE = SITE "M19" LEVEL 1;
+COMP "colour_green<1>" LOCATE = SITE "M18" LEVEL 1;
+COMP "colour_green<2>" LOCATE = SITE "J23" LEVEL 1;
+COMP "paddle_down" LOCATE = SITE "J17" LEVEL 1;
+COMP "colour_green<3>" LOCATE = SITE "J22" LEVEL 1;
+COMP "vsync" LOCATE = SITE "K25" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "P26" LEVEL 1;
+COMP "colour_blue<0>" LOCATE = SITE "L22" LEVEL 1;
+COMP "colour_blue<1>" LOCATE = SITE "K21" LEVEL 1;
 COMP "rst" LOCATE = SITE "Y16" LEVEL 1;
+COMP "colour_blue<2>" LOCATE = SITE "G23" LEVEL 1;
+COMP "colour_blue<3>" LOCATE = SITE "G24" LEVEL 1;
+TIMEGRP clk_in = BEL "final_colour.red_0" BEL "rslve_pm/rslv_colour_red_3" BEL
+        "sgnal_pm/vsync_counter_8" BEL "sgnal_pm/vsync_counter_7" BEL
+        "sgnal_pm/vsync_counter_9" BEL "sgnal_pm/vsync_counter_6" BEL
+        "sgnal_pm/vsync_counter_5" BEL "sgnal_pm/vsync_counter_4" BEL
+        "sgnal_pm/vsync_counter_3" BEL "sgnal_pm/vsync_counter_2" BEL
+        "sgnal_pm/vsync_counter_1" BEL "sgnal_pm/vsync_counter_0" BEL
+        "sgnal_pm/hsync_counter_9" BEL "sgnal_pm/hsync_counter_8" BEL
+        "sgnal_pm/hsync_counter_7" BEL "sgnal_pm/hsync_counter_6" BEL
+        "sgnal_pm/hsync_counter_4" BEL "sgnal_pm/hsync_counter_3" BEL
+        "sgnal_pm/hsync_counter_5" BEL "sgnal_pm/hsync_counter_2" BEL
+        "sgnal_pm/hsync_counter_1" BEL "sgnal_pm/hsync_counter_0" BEL
+        "sgnal_pm/siggen_vsync" BEL "sgnal_pm/siggen_hsync" BEL
+        "sgnal_pm/pos_y_8" BEL "sgnal_pm/pos_y_7" BEL "sgnal_pm/pos_y_6" BEL
+        "sgnal_pm/pos_y_5" BEL "sgnal_pm/pos_y_4" BEL "sgnal_pm/pos_y_3" BEL
+        "sgnal_pm/pos_y_2" BEL "sgnal_pm/pos_y_1" BEL "sgnal_pm/pos_y_0" BEL
+        "sgnal_pm/pos_x_9" BEL "sgnal_pm/pos_x_8" BEL "sgnal_pm/pos_x_7" BEL
+        "sgnal_pm/pos_x_6" BEL "sgnal_pm/pos_x_5" BEL "sgnal_pm/pos_x_4" BEL
+        "sgnal_pm/pos_x_3" BEL "sgnal_pm/pos_x_2" BEL "sgnal_pm/pos_x_1" BEL
+        "sgnal_pm/pos_x_0";
+TS_clk_in = PERIOD TIMEGRP "clk_in" 25.175 MHz HIGH 50%;
 SCHEMATIC END;
 

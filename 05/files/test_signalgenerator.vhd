@@ -36,6 +36,8 @@ begin
 	siggen_p : process(siggen_clk_in)
 	variable hsync_counter : integer range 1 to 15 := 1;
 	variable vsync_counter : integer range 1 to 10 := 1;
+	variable pos_x	: integer range 0 to 640;
+	variable pos_y	: integer range 0 to 480;
 	begin
 	
 	
@@ -56,15 +58,15 @@ begin
 
 
 			if(hsync_counter > 3 and hsync_counter <= 3+5) then
-				siggen_pos_x <= hsync_counter - 3;
+				pos_x := hsync_counter - 3;
 			else
-				siggen_pos_x <= 0;
+				pos_x := 0;
 			end if;
 
 			if(vsync_counter > 2 and vsync_counter <= 2+5) then
-				siggen_pos_y <= vsync_counter - 2;
+				pos_y := vsync_counter - 2;
 			else
-				siggen_pos_y <= 0;
+				pos_y := 0;
 			end if;
 			
 			        
@@ -79,6 +81,9 @@ begin
             else
             	hsync_counter := hsync_counter + 1;
             end if;
+            
+            siggen_pos_x <= pos_x;
+            siggen_pos_y <= pos_y;
 		end if;
 	end process;
 end architecture architecture_test_signalgenerator;

@@ -63,7 +63,7 @@ begin
 	combiner_p : entity_colourcombiner port map
 	(
 		cc_colour_1_in => mix_colour,
-		cc_colour_2_in => border_colour_in,
+		cc_colour_2_in => border_colour_mix,
 		cc_colour_out => border_colour_out
 	);
 

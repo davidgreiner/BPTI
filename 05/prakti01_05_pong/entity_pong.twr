@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Release 10.1.02 Trace  (lin)
+Release 10.1.03 Trace  (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
@@ -9,7 +9,7 @@ entity_pong.pcf -ucf entity_pong.ucf
 
 Design file:              entity_pong.ncd
 Physical constraint file: entity_pong.pcf
-Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.33 2008-07-25)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -17,7 +17,6 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
-INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
    unconstrained paths section(s) of the report.
@@ -26,58 +25,161 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    and for more information on accounting for different loading conditions, 
    please see the device datasheet.
 
+================================================================================
+Timing constraint: TS_clk_in = PERIOD TIMEGRP "clk_in" 25.175 MHz HIGH 50%;
+
+ 985 paths analyzed, 145 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   8.302ns.
+--------------------------------------------------------------------------------
+Slack:                  31.419ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/pos_x_5 (FF)
+  Destination:          final_colour.red_0 (FF)
+  Requirement:          39.721ns
+  Data Path Delay:      8.234ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.068ns (0.807 - 0.875)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 39.721ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sgnal_pm/pos_x_5 to final_colour.red_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X79Y47.XQ      Tcko                  0.591   sgnal_pm/pos_x<5>
+                                                       sgnal_pm/pos_x_5
+    SLICE_X80Y51.F4      net (fanout=2)        0.923   sgnal_pm/pos_x<5>
+    SLICE_X80Y51.X       Tilo                  0.692   final_colour_red_or0000136
+                                                       final_colour_red_or0000136
+    SLICE_X81Y51.F3      net (fanout=1)        0.043   final_colour_red_or0000136
+    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
+                                                       final_colour_red_or0000145
+    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
+    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
+                                                       final_colour_red_or000075_SW0
+    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
+    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
+                                                       final_colour_red_or0000162
+    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
+    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+                                                       final_colour.red_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.234ns (4.192ns logic, 4.042ns route)
+                                                       (50.9% logic, 49.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  31.445ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/pos_x_7 (FF)
+  Destination:          final_colour.red_0 (FF)
+  Requirement:          39.721ns
+  Data Path Delay:      8.196ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.080ns (0.807 - 0.887)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 39.721ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sgnal_pm/pos_x_7 to final_colour.red_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X81Y48.XQ      Tcko                  0.591   sgnal_pm/pos_x<7>
+                                                       sgnal_pm/pos_x_7
+    SLICE_X80Y50.F1      net (fanout=2)        0.498   sgnal_pm/pos_x<7>
+    SLICE_X80Y50.X       Tilo                  0.692   final_colour_red_or0000126
+                                                       final_colour_red_or0000126
+    SLICE_X81Y51.F2      net (fanout=1)        0.430   final_colour_red_or0000126
+    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
+                                                       final_colour_red_or0000145
+    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
+    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
+                                                       final_colour_red_or000075_SW0
+    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
+    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
+                                                       final_colour_red_or0000162
+    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
+    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+                                                       final_colour.red_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.196ns (4.192ns logic, 4.004ns route)
+                                                       (51.1% logic, 48.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  31.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/pos_x_8 (FF)
+  Destination:          final_colour.red_0 (FF)
+  Requirement:          39.721ns
+  Data Path Delay:      8.130ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.088ns (0.807 - 0.895)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 39.721ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sgnal_pm/pos_x_8 to final_colour.red_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X80Y52.XQ      Tcko                  0.631   sgnal_pm/pos_x<8>
+                                                       sgnal_pm/pos_x_8
+    SLICE_X80Y50.F4      net (fanout=2)        0.392   sgnal_pm/pos_x<8>
+    SLICE_X80Y50.X       Tilo                  0.692   final_colour_red_or0000126
+                                                       final_colour_red_or0000126
+    SLICE_X81Y51.F2      net (fanout=1)        0.430   final_colour_red_or0000126
+    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
+                                                       final_colour_red_or0000145
+    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
+    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
+                                                       final_colour_red_or000075_SW0
+    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
+    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
+                                                       final_colour_red_or0000162
+    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
+    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+                                                       final_colour.red_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.130ns (4.232ns logic, 3.898ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock clk_in
-------------+------------+------------+------------------+--------+
-            |  Setup to  |  Hold to   |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-rst         |    1.984(R)|   -0.505(R)|clk_in_BUFGP      |   0.000|
-------------+------------+------------+------------------+--------+
-
-Clock clk_in to Pad
----------------+------------+------------------+--------+
-               | clk (edge) |                  | Clock  |
-Destination    |   to PAD   |Internal Clock(s) | Phase  |
----------------+------------+------------------+--------+
-colour_blue<0> |    8.268(R)|clk_in_BUFGP      |   0.000|
-colour_blue<1> |    8.295(R)|clk_in_BUFGP      |   0.000|
-colour_blue<2> |    8.275(R)|clk_in_BUFGP      |   0.000|
-colour_blue<3> |    8.578(R)|clk_in_BUFGP      |   0.000|
-colour_green<0>|    8.248(R)|clk_in_BUFGP      |   0.000|
-colour_green<1>|    8.248(R)|clk_in_BUFGP      |   0.000|
-colour_green<2>|    8.275(R)|clk_in_BUFGP      |   0.000|
-colour_green<3>|    8.578(R)|clk_in_BUFGP      |   0.000|
-colour_red<0>  |    8.148(R)|clk_in_BUFGP      |   0.000|
-colour_red<1>  |    8.840(R)|clk_in_BUFGP      |   0.000|
-colour_red<2>  |    8.417(R)|clk_in_BUFGP      |   0.000|
-colour_red<3>  |    8.840(R)|clk_in_BUFGP      |   0.000|
-hsync          |    8.989(R)|clk_in_BUFGP      |   0.000|
-vsync          |    9.652(R)|clk_in_BUFGP      |   0.000|
----------------+------------+------------------+--------+
-
 Clock to Setup on destination clock clk_in
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |   10.679|         |         |         |
+clk_in         |    8.302|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jul  1 18:12:16 2015 
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 985 paths, 0 nets, and 401 connections
+
+Design statistics:
+   Minimum period:   8.302ns{1}   (Maximum frequency: 120.453MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jul  2 15:12:32 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 175 MB
+Peak Memory Usage: 163 MB
 
 
 

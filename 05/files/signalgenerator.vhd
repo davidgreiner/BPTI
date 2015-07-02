@@ -38,8 +38,8 @@ begin
 	variable hsync_counter : integer range 1 to 800 := 1;
 	variable vsync_counter : integer range 1 to 525 := 1;
 	
-	variable pos_x : integer range 0 to 640;
-	variable pos_y : integer range 0 to 480;
+	variable pos_x : integer range 0 to 640 := 0;
+	variable pos_y : integer range 0 to 480 := 0;
 	begin
 		if(siggen_rst = '0') then
 			hsync_counter := 1;
@@ -83,9 +83,9 @@ begin
 			else
 				hsync_counter := hsync_counter + 1;
 			end if;
-			
-			siggen_pos_x <= pos_x;
-			siggen_pos_y <= pos_y;
 		end if;
+		
+		siggen_pos_x <= pos_x;
+		siggen_pos_y <= pos_y;
 	end process;
 end architecture architecture_signalgenerator;
