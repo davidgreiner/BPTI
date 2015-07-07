@@ -13,7 +13,7 @@ entity entity_test_signalgenerator_old is
 end entity;
 
 
-architecture architecture_test_signalgenerator o_oldf entity_test_signalgenerator_old is
+architecture architecture_test_signalgenerator_old of entity_test_signalgenerator_old is
 
     --  Timing constraints for testing:
     --      HSync:
