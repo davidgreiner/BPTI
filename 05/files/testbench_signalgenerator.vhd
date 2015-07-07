@@ -10,6 +10,7 @@ component entity_test_signalgenerator
 port
 (
     siggen_clk_in	: in std_logic;
+    siggen_rst_in   : in std_logic;
     siggen_hsync	: out std_logic;
     siggen_vsync	: out std_logic;
     siggen_pos_x	: out integer range 0 to 5;
@@ -25,6 +26,7 @@ begin
     signalgenerator_pm : entity_test_signalgenerator port map
     (
         siggen_clk_in	=> clk_in,
+        siggen_rst_in   => '1',
         siggen_hsync	=> hsync,
         siggen_vsync	=> vsync,
         siggen_pos_x    => pos_x,
