@@ -175,14 +175,14 @@ begin
 
             -- Paddle up button pressed
             if(pong_paddle_up = '1') then
-                if(paddle_position.y > 0) then
+                if(paddle_position.y >= border_width) then
                     paddle_position.y := paddle_position.y - 1;
                 end if;
             end if;
 
             -- Paddle down button pressed
             if(pong_paddle_down = '1') then
-                if(paddle_position.y < (screen_dimension.height - paddle_dimension.height)) then
+                if(paddle_position.y < (screen_dimension.height - paddle_dimension.height - border_width)) then
                     paddle_position.y := paddle_position.y + 1;
                 end if;
             end if;
