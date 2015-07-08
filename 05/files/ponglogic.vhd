@@ -103,7 +103,7 @@ begin
                 -- ball_vector.y := 1;
             -- Check collision border right
             elsif ball_position.x + ball_radius > screen_dimension.width then
-                ball_position.x := screen_dimension.width - ball_radius;
+                ball_position.x := screen_dimension.width - ball_radius - 1;
 
                 if(pong_hardcore = '1') then
                     ball_vector.x := -2 * ball_vector.x;
