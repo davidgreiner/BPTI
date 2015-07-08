@@ -1,7 +1,7 @@
-#Release 10.1.03 - par K.39 (lin)
+#Release 10.1.02 - par K.37 (lin)
 #Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-#Thu Jul  2 15:12:23 2015
+#Wed Jul  8 14:05:47 2015
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -403,7 +403,7 @@ J17,paddle_down,IBUF,IP_0/VREF_0,INPUT,LVCMOS25*,0,,,,IBUF,,LOCATED,,NO,NONE,
 J18,,,VCCAUX,,,,,,,,2.5,,,,,
 J19,,DIFFMLR,IO_L59P_1,UNUSED,,1,,,,,,,,,,
 J20,,DIFFSLR,IO_L59N_1,UNUSED,,1,,,,,,,,,,
-J21,,DIFFMLR,IO_L62P_1/A20,UNUSED,,1,,,,,,,,,,
+J21,hardcore,IBUF,IO_L62P_1/A20,INPUT,LVCMOS25*,1,,,,IBUF,,,,NO,NONE,
 J22,colour_green<3>,IOB,IO_L49N_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,,NO,NONE,
 J23,colour_green<2>,IOB,IO_L49P_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,,NO,NONE,
 J24,,,GND,,,,,,,,,,,,,

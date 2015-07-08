@@ -1,5 +1,5 @@
 NUM_USER_FILES
-12
+11
 s
 user_file_1
 ../files/colourresolver.vhd
@@ -8,9 +8,6 @@ user_file_10
 ../files/signalgenerator.vhd
 s
 user_file_11
-../files/colourcombiner.vhd
-s
-user_file_12
 entity_pong.ucf
 s
 user_file_2

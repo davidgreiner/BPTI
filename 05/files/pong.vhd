@@ -63,11 +63,11 @@ component entity_signalgenerator is
     port
     (
         siggen_clk_in	: in std_logic;
-        siggen_rst		: in std_logic;
-        siggen_hsync	: out std_logic;
-        siggen_vsync	: out std_logic;
-        siggen_pos_x	: out integer range 0 to 640;
-        siggen_pos_y	: out integer range 0 to 480
+        siggen_rst_in	: in std_logic;
+        siggen_hsync		: out std_logic;
+        siggen_vsync		: out std_logic;
+        siggen_pos_x		: out integer range 0 to 640;
+        siggen_pos_y		: out integer range 0 to 480
     );
 end component;
 
@@ -185,11 +185,11 @@ begin
     sgnal_pm : entity_signalgenerator port map
     (
         siggen_clk_in	=> clk_in,
-        siggen_rst		=> rst,
-        siggen_hsync	=> hsync,
-        siggen_vsync	=> logic_clock,
-        siggen_pos_x	=> pos_x,
-        siggen_pos_y	=> pos_y
+        siggen_rst_in 	=> rst,
+        siggen_hsync		=> hsync,
+        siggen_vsync		=> logic_clock,
+        siggen_pos_x		=> pos_x,
+        siggen_pos_y		=> pos_y
     );
 
     paint_pm : entity_pixelgenerator port map
@@ -230,10 +230,10 @@ begin
     colour_checker : process(clk_in)
     begin
     if(clk_in'event and clk_in = '1') then
-    	if(pos_x < 20 or pos_y < 20 or pos_x > 620 or pos_y > 460) then
+    	if(pos_x = 0 or pos_y = 0) then
     		final_colour <= ("0000", "0000", "0000");
 		else
-			final_colour <= ("1111", "1010", "0000"); --colour_out;
+			final_colour <= colour_out;
 		end if;
 	end if;
     end process;

@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Release 10.1.03 Trace  (lin)
+Release 10.1.02 Trace  (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -ise
@@ -9,7 +9,7 @@ entity_pong.pcf -ucf entity_pong.ucf
 
 Design file:              entity_pong.ncd
 Physical constraint file: entity_pong.pcf
-Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.33 2008-07-25)
+Device,package,speed:     xc3sd1800a,fg676,-4 (PRODUCTION 1.32 2008-05-28)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -28,116 +28,170 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 ================================================================================
 Timing constraint: TS_clk_in = PERIOD TIMEGRP "clk_in" 25.175 MHz HIGH 50%;
 
- 985 paths analyzed, 145 endpoints analyzed, 0 failing endpoints
+ 3509 paths analyzed, 141 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is   8.302ns.
+ Minimum period is  21.262ns.
 --------------------------------------------------------------------------------
-Slack:                  31.419ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/pos_x_5 (FF)
+Slack:                  18.459ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_0 (FF)
   Destination:          final_colour.red_0 (FF)
   Requirement:          39.721ns
-  Data Path Delay:      8.234ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.068ns (0.807 - 0.875)
+  Data Path Delay:      21.124ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.138ns (0.218 - 0.356)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 39.721ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: sgnal_pm/pos_x_5 to final_colour.red_0
+  Maximum Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.red_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X79Y47.XQ      Tcko                  0.591   sgnal_pm/pos_x<5>
-                                                       sgnal_pm/pos_x_5
-    SLICE_X80Y51.F4      net (fanout=2)        0.923   sgnal_pm/pos_x<5>
-    SLICE_X80Y51.X       Tilo                  0.692   final_colour_red_or0000136
-                                                       final_colour_red_or0000136
-    SLICE_X81Y51.F3      net (fanout=1)        0.043   final_colour_red_or0000136
-    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
-                                                       final_colour_red_or0000145
-    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
-    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
-                                                       final_colour_red_or000075_SW0
-    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
-    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
-                                                       final_colour_red_or0000162
-    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
-    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+    SLICE_X89Y89.YQ      Tcko                  0.580   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_0
+    SLICE_X72Y86.G2      net (fanout=136)      1.973   sgnal_pm/siggen_pos_x<0>
+    SLICE_X72Y86.Y       Tilo                  0.707   paint_pm/score_pm/num_sub0000<3>
+                                                       paint_pm/score_pm/Msub_num_sub0000_Madd_xor<2>11
+    SLICE_X88Y44.F1      net (fanout=120)      7.361   paint_pm/score_pm/num_sub0000<2>
+    SLICE_X88Y44.X       Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0003_113
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.G4      net (fanout=2)        0.378   paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.F5      Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113_rt_pack_1
+                                                       paint_pm/score_pm/Mmux_num_mux0003_10_f5_0
+    SLICE_X89Y46.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_10_f51
+    SLICE_X89Y46.Y       Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.G2      net (fanout=1)        0.975   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.F5      Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FX      Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.Y       Tif6y                 0.410   paint_pm/score_pm/num_mux0003
+                                                       paint_pm/score_pm/Mmux_num_mux0003_2_f7
+    SLICE_X73Y37.F4      net (fanout=1)        0.690   paint_pm/score_pm/num_mux0003
+    SLICE_X73Y37.X       Tilo                  0.643   paint_pm/score_pm/number_colour_out_blue<0>12
+                                                       paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.F1      net (fanout=1)        2.174   paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.X       Tilo                  0.643   final_colour.green_1
+                                                       paint_pm/score_pm/number_colour_out_blue<0>289
+    SLICE_X76Y104.BX     net (fanout=3)        0.812   paint_pm/number_colour_blue<0>
+    SLICE_X76Y104.CLK    Tdick                 0.970   final_colour.red_0
+                                                       paint_pm/pxlgen_colour_out_red<0>11_f5
                                                        final_colour.red_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.234ns (4.192ns logic, 4.042ns route)
-                                                       (50.9% logic, 49.1% route)
+    Total                                     21.124ns (6.761ns logic, 14.363ns route)
+                                                       (32.0% logic, 68.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  31.445ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/pos_x_7 (FF)
+Slack:                  18.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_0 (FF)
   Destination:          final_colour.red_0 (FF)
   Requirement:          39.721ns
-  Data Path Delay:      8.196ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.080ns (0.807 - 0.887)
+  Data Path Delay:      21.122ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.138ns (0.218 - 0.356)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 39.721ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: sgnal_pm/pos_x_7 to final_colour.red_0
+  Maximum Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.red_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X81Y48.XQ      Tcko                  0.591   sgnal_pm/pos_x<7>
-                                                       sgnal_pm/pos_x_7
-    SLICE_X80Y50.F1      net (fanout=2)        0.498   sgnal_pm/pos_x<7>
-    SLICE_X80Y50.X       Tilo                  0.692   final_colour_red_or0000126
-                                                       final_colour_red_or0000126
-    SLICE_X81Y51.F2      net (fanout=1)        0.430   final_colour_red_or0000126
-    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
-                                                       final_colour_red_or0000145
-    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
-    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
-                                                       final_colour_red_or000075_SW0
-    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
-    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
-                                                       final_colour_red_or0000162
-    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
-    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+    SLICE_X89Y89.YQ      Tcko                  0.580   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_0
+    SLICE_X72Y86.G2      net (fanout=136)      1.973   sgnal_pm/siggen_pos_x<0>
+    SLICE_X72Y86.Y       Tilo                  0.707   paint_pm/score_pm/num_sub0000<3>
+                                                       paint_pm/score_pm/Msub_num_sub0000_Madd_xor<2>11
+    SLICE_X88Y44.F1      net (fanout=120)      7.361   paint_pm/score_pm/num_sub0000<2>
+    SLICE_X88Y44.X       Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0003_113
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.F4      net (fanout=2)        0.376   paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.F5      Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113_rt
+                                                       paint_pm/score_pm/Mmux_num_mux0003_10_f5_0
+    SLICE_X89Y46.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_10_f51
+    SLICE_X89Y46.Y       Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.G2      net (fanout=1)        0.975   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.F5      Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FX      Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.Y       Tif6y                 0.410   paint_pm/score_pm/num_mux0003
+                                                       paint_pm/score_pm/Mmux_num_mux0003_2_f7
+    SLICE_X73Y37.F4      net (fanout=1)        0.690   paint_pm/score_pm/num_mux0003
+    SLICE_X73Y37.X       Tilo                  0.643   paint_pm/score_pm/number_colour_out_blue<0>12
+                                                       paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.F1      net (fanout=1)        2.174   paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.X       Tilo                  0.643   final_colour.green_1
+                                                       paint_pm/score_pm/number_colour_out_blue<0>289
+    SLICE_X76Y104.BX     net (fanout=3)        0.812   paint_pm/number_colour_blue<0>
+    SLICE_X76Y104.CLK    Tdick                 0.970   final_colour.red_0
+                                                       paint_pm/pxlgen_colour_out_red<0>11_f5
                                                        final_colour.red_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.196ns (4.192ns logic, 4.004ns route)
-                                                       (51.1% logic, 48.9% route)
+    Total                                     21.122ns (6.761ns logic, 14.361ns route)
+                                                       (32.0% logic, 68.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  31.503ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/pos_x_8 (FF)
+Slack:                  18.596ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_1 (FF)
   Destination:          final_colour.red_0 (FF)
   Requirement:          39.721ns
-  Data Path Delay:      8.130ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.088ns (0.807 - 0.895)
+  Data Path Delay:      20.987ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.138ns (0.218 - 0.356)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 39.721ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: sgnal_pm/pos_x_8 to final_colour.red_0
+  Maximum Data Path: sgnal_pm/siggen_pos_x_1 to final_colour.red_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X80Y52.XQ      Tcko                  0.631   sgnal_pm/pos_x<8>
-                                                       sgnal_pm/pos_x_8
-    SLICE_X80Y50.F4      net (fanout=2)        0.392   sgnal_pm/pos_x<8>
-    SLICE_X80Y50.X       Tilo                  0.692   final_colour_red_or0000126
-                                                       final_colour_red_or0000126
-    SLICE_X81Y51.F2      net (fanout=1)        0.430   final_colour_red_or0000126
-    SLICE_X81Y51.X       Tilo                  0.643   final_colour_red_or0000145
-                                                       final_colour_red_or0000145
-    SLICE_X84Y56.G2      net (fanout=1)        0.694   final_colour_red_or0000145
-    SLICE_X84Y56.Y       Tilo                  0.707   final_colour_red_or0000
-                                                       final_colour_red_or000075_SW0
-    SLICE_X84Y56.F4      net (fanout=1)        0.060   final_colour_red_or000075_SW0/O
-    SLICE_X84Y56.X       Tilo                  0.692   final_colour_red_or0000
-                                                       final_colour_red_or0000162
-    SLICE_X92Y89.SR      net (fanout=1)        2.322   final_colour_red_or0000
-    SLICE_X92Y89.CLK     Tsrck                 0.867   final_colour.red_0
+    SLICE_X89Y89.XQ      Tcko                  0.591   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_1
+    SLICE_X72Y86.G1      net (fanout=45)       1.825   sgnal_pm/siggen_pos_x<1>
+    SLICE_X72Y86.Y       Tilo                  0.707   paint_pm/score_pm/num_sub0000<3>
+                                                       paint_pm/score_pm/Msub_num_sub0000_Madd_xor<2>11
+    SLICE_X88Y44.F1      net (fanout=120)      7.361   paint_pm/score_pm/num_sub0000<2>
+    SLICE_X88Y44.X       Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0003_113
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.G4      net (fanout=2)        0.378   paint_pm/score_pm/Mmux_num_mux0003_113
+    SLICE_X89Y46.F5      Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_113_rt_pack_1
+                                                       paint_pm/score_pm/Mmux_num_mux0003_10_f5_0
+    SLICE_X89Y46.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_10_f51
+    SLICE_X89Y46.Y       Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.G2      net (fanout=1)        0.975   paint_pm/score_pm/Mmux_num_mux0003_9_f6
+    SLICE_X86Y36.F5      Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_6
+                                                       paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+    SLICE_X86Y36.FX      Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0003_4_f5
+                                                       paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.FXINA   net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0003_3_f6
+    SLICE_X86Y37.Y       Tif6y                 0.410   paint_pm/score_pm/num_mux0003
+                                                       paint_pm/score_pm/Mmux_num_mux0003_2_f7
+    SLICE_X73Y37.F4      net (fanout=1)        0.690   paint_pm/score_pm/num_mux0003
+    SLICE_X73Y37.X       Tilo                  0.643   paint_pm/score_pm/number_colour_out_blue<0>12
+                                                       paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.F1      net (fanout=1)        2.174   paint_pm/score_pm/number_colour_out_blue<0>12
+    SLICE_X77Y98.X       Tilo                  0.643   final_colour.green_1
+                                                       paint_pm/score_pm/number_colour_out_blue<0>289
+    SLICE_X76Y104.BX     net (fanout=3)        0.812   paint_pm/number_colour_blue<0>
+    SLICE_X76Y104.CLK    Tdick                 0.970   final_colour.red_0
+                                                       paint_pm/pxlgen_colour_out_red<0>11_f5
                                                        final_colour.red_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.130ns (4.232ns logic, 3.898ns route)
-                                                       (52.1% logic, 47.9% route)
+    Total                                     20.987ns (6.772ns logic, 14.215ns route)
+                                                       (32.3% logic, 67.7% route)
 
 --------------------------------------------------------------------------------
 
@@ -154,7 +208,7 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |    8.302|         |         |         |
+clk_in         |   21.262|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -163,23 +217,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 985 paths, 0 nets, and 401 connections
+Constraints cover 3509 paths, 0 nets, and 1094 connections
 
 Design statistics:
-   Minimum period:   8.302ns{1}   (Maximum frequency: 120.453MHz)
+   Minimum period:  21.262ns{1}   (Maximum frequency:  47.032MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Jul  2 15:12:32 2015 
+Analysis completed Wed Jul  8 14:06:02 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 163 MB
+Peak Memory Usage: 173 MB
 
 
 
