@@ -28,151 +28,166 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 ================================================================================
 Timing constraint: TS_clk_in = PERIOD TIMEGRP "clk_in" 25.175 MHz HIGH 50%;
 
- 3104 paths analyzed, 141 endpoints analyzed, 0 failing endpoints
+ 3966 paths analyzed, 137 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is  13.762ns.
+ Minimum period is  15.705ns.
 --------------------------------------------------------------------------------
-Slack:                  25.959ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/siggen_pos_y_1 (FF)
-  Destination:          final_colour.red_0 (FF)
-  Requirement:          39.721ns
-  Data Path Delay:      13.710ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.052ns (0.319 - 0.371)
-  Source Clock:         clk_in_BUFGP rising at 0.000ns
-  Destination Clock:    clk_in_BUFGP rising at 39.721ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: sgnal_pm/siggen_pos_y_1 to final_colour.red_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y113.XQ     Tcko                  0.591   sgnal_pm/siggen_pos_y<1>
-                                                       sgnal_pm/siggen_pos_y_1
-    SLICE_X24Y104.F3     net (fanout=187)      4.597   sgnal_pm/siggen_pos_y<1>
-    SLICE_X24Y104.X      Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0001_113
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.G4     net (fanout=2)        0.088   paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.F5     Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113_rt_pack_1
-                                                       paint_pm/score_pm/Mmux_num_mux0001_10_f5_0
-    SLICE_X25Y104.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_10_f51
-    SLICE_X25Y104.Y      Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.G2     net (fanout=1)        0.681   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.F5     Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FX     Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.Y      Tif6y                 0.410   paint_pm/score_pm/num_mux0001
-                                                       paint_pm/score_pm/Mmux_num_mux0001_2_f7
-    SLICE_X56Y109.F1     net (fanout=1)        1.945   paint_pm/score_pm/num_mux0001
-    SLICE_X56Y109.X      Tilo                  0.692   paint_pm/number_colour_blue<0>
-                                                       paint_pm/score_pm/number_colour_out_blue<0>270
-    SLICE_X52Y112.BX     net (fanout=3)        0.928   paint_pm/number_colour_blue<0>
-    SLICE_X52Y112.CLK    Tdick                 0.970   final_colour.red_0
-                                                       paint_pm/pxlgen_colour_out_red<0>11_f5
-                                                       final_colour.red_0
-    -------------------------------------------------  ---------------------------
-    Total                                     13.710ns (5.471ns logic, 8.239ns route)
-                                                       (39.9% logic, 60.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  25.961ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/siggen_pos_y_1 (FF)
-  Destination:          final_colour.red_0 (FF)
-  Requirement:          39.721ns
-  Data Path Delay:      13.708ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.052ns (0.319 - 0.371)
-  Source Clock:         clk_in_BUFGP rising at 0.000ns
-  Destination Clock:    clk_in_BUFGP rising at 39.721ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: sgnal_pm/siggen_pos_y_1 to final_colour.red_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y113.XQ     Tcko                  0.591   sgnal_pm/siggen_pos_y<1>
-                                                       sgnal_pm/siggen_pos_y_1
-    SLICE_X24Y104.F3     net (fanout=187)      4.597   sgnal_pm/siggen_pos_y<1>
-    SLICE_X24Y104.X      Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0001_113
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.F4     net (fanout=2)        0.086   paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.F5     Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113_rt
-                                                       paint_pm/score_pm/Mmux_num_mux0001_10_f5_0
-    SLICE_X25Y104.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_10_f51
-    SLICE_X25Y104.Y      Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.G2     net (fanout=1)        0.681   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.F5     Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FX     Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.Y      Tif6y                 0.410   paint_pm/score_pm/num_mux0001
-                                                       paint_pm/score_pm/Mmux_num_mux0001_2_f7
-    SLICE_X56Y109.F1     net (fanout=1)        1.945   paint_pm/score_pm/num_mux0001
-    SLICE_X56Y109.X      Tilo                  0.692   paint_pm/number_colour_blue<0>
-                                                       paint_pm/score_pm/number_colour_out_blue<0>270
-    SLICE_X52Y112.BX     net (fanout=3)        0.928   paint_pm/number_colour_blue<0>
-    SLICE_X52Y112.CLK    Tdick                 0.970   final_colour.red_0
-                                                       paint_pm/pxlgen_colour_out_red<0>11_f5
-                                                       final_colour.red_0
-    -------------------------------------------------  ---------------------------
-    Total                                     13.708ns (5.471ns logic, 8.237ns route)
-                                                       (39.9% logic, 60.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  26.136ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               sgnal_pm/siggen_pos_y_1 (FF)
+Slack:                  24.016ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_0 (FF)
   Destination:          final_colour.blue_0 (FF)
   Requirement:          39.721ns
-  Data Path Delay:      13.548ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.037ns (0.334 - 0.371)
+  Data Path Delay:      15.719ns (Levels of Logic = 9)
+  Clock Path Skew:      0.014ns (0.532 - 0.518)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 39.721ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: sgnal_pm/siggen_pos_y_1 to final_colour.blue_0
+  Maximum Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.blue_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y113.XQ     Tcko                  0.591   sgnal_pm/siggen_pos_y<1>
-                                                       sgnal_pm/siggen_pos_y_1
-    SLICE_X24Y104.F3     net (fanout=187)      4.597   sgnal_pm/siggen_pos_y<1>
-    SLICE_X24Y104.X      Tilo                  0.692   paint_pm/score_pm/Mmux_num_mux0001_113
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.G4     net (fanout=2)        0.088   paint_pm/score_pm/Mmux_num_mux0001_113
-    SLICE_X25Y104.F5     Tif5                  0.773   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_113_rt_pack_1
-                                                       paint_pm/score_pm/Mmux_num_mux0001_10_f5_0
-    SLICE_X25Y104.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_10_f51
-    SLICE_X25Y104.Y      Tif6y                 0.291   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.G2     net (fanout=1)        0.681   paint_pm/score_pm/Mmux_num_mux0001_9_f6
-    SLICE_X26Y108.F5     Tif5                  0.767   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_6
-                                                       paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-    SLICE_X26Y108.FX     Tinafx                0.285   paint_pm/score_pm/Mmux_num_mux0001_4_f5
-                                                       paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.FXINA  net (fanout=1)        0.000   paint_pm/score_pm/Mmux_num_mux0001_3_f6
-    SLICE_X26Y109.Y      Tif6y                 0.410   paint_pm/score_pm/num_mux0001
-                                                       paint_pm/score_pm/Mmux_num_mux0001_2_f7
-    SLICE_X56Y109.F1     net (fanout=1)        1.945   paint_pm/score_pm/num_mux0001
-    SLICE_X56Y109.X      Tilo                  0.692   paint_pm/number_colour_blue<0>
-                                                       paint_pm/score_pm/number_colour_out_blue<0>270
-    SLICE_X56Y112.BY     net (fanout=3)        0.907   paint_pm/number_colour_blue<0>
-    SLICE_X56Y112.CLK    Tsrck                 0.829   final_colour.blue_0
+    SLICE_X68Y98.YQ      Tcko                  0.676   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_0
+    SLICE_X62Y110.G2     net (fanout=28)       2.435   sgnal_pm/siggen_pos_x<0>
+    SLICE_X62Y110.Y      Tilo                  0.707   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/number_colour_out_blue<0>2211
+    SLICE_X60Y111.G2     net (fanout=1)        0.428   paint_pm/score_pm/Msub_num_sub0001_Madd_cy<1>
+    SLICE_X60Y111.Y      Tilo                  0.707   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/Msub_num_sub0001_Madd_xor<4>11
+    SLICE_X60Y111.F3     net (fanout=5)        0.211   paint_pm/score_pm/num_sub0001<4>
+    SLICE_X60Y111.X      Tilo                  0.692   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/number_colour_out_blue<0>31211
+    SLICE_X62Y110.F2     net (fanout=4)        0.431   paint_pm/score_pm/N142
+    SLICE_X62Y110.X      Tilo                  0.692   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/num_cmp_eq00051
+    SLICE_X69Y120.F2     net (fanout=3)        1.715   paint_pm/score_pm/num_cmp_eq0005
+    SLICE_X69Y120.X      Tif5x                 0.924   paint_pm/score_pm/number_colour_out_blue<0>140
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140_G
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.G3     net (fanout=1)        0.736   paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.Y      Tilo                  0.707   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>224
+    SLICE_X66Y117.F3     net (fanout=1)        0.043   paint_pm/score_pm/number_colour_out_blue<0>224/O
+    SLICE_X66Y117.X      Tilo                  0.692   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.G1     net (fanout=1)        0.767   paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.Y      Tilo                  0.648   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>977
+    SLICE_X61Y113.F4     net (fanout=1)        0.044   paint_pm/score_pm/number_colour_out_blue<0>977/O
+    SLICE_X61Y113.X      Tilo                  0.643   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>1054
+    SLICE_X63Y120.BY     net (fanout=3)        1.033   paint_pm/number_colour_blue<0>
+    SLICE_X63Y120.CLK    Tsrck                 0.788   final_colour.blue_0
                                                        final_colour.blue_0
     -------------------------------------------------  ---------------------------
-    Total                                     13.548ns (5.330ns logic, 8.218ns route)
-                                                       (39.3% logic, 60.7% route)
+    Total                                     15.719ns (7.876ns logic, 7.843ns route)
+                                                       (50.1% logic, 49.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  24.082ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_0 (FF)
+  Destination:          final_colour.red_0 (FF)
+  Requirement:          39.721ns
+  Data Path Delay:      15.645ns (Levels of Logic = 10)
+  Clock Path Skew:      0.006ns (0.524 - 0.518)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 39.721ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.red_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X68Y98.YQ      Tcko                  0.676   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_0
+    SLICE_X62Y110.G2     net (fanout=28)       2.435   sgnal_pm/siggen_pos_x<0>
+    SLICE_X62Y110.Y      Tilo                  0.707   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/number_colour_out_blue<0>2211
+    SLICE_X60Y111.G2     net (fanout=1)        0.428   paint_pm/score_pm/Msub_num_sub0001_Madd_cy<1>
+    SLICE_X60Y111.Y      Tilo                  0.707   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/Msub_num_sub0001_Madd_xor<4>11
+    SLICE_X60Y111.F3     net (fanout=5)        0.211   paint_pm/score_pm/num_sub0001<4>
+    SLICE_X60Y111.X      Tilo                  0.692   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/number_colour_out_blue<0>31211
+    SLICE_X62Y110.F2     net (fanout=4)        0.431   paint_pm/score_pm/N142
+    SLICE_X62Y110.X      Tilo                  0.692   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/num_cmp_eq00051
+    SLICE_X69Y120.F2     net (fanout=3)        1.715   paint_pm/score_pm/num_cmp_eq0005
+    SLICE_X69Y120.X      Tif5x                 0.924   paint_pm/score_pm/number_colour_out_blue<0>140
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140_G
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.G3     net (fanout=1)        0.736   paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.Y      Tilo                  0.707   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>224
+    SLICE_X66Y117.F3     net (fanout=1)        0.043   paint_pm/score_pm/number_colour_out_blue<0>224/O
+    SLICE_X66Y117.X      Tilo                  0.692   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.G1     net (fanout=1)        0.767   paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.Y      Tilo                  0.648   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>977
+    SLICE_X61Y113.F4     net (fanout=1)        0.044   paint_pm/score_pm/number_colour_out_blue<0>977/O
+    SLICE_X61Y113.X      Tilo                  0.643   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>1054
+    SLICE_X65Y120.F2     net (fanout=3)        1.025   paint_pm/number_colour_blue<0>
+    SLICE_X65Y120.CLK    Tfck                  0.722   final_colour.red_0
+                                                       paint_pm/pxlgen_colour_out_red<0>11
+                                                       final_colour.red_0
+    -------------------------------------------------  ---------------------------
+    Total                                     15.645ns (7.810ns logic, 7.835ns route)
+                                                       (49.9% logic, 50.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  24.095ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sgnal_pm/siggen_pos_x_0 (FF)
+  Destination:          final_colour.green_1 (FF)
+  Requirement:          39.721ns
+  Data Path Delay:      15.632ns (Levels of Logic = 10)
+  Clock Path Skew:      0.006ns (0.524 - 0.518)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 39.721ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.green_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X68Y98.YQ      Tcko                  0.676   sgnal_pm/siggen_pos_x<1>
+                                                       sgnal_pm/siggen_pos_x_0
+    SLICE_X62Y110.G2     net (fanout=28)       2.435   sgnal_pm/siggen_pos_x<0>
+    SLICE_X62Y110.Y      Tilo                  0.707   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/number_colour_out_blue<0>2211
+    SLICE_X60Y111.G2     net (fanout=1)        0.428   paint_pm/score_pm/Msub_num_sub0001_Madd_cy<1>
+    SLICE_X60Y111.Y      Tilo                  0.707   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/Msub_num_sub0001_Madd_xor<4>11
+    SLICE_X60Y111.F3     net (fanout=5)        0.211   paint_pm/score_pm/num_sub0001<4>
+    SLICE_X60Y111.X      Tilo                  0.692   paint_pm/score_pm/N142
+                                                       paint_pm/score_pm/number_colour_out_blue<0>31211
+    SLICE_X62Y110.F2     net (fanout=4)        0.431   paint_pm/score_pm/N142
+    SLICE_X62Y110.X      Tilo                  0.692   paint_pm/score_pm/num_cmp_eq0005
+                                                       paint_pm/score_pm/num_cmp_eq00051
+    SLICE_X69Y120.F2     net (fanout=3)        1.715   paint_pm/score_pm/num_cmp_eq0005
+    SLICE_X69Y120.X      Tif5x                 0.924   paint_pm/score_pm/number_colour_out_blue<0>140
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140_G
+                                                       paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.G3     net (fanout=1)        0.736   paint_pm/score_pm/number_colour_out_blue<0>140
+    SLICE_X66Y117.Y      Tilo                  0.707   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>224
+    SLICE_X66Y117.F3     net (fanout=1)        0.043   paint_pm/score_pm/number_colour_out_blue<0>224/O
+    SLICE_X66Y117.X      Tilo                  0.692   paint_pm/score_pm/number_colour_out_blue<0>248
+                                                       paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.G1     net (fanout=1)        0.767   paint_pm/score_pm/number_colour_out_blue<0>248
+    SLICE_X61Y113.Y      Tilo                  0.648   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>977
+    SLICE_X61Y113.F4     net (fanout=1)        0.044   paint_pm/score_pm/number_colour_out_blue<0>977/O
+    SLICE_X61Y113.X      Tilo                  0.643   paint_pm/number_colour_blue<0>
+                                                       paint_pm/score_pm/number_colour_out_blue<0>1054
+    SLICE_X65Y120.G2     net (fanout=3)        1.007   paint_pm/number_colour_blue<0>
+    SLICE_X65Y120.CLK    Tgck                  0.727   final_colour.red_0
+                                                       paint_pm/pxlgen_colour_out_green<1>11
+                                                       final_colour.green_1
+    -------------------------------------------------  ---------------------------
+    Total                                     15.632ns (7.815ns logic, 7.817ns route)
+                                                       (50.0% logic, 50.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -189,7 +204,7 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |   13.762|         |         |         |
+clk_in         |   15.705|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -198,23 +213,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 3104 paths, 0 nets, and 1286 connections
+Constraints cover 3966 paths, 0 nets, and 1365 connections
 
 Design statistics:
-   Minimum period:  13.762ns{1}   (Maximum frequency:  72.664MHz)
+   Minimum period:  15.705ns{1}   (Maximum frequency:  63.674MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Jul  8 15:21:54 2015 
+Analysis completed Wed Jul  8 15:31:17 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 174 MB
+Peak Memory Usage: 175 MB
 
 
 
