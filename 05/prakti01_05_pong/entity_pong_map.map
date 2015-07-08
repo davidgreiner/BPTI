@@ -11,7 +11,7 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Jul  8 14:04:44 2015
+Mapped Date    : Wed Jul  8 14:51:03 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,25 +23,25 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    4
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           172 out of  33,280    1%
-  Number of 4 input LUTs:             1,318 out of  33,280    3%
+  Number of Slice Flip Flops:           228 out of  33,280    1%
+  Number of 4 input LUTs:             1,096 out of  33,280    3%
 Logic Distribution:
-  Number of occupied Slices:            832 out of  16,640    5%
-    Number of Slices containing only related logic:     832 out of     832 100%
-    Number of Slices containing unrelated logic:          0 out of     832   0%
+  Number of occupied Slices:            688 out of  16,640    4%
+    Number of Slices containing only related logic:     688 out of     688 100%
+    Number of Slices containing unrelated logic:          0 out of     688   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,609 out of  33,280    4%
-    Number used as logic:             1,318
-    Number used as a route-thru:        291
+  Total Number of 4 input LUTs:       1,325 out of  33,280    3%
+    Number used as logic:             1,096
+    Number used as a route-thru:        229
   Number of bonded IOBs:                 19 out of     519    3%
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DSP48As:                      4 out of      84    4%
 
-Peak Memory Usage:  236 MB
-Total REAL time to MAP completion:  16 secs 
-Total CPU time to MAP completion:   11 secs 
+Peak Memory Usage:  234 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   10 secs 
 
 NOTES:
 

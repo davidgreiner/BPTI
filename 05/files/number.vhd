@@ -10,7 +10,7 @@ entity entity_number is
 
         number_start_x_in   : in integer range 0 to 640;
         number_start_y_in   : in integer range 0 to 480;
-
+	
         number_score_in     : in score;
 
 
@@ -192,10 +192,11 @@ begin
 		        end if;
 
 		        if(number_pos_x_in >= number_start_x_in + shift_x and number_pos_y_in >= number_start_y_in and number_pos_x_in < number_start_x_in + 8 + shift_x and number_pos_y_in < number_start_y_in + 12) then
-		            if(num(number_pos_x_in - number_start_x_in, number_pos_y_in - number_start_y_in) = '1') then
-		                number_colour_out <= colour_min;
-		            else
+		            if(num(number_pos_y_in - number_start_y_in, number_pos_x_in - number_start_x_in) = '1') then
 		                number_colour_out <= colour_max;
+		                exit;
+		            else
+		                number_colour_out <= colour_min;
 		                exit;
 		            end if;
 		        else
