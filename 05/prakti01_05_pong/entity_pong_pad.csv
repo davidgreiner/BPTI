@@ -1,7 +1,7 @@
 #Release 10.1.02 - par K.37 (lin)
 #Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-#Wed Jul  8 14:52:02 2015
+#Wed Jul  8 15:21:43 2015
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -276,9 +276,9 @@ D20,,DIFFMTB,IO_L11P_0,UNUSED,,0,,,,,,,,,,
 D21,,DIFFSTB,IO_L10N_0,UNUSED,,0,,,,,,,,,,
 D22,,DIFFMTB,IO_L05P_0,UNUSED,,0,,,,,,,,,,
 D23,,DIFFMTB,IO_L06P_0,UNUSED,,0,,,,,,,,,,
-D24,hardcore,IBUF,IO_L61N_1,INPUT,LVCMOS25*,1,,,,IBUF,,,,NO,NONE,
+D24,,DIFFSLR,IO_L61N_1,UNUSED,,1,,,,,,,,,,
 D25,,DIFFMLR,IO_L61P_1,UNUSED,,1,,,,,,,,,,
-D26,,DIFFSLR,IO_L60N_1,UNUSED,,1,,,,,,,,,,
+D26,hardcore,IBUF,IO_L60N_1,INPUT,LVCMOS25*,1,,,,IBUF,,,,NO,NONE,
 E1,,DIFFMLR,IO_L11P_3,UNUSED,,3,,,,,,,,,,
 E2,,,VCCO_3,,,3,,,,,any******,,,,,
 E3,,DIFFMLR,IO_L07P_3,UNUSED,,3,,,,,,,,,,

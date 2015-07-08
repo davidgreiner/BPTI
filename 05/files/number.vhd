@@ -190,9 +190,15 @@ begin
 		        else
 		            num := nine;
 		        end if;
+	
+	--x : 295
+	--y : 10
 
-		        if(number_pos_x_in >= number_start_x_in + shift_x and number_pos_y_in >= number_start_y_in and number_pos_x_in < number_start_x_in + 8 + shift_x and number_pos_y_in < number_start_y_in + 12) then
-		            if(num(number_pos_y_in - number_start_y_in, number_pos_x_in - number_start_x_in) = '1') then
+		        if (number_pos_x_in >= number_start_x_in + shift_x 
+		        and number_pos_x_in < number_start_x_in + shift_x + 8
+				and number_pos_y_in >= number_start_y_in
+				and number_pos_y_in < number_start_y_in + 12) then
+		            if(num(number_pos_y_in - number_start_y_in, number_pos_x_in - number_start_x_in - shift_x) = '1') then
 		                number_colour_out <= colour_max;
 		                exit;
 		            else
@@ -202,6 +208,8 @@ begin
 		        else
 		            number_colour_out <= colour_min;
 		        end if;
+		        
+		        shift_x := shift_x + 15;
 	        end loop;
         end if;
     end process;
