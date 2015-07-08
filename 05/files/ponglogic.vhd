@@ -147,7 +147,7 @@ begin
                 end if;
 
             -- Check collision border bottom
-            elsif((ball_position.y + ball_radius) > screen_dimension.height) then
+        elsif((ball_position.y + ball_radius) >= screen_dimension.height - border_width) then
                 ball_position.y := screen_dimension.height - ball_radius - 1;
 
                 if(pong_hardcore = '1') then
@@ -157,7 +157,7 @@ begin
                 end if;
 
             -- Check collision border top
-            elsif ((ball_position.y - ball_radius) < 0) then
+            elsif ((ball_position.y - ball_radius) < border_width) then
                 ball_position.y := ball_radius + 1;
 
                 if(pong_hardcore = '1') then
