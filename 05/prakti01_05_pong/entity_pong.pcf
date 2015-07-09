@@ -1,27 +1,28 @@
 //! **************************************************************************
-// Written by: Map K.37 on Thu Jul 09 14:29:02 2015
+// Written by: Map K.37 on Thu Jul 09 15:11:55 2015
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "colour_red<0>" LOCATE = SITE "L20" LEVEL 1;
-COMP "colour_red<1>" LOCATE = SITE "K20" LEVEL 1;
-COMP "colour_red<2>" LOCATE = SITE "F25" LEVEL 1;
-COMP "colour_red<3>" LOCATE = SITE "F24" LEVEL 1;
-COMP "rst" LOCATE = SITE "Y16" LEVEL 1;
-NET "clk_in_BUFGP/IBUFG" BEL "clk_in_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
-COMP "paddle_down" LOCATE = SITE "J17" LEVEL 1;
+COMP "paddle_down" LOCATE = SITE "J10" LEVEL 1;
+COMP "hardcore" LOCATE = SITE "A7" LEVEL 1;
 COMP "colour_blue<0>" LOCATE = SITE "L22" LEVEL 1;
 COMP "colour_blue<1>" LOCATE = SITE "K21" LEVEL 1;
 COMP "colour_blue<2>" LOCATE = SITE "G23" LEVEL 1;
 COMP "colour_blue<3>" LOCATE = SITE "G24" LEVEL 1;
 COMP "hsync" LOCATE = SITE "K26" LEVEL 1;
 COMP "clk_in" LOCATE = SITE "P26" LEVEL 1;
-COMP "paddle_up" LOCATE = SITE "J10" LEVEL 1;
+COMP "paddle_up" LOCATE = SITE "J17" LEVEL 1;
 COMP "colour_green<0>" LOCATE = SITE "M19" LEVEL 1;
 COMP "colour_green<1>" LOCATE = SITE "M18" LEVEL 1;
 COMP "colour_green<2>" LOCATE = SITE "J23" LEVEL 1;
 COMP "colour_green<3>" LOCATE = SITE "J22" LEVEL 1;
 COMP "vsync" LOCATE = SITE "K25" LEVEL 1;
+COMP "colour_red<0>" LOCATE = SITE "L20" LEVEL 1;
+COMP "colour_red<1>" LOCATE = SITE "K20" LEVEL 1;
+COMP "colour_red<2>" LOCATE = SITE "F25" LEVEL 1;
+COMP "reflection" LOCATE = SITE "G16" LEVEL 1;
+COMP "colour_red<3>" LOCATE = SITE "F24" LEVEL 1;
+COMP "rst" LOCATE = SITE "Y16" LEVEL 1;
 TIMEGRP clk_in = BEL "rslve_pm/rslv_colour_red_3" BEL
         "rslve_pm/rslv_colour_green_3" BEL "rslve_pm/rslv_colour_green_2" BEL
         "sgnal_pm/vsync_counter_8" BEL "sgnal_pm/vsync_counter_7" BEL

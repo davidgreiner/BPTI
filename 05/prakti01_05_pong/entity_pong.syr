@@ -119,7 +119,8 @@ Architecture architecture_border of Entity entity_border is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" in Library work.
 Architecture architecture_number of Entity entity_number is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" in Library work.
-Architecture architecture_ponglogic of Entity entity_ponglogic is up to date.
+Entity <entity_ponglogic> compiled.
+Entity <entity_ponglogic> (Architecture <architecture_ponglogic>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/signalgenerator.vhd" in Library work.
 Architecture architecture_signalgenerator of Entity entity_signalgenerator is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" in Library work.
@@ -198,86 +199,104 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <entity_ponglogic>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd".
+WARNING:Xst:653 - Signal <paddle_quart3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <paddle_quart2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <paddle_quart1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
 WARNING:Xst:653 - Signal <paddle_position.x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 57: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 57: The result of a 4x5-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 57: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 58: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 58: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 58: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 58: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-    Found 4x5-bit multiplier for signal <$mult0000> created at line 57.
-    Found 4x4-bit multiplier for signal <$mult0002> created at line 57.
-    Found 4x4-bit multiplier for signal <$mult0003> created at line 57.
-    Found 4x4-bit multiplier for signal <$mult0004> created at line 58.
-    Found 4x3-bit multiplier for signal <$mult0005> created at line 58.
-    Found 9-bit adder for signal <add0000$addsub0000> created at line 57.
-    Found 9-bit subtractor for signal <add0000$addsub0001> created at line 57.
-    Found 9-bit adder carry out for signal <add0000$addsub0002> created at line 57.
-    Found 8-bit adder for signal <add0001$addsub0000> created at line 58.
-    Found 8-bit adder carry out for signal <add0001$addsub0001> created at line 58.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x5-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 4x5-bit multiplier for signal <$mult0000> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0002> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0003> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0004> created at line 63.
+    Found 4x3-bit multiplier for signal <$mult0005> created at line 63.
+    Found 9-bit adder for signal <add0000$addsub0000> created at line 62.
+    Found 9-bit subtractor for signal <add0000$addsub0001> created at line 62.
+    Found 9-bit adder carry out for signal <add0000$addsub0002> created at line 62.
+    Found 8-bit adder for signal <add0001$addsub0000> created at line 63.
+    Found 8-bit adder carry out for signal <add0001$addsub0001> created at line 63.
     Found 32-bit register for signal <ball_position.x>.
-    Found 32-bit adder for signal <ball_position.x$add0000> created at line 81.
-    Found 32-bit adder for signal <ball_position.x$addsub0000> created at line 92.
-    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0000> created at line 86.
-    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0001> created at line 122.
-    Found 32-bit comparator lessequal for signal <ball_position.x$cmp_le0000> created at line 116.
-    Found 11-bit subtractor for signal <ball_position.x$sub0000> created at line 57.
+    Found 32-bit adder for signal <ball_position.x$add0000> created at line 86.
+    Found 32-bit adder for signal <ball_position.x$addsub0000> created at line 94.
+    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0000> created at line 147.
+    Found 32-bit comparator lessequal for signal <ball_position.x$cmp_le0000> created at line 141.
+    Found 11-bit subtractor for signal <ball_position.x$sub0000> created at line 62.
     Found 32-bit register for signal <ball_position.y>.
-    Found 11-bit adder for signal <ball_position.y$add0000> created at line 58.
-    Found 32-bit adder for signal <ball_position.y$add0001> created at line 80.
-    Found 4x3-bit multiplier for signal <ball_position.y$mult0000> created at line 58.
-    Found 10-bit subtractor for signal <ball_position.y$sub0000> created at line 58.
+    Found 11-bit adder for signal <ball_position.y$add0000> created at line 63.
+    Found 32-bit comparator greatequal for signal <ball_position.y$cmp_ge0000> created at line 166.
+    Found 4x3-bit multiplier for signal <ball_position.y$mult0000> created at line 63.
+    Found 10-bit subtractor for signal <ball_position.y$sub0000> created at line 63.
     Found 32-bit register for signal <ball_vector.x>.
-    Found 32-bit comparator lessequal for signal <ball_vector.x$cmp_le0000> created at line 122.
-    Found 32-bit adder for signal <ball_vector.x$mux0000> created at line 131.
+    Found 32-bit comparator greatequal for signal <ball_vector.x$cmp_ge0000> created at line 96.
+    Found 32-bit comparator lessequal for signal <ball_vector.x$cmp_le0000> created at line 96.
+    Found 32-bit comparator lessequal for signal <ball_vector.x$cmp_le0001> created at line 147.
+    Found 32-bit adder for signal <ball_vector.x$mux0000> created at line 156.
     Found 32-bit register for signal <ball_vector.y>.
-    Found 32-bit adder for signal <ball_vector.y$add0000> created at line 86.
-    Found 32-bit adder for signal <ball_vector.y$add0001> created at line 86.
-    Found 32-bit adder for signal <ball_vector.y$add0002> created at line 86.
-    Found 32-bit adder for signal <ball_vector.y$addsub0000> created at line 86.
-    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0000> created at line 139.
-    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0001> created at line 139.
-    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0002> created at line 145.
-    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0000> created at line 145.
-    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0001> created at line 139.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0000>.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0001>.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0002>.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0003>.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0006>.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_vector.y$mux0007>.
+    Found 32-bit adder for signal <ball_vector.y$add0000> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0001> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0002> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0004> created at line 114.
+    Found 32-bit adder for signal <ball_vector.y$add0005> created at line 118.
+    Found 32-bit adder for signal <ball_vector.y$add0006> created at line 85.
+    Found 32-bit adder for signal <ball_vector.y$addsub0000> created at line 91.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0000> created at line 166.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0001> created at line 113.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0002> created at line 104.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0003> created at line 174.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0000> created at line 91.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0001> created at line 91.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0002> created at line 105.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0003> created at line 170.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0004> created at line 182.
+    Found 32-bit comparator lessequal for signal <ball_vector.y$cmp_le0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <ball_vector.y$cmp_le0001> created at line 105.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0000> created at line 174.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0001> created at line 91.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0002> created at line 104.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0003> created at line 106.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0004> created at line 113.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0005> created at line 110.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0006> created at line 104.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0007> created at line 166.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0008> created at line 170.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0009> created at line 182.
+    Found 32-bit 8-to-1 multiplexer for signal <ball_vector.y$mux0009>.
     Found 32-bit adder for signal <ball_vector.y$share0000>.
-    Found 32-bit subtractor for signal <ball_vector.y$sub0000> created at line 86.
-    Found 32-bit subtractor for signal <ball_vector.y$sub0001> created at line 86.
-    Found 32-bit adder for signal <ball_vector.y$sub0002> created at line 94.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0000> created at line 91.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0001> created at line 91.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0002> created at line 103.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0003> created at line 106.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0004> created at line 110.
+    Found 32-bit adder for signal <ball_vector.y$sub0005> created at line 114.
     Found 1-bit register for signal <game_over>.
-    Found 32-bit comparator greater for signal <game_over$cmp_gt0000> created at line 86.
-    Found 32-bit comparator greater for signal <game_over$cmp_gt0001> created at line 86.
-    Found 32-bit comparator greater for signal <game_over$cmp_gt0002> created at line 116.
-    Found 32-bit comparator lessequal for signal <game_over$cmp_le0000> created at line 86.
-    Found 32-bit comparator less for signal <game_over$cmp_lt0000> created at line 86.
-    Found 4x4-bit multiplier for signal <mult0001$mult0000> created at line 57.
-    Found 4x3-bit multiplier for signal <mult0006$mult0000> created at line 58.
+    Found 32-bit comparator greater for signal <game_over$cmp_gt0000> created at line 91.
+    Found 32-bit comparator greater for signal <game_over$cmp_gt0001> created at line 141.
+    Found 4x4-bit multiplier for signal <mult0001$mult0000> created at line 62.
+    Found 4x3-bit multiplier for signal <mult0006$mult0000> created at line 63.
     Found 32-bit register for signal <paddle_position.y>.
-    Found 32-bit adder for signal <paddle_position.y$addsub0000> created at line 75.
-    Found 32-bit comparator greatequal for signal <paddle_position.y$cmp_ge0000> created at line 67.
-    Found 32-bit comparator less for signal <paddle_position.y$cmp_lt0000> created at line 74.
+    Found 32-bit adder for signal <paddle_position.y$addsub0000> created at line 80.
+    Found 32-bit comparator greatequal for signal <paddle_position.y$cmp_ge0000> created at line 72.
+    Found 32-bit comparator less for signal <paddle_position.y$cmp_lt0000> created at line 79.
     Found 32-bit 4-to-1 multiplexer for signal <paddle_position.y$mux0000>.
-    Found 32-bit 8-to-1 multiplexer for signal <paddle_position.y$mux0002> created at line 73.
-    Found 32-bit subtractor for signal <paddle_position.y$sub0000> created at line 68.
+    Found 32-bit 8-to-1 multiplexer for signal <paddle_position.y$mux0002> created at line 78.
+    Found 32-bit subtractor for signal <paddle_position.y$sub0000> created at line 73.
     Found 4-bit up counter for signal <points>.
-    Found 32-bit comparator greatequal for signal <points_0$cmp_ge0000> created at line 86.
-    Found 32-bit comparator greater for signal <points_0$cmp_gt0000> created at line 86.
-    Found 32-bit comparator lessequal for signal <points_0$cmp_le0000> created at line 86.
-    Found 32-bit comparator lessequal for signal <points_0$cmp_le0001> created at line 86.
+    Found 32-bit comparator greatequal for signal <points_0$cmp_ge0000> created at line 91.
+    Found 32-bit comparator greater for signal <points_0$cmp_gt0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <points_0$cmp_le0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <points_0$cmp_le0001> created at line 91.
     Summary:
 	inferred   4 Counter(s).
 	inferred  33 D-type flip-flop(s).
-	inferred  22 Adder/Subtractor(s).
+	inferred  27 Adder/Subtractor(s).
 	inferred   8 Multiplier(s).
-	inferred  20 Comparator(s).
-	inferred 256 Multiplexer(s).
+	inferred  35 Comparator(s).
+	inferred  96 Multiplexer(s).
 Unit <entity_ponglogic> synthesized.
 
 
@@ -418,12 +437,12 @@ Macro Statistics
  4x3-bit multiplier                                    : 3
  4x4-bit multiplier                                    : 4
  4x5-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 33
+# Adders/Subtractors                                   : 38
  10-bit subtractor                                     : 2
  11-bit adder                                          : 1
  11-bit subtractor                                     : 2
- 32-bit adder                                          : 18
- 32-bit subtractor                                     : 5
+ 32-bit adder                                          : 20
+ 32-bit subtractor                                     : 8
  8-bit adder                                           : 1
  8-bit adder carry out                                 : 1
  9-bit adder                                           : 1
@@ -438,22 +457,22 @@ Macro Statistics
  32-bit register                                       : 5
  4-bit register                                        : 6
  9-bit register                                        : 1
-# Comparators                                          : 47
+# Comparators                                          : 62
  10-bit comparator greatequal                          : 4
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 1
  10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 3
- 32-bit comparator greatequal                          : 9
- 32-bit comparator greater                             : 8
- 32-bit comparator less                                : 7
- 32-bit comparator lessequal                           : 7
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 11
+ 32-bit comparator less                                : 14
+ 32-bit comparator lessequal                           : 9
  9-bit comparator greatequal                           : 1
  9-bit comparator less                                 : 1
-# Multiplexers                                         : 13
+# Multiplexers                                         : 8
  1-bit 8-to-1 multiplexer                              : 1
- 32-bit 4-to-1 multiplexer                             : 7
- 32-bit 8-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 2
  8-bit 12-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -494,9 +513,9 @@ Macro Statistics
 # Multipliers                                          : 3
  4x3-bit multiplier                                    : 1
  4x4-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 28
- 32-bit adder                                          : 18
- 32-bit subtractor                                     : 5
+# Adders/Subtractors                                   : 33
+ 32-bit adder                                          : 20
+ 32-bit subtractor                                     : 8
  4-bit subtractor                                      : 1
  6-bit subtractor                                      : 1
  8-bit adder                                           : 1
@@ -507,22 +526,22 @@ Macro Statistics
  4-bit up counter                                      : 4
 # Registers                                            : 142
  Flip-Flops                                            : 142
-# Comparators                                          : 47
+# Comparators                                          : 62
  10-bit comparator greatequal                          : 4
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 1
  10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 3
- 32-bit comparator greatequal                          : 9
- 32-bit comparator greater                             : 8
- 32-bit comparator less                                : 7
- 32-bit comparator lessequal                           : 7
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 11
+ 32-bit comparator less                                : 14
+ 32-bit comparator lessequal                           : 9
  9-bit comparator greatequal                           : 1
  9-bit comparator less                                 : 1
-# Multiplexers                                         : 13
+# Multiplexers                                         : 8
  1-bit 8-to-1 multiplexer                              : 1
- 32-bit 4-to-1 multiplexer                             : 7
- 32-bit 8-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 2
  8-bit 12-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -530,6 +549,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <paddle_position.y_0> has a constant value of 0 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <entity_pong> ...
 
@@ -553,7 +573,7 @@ INFO:Xst:2261 - The FF/Latch <final_colour.blue_0> in Unit <entity_pong> is equi
 INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_3> in Unit <entity_pong> is equivalent to the following FF/Latch, which will be removed : <rslve_pm/rslv_colour_green_1> 
 INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_2> in Unit <entity_pong> is equivalent to the following 5 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_green_0> <rslve_pm/rslv_colour_blue_3> <rslve_pm/rslv_colour_blue_2> <rslve_pm/rslv_colour_blue_1> <rslve_pm/rslv_colour_blue_0> 
 INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_red_3> in Unit <entity_pong> is equivalent to the following 3 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_red_2> <rslve_pm/rslv_colour_red_1> <rslve_pm/rslv_colour_red_0> 
-Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 8.
 
 Final Macro Processing ...
 
@@ -561,8 +581,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 224
- Flip-Flops                                            : 224
+# Registers                                            : 223
+ Flip-Flops                                            : 223
 
 =========================================================================
 
@@ -588,40 +608,42 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : NO
 
 Design Statistics
-# IOs                              : 19
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 3529
+# BELS                             : 4257
 #      GND                         : 1
-#      INV                         : 249
-#      LUT1                        : 234
-#      LUT2                        : 329
-#      LUT2_L                      : 1
-#      LUT3                        : 172
-#      LUT3_D                      : 2
-#      LUT4                        : 809
-#      LUT4_D                      : 32
-#      LUT4_L                      : 11
-#      MUXCY                       : 899
-#      MUXF5                       : 142
+#      INV                         : 320
+#      LUT1                        : 240
+#      LUT2                        : 328
+#      LUT2_D                      : 2
+#      LUT2_L                      : 31
+#      LUT3                        : 289
+#      LUT3_D                      : 3
+#      LUT3_L                      : 4
+#      LUT4                        : 953
+#      LUT4_D                      : 60
+#      LUT4_L                      : 33
+#      MUXCY                       : 1082
+#      MUXF5                       : 140
 #      MUXF6                       : 34
 #      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 612
-# FlipFlops/Latches                : 224
+#      XORCY                       : 735
+# FlipFlops/Latches                : 223
 #      FD                          : 3
 #      FDC                         : 9
 #      FDCE                        : 88
 #      FDCPE                       : 64
-#      FDE                         : 53
+#      FDE                         : 52
 #      FDP                         : 1
 #      FDPE                        : 3
 #      FDRS                        : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
-#      IBUF                        : 4
+# IO Buffers                       : 19
+#      IBUF                        : 5
 #      OBUF                        : 14
 # DSPs                             : 4
 #      DSP48A                      : 4
@@ -632,11 +654,11 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                     1039  out of  16640     6%  
- Number of Slice Flip Flops:            224  out of  33280     0%  
- Number of 4 input LUTs:               1839  out of  33280     5%  
- Number of IOs:                          19
- Number of bonded IOBs:                  19  out of    519     3%  
+ Number of Slices:                     1253  out of  16640     7%  
+ Number of Slice Flip Flops:            223  out of  33280     0%  
+ Number of 4 input LUTs:               2263  out of  33280     6%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    519     3%  
  Number of GCLKs:                         2  out of     24     8%  
  Number of DSP48s:                        4  out of     84     4%  
 
@@ -662,7 +684,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clk_in                             | BUFGP                  | 47    |
-sgnal_pm/siggen_vsync1             | BUFG                   | 177   |
+sgnal_pm/siggen_vsync1             | BUFG                   | 176   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -670,11 +692,11 @@ Asynchronous Control Signals Information:
 ------------------------------------------------------------------------------+----------------------------------+-------+
 Control Signal                                                                | Buffer(FF name)                  | Load  |
 ------------------------------------------------------------------------------+----------------------------------+-------+
-logic_pm/ball_vector.x_Acst_inv(sgnal_pm/siggen_rst_in_inv1_INV_0:O)          | NONE(sgnal_pm/vsync_counter_6)   | 101   |
-logic_pm/ball_position.x_10__and0000(logic_pm/ball_position.x_10__and000011:O)| NONE(logic_pm/ball_position.x_10)| 22    |
-logic_pm/ball_position.x_10__and0001(logic_pm/ball_position.x_10__and000111:O)| NONE(logic_pm/ball_position.x_10)| 22    |
-logic_pm/ball_position.y_10__and0000(logic_pm/ball_position.y_10__and000011:O)| NONE(logic_pm/ball_position.y_27)| 22    |
-logic_pm/ball_position.y_10__and0001(logic_pm/ball_position.y_10__and000111:O)| NONE(logic_pm/ball_position.y_27)| 22    |
+logic_pm/ball_vector.x_Acst_inv(sgnal_pm/siggen_rst_in_inv1_INV_0:O)          | NONE(sgnal_pm/hsync_counter_5)   | 101   |
+logic_pm/ball_position.x_10__and0000(logic_pm/ball_position.x_10__and000011:O)| NONE(logic_pm/ball_position.x_12)| 22    |
+logic_pm/ball_position.x_10__and0001(logic_pm/ball_position.x_10__and000111:O)| NONE(logic_pm/ball_position.x_12)| 22    |
+logic_pm/ball_position.y_10__and0000(logic_pm/ball_position.y_10__and000011:O)| NONE(logic_pm/ball_position.y_28)| 22    |
+logic_pm/ball_position.y_10__and0001(logic_pm/ball_position.y_10__and000111:O)| NONE(logic_pm/ball_position.y_28)| 22    |
 logic_pm/ball_position.x_0__and0000(logic_pm/ball_position.x_0__and00001:O)   | NONE(logic_pm/ball_position.x_0) | 1     |
 logic_pm/ball_position.x_0__and0001(logic_pm/ball_position.x_0__and00011:O)   | NONE(logic_pm/ball_position.x_0) | 1     |
 logic_pm/ball_position.x_1__and0000(logic_pm/ball_position.x_1__and00001:O)   | NONE(logic_pm/ball_position.x_1) | 1     |
@@ -721,8 +743,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 24.359ns (Maximum Frequency: 41.053MHz)
-   Minimum input arrival time before clock: 21.223ns
+   Minimum period: 28.154ns (Maximum Frequency: 35.519MHz)
+   Minimum input arrival time before clock: 25.050ns
    Maximum output required time after clock: 5.780ns
    Maximum combinational path delay: No path found
 
@@ -733,7 +755,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
   Clock period: 13.467ns (frequency: 74.258MHz)
-  Total number of paths / destination ports: 4053 / 63
+  Total number of paths / destination ports: 4035 / 63
 -------------------------------------------------------------------------
 Delay:               13.467ns (Levels of Logic = 11)
   Source:            sgnal_pm/siggen_pos_y_1 (FF)
@@ -751,8 +773,8 @@ Delay:               13.467ns (Levels of Logic = 11)
      LUT3:I1->O            1   0.643   0.000  paint_pm/score_pm/number_colour_out_blue<0>7021 (paint_pm/score_pm/number_colour_out_blue<0>7021)
      MUXF5:I1->O           1   0.276   0.500  paint_pm/score_pm/number_colour_out_blue<0>702_f5 (paint_pm/score_pm/number_colour_out_blue<0>702)
      LUT4:I1->O            1   0.643   0.563  paint_pm/score_pm/number_colour_out_blue<0>729 (paint_pm/score_pm/number_colour_out_blue<0>729)
-     LUT4:I0->O            1   0.648   0.452  paint_pm/score_pm/number_colour_out_blue<0>927_SW0 (N240)
-     LUT3:I2->O            1   0.648   0.000  paint_pm/score_pm/number_colour_out_blue<0>936_F (N538)
+     LUT4:I0->O            1   0.648   0.452  paint_pm/score_pm/number_colour_out_blue<0>927_SW0 (N725)
+     LUT3:I2->O            1   0.648   0.000  paint_pm/score_pm/number_colour_out_blue<0>936_F (N992)
      MUXF5:I0->O           1   0.276   0.423  paint_pm/score_pm/number_colour_out_blue<0>936 (paint_pm/score_pm/number_colour_out_blue<0>936)
      LUT4:I3->O            1   0.648   0.423  paint_pm/score_pm/number_colour_out_blue<0>977 (paint_pm/score_pm/number_colour_out_blue<0>977)
      LUT4:I3->O            3   0.648   0.674  paint_pm/score_pm/number_colour_out_blue<0>1054 (paint_pm/number_colour_blue<0>)
@@ -764,78 +786,76 @@ Delay:               13.467ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sgnal_pm/siggen_vsync1'
-  Clock period: 24.359ns (frequency: 41.053MHz)
-  Total number of paths / destination ports: 872043011 / 353
+  Clock period: 28.154ns (frequency: 35.519MHz)
+  Total number of paths / destination ports: 19480156632 / 351
 -------------------------------------------------------------------------
-Delay:               24.359ns (Levels of Logic = 87)
-  Source:            logic_pm/paddle_position.y_0 (FF)
+Delay:               28.154ns (Levels of Logic = 85)
+  Source:            logic_pm/paddle_position.y_1 (FF)
   Destination:       logic_pm/ball_vector.y_31 (FF)
   Source Clock:      sgnal_pm/siggen_vsync1 rising
   Destination Clock: sgnal_pm/siggen_vsync1 rising
 
-  Data Path: logic_pm/paddle_position.y_0 to logic_pm/ball_vector.y_31
+  Data Path: logic_pm/paddle_position.y_1 to logic_pm/ball_vector.y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              6   0.591   0.812  logic_pm/paddle_position.y_0 (logic_pm/paddle_position.y_0)
-     LUT1:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<0>_rt (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<0> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1>)
+     FDE:C->Q              6   0.591   0.812  logic_pm/paddle_position.y_1 (logic_pm/paddle_position.y_1)
+     LUT4:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_lut<1> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<2> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<3> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           3   0.269   0.534  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7>)
-     LUT4_D:I3->O         12   0.648   1.041  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1)
-     LUT2:I1->O            2   0.643   0.450  logic_pm/Mmux_paddle_position.y_mux0000110111 (logic_pm/N0)
-     LUT4:I3->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<3> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<3>)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           4   0.269   0.590  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1_2 (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1_1)
+     LUT4_D:I3->O          4   0.648   0.730  logic_pm/Mmux_paddle_position.y_mux00003211 (logic_pm/paddle_position_y_mux0000<9>1)
+     LUT4:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<5>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8>)
      MUXCY:CI->O           3   0.269   0.563  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
-     LUT3:I2->O           10   0.648   0.885  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
-     LUT4:I3->O            1   0.648   0.000  logic_pm/Madd_ball_vector.y_add0002_lut<2> (logic_pm/Madd_ball_vector.y_add0002_lut<2>)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<2> (logic_pm/Madd_ball_vector.y_add0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<3> (logic_pm/Madd_ball_vector.y_add0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<4> (logic_pm/Madd_ball_vector.y_add0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<5> (logic_pm/Madd_ball_vector.y_add0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<6> (logic_pm/Madd_ball_vector.y_add0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<7> (logic_pm/Madd_ball_vector.y_add0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<8> (logic_pm/Madd_ball_vector.y_add0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<9> (logic_pm/Madd_ball_vector.y_add0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<10> (logic_pm/Madd_ball_vector.y_add0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<11> (logic_pm/Madd_ball_vector.y_add0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<12> (logic_pm/Madd_ball_vector.y_add0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<13> (logic_pm/Madd_ball_vector.y_add0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<14> (logic_pm/Madd_ball_vector.y_add0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<15> (logic_pm/Madd_ball_vector.y_add0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<16> (logic_pm/Madd_ball_vector.y_add0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<17> (logic_pm/Madd_ball_vector.y_add0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<18> (logic_pm/Madd_ball_vector.y_add0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<19> (logic_pm/Madd_ball_vector.y_add0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<20> (logic_pm/Madd_ball_vector.y_add0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<21> (logic_pm/Madd_ball_vector.y_add0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<22> (logic_pm/Madd_ball_vector.y_add0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<23> (logic_pm/Madd_ball_vector.y_add0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<24> (logic_pm/Madd_ball_vector.y_add0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<25> (logic_pm/Madd_ball_vector.y_add0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<26> (logic_pm/Madd_ball_vector.y_add0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<27> (logic_pm/Madd_ball_vector.y_add0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<28> (logic_pm/Madd_ball_vector.y_add0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<29> (logic_pm/Madd_ball_vector.y_add0002_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<30> (logic_pm/Madd_ball_vector.y_add0002_cy<30>)
-     XORCY:CI->O           1   0.844   0.500  logic_pm/Madd_ball_vector.y_add0002_xor<31> (logic_pm/ball_vector_y_add0002<31>)
-     LUT2:I1->O            1   0.643   0.000  logic_pm/Mcompar_game_over_cmp_lt0000_lut<31> (logic_pm/Mcompar_game_over_cmp_lt0000_lut<31>)
-     MUXCY:S->O           30   0.836   1.265  logic_pm/Mcompar_game_over_cmp_lt0000_cy<31> (logic_pm/Mcompar_game_over_cmp_lt0000_cy<31>)
-     LUT4:I3->O            1   0.648   0.563  logic_pm/Mmux_ball_vector.y_mux0007_2_f5_9 (logic_pm/ball_vector_y_mux0007<1>)
-     LUT1:I0->O            1   0.648   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<1>_rt (logic_pm/Madd_ball_vector.y_share0000_cy<1>_rt)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<1> (logic_pm/Madd_ball_vector.y_share0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<2> (logic_pm/Madd_ball_vector.y_share0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
+     LUT3_D:I2->O         16   0.648   1.037  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/Msub_ball_vector.y_sub0002_lut<1> (logic_pm/Msub_ball_vector.y_sub0002_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<1> (logic_pm/Msub_ball_vector.y_sub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<2> (logic_pm/Msub_ball_vector.y_sub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<3> (logic_pm/Msub_ball_vector.y_sub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<4> (logic_pm/Msub_ball_vector.y_sub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<5> (logic_pm/Msub_ball_vector.y_sub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<6> (logic_pm/Msub_ball_vector.y_sub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<7> (logic_pm/Msub_ball_vector.y_sub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<8> (logic_pm/Msub_ball_vector.y_sub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<9> (logic_pm/Msub_ball_vector.y_sub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<10> (logic_pm/Msub_ball_vector.y_sub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<11> (logic_pm/Msub_ball_vector.y_sub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<12> (logic_pm/Msub_ball_vector.y_sub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<13> (logic_pm/Msub_ball_vector.y_sub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<14> (logic_pm/Msub_ball_vector.y_sub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<15> (logic_pm/Msub_ball_vector.y_sub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<16> (logic_pm/Msub_ball_vector.y_sub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<17> (logic_pm/Msub_ball_vector.y_sub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<18> (logic_pm/Msub_ball_vector.y_sub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<19> (logic_pm/Msub_ball_vector.y_sub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<20> (logic_pm/Msub_ball_vector.y_sub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<21> (logic_pm/Msub_ball_vector.y_sub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<22> (logic_pm/Msub_ball_vector.y_sub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<23> (logic_pm/Msub_ball_vector.y_sub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<24> (logic_pm/Msub_ball_vector.y_sub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<25> (logic_pm/Msub_ball_vector.y_sub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<26> (logic_pm/Msub_ball_vector.y_sub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<27> (logic_pm/Msub_ball_vector.y_sub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<28> (logic_pm/Msub_ball_vector.y_sub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<29> (logic_pm/Msub_ball_vector.y_sub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<30> (logic_pm/Msub_ball_vector.y_sub0002_cy<30>)
+     XORCY:CI->O          39   0.844   1.264  logic_pm/Msub_ball_vector.y_sub0002_xor<31> (logic_pm/ball_vector_y_sub0002<31>)
+     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>)
+     MUXCY:S->O           48   0.836   1.270  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10> (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/ball_vector_y_mux0000<10>1_SW0 (N508)
+     LUT4:I3->O            6   0.648   0.672  logic_pm/ball_vector_y_mux0000<3>59 (logic_pm/ball_vector_y_mux0000<3>)
+     LUT4:I3->O            1   0.648   0.500  logic_pm/Mmux_ball_vector.y_mux000926_SW1 (N161)
+     LUT3:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_vector.y_mux000926 (logic_pm/ball_vector_y_mux0009<3>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<4> (logic_pm/Madd_ball_vector.y_share0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<5> (logic_pm/Madd_ball_vector.y_share0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<6> (logic_pm/Madd_ball_vector.y_share0000_cy<6>)
@@ -864,11 +884,11 @@ Delay:               24.359ns (Levels of Logic = 87)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<29> (logic_pm/Madd_ball_vector.y_share0000_cy<29>)
      MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<30> (logic_pm/Madd_ball_vector.y_share0000_cy<30>)
      XORCY:CI->O           1   0.844   0.423  logic_pm/Madd_ball_vector.y_share0000_xor<31> (logic_pm/ball_vector_y_share0000<31>)
-     LUT4:I3->O            1   0.648   0.000  logic_pm/Mmux_ball_vector.y_mux0006251 (logic_pm/ball_vector_y_mux0006<31>)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/ball_vector_y_mux0008<31>22 (logic_pm/ball_vector_y_mux0008<31>)
      FDCE:D                    0.252          logic_pm/ball_vector.y_31
     ----------------------------------------
-    Total                     24.359ns (17.323ns logic, 7.036ns route)
-                                       (71.1% logic, 28.9% route)
+    Total                     28.154ns (18.364ns logic, 9.790ns route)
+                                       (65.2% logic, 34.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
@@ -883,7 +903,7 @@ Offset:              2.455ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           132   0.849   1.294  rst_IBUF (rst_IBUF)
+     IBUF:I->O           133   0.849   1.294  rst_IBUF (rst_IBUF)
      FDE:CE                    0.312          sgnal_pm/siggen_pos_y_0
     ----------------------------------------
     Total                      2.455ns (1.161ns logic, 1.294ns route)
@@ -891,9 +911,9 @@ Offset:              2.455ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sgnal_pm/siggen_vsync1'
-  Total number of paths / destination ports: 16968102 / 273
+  Total number of paths / destination ports: 405120695 / 271
 -------------------------------------------------------------------------
-Offset:              21.223ns (Levels of Logic = 77)
+Offset:              25.050ns (Levels of Logic = 78)
   Source:            paddle_up (PAD)
   Destination:       logic_pm/ball_vector.y_31 (FF)
   Destination Clock: sgnal_pm/siggen_vsync1 rising
@@ -902,8 +922,8 @@ Offset:              21.223ns (Levels of Logic = 77)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            67   0.849   1.416  paddle_up_IBUF (paddle_up_IBUF)
-     LUT4:I0->O            3   0.648   0.674  logic_pm/Mmux_paddle_position.y_mux00002911 (logic_pm/paddle_position_y_mux0000<6>1)
+     IBUF:I->O            65   0.849   1.416  paddle_up_IBUF (paddle_up_IBUF)
+     LUT4:I0->O            5   0.648   0.776  logic_pm/Mmux_paddle_position.y_mux00002911 (logic_pm/paddle_position_y_mux0000<6>1)
      LUT3:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<4>)
      MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
@@ -911,45 +931,46 @@ Offset:              21.223ns (Levels of Logic = 77)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8>)
      MUXCY:CI->O           3   0.269   0.563  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
-     LUT3:I2->O           10   0.648   0.885  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
-     LUT4:I3->O            1   0.648   0.000  logic_pm/Madd_ball_vector.y_add0002_lut<2> (logic_pm/Madd_ball_vector.y_add0002_lut<2>)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<2> (logic_pm/Madd_ball_vector.y_add0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<3> (logic_pm/Madd_ball_vector.y_add0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<4> (logic_pm/Madd_ball_vector.y_add0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<5> (logic_pm/Madd_ball_vector.y_add0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<6> (logic_pm/Madd_ball_vector.y_add0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<7> (logic_pm/Madd_ball_vector.y_add0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<8> (logic_pm/Madd_ball_vector.y_add0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<9> (logic_pm/Madd_ball_vector.y_add0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<10> (logic_pm/Madd_ball_vector.y_add0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<11> (logic_pm/Madd_ball_vector.y_add0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<12> (logic_pm/Madd_ball_vector.y_add0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<13> (logic_pm/Madd_ball_vector.y_add0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<14> (logic_pm/Madd_ball_vector.y_add0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<15> (logic_pm/Madd_ball_vector.y_add0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<16> (logic_pm/Madd_ball_vector.y_add0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<17> (logic_pm/Madd_ball_vector.y_add0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<18> (logic_pm/Madd_ball_vector.y_add0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<19> (logic_pm/Madd_ball_vector.y_add0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<20> (logic_pm/Madd_ball_vector.y_add0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<21> (logic_pm/Madd_ball_vector.y_add0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<22> (logic_pm/Madd_ball_vector.y_add0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<23> (logic_pm/Madd_ball_vector.y_add0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<24> (logic_pm/Madd_ball_vector.y_add0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<25> (logic_pm/Madd_ball_vector.y_add0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<26> (logic_pm/Madd_ball_vector.y_add0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<27> (logic_pm/Madd_ball_vector.y_add0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<28> (logic_pm/Madd_ball_vector.y_add0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<29> (logic_pm/Madd_ball_vector.y_add0002_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_add0002_cy<30> (logic_pm/Madd_ball_vector.y_add0002_cy<30>)
-     XORCY:CI->O           1   0.844   0.500  logic_pm/Madd_ball_vector.y_add0002_xor<31> (logic_pm/ball_vector_y_add0002<31>)
-     LUT2:I1->O            1   0.643   0.000  logic_pm/Mcompar_game_over_cmp_lt0000_lut<31> (logic_pm/Mcompar_game_over_cmp_lt0000_lut<31>)
-     MUXCY:S->O           30   0.836   1.265  logic_pm/Mcompar_game_over_cmp_lt0000_cy<31> (logic_pm/Mcompar_game_over_cmp_lt0000_cy<31>)
-     LUT4:I3->O            1   0.648   0.563  logic_pm/Mmux_ball_vector.y_mux0007_2_f5_9 (logic_pm/ball_vector_y_mux0007<1>)
-     LUT1:I0->O            1   0.648   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<1>_rt (logic_pm/Madd_ball_vector.y_share0000_cy<1>_rt)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<1> (logic_pm/Madd_ball_vector.y_share0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<2> (logic_pm/Madd_ball_vector.y_share0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
+     LUT3_D:I2->O         16   0.648   1.037  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/Msub_ball_vector.y_sub0002_lut<1> (logic_pm/Msub_ball_vector.y_sub0002_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<1> (logic_pm/Msub_ball_vector.y_sub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<2> (logic_pm/Msub_ball_vector.y_sub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<3> (logic_pm/Msub_ball_vector.y_sub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<4> (logic_pm/Msub_ball_vector.y_sub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<5> (logic_pm/Msub_ball_vector.y_sub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<6> (logic_pm/Msub_ball_vector.y_sub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<7> (logic_pm/Msub_ball_vector.y_sub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<8> (logic_pm/Msub_ball_vector.y_sub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<9> (logic_pm/Msub_ball_vector.y_sub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<10> (logic_pm/Msub_ball_vector.y_sub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<11> (logic_pm/Msub_ball_vector.y_sub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<12> (logic_pm/Msub_ball_vector.y_sub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<13> (logic_pm/Msub_ball_vector.y_sub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<14> (logic_pm/Msub_ball_vector.y_sub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<15> (logic_pm/Msub_ball_vector.y_sub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<16> (logic_pm/Msub_ball_vector.y_sub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<17> (logic_pm/Msub_ball_vector.y_sub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<18> (logic_pm/Msub_ball_vector.y_sub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<19> (logic_pm/Msub_ball_vector.y_sub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<20> (logic_pm/Msub_ball_vector.y_sub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<21> (logic_pm/Msub_ball_vector.y_sub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<22> (logic_pm/Msub_ball_vector.y_sub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<23> (logic_pm/Msub_ball_vector.y_sub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<24> (logic_pm/Msub_ball_vector.y_sub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<25> (logic_pm/Msub_ball_vector.y_sub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<26> (logic_pm/Msub_ball_vector.y_sub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<27> (logic_pm/Msub_ball_vector.y_sub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<28> (logic_pm/Msub_ball_vector.y_sub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<29> (logic_pm/Msub_ball_vector.y_sub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<30> (logic_pm/Msub_ball_vector.y_sub0002_cy<30>)
+     XORCY:CI->O          39   0.844   1.264  logic_pm/Msub_ball_vector.y_sub0002_xor<31> (logic_pm/ball_vector_y_sub0002<31>)
+     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>)
+     MUXCY:S->O           48   0.836   1.270  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10> (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/ball_vector_y_mux0000<10>1_SW0 (N508)
+     LUT4:I3->O            6   0.648   0.672  logic_pm/ball_vector_y_mux0000<3>59 (logic_pm/ball_vector_y_mux0000<3>)
+     LUT4:I3->O            1   0.648   0.500  logic_pm/Mmux_ball_vector.y_mux000926_SW1 (N161)
+     LUT3:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_vector.y_mux000926 (logic_pm/ball_vector_y_mux0009<3>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<4> (logic_pm/Madd_ball_vector.y_share0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<5> (logic_pm/Madd_ball_vector.y_share0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<6> (logic_pm/Madd_ball_vector.y_share0000_cy<6>)
@@ -978,11 +999,11 @@ Offset:              21.223ns (Levels of Logic = 77)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<29> (logic_pm/Madd_ball_vector.y_share0000_cy<29>)
      MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<30> (logic_pm/Madd_ball_vector.y_share0000_cy<30>)
      XORCY:CI->O           1   0.844   0.423  logic_pm/Madd_ball_vector.y_share0000_xor<31> (logic_pm/ball_vector_y_share0000<31>)
-     LUT4:I3->O            1   0.648   0.000  logic_pm/Mmux_ball_vector.y_mux0006251 (logic_pm/ball_vector_y_mux0006<31>)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/ball_vector_y_mux0008<31>22 (logic_pm/ball_vector_y_mux0008<31>)
      FDCE:D                    0.252          logic_pm/ball_vector.y_31
     ----------------------------------------
-    Total                     21.223ns (14.934ns logic, 6.289ns route)
-                                       (70.4% logic, 29.6% route)
+    Total                     25.050ns (16.165ns logic, 8.885ns route)
+                                       (64.5% logic, 35.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
@@ -1006,15 +1027,15 @@ Offset:              5.780ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 58.00 secs
-Total CPU time to Xst completion: 54.15 secs
+Total REAL time to Xst completion: 71.00 secs
+Total CPU time to Xst completion: 66.62 secs
  
 --> 
 
 
-Total memory usage is 236944 kilobytes
+Total memory usage is 247056 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
 Number of infos    :   13 (   0 filtered)
 
