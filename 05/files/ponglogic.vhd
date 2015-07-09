@@ -107,11 +107,11 @@ architecture architecture_ponglogic of entity_ponglogic is
                             end if;
                         elsif (hit_y < paddle_quart2) then
                             if(ball_vector.y > -8) then
-                                ball_vector.y := ball_vector.y - 1;
+                                ball_vector.y := -ball_vector.y - 1;
                             end if;
                         elsif (hit_y < paddle_quart3) then
                             if(ball_vector.y < 8) then
-                                ball_vector.y := ball_vector.y + 1;
+                                ball_vector.y := -ball_vector.y + 1;
                             end if;
                         else
                             if(ball_vector.y < 8) then
