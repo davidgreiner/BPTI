@@ -86,12 +86,11 @@ architecture architecture_ponglogic of entity_ponglogic is
         if ball_position.x - ball_radius  <= paddle_position.x + paddle_dimension.width and ball_position.x + ball_radius > paddle_position.x
         and ball_position.y - ball_radius < paddle_position.y + paddle_dimension.height and ball_position.y + ball_radius > paddle_position.y then
 
+        ball_position.x := paddle_position.x + paddle_dimension.width + ball_radius;
           if(pong_hardcore = '1') then
             ball_vector.x := -2 * ball_vector.x;
           else
-            ball_position.x := paddle_position.x + paddle_dimension.width + ball_radius;
             ball_vector.x := -ball_vector.x;
-            ball_vector.y := -ball_vector.y;
 
           end if;
 
