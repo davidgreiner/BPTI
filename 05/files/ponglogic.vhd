@@ -12,6 +12,7 @@ entity entity_ponglogic is
   pong_paddle_down : in std_logic;
 
   pong_hardcore   : in std_logic;
+  pong_reflection : in std_logic;
 
   --#### Ball
   pong_ball_position : out position;
@@ -52,6 +53,10 @@ architecture architecture_ponglogic of entity_ponglogic is
     variable ball_vector : position := (1, 1);
     variable paddle_position : position := (paddle_x_distance, 240 - paddle_dimension.height / 2);
     variable game_over : std_logic := '0';
+    variable hit_y : integer := 0;
+    variable paddle_quart1 := paddle_dimension.height / 4;
+    variable paddle_quart2 := paddle_quart1 * 2;
+    variable paddle_quart3 := paddle_quart1 * 3;
     begin
       if (pong_reset = '0') then
         ball_position.x := 320 + 20 * points(0) - 10 * points(1) + 10 * points(2) - 15 * points(3);
@@ -65,14 +70,14 @@ architecture architecture_ponglogic of entity_ponglogic is
         -- Paddle up button pressed
         if(pong_paddle_up = '1') then
           if(paddle_position.y >= border_width) then
-            paddle_position.y := paddle_position.y - 1;
+            paddle_position.y := paddle_position.y - 2;
           end if;
         end if;
 
         -- Paddle down button pressed
         if(pong_paddle_down = '1') then
           if(paddle_position.y < (screen_dimension.height - paddle_dimension.height - border_width)) then
-            paddle_position.y := paddle_position.y + 1;
+            paddle_position.y := paddle_position.y + 2;
           end if;
         end if;
 
@@ -86,12 +91,42 @@ architecture architecture_ponglogic of entity_ponglogic is
         if ball_position.x - ball_radius  <= paddle_position.x + paddle_dimension.width and ball_position.x + ball_radius > paddle_position.x
         and ball_position.y - ball_radius < paddle_position.y + paddle_dimension.height and ball_position.y + ball_radius > paddle_position.y then
 
-        ball_position.x := paddle_position.x + paddle_dimension.width + ball_radius;
+          ball_position.x := paddle_position.x + paddle_dimension.width + ball_radius;
           if(pong_hardcore = '1') then
-            ball_vector.x := -2 * ball_vector.x;
+             if(ball_vector.x > -8 and ball_vector.x < 8) then
+                 ball_vector.x := -2 * ball_vector.x;
+             end if;
           else
             ball_vector.x := -ball_vector.x;
+          end if;
+          if(pong_reflection = '1') then
+              hit_y := ball_position.y - paddle_position.y;
+              if(hit_y < paddle_quart1) then
+                  if(ball_vector.y > -8) then
+                      ball_vector.y := ball_vector.y - 2;
+                  end if;
+              elsif (hit_y < paddle_quart2) then
+                  if(ball_vector.y > -8) then
+                      ball_vector.y := ball_vector.y - 1;
+                  end if;
+              elsif (hit_y < paddle_quart3) then
+                  if(ball_vector.y < 8) then
+                      ball_vector.y := ball_vector.y + 1;
+                  end if;
+              else
+                  if(ball_vector.y < 8) then
+                      ball_vector.y := ball_vector.y + 2;
+                  end if;
+              end if;
 
+                             -- hity = ballcentery - paddle[0].y)
+                             --  if (hity < 0) {
+                             -- hity = 0;
+                             -- } else if (hity > paddle[i].height) {
+                             -- hity = paddle[i].height;
+                             -- }
+                             -- hity -= paddle[i].height / 2.0f;
+            ball_vector.y := 2 * (hit_y)-- 2.0f * (hity / (paddle[i].height / 2.0f))
           end if;
 
           if(points(3) = 9) then
@@ -128,7 +163,9 @@ architecture architecture_ponglogic of entity_ponglogic is
           ball_position.x := screen_dimension.width - ball_radius - 1;
 
           if(pong_hardcore = '1') then
+              if(ball_vector.x > -8 and ball_vector.x < 8) then
             ball_vector.x := -2 * ball_vector.x;
+        end if;
           else
             ball_vector.x := -ball_vector.x;
           end if;
@@ -139,7 +176,9 @@ architecture architecture_ponglogic of entity_ponglogic is
           ball_position.y := screen_dimension.height - ball_radius - 1;
 
           if(pong_hardcore = '1') then
+              if(ball_vector.y > -8 and ball_vector.y < 8) then
             ball_vector.y := -2 * ball_vector.y;
+        end if;
           else
             ball_vector.y := -ball_vector.y;
           end if;
@@ -149,7 +188,9 @@ architecture architecture_ponglogic of entity_ponglogic is
           ball_position.y := ball_radius + 1;
 
           if(pong_hardcore = '1') then
+              if(ball_vector.y > -8 and ball_vector.y < 8) then
             ball_vector.y := -2 * ball_vector.y;
+        end if;
           else
             ball_vector.y := -ball_vector.y;
           end if;
