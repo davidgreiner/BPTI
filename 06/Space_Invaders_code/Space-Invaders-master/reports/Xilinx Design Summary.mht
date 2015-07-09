@@ -1,0 +1,396 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Xilinx Design Summary
+Date: Sun, 22 May 2011 19:41:35 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://X:\Papilio\workarea\Space_Invaders\scripts\invaders_top_summary.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16776
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Xilinx Design Summary</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16766"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#0000ee bgColor=3D#ffffff text=3D#000000 =
+vLink=3D#551a8b>
+<TABLE border=3D1 cellSpacing=3D0 cellPadding=3D3 width=3D"100%">
+  <TBODY>
+  <TR align=3Dmiddle bgColor=3D#99ccff>
+    <TD colSpan=3D4 align=3Dmiddle><B>invaders_top Project Status =
+(05/22/2011 -=20
+      19:39:59)</B></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Project File:</B></TD>
+    <TD>SpaceInvaders.xise</TD>
+    <TD bgColor=3D#ffff99><B>Parser Errors:</B></TD>
+    <TD>No Errors </TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Module Name:</B></TD>
+    <TD>invaders_top</TD>
+    <TD bgColor=3D#ffff99><B>Implementation State:</B></TD>
+    <TD>Placed and Routed</TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Target Device:</B></TD>
+    <TD>xc3s500e-4vq100</TD>
+    <TD bgColor=3D#ffff99>
+      <UL>
+        <LI><B>Errors:</B></LI></UL></TD>
+    <TD>No Errors</TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Product Version:</B></TD>
+    <TD>ISE 13.1</TD>
+    <TD bgColor=3D#ffff99>
+      <UL>
+        <LI><B>Warnings:</B></LI></UL></TD>
+    <TD align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/*.xmsg=
+s?&amp;DataKey=3DWarning">199=20
+      Warnings (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Design Goal:</B></DIF></TD>
+    <TD>Balanced</TD>
+    <TD bgColor=3D#ffff99>
+      <UL>
+        <LI><B>Routing Results:</B></LI></UL></TD>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+unroutes">All=20
+      Signals Completely Routed</A></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Design Strategy:</B></DIF></TD>
+    <TD><A=20
+      HREF_DISABLED=3D"Xilinx Default =
+(unlocked)?&amp;DataKey=3DStrategy">Xilinx=20
+      Default (unlocked)</A></TD>
+    <TD bgColor=3D#ffff99>
+      <UL>
+        <LI><B>Timing Constraints:</B></LI></UL></TD>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+ptwx?&amp;DataKey=3DConstraintsData">All=20
+      Constraints Met</A></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Environment:</B></DIF></TD>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+envsettings.html">System=20
+      Settings</A> </TD>
+    <TD bgColor=3D#ffff99>
+      <UL>
+        <LI><B>Final Timing Score:</B></LI></UL></TD>
+    <TD>0 &nbsp;<A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+twx?&amp;DataKey=3DXmlTimingReport">(Timing=20
+      Report)</A></TD></TR></TBODY></TABLE>&nbsp;<BR>
+<TABLE border=3D1 cellSpacing=3D0 cellPadding=3D3 width=3D"100%">
+  <TBODY>
+  <TR align=3Dmiddle bgColor=3D#99ccff>
+    <TD colSpan=3D5 align=3Dmiddle><B>Device Utilization =
+Summary</B></TD>
+    <TD width=3D"10%" align=3Dright><A=20
+      =
+HREF_DISABLED=3D"?&amp;ExpandedTable=3DDeviceUtilizationSummary"><B>[-]</=
+B></A></TD></TR>
+  <TR align=3Dmiddle bgColor=3D#ffff99>
+    <TD align=3Dleft><B>Logic Utilization</B></TD>
+    <TD><B>Used</B></TD>
+    <TD><B>Available</B></TD>
+    <TD><B>Utilization</B></TD>
+    <TD colSpan=3D2><B>Note(s)</B></TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of Slice Flip Flops</TD>
+    <TD align=3Dright>606</TD>
+    <TD align=3Dright>9,312</TD>
+    <TD align=3Dright>6%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of 4 input LUTs</TD>
+    <TD align=3Dright>2,015</TD>
+    <TD align=3Dright>9,312</TD>
+    <TD align=3Dright>21%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of occupied Slices</TD>
+    <TD align=3Dright>1,177</TD>
+    <TD align=3Dright>4,656</TD>
+    <TD align=3Dright>25%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number of Slices containing =
+only=20
+      related logic</TD>
+    <TD align=3Dright>1,177</TD>
+    <TD align=3Dright>1,177</TD>
+    <TD align=3Dright>100%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number of Slices containing =
+
+      unrelated logic</TD>
+    <TD align=3Dright>0</TD>
+    <TD align=3Dright>1,177</TD>
+    <TD align=3Dright>0%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Total Number of 4 input LUTs</TD>
+    <TD align=3Dright>2,131</TD>
+    <TD align=3Dright>9,312</TD>
+    <TD align=3Dright>22%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number used as logic</TD>
+    <TD align=3Dright>1,946</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number used as a =
+route-thru</TD>
+    <TD align=3Dright>116</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number used for Dual Port =
+RAMs</TD>
+    <TD align=3Dright>64</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Shift =
+registers</TD>
+    <TD align=3Dright>5</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of bonded <A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+map.xrpt?&amp;DataKey=3DIOBProperties">IOBs</A></TD>
+    <TD align=3Dright>14</TD>
+    <TD align=3Dright>66</TD>
+    <TD align=3Dright>21%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of RAMB16s</TD>
+    <TD align=3Dright>10</TD>
+    <TD align=3Dright>20</TD>
+    <TD align=3Dright>50%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of BUFGMUXs</TD>
+    <TD align=3Dright>3</TD>
+    <TD align=3Dright>24</TD>
+    <TD align=3Dright>12%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Number of DCMs</TD>
+    <TD align=3Dright>1</TD>
+    <TD align=3Dright>4</TD>
+    <TD align=3Dright>25%</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dright>
+    <TD align=3Dleft>Average Fanout of Non-Clock Nets</TD>
+    <TD align=3Dright>3.71</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR></TBODY></TABLE>&nbsp;<BR>
+<TABLE border=3D1 cellSpacing=3D0 cellPadding=3D3 width=3D"100%">
+  <TBODY>
+  <TR align=3Dmiddle bgColor=3D#99ccff>
+    <TD colSpan=3D4 align=3Dmiddle><B>Performance Summary</B></TD>
+    <TD width=3D"10%" align=3Dright><A=20
+      =
+HREF_DISABLED=3D"?&amp;ExpandedTable=3DPerformanceSummary"><B>[-]</B></A>=
+</TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Final Timing Score:</B></TD>
+    <TD>0 (Setup: 0, Hold: 0, Component Switching Limit: 0)</TD>
+    <TD bgColor=3D#ffff99><B>Pinout Data:</B></TD>
+    <TD colSpan=3D2><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+par.xrpt?&amp;DataKey=3DPinoutData">Pinout=20
+      Report</A></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Routing Results:</B></TD>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+unroutes">All=20
+      Signals Completely Routed</A></TD>
+    <TD bgColor=3D#ffff99><B>Clock Data:</B></TD>
+    <TD colSpan=3D2><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+par.xrpt?&amp;DataKey=3DClocksData">Clock=20
+      Report</A></TD></TR>
+  <TR align=3Dleft>
+    <TD bgColor=3D#ffff99><B>Timing Constraints:</B></TD>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+ptwx?&amp;DataKey=3DConstraintsData">All=20
+      Constraints Met</A></TD>
+    <TD bgColor=3D#ffff99><B>&nbsp;</B></TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR></TBODY></TABLE>&nbsp;<BR>
+<TABLE border=3D1 cellSpacing=3D0 cellPadding=3D3 width=3D"100%">
+  <TBODY>
+  <TR align=3Dmiddle bgColor=3D#99ccff>
+    <TD colSpan=3D6 align=3Dmiddle><B>Detailed Reports</B></TD>
+    <TD width=3D"10%" align=3Dright><A=20
+      =
+HREF_DISABLED=3D"?&amp;ExpandedTable=3DDetailedReports"><B>[-]</B></A></T=
+D></TR>
+  <TR bgColor=3D#ffff99>
+    <TD><B>Report Name</B></TD>
+    <TD><B>Status</B></TD>
+    <TD><B>Generated</B></TD>
+    <TD align=3Dleft><B>Errors</B></TD>
+    <TD align=3Dleft><B>Warnings</B></TD>
+    <TD colSpan=3D2 align=3Dleft><B>Infos</B></TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+syr">Synthesis=20
+      Report</A></TD>
+    <TD>Current</TD>
+    <TD>Sun May 22 19:37:47 2011</TD>
+    <TD align=3Dleft>0</TD>
+    <TD align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/xst.xm=
+sgs?&amp;DataKey=3DWarning">194=20
+      Warnings (0 new)</A></TD>
+    <TD colSpan=3D2 align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/xst.xm=
+sgs?&amp;DataKey=3DInfo">8=20
+      Infos (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+bld">Translation=20
+      Report</A></TD>
+    <TD>Current</TD>
+    <TD>Sun May 22 19:37:59 2011</TD>
+    <TD align=3Dleft>0</TD>
+    <TD align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/ngdbui=
+ld.xmsgs?&amp;DataKey=3DWarning">1=20
+      Warning (0 new)</A></TD>
+    <TD colSpan=3D2 align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/ngdbui=
+ld.xmsgs?&amp;DataKey=3DInfo">2=20
+      Infos (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+map.mrp">Map=20
+      Report</A></TD>
+    <TD>Current</TD>
+    <TD>Sun May 22 19:38:13 2011</TD>
+    <TD align=3Dleft>0</TD>
+    <TD align=3Dleft>0</TD>
+    <TD colSpan=3D2 align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/map.xm=
+sgs?&amp;DataKey=3DInfo">5=20
+      Infos (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+par">Place=20
+      and Route Report</A></TD>
+    <TD>Current</TD>
+    <TD>Sun May 22 19:39:09 2011</TD>
+    <TD align=3Dleft>0</TD>
+    <TD align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/par.xm=
+sgs?&amp;DataKey=3DWarning">2=20
+      Warnings (0 new)</A></TD>
+    <TD colSpan=3D2 align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/par.xm=
+sgs?&amp;DataKey=3DInfo">2=20
+      Infos (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD>Power Report</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top.=
+twr">Post-PAR=20
+      Static Timing Report</A></TD>
+    <TD>Current</TD>
+    <TD>Sun May 22 19:39:22 2011</TD>
+    <TD align=3Dleft>0</TD>
+    <TD align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/trce.x=
+msgs?&amp;DataKey=3DWarning">2=20
+      Warnings (0 new)</A></TD>
+    <TD colSpan=3D2 align=3Dleft><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\_xmsgs/trce.x=
+msgs?&amp;DataKey=3DInfo">4=20
+      Infos (0 new)</A></TD></TR>
+  <TR align=3Dleft>
+    <TD>Bitgen Report</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD colSpan=3D2>&nbsp;</TD></TR></TBODY></TABLE>&nbsp;<BR>
+<TABLE border=3D1 cellSpacing=3D0 cellPadding=3D3 width=3D"100%">
+  <TBODY>
+  <TR align=3Dmiddle bgColor=3D#99ccff>
+    <TD colSpan=3D3 align=3Dmiddle><B>Secondary Reports</B></TD>
+    <TD width=3D"10%" align=3Dright><A=20
+      =
+HREF_DISABLED=3D"?&amp;ExpandedTable=3DSecondaryReports"><B>[-]</B></A></=
+TD></TR>
+  <TR bgColor=3D#ffff99>
+    <TD><B>Report Name</B></TD>
+    <TD><B>Status</B></TD>
+    <TD colSpan=3D2><B>Generated</B></TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+preroute.twr">Post-Map=20
+      Static Timing Report</A></TD>
+    <TD>Out of Date</TD>
+    <TD colSpan=3D2>Sun May 22 19:19:17 2011</TD></TR>
+  <TR align=3Dleft>
+    <TD><A=20
+      =
+HREF_DISABLED=3D"X:/Papilio/workarea/Space_Invaders/scripts\invaders_top_=
+sta.nlf">Primetime=20
+      Netlist Report</A></TD>
+    <TD>Current</TD>
+    <TD colSpan=3D2>Sun May 22 19:39:56 =
+2011</TD></TR></TBODY></TABLE><BR>
+<CENTER><B>Date Generated:</B> 05/22/2011 - =
+19:39:59</CENTER></BODY></HTML>

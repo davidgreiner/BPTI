@@ -1,0 +1,383 @@
+//! **************************************************************************
+// Written by: Map O.40d on Sun May 22 19:38:10 2011
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN u_dblscan/u_ram_b.A_pins<12> = BEL "u_dblscan/u_ram_b.A" PINNAME CLKA;
+PIN u_dblscan/u_ram_a.A_pins<12> = BEL "u_dblscan/u_ram_a.A" PINNAME CLKA;
+TIMEGRP u_clocks_clk_dcm_op_dv = BEL "Buttons_0" BEL "Buttons_1" BEL
+        "Buttons_2" BEL "Overlay_G1_0" BEL "Buttons_3" BEL "Overlay_G2_0" BEL
+        "Buttons_4" BEL "Buttons_5" BEL "Tick1us" BEL "Overlay_R1_0" BEL
+        "HSync_t1" BEL "Overlay_G1_VCnt_0" BEL "u_dac/DACout_q" BEL "cnt_0"
+        BEL "cnt_1" BEL "cnt_2" BEL "cnt_3" BEL "HCnt_0" BEL "HCnt_1" BEL
+        "HCnt_2" BEL "HCnt_3" BEL "HCnt_4" BEL "HCnt_5" BEL "HCnt_6" BEL
+        "HCnt_7" BEL "HCnt_8" BEL "HCnt_9" BEL "HCnt_10" BEL "HCnt_11" BEL
+        "VCnt_0" BEL "VCnt_1" BEL "VCnt_2" BEL "VCnt_3" BEL "VCnt_4" BEL
+        "VCnt_5" BEL "VCnt_6" BEL "VCnt_7" BEL "VCnt_8" BEL "VCnt_9" BEL
+        "VCnt_10" BEL "VCnt_11" BEL "u_dac/SigmaLatch_q_0" BEL
+        "u_dac/SigmaLatch_q_1" BEL "u_dac/SigmaLatch_q_2" BEL
+        "u_dac/SigmaLatch_q_3" BEL "u_dac/SigmaLatch_q_4" BEL
+        "u_dac/SigmaLatch_q_5" BEL "u_dac/SigmaLatch_q_6" BEL
+        "u_dac/SigmaLatch_q_7" BEL "u_dac/SigmaLatch_q_8" BEL
+        "u_dac/SigmaLatch_q_9" BEL "kbd/RX_ShiftReg_0" BEL "kbd/RX_ShiftReg_1"
+        BEL "kbd/RX_ShiftReg_2" BEL "kbd/RX_ShiftReg_3" BEL
+        "kbd/RX_ShiftReg_4" BEL "kbd/RX_ShiftReg_5" BEL "kbd/RX_ShiftReg_6"
+        BEL "kbd/RX_ShiftReg_7" BEL "kbd/PS2_Clk_State" BEL "kbd/PS2_Data_s"
+        BEL "kbd/Cnt_31" BEL "kbd/Cnt_30" BEL "kbd/Cnt_29" BEL "kbd/Cnt_28"
+        BEL "kbd/Cnt_27" BEL "kbd/Cnt_26" BEL "kbd/Cnt_25" BEL "kbd/Cnt_24"
+        BEL "kbd/Cnt_23" BEL "kbd/Cnt_22" BEL "kbd/Cnt_21" BEL "kbd/Cnt_20"
+        BEL "kbd/Cnt_19" BEL "kbd/Cnt_18" BEL "kbd/Cnt_17" BEL "kbd/Cnt_16"
+        BEL "kbd/Cnt_15" BEL "kbd/Cnt_14" BEL "kbd/Cnt_13" BEL "kbd/Cnt_12"
+        BEL "kbd/Cnt_11" BEL "kbd/Cnt_10" BEL "kbd/Cnt_9" BEL "kbd/Cnt_8" BEL
+        "kbd/Cnt_7" BEL "kbd/Cnt_6" BEL "kbd/Cnt_5" BEL "kbd/Cnt_4" BEL
+        "kbd/Cnt_3" BEL "kbd/Cnt_2" BEL "kbd/Cnt_1" BEL "kbd/Cnt_0" BEL
+        "kbd/PS2_Clk_r_1" BEL "kbd/PS2_Data_r_1" BEL "kbd/RX_Release" BEL
+        "kbd/PS2_Clk_r_0" BEL "kbd/RX_Bit_Cnt_3" BEL "kbd/RX_Bit_Cnt_2" BEL
+        "kbd/RX_Bit_Cnt_1" BEL "kbd/RX_Bit_Cnt_0" BEL "kbd/PS2_Data_r_0" BEL
+        "kbd/PS2_Sample" BEL "kbd/Press" BEL "kbd/RX_Received" BEL
+        "kbd/Release" BEL "kbd/Reset" BEL "u_audio/miscnt1_7" BEL
+        "u_audio/miscnt1_6" BEL "u_audio/miscnt1_5" BEL "u_audio/miscnt1_4"
+        BEL "u_audio/miscnt1_3" BEL "u_audio/miscnt1_2" BEL
+        "u_audio/miscnt1_1" BEL "u_audio/miscnt1_0" BEL "u_audio/IHitTri_5"
+        BEL "u_audio/IHitTri_4" BEL "u_audio/IHitTri_3" BEL
+        "u_audio/IHitTri_2" BEL "u_audio/IHitTri_1" BEL "u_audio/SHitTri_5"
+        BEL "u_audio/SHitTri_4" BEL "u_audio/SHitTri_3" BEL
+        "u_audio/SHitTri_2" BEL "u_audio/SHitTri_1" BEL "u_audio/SHitTri_0"
+        BEL "u_audio/vco_cnt_3" BEL "u_audio/vco_cnt_2" BEL
+        "u_audio/vco_cnt_1" BEL "u_audio/vco_cnt_0" BEL "u_audio/Fnum_3" BEL
+        "u_audio/Fnum_2" BEL "u_audio/Fnum_1" BEL "u_audio/Fnum_0" BEL
+        "u_audio/bg_cnt_7" BEL "u_audio/bg_cnt_6" BEL "u_audio/bg_cnt_5" BEL
+        "u_audio/bg_cnt_4" BEL "u_audio/bg_cnt_3" BEL "u_audio/bg_cnt_2" BEL
+        "u_audio/bg_cnt_1" BEL "u_audio/bg_cnt_0" BEL "u_audio/SHCnt_8" BEL
+        "u_audio/SHCnt_7" BEL "u_audio/SHCnt_6" BEL "u_audio/SHCnt_5" BEL
+        "u_audio/SHCnt_4" BEL "u_audio/SHCnt_3" BEL "u_audio/SHCnt_2" BEL
+        "u_audio/SHCnt_1" BEL "u_audio/SHCnt_0" BEL "u_audio/ClkDiv2_7" BEL
+        "u_audio/ClkDiv2_6" BEL "u_audio/ClkDiv2_5" BEL "u_audio/ClkDiv2_4"
+        BEL "u_audio/ClkDiv2_3" BEL "u_audio/ClkDiv2_2" BEL
+        "u_audio/ClkDiv2_1" BEL "u_audio/ClkDiv2_0" BEL "u_audio/MisCnt_8" BEL
+        "u_audio/MisCnt_7" BEL "u_audio/MisCnt_6" BEL "u_audio/MisCnt_5" BEL
+        "u_audio/MisCnt_4" BEL "u_audio/MisCnt_3" BEL "u_audio/MisCnt_2" BEL
+        "u_audio/MisCnt_1" BEL "u_audio/MisCnt_0" BEL "u_audio/Excnt_9" BEL
+        "u_audio/Excnt_8" BEL "u_audio/Excnt_7" BEL "u_audio/Excnt_6" BEL
+        "u_audio/Excnt_5" BEL "u_audio/Excnt_4" BEL "u_audio/Excnt_3" BEL
+        "u_audio/Excnt_2" BEL "u_audio/Excnt_1" BEL "u_audio/Excnt_0" BEL
+        "u_audio/ClkDiv_10" BEL "u_audio/ClkDiv_9" BEL "u_audio/ClkDiv_8" BEL
+        "u_audio/ClkDiv_7" BEL "u_audio/ClkDiv_6" BEL "u_audio/ClkDiv_5" BEL
+        "u_audio/ClkDiv_4" BEL "u_audio/ClkDiv_3" BEL "u_audio/ClkDiv_2" BEL
+        "u_audio/ClkDiv_1" BEL "u_audio/ClkDiv_0" BEL "u_audio/IHCnt_8" BEL
+        "u_audio/IHCnt_7" BEL "u_audio/IHCnt_6" BEL "u_audio/IHCnt_5" BEL
+        "u_audio/IHCnt_4" BEL "u_audio/IHCnt_3" BEL "u_audio/IHCnt_2" BEL
+        "u_audio/IHCnt_1" BEL "u_audio/IHCnt_0" BEL "u_audio/Aud_6" BEL
+        "u_audio/Aud_5" BEL "u_audio/Aud_4" BEL "u_audio/TrigIH" BEL
+        "u_audio/comp" BEL "u_audio/ExShift_15" BEL "u_audio/ExShift_14" BEL
+        "u_audio/ExShift_13" BEL "u_audio/ExShift_12" BEL "u_audio/ExShift_11"
+        BEL "u_audio/ExShift_9" BEL "u_audio/ExShift_8" BEL
+        "u_audio/ExShift_10" BEL "u_audio/ExShift_7" BEL "u_audio/ExShift_6"
+        BEL "u_audio/ExShift_5" BEL "u_audio/ExShift_4" BEL
+        "u_audio/ExShift_3" BEL "u_audio/MisShift_9" BEL "u_audio/MisShift_8"
+        BEL "u_audio/ExShift_2" BEL "u_audio/ExShift_1" BEL
+        "u_audio/tempsum_6" BEL "u_audio/tempsum_5" BEL "u_audio/tempsum_4"
+        BEL "u_audio/MisShift_7" BEL "u_audio/ExShift_0" BEL
+        "u_audio/MisShift_6" BEL "u_audio/MisShift_5" BEL "u_audio/MisShift_4"
+        BEL "u_audio/SauHit_8" BEL "u_audio/SauHit_7" BEL "u_audio/SauHit_6"
+        BEL "u_audio/SauHit_5" BEL "u_audio/SauHit_4" BEL "u_audio/SauHit_3"
+        BEL "u_audio/SauHit_2" BEL "u_audio/SauHit_1" BEL "u_audio/SauHit_0"
+        BEL "u_audio/MisShift_15" BEL "u_audio/MisShift_14" BEL
+        "u_audio/MisShift_3" BEL "u_audio/MisShift_2" BEL
+        "u_audio/MisShift_13" BEL "u_audio/MisShift_12" BEL "u_audio/TrigMis"
+        BEL "u_audio/MisShift_11" BEL "u_audio/MisShift_1" BEL
+        "u_audio/MisShift_0" BEL "u_audio/MisShift_10" BEL "u_audio/InHit_8"
+        BEL "u_audio/InHit_7" BEL "u_audio/InHit_6" BEL "u_audio/InHit_5" BEL
+        "u_audio/InHit_4" BEL "u_audio/InHit_3" BEL "u_audio/InHit_2" BEL
+        "u_audio/InHit_1" BEL "u_audio/InHit_0" BEL "u_audio/TrigSH" BEL
+        "u_audio/IHDir" BEL "u_audio/TrigEx" BEL "u_audio/Missile" BEL
+        "u_audio/Clk480_ena" BEL "u_audio/s1_t1_3" BEL "u_audio/s1_t1_2" BEL
+        "u_audio/s1_t1_1" BEL "u_audio/SS" BEL "u_audio/Clk60_ena" BEL
+        "u_audio/SH_6" BEL "u_audio/SH_5" BEL "u_audio/SH_4" BEL
+        "u_audio/SH_3" BEL "u_audio/SH_2" BEL "u_audio/SH_1" BEL
+        "u_audio/SH_0" BEL "u_audio/Ex_2" BEL "u_audio/Ex_1" BEL
+        "u_audio/Ex_0" BEL "u_audio/s2_t1_4" BEL "u_audio/Clk7680_ena" BEL
+        "u_audio/Mis_2" BEL "u_audio/Mis_1" BEL "u_audio/Mis_0" BEL
+        "u_audio/IH_6" BEL "u_audio/IH_5" BEL "u_audio/IH_4" BEL
+        "u_audio/IH_3" BEL "u_audio/IH_2" BEL "u_audio/IH_1" BEL
+        "u_audio/IH_0" BEL "u_audio/TriDir1" BEL "u_audio/BG" BEL
+        "u_audio/IHDir1" BEL "u_dblscan/hpos_i_10" BEL "u_dblscan/hpos_i_9"
+        BEL "u_dblscan/hpos_i_8" BEL "u_dblscan/hpos_i_7" BEL
+        "u_dblscan/hpos_i_6" BEL "u_dblscan/hpos_i_5" BEL "u_dblscan/hpos_i_4"
+        BEL "u_dblscan/hpos_i_3" BEL "u_dblscan/hpos_i_2" BEL
+        "u_dblscan/hpos_i_1" BEL "u_dblscan/hpos_i_0" BEL
+        "u_dblscan/vsync_in_t1" BEL "u_dblscan/hsync_in_t1" BEL
+        "u_dblscan/ibank" BEL "core/u_mw8080/RR_2" BEL "core/u_mw8080/RR_1"
+        BEL "core/u_mw8080/RR_3" BEL "core/u_mw8080/RR_4" BEL
+        "core/u_mw8080/RR_5" BEL "core/u_mw8080/RR_6" BEL "core/u_mw8080/RR_7"
+        BEL "core/u_mw8080/RR_8" BEL "core/u_mw8080/RR_9" BEL
+        "core/u_mw8080/IntTrigOld" BEL "core/u_mw8080/Ready_i" BEL
+        "core/u_mw8080/Int_i" BEL "core/u_mw8080/VidEn" BEL
+        "core/u_mw8080/RR_0" BEL "core/u_mw8080/VSync" BEL
+        "core/u_mw8080/Shift_0" BEL "core/u_mw8080/Shift_3" BEL
+        "core/u_mw8080/Shift_1" BEL "core/u_mw8080/Shift_2" BEL
+        "core/u_mw8080/Shift_4" BEL "core/u_mw8080/Shift_5" BEL
+        "core/u_mw8080/Shift_6" BEL "core/u_mw8080/Shift_7" BEL
+        "core/u_mw8080/HSync" BEL "core/u_mw8080/OldASEL" BEL
+        "core/u_mw8080/Video" BEL "core/u_mw8080/Status_i_0" BEL
+        "core/u_mw8080/Status_i_4" BEL "core/u_mw8080/Status_i_6" BEL
+        "core/u_mw8080/CntD5_0" BEL "core/u_mw8080/CntD5_1" BEL
+        "core/u_mw8080/CntD5_2" BEL "core/u_mw8080/CntD5_3" BEL
+        "core/u_mw8080/CntE5_0" BEL "core/u_mw8080/CntE5_1" BEL
+        "core/u_mw8080/CntE5_2" BEL "core/u_mw8080/CntE5_3" BEL
+        "core/u_mw8080/CntE5_4" BEL "core/u_mw8080/CntE6_0" BEL
+        "core/u_mw8080/CntE6_1" BEL "core/u_mw8080/CntE6_2" BEL
+        "core/u_mw8080/CntE6_3" BEL "core/u_mw8080/CntE7_0" BEL
+        "core/u_mw8080/CntE7_1" BEL "core/u_mw8080/CntE7_2" BEL
+        "core/u_mw8080/CntE7_3" BEL "core/u_mw8080/CntE7_4" BEL
+        "core/u_mw8080/ClkEnCnt_0" BEL "core/u_mw8080/ClkEnCnt_1" BEL
+        "core/u_mw8080/ClkEnCnt_2" BEL "core/u_mw8080/u_8080/u0/PC_8" BEL
+        "core/u_mw8080/u_8080/u0/SP_3" BEL
+        "core/u_mw8080/u_8080/u0/Read_To_Reg_r_4" BEL
+        "core/u_mw8080/u_8080/u0/PC_9" BEL
+        "core/u_mw8080/u_8080/u0/ALU_Op_r_0" BEL
+        "core/u_mw8080/u_8080/u0/ALU_Op_r_1" BEL
+        "core/u_mw8080/u_8080/u0/ALU_Op_r_2" BEL
+        "core/u_mw8080/u_8080/u0/ALU_Op_r_3" BEL
+        "core/u_mw8080/u_8080/u0/IntCycle" BEL "core/u_mw8080/u_8080/u0/SP_4"
+        BEL "core/u_mw8080/u_8080/u0/SP_5" BEL "core/u_mw8080/u_8080/u0/PC_10"
+        BEL "core/u_mw8080/u_8080/u0/RegAddrC_0" BEL
+        "core/u_mw8080/u_8080/u0/RegAddrC_1" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_0" BEL "core/u_mw8080/u_8080/u0/SP_6"
+        BEL "core/u_mw8080/u_8080/u0/PC_11" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_1" BEL "core/u_mw8080/u_8080/u0/SP_7"
+        BEL "core/u_mw8080/u_8080/u0/PC_12" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_2" BEL "core/u_mw8080/u_8080/u0/SP_8"
+        BEL "core/u_mw8080/u_8080/u0/PC_13" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_3" BEL "core/u_mw8080/u_8080/u0/SP_9"
+        BEL "core/u_mw8080/u_8080/u0/PC_14" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_4" BEL
+        "core/u_mw8080/u_8080/u0/PC_15" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_5" BEL
+        "core/u_mw8080/u_8080/u0/BusA_0" BEL "core/u_mw8080/u_8080/u0/BusA_1"
+        BEL "core/u_mw8080/u_8080/u0/BusA_2" BEL
+        "core/u_mw8080/u_8080/u0/BusA_3" BEL "core/u_mw8080/u_8080/u0/BusA_4"
+        BEL "core/u_mw8080/u_8080/u0/BusA_5" BEL
+        "core/u_mw8080/u_8080/u0/BusA_6" BEL "core/u_mw8080/u_8080/u0/BusA_7"
+        BEL "core/u_mw8080/u_8080/u0/TmpAddr_6" BEL
+        "core/u_mw8080/u_8080/u0/ISet_0" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_7" BEL "core/u_mw8080/u_8080/u0/A_10"
+        BEL "core/u_mw8080/u_8080/u0/A_11" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_8" BEL "core/u_mw8080/u_8080/u0/IR_0"
+        BEL "core/u_mw8080/u_8080/u0/IR_1" BEL "core/u_mw8080/u_8080/u0/IR_2"
+        BEL "core/u_mw8080/u_8080/u0/IR_3" BEL "core/u_mw8080/u_8080/u0/IR_4"
+        BEL "core/u_mw8080/u_8080/u0/IR_5" BEL "core/u_mw8080/u_8080/u0/IR_6"
+        BEL "core/u_mw8080/u_8080/u0/IR_7" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_9" BEL "core/u_mw8080/u_8080/u0/A_12"
+        BEL "core/u_mw8080/u_8080/u0/A_13" BEL "core/u_mw8080/u_8080/u0/A_0"
+        BEL "core/u_mw8080/u_8080/u0/A_1" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_10" BEL "core/u_mw8080/u_8080/u0/A_2"
+        BEL "core/u_mw8080/u_8080/u0/ACC_0" BEL
+        "core/u_mw8080/u_8080/u0/ACC_1" BEL "core/u_mw8080/u_8080/u0/ACC_2"
+        BEL "core/u_mw8080/u_8080/u0/ACC_3" BEL
+        "core/u_mw8080/u_8080/u0/ACC_4" BEL "core/u_mw8080/u_8080/u0/ACC_5"
+        BEL "core/u_mw8080/u_8080/u0/ACC_6" BEL
+        "core/u_mw8080/u_8080/u0/ACC_7" BEL "core/u_mw8080/u_8080/u0/A_3" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_11" BEL "core/u_mw8080/u_8080/u0/A_4"
+        BEL "core/u_mw8080/u_8080/u0/TmpAddr_12" BEL
+        "core/u_mw8080/u_8080/u0/A_6" BEL "core/u_mw8080/u_8080/u0/A_5" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_13" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_14" BEL "core/u_mw8080/u_8080/u0/A_7"
+        BEL "core/u_mw8080/u_8080/u0/Auto_Wait_t1" BEL
+        "core/u_mw8080/u_8080/u0/TmpAddr_15" BEL "core/u_mw8080/u_8080/u0/A_8"
+        BEL "core/u_mw8080/u_8080/u0/A_9" BEL
+        "core/u_mw8080/u_8080/u0/IntE_FF1" BEL "core/u_mw8080/u_8080/u0/F_0"
+        BEL "core/u_mw8080/u_8080/u0/F_1" BEL "core/u_mw8080/u_8080/u0/DO_0"
+        BEL "core/u_mw8080/u_8080/u0/F_2" BEL "core/u_mw8080/u_8080/u0/DO_1"
+        BEL "core/u_mw8080/u_8080/u0/RegAddrA_r_0" BEL
+        "core/u_mw8080/u_8080/u0/RegAddrA_r_1" BEL
+        "core/u_mw8080/u_8080/u0/DO_2" BEL "core/u_mw8080/u_8080/u0/F_3" BEL
+        "core/u_mw8080/u_8080/u0/SP_10" BEL
+        "core/u_mw8080/u_8080/u0/Save_ALU_r" BEL
+        "core/u_mw8080/u_8080/u0/SP_11" BEL "core/u_mw8080/u_8080/u0/F_4" BEL
+        "core/u_mw8080/u_8080/u0/DO_3" BEL "core/u_mw8080/u_8080/u0/PC_0" BEL
+        "core/u_mw8080/u_8080/u0/F_5" BEL "core/u_mw8080/u_8080/u0/SP_12" BEL
+        "core/u_mw8080/u_8080/u0/DO_4" BEL "core/u_mw8080/u_8080/u0/PC_1" BEL
+        "core/u_mw8080/u_8080/u0/F_6" BEL "core/u_mw8080/u_8080/u0/SP_13" BEL
+        "core/u_mw8080/u_8080/u0/DO_5" BEL "core/u_mw8080/u_8080/u0/INT_s" BEL
+        "core/u_mw8080/u_8080/u0/PC_2" BEL "core/u_mw8080/u_8080/u0/F_7" BEL
+        "core/u_mw8080/u_8080/u0/SP_14" BEL "core/u_mw8080/u_8080/u0/DO_6" BEL
+        "core/u_mw8080/u_8080/u0/RegAddrB_r_0" BEL
+        "core/u_mw8080/u_8080/u0/RegAddrB_r_1" BEL
+        "core/u_mw8080/u_8080/u0/PC_3" BEL "core/u_mw8080/u_8080/u0/SP_15" BEL
+        "core/u_mw8080/u_8080/u0/DO_7" BEL "core/u_mw8080/u_8080/u0/PC_5" BEL
+        "core/u_mw8080/u_8080/u0/PC_4" BEL
+        "core/u_mw8080/u_8080/u0/Read_To_Reg_r_0" BEL
+        "core/u_mw8080/u_8080/u0/SP_0" BEL
+        "core/u_mw8080/u_8080/u0/Read_To_Reg_r_1" BEL
+        "core/u_mw8080/u_8080/u0/PC_6" BEL "core/u_mw8080/u_8080/u0/SP_1" BEL
+        "core/u_mw8080/u_8080/u0/Read_To_Reg_r_2" BEL
+        "core/u_mw8080/u_8080/u0/Halt_FF" BEL "core/u_mw8080/u_8080/u0/SP_2"
+        BEL "core/u_mw8080/u_8080/u0/PC_7" BEL
+        "core/u_mw8080/u_8080/u0/Read_To_Reg_r_3" BEL
+        "core/u_mw8080/u_8080/u0/Auto_Wait_t2" BEL
+        "core/u_mw8080/u_8080/u0/PreserveC_r" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_0" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_1" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_2" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_3" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_4" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_5" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_6" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_7" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_8" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_9" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_10" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_11" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_12" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_13" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_14" BEL
+        "core/u_mw8080/u_8080/u0/RegBusA_r_15" BEL
+        "core/u_mw8080/u_8080/u0/Arith16_r" BEL
+        "core/u_mw8080/u_8080/u0/MCycles_0" BEL
+        "core/u_mw8080/u_8080/u0/MCycles_1" BEL
+        "core/u_mw8080/u_8080/u0/MCycles_2" BEL
+        "core/u_mw8080/u_8080/u0/BusB_0" BEL "core/u_mw8080/u_8080/u0/BusB_1"
+        BEL "core/u_mw8080/u_8080/u0/BusB_2" BEL
+        "core/u_mw8080/u_8080/u0/BusB_3" BEL "core/u_mw8080/u_8080/u0/BusB_4"
+        BEL "core/u_mw8080/u_8080/u0/BusB_5" BEL
+        "core/u_mw8080/u_8080/u0/BusB_6" BEL "core/u_mw8080/u_8080/u0/BusB_7"
+        BEL "core/u_mw8080/u_8080/u0/MCycle_1" BEL
+        "core/u_mw8080/u_8080/u0/MCycle_0" BEL
+        "core/u_mw8080/u_8080/u0/MCycle_2" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren1.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren1.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren4.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren4.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren2.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren2.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren3.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren3.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren7.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren7.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren5.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren5.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren6.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren6.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL2.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL2.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren8.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL_ren8.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL1.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL1.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL5.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL5.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL3.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL3.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL4.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL4.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL8.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL8.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL6.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL6.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL7.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsL7.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren3.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren3.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren1.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren1.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren2.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren2.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren6.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren6.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren4.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren4.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren5.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren5.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH1.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH1.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren7.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren7.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren8.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH_ren8.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH4.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH4.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH2.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH2.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH3.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH3.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH7.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH7.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH5.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH5.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH6.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH6.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH8.SLICEM_F" BEL
+        "core/u_mw8080/u_8080/u0/Regs/Mram_RegsH8.SLICEM_G" BEL
+        "core/u_mw8080/u_8080/u0/TState_0" BEL
+        "core/u_mw8080/u_8080/u0/TState_1" BEL
+        "core/u_mw8080/u_8080/u0/TState_2" BEL "core/u_mw8080/u_8080/DI_Reg_7"
+        BEL "core/u_mw8080/u_8080/DI_Reg_6" BEL
+        "core/u_mw8080/u_8080/DI_Reg_5" BEL "core/u_mw8080/u_8080/DI_Reg_4"
+        BEL "core/u_mw8080/u_8080/DI_Reg_3" BEL
+        "core/u_mw8080/u_8080/DI_Reg_2" BEL "core/u_mw8080/u_8080/DI_Reg_1"
+        BEL "core/u_mw8080/u_8080/DI_Reg_0" BEL "core/u_mw8080/u_8080/WR_n"
+        BEL "core/WD_Cnt_7" BEL "core/WD_Cnt_6" BEL "core/WD_Cnt_5" BEL
+        "core/WD_Cnt_4" BEL "core/WD_Cnt_3" BEL "core/WD_Cnt_2" BEL
+        "core/WD_Cnt_1" BEL "core/WD_Cnt_0" BEL "core/Old_S0" BEL
+        "core/SoundCtrl5_4" BEL "core/SoundCtrl5_3" BEL "core/SoundCtrl5_2"
+        BEL "core/SoundCtrl5_1" BEL "core/SoundCtrl5_0" BEL
+        "core/SoundCtrl3_3" BEL "core/SoundCtrl3_2" BEL "core/SoundCtrl3_1"
+        BEL "core/SoundCtrl3_0" BEL "core/OldSample" BEL "core/D5_4" BEL
+        "core/D5_2" BEL "core/D5_1" BEL "core/D5_3" BEL "core/D5_7" BEL
+        "core/D5_6" BEL "core/D5_5" BEL "core/D5_14" BEL "core/D5_15" BEL
+        "core/D5_13" BEL "core/D5_12" BEL "core/D5_11" BEL "core/D5_10" BEL
+        "core/EA_2" BEL "core/EA_1" BEL "core/EA_0" BEL "core/D5_8" BEL
+        "core/D5_9" BEL "core/Rst_n_s_i" BEL "core/Rst_n_r" BEL
+        "core/u_mw8080/u_8080/u0/IR_5_1" BEL "core/u_mw8080/u_8080/u0/IR_4_1"
+        BEL "core/u_mw8080/u_8080/u0/IR_1_1" BEL
+        "core/u_mw8080/u_8080/u0/IR_6_1" BEL "core/u_mw8080/u_8080/u0/IR_3_1"
+        BEL "core/u_mw8080/u_8080/u0/IR_0_1" BEL
+        "core/u_mw8080/u_8080/u0/IR_7_1" BEL "core/u_mw8080/u_8080/u0/IR_2_1"
+        BEL "core/u_mw8080/u_8080/u0/IR_5_2" BEL
+        "core/u_mw8080/u_8080/u0/IR_4_2" BEL "core/u_mw8080/u_8080/u0/IR_6_2"
+        BEL "core/u_mw8080/u_8080/u0/IR_7_2" BEL "rams[0].u_ram.A" BEL
+        "rams[1].u_ram.A" BEL "rams[2].u_ram.A" BEL "rams[3].u_ram.A" BEL
+        "u_rom_h/rom0.inst.A" BEL "u_rom_g/rom0.inst.A" BEL
+        "u_rom_f/rom0.inst.A" BEL "u_rom_e/rom0.inst.A" PIN
+        "u_dblscan/u_ram_b.A_pins<12>" PIN "u_dblscan/u_ram_a.A_pins<12>" BEL
+        "u_audio/Mshreg_Aud_2/SRL16E" BEL "u_audio/Aud_2" BEL
+        "u_audio/Mshreg_Aud_7/SRL16E" BEL "u_audio/Aud_7" BEL
+        "u_audio/Mshreg_Aud_3/SRL16E" BEL "u_audio/Aud_3" BEL
+        "u_audio/Mshreg_Aud_1/SRL16E" BEL "u_audio/Aud_1" BEL
+        "u_audio/Mshreg_Aud_0/SRL16E" BEL "u_audio/Aud_0" BEL
+        "u_clocks/BUFG1.GCLKMUX" BEL "u_clocks/BUFG1";
+PIN u_dblscan/u_ram_b.B_pins<12> = BEL "u_dblscan/u_ram_b.B" PINNAME CLKB;
+PIN u_dblscan/u_ram_a.B_pins<12> = BEL "u_dblscan/u_ram_a.B" PINNAME CLKB;
+TIMEGRP u_clocks_clk_dcm_op_fx = BEL "u_dblscan/hpos_o_10" BEL
+        "u_dblscan/hpos_o_9" BEL "u_dblscan/hpos_o_8" BEL "u_dblscan/hpos_o_7"
+        BEL "u_dblscan/hpos_o_6" BEL "u_dblscan/hpos_o_5" BEL
+        "u_dblscan/hpos_o_4" BEL "u_dblscan/hpos_o_3" BEL "u_dblscan/hpos_o_2"
+        BEL "u_dblscan/hpos_o_1" BEL "u_dblscan/hpos_o_0" BEL
+        "u_dblscan/vs_cnt_2" BEL "u_dblscan/vs_cnt_1" BEL "u_dblscan/vs_cnt_0"
+        BEL "u_dblscan/VSYNC_OUT" BEL "u_dblscan/obank_t1" BEL
+        "u_dblscan/ovs_t1" BEL "u_dblscan/ohs_t1" BEL "u_dblscan/obank" BEL
+        "u_dblscan/HSYNC_OUT" BEL "u_dblscan/ohs" BEL "u_dblscan/RGB_OUT_2"
+        BEL "u_dblscan/RGB_OUT_1" BEL "u_dblscan/RGB_OUT_0" BEL
+        "u_dblscan/ovs" PIN "u_dblscan/u_ram_b.B_pins<12>" PIN
+        "u_dblscan/u_ram_a.B_pins<12>" BEL "u_clocks/BUFG2.GCLKMUX" BEL
+        "u_clocks/BUFG2";
+TIMEGRP Outputs = BEL "O_AUDIO_L" BEL "O_AUDIO_R" BEL "O_HSYNC" BEL
+        "O_VIDEO_B" BEL "O_VIDEO_G" BEL "O_VIDEO_R" BEL "O_VSYNC" BEL
+        "STRATAFLASH_CE" BEL "STRATAFLASH_OE" BEL "STRATAFLASH_WE";
+PIN u_clocks/dcma.dcm_inst_pins<4> = BEL "u_clocks/dcma.dcm_inst" PINNAME
+        CLKIN;
+TIMEGRP I_CLK_REF = PIN "u_clocks/dcma.dcm_inst_pins<4>";
+TS_I_CLK_REF = PERIOD TIMEGRP "I_CLK_REF" 20 ns HIGH 50% INPUT_JITTER 0.02 ns;
+TS_u_clocks_clk_dcm_op_dv = PERIOD TIMEGRP "u_clocks_clk_dcm_op_dv"
+        TS_I_CLK_REF * 5 HIGH 50% INPUT_JITTER 0.02 ns;
+TS_u_clocks_clk_dcm_op_fx = PERIOD TIMEGRP "u_clocks_clk_dcm_op_fx"
+        TS_I_CLK_REF / 0.4 HIGH 50% INPUT_JITTER 0.02 ns;
+COMP "I_PS2_CLK" OFFSET = IN 5 ns VALID 20 ns BEFORE COMP "I_CLK_REF"
+        "RISING";
+COMP "I_PS2_DATA" OFFSET = IN 5 ns VALID 20 ns BEFORE COMP "I_CLK_REF"
+        "RISING";
+COMP "I_RESET" OFFSET = IN 10 ns VALID 20 ns BEFORE COMP "I_CLK_REF" "RISING";
+TIMEGRP "Outputs" OFFSET = OUT 20 ns AFTER COMP "I_CLK_REF";
+SCHEMATIC END;
+
