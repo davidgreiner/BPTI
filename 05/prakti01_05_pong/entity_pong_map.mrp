@@ -11,29 +11,29 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Jul  8 15:30:06 2015
+Mapped Date    : Thu Jul  9 14:28:51 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    4
 Logic Utilization:
-  Number of Slice Flip Flops:           228 out of  33,280    1%
-  Number of 4 input LUTs:             1,563 out of  33,280    4%
+  Number of Slice Flip Flops:           224 out of  33,280    1%
+  Number of 4 input LUTs:             1,605 out of  33,280    4%
 Logic Distribution:
-  Number of occupied Slices:            960 out of  16,640    5%
-    Number of Slices containing only related logic:     960 out of     960 100%
-    Number of Slices containing unrelated logic:          0 out of     960   0%
+  Number of occupied Slices:            948 out of  16,640    5%
+    Number of Slices containing only related logic:     948 out of     948 100%
+    Number of Slices containing unrelated logic:          0 out of     948   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,863 out of  33,280    5%
-    Number used as logic:             1,563
-    Number used as a route-thru:        300
+  Total Number of 4 input LUTs:       1,848 out of  33,280    5%
+    Number used as logic:             1,605
+    Number used as a route-thru:        243
   Number of bonded IOBs:                 19 out of     519    3%
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DSP48As:                      4 out of      84    4%
 
 Peak Memory Usage:  237 MB
-Total REAL time to MAP completion:  14 secs 
+Total REAL time to MAP completion:  15 secs 
 Total CPU time to MAP completion:   11 secs 
 
 NOTES:
@@ -191,13 +191,13 @@ Section 14 - Utilization by Hierarchy
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | DSP48A    | BUFG  | DCM   | Full Hierarchical Name         |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| entity_pong/       |           | 392/1359      | 3/228         | 313/1863      | 0/0           | 0/0       | 0/4       | 1/2   | 0/0   | entity_pong                    |
-| +logic_pm          |           | 495/495       | 181/181       | 769/769       | 0/0           | 0/0       | 4/4       | 0/0   | 0/0   | entity_pong/logic_pm           |
-| +paint_pm          |           | 1/429         | 0/0           | 2/722         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm           |
-| ++ball_pm          |           | 106/106       | 0/0           | 140/140       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/ball_pm   |
+| entity_pong/       |           | 371/1328      | 3/224         | 257/1848      | 0/0           | 0/0       | 0/4       | 1/2   | 0/0   | entity_pong                    |
+| +logic_pm          |           | 484/484       | 177/177       | 814/814       | 0/0           | 0/0       | 4/4       | 0/0   | 0/0   | entity_pong/logic_pm           |
+| +paint_pm          |           | 2/430         | 0/0           | 2/718         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm           |
+| ++ball_pm          |           | 104/104       | 0/0           | 137/137       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/ball_pm   |
 | ++border_pm        |           | 10/10         | 0/0           | 13/13         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/border_pm |
 | ++paddle_pm        |           | 43/43         | 0/0           | 52/52         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/paddle_pm |
-| ++score_pm         |           | 269/269       | 0/0           | 515/515       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/score_pm  |
+| ++score_pm         |           | 271/271       | 0/0           | 514/514       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/paint_pm/score_pm  |
 | +rslve_pm          |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | entity_pong/rslve_pm           |
 | +sgnal_pm          |           | 41/41         | 41/41         | 59/59         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | entity_pong/sgnal_pm           |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

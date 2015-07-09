@@ -13,6 +13,7 @@ port
         paddle_down     : in std_logic;
 
         hardcore        : in std_logic;
+		  reflection		 : in std_logic;
 
 
         hsync           : out std_logic;
@@ -32,6 +33,7 @@ component entity_ponglogic is
     port
     (
         pong_hardcore           : in std_logic;
+		  pong_reflection				: in std_logic;
 
         pong_clckin             : in std_logic;
         pong_reset              : in std_logic;
@@ -157,6 +159,7 @@ begin
     logic_pm : entity_ponglogic port map
     (
         pong_hardcore           => hardcore,
+		  pong_reflection				=> reflection,
 
         pong_clckin             => logic_clock,
         pong_reset              => rst,
