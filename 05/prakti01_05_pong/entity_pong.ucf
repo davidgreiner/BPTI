@@ -1,3 +1,5 @@
+NET "hardcore" LOC = A7;
+NET "reflection" LOC = G16;
 NET "clk_in" LOC = P26;
 NET "hardcore" LOC = A7;
 NET "colour_blue<0>" LOC = L22;
@@ -14,6 +16,8 @@ NET "colour_red<2>" LOC = F25;
 NET "colour_red<3>" LOC = F24;
 NET "hsync" LOC = K26;
 NET "vsync" LOC = K25;
-NET "paddle_down" LOC = J17;
-NET "paddle_up" LOC = J10;
+NET "paddle_down" LOC = J10;
+NET "paddle_up" LOC = J17;
 NET "rst" LOC = Y16;
+NET "clk_in" TNM_NET = clk_in;
+TIMESPEC TS_clk_in = PERIOD "clk_in" 25.175 MHz HIGH 50%;

@@ -1,5 +1,4 @@
 vhdl work "../files/pongtypes.vhd"
-vhdl work "../files/colourcombiner.vhd"
 vhdl work "../files/number.vhd"
 vhdl work "../files/disp_paddle.vhd"
 vhdl work "../files/disp_border.vhd"

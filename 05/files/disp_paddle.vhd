@@ -1,4 +1,5 @@
 library ieee;
+use ieee.std_logic_1164.all;
 use work.pongtypes.all;
 
 entity entity_paddle is
@@ -11,59 +12,34 @@ entity entity_paddle is
         paddle_position     : in position;
         paddle_dimension    : in dimension;
         paddle_colour_in    : in color;
-
-        paddle_colour_mix   : in color;
-
         -- Output
-        paddle_colour_out   : out color;
-
-        paddle_pos_x_out    : out integer range 0 to 640;
-        paddle_pos_y_out    : out integer range 0 to 480
+        paddle_colour_out   : out color
     );
 end entity;
 
 
 architecture architecture_paddle of entity_paddle is
+    constant colour_min : color := ("0000", "0000", "0000");
 
-    component entity_colourcombiner is
-    	port
-    	(
-    		cc_colour_1_in  : in color;
-    		cc_colour_2_in  : in color;
-
-    		cc_colour_out   : out color
-    	);
-    end component;
-
-signal mix_colour : color;
 
 begin
     paint_paddle : process(paddle_pos_x_in, paddle_pos_y_in)
     begin
         if(paddle_pos_x_in = 0 or paddle_pos_y_in = 0) then
             -- Invalid location, do not paint
-			mix_colour <= paddle_colour_mix;
+			paddle_colour_out <= colour_min;
         else
             if(paddle_pos_x_in >= paddle_position.x
              and paddle_pos_x_in < paddle_position.x + paddle_dimension.width
              and paddle_pos_y_in >= paddle_position.y
              and paddle_pos_y_in < paddle_position.y + paddle_dimension.height) then
                 -- Paint paddle
-                mix_colour <= paddle_colour_in;
+                paddle_colour_out <= paddle_colour_in;
             else
-                mix_colour <= paddle_colour_mix;
+                paddle_colour_out <= colour_min;
             end if;
         end if;
-        
-        paddle_pos_x_out <= paddle_pos_x_in;
-        paddle_pos_y_out <= paddle_pos_y_in;
-    end process;
 
-    combiner_p : entity_colourcombiner port map
-	(
-		cc_colour_1_in => mix_colour,
-		cc_colour_2_in => paddle_colour_mix,
-		cc_colour_out => paddle_colour_out
-	);
+    end process;
 
 end architecture architecture_paddle;

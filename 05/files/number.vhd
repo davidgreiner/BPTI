@@ -10,14 +10,11 @@ entity entity_number is
 
         number_start_x_in   : in integer range 0 to 640;
         number_start_y_in   : in integer range 0 to 480;
-
-        number_colour_in    : in color;
+	
         number_score_in     : in score;
 
 
-        number_colour_out   : out color;
-        number_pos_x_out    : out integer range 0 to 640;
-        number_pos_y_out    : out integer range 0 to 480
+        number_colour_out   : out color
         );
 end entity;
 
@@ -154,19 +151,20 @@ architecture architecture_number of entity_number is
                                 ('1', '1', '1', '1', '0', '0', '0', '0'));
 
     constant colour_max : color := (red => "1111", green => "1111", blue => "1111");
+    constant colour_min : color := ("0000", "0000", "0000");
 begin
 
     number_p : process(number_pos_x_in, number_pos_y_in)
-    variable value : integer range 0 to 9;
-    variable num : number;
-    variable shift_x : integer range 0 to 50 := 0;
+    variable value      : integer range 0 to 9;
+    variable num        : number;
+    variable shift_x    : integer range 0 to 50 := 0;
     begin
         if(number_pos_x_in = 0 or number_pos_y_in = 0) then
-            number_colour_out <= number_colour_in;            
+            number_colour_out <= colour_min;
         else
-        	
+
         	shift_x := 0;
-        	
+
 		    for i in 0 to 3 loop
 		        value := number_score_in(i);
 
@@ -192,21 +190,27 @@ begin
 		        else
 		            num := nine;
 		        end if;
+	
+	--x : 295
+	--y : 10
 
-		        if(number_pos_x_in >= number_start_x_in + shift_x and number_pos_y_in >= number_start_y_in and number_pos_x_in < number_start_x_in + 8 + shift_x and number_pos_y_in < number_start_y_in + 12) then
-		            if(num(number_pos_x_in - number_start_x_in, number_pos_y_in - number_start_y_in) = '1') then
+		        if (number_pos_x_in >= number_start_x_in + shift_x 
+		        and number_pos_x_in < number_start_x_in + shift_x + 8
+				and number_pos_y_in >= number_start_y_in
+				and number_pos_y_in < number_start_y_in + 12) then
+		            if(num(number_pos_y_in - number_start_y_in, number_pos_x_in - number_start_x_in - shift_x) = '1') then
 		                number_colour_out <= colour_max;
+		                exit;
 		            else
-		                number_colour_out <= number_colour_in;
+		                number_colour_out <= colour_min;
 		                exit;
 		            end if;
 		        else
-		            number_colour_out <= number_colour_in;
+		            number_colour_out <= colour_min;
 		        end if;
+		        
+		        shift_x := shift_x + 15;
 	        end loop;
-
-            number_pos_x_out <= number_pos_x_in;
-            number_pos_y_out <= number_pos_y_in;
         end if;
     end process;
 end architecture architecture_number;

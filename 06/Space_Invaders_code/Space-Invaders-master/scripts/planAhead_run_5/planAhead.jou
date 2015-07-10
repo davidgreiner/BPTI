@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+# Start of session at: Sun May 22 18:30:29 2011
+# Process ID: 2724
+# Log file: X:/Papilio/workarea/SpaceInvaders/planAhead_run_5/planAhead.log
+# Journal file: X:/Papilio/workarea/SpaceInvaders/planAhead_run_5/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source X:/Papilio/workarea/SpaceInvaders/pa.fromHdl.tcl

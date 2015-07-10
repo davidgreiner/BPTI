@@ -13,6 +13,7 @@ port
         paddle_down     : in std_logic;
 
         hardcore        : in std_logic;
+		  reflection		 : in std_logic;
 
 
         hsync           : out std_logic;
@@ -32,6 +33,7 @@ component entity_ponglogic is
     port
     (
         pong_hardcore           : in std_logic;
+		  pong_reflection				: in std_logic;
 
         pong_clckin             : in std_logic;
         pong_reset              : in std_logic;
@@ -63,11 +65,11 @@ component entity_signalgenerator is
     port
     (
         siggen_clk_in	: in std_logic;
-        siggen_rst		: in std_logic;
-        siggen_hsync	: out std_logic;
-        siggen_vsync	: out std_logic;
-        siggen_pos_x	: out integer range 0 to 640;
-        siggen_pos_y	: out integer range 0 to 480
+        siggen_rst_in	: in std_logic;
+        siggen_hsync		: out std_logic;
+        siggen_vsync		: out std_logic;
+        siggen_pos_x		: out integer range 0 to 640;
+        siggen_pos_y		: out integer range 0 to 480
     );
 end component;
 
@@ -157,6 +159,7 @@ begin
     logic_pm : entity_ponglogic port map
     (
         pong_hardcore           => hardcore,
+		  pong_reflection				=> reflection,
 
         pong_clckin             => logic_clock,
         pong_reset              => rst,
@@ -185,11 +188,11 @@ begin
     sgnal_pm : entity_signalgenerator port map
     (
         siggen_clk_in	=> clk_in,
-        siggen_rst		=> rst,
-        siggen_hsync	=> hsync,
-        siggen_vsync	=> logic_clock,
-        siggen_pos_x	=> pos_x,
-        siggen_pos_y	=> pos_y
+        siggen_rst_in 	=> rst,
+        siggen_hsync		=> hsync,
+        siggen_vsync		=> logic_clock,
+        siggen_pos_x		=> pos_x,
+        siggen_pos_y		=> pos_y
     );
 
     paint_pm : entity_pixelgenerator port map

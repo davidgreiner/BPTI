@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/prakti01_05_pong/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: entity_pong.prj
@@ -110,8 +110,6 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pongtypes.vhd" in Library work.
-Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourcombiner.vhd" in Library work.
-Architecture architecture_colourcombiner of Entity entity_colourcombiner is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd" in Library work.
 Architecture architecture_ball of Entity entity_ball is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" in Library work.
@@ -121,7 +119,8 @@ Architecture architecture_border of Entity entity_border is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" in Library work.
 Architecture architecture_number of Entity entity_number is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" in Library work.
-Architecture architecture_ponglogic of Entity entity_ponglogic is up to date.
+Entity <entity_ponglogic> compiled.
+Entity <entity_ponglogic> (Architecture <architecture_ponglogic>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/signalgenerator.vhd" in Library work.
 Architecture architecture_signalgenerator of Entity entity_signalgenerator is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" in Library work.
@@ -129,8 +128,7 @@ Architecture architecture_pixelgenerator of Entity entity_pixelgenerator is up t
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourresolver.vhd" in Library work.
 Architecture architecture_colourresolver of Entity entity_colourresolver is up to date.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pong.vhd" in Library work.
-Entity <entity_pong> compiled.
-Entity <entity_pong> (Architecture <architecture_pong>) compiled.
+Architecture architecture_pong of Entity entity_pong is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -153,8 +151,6 @@ Analyzing hierarchy for entity <entity_border> in library <work> (architecture <
 
 Analyzing hierarchy for entity <entity_number> in library <work> (architecture <architecture_number>).
 
-Analyzing hierarchy for entity <entity_colourcombiner> in library <work> (architecture <architecture_colourcombiner>).
-
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -169,31 +165,26 @@ Analyzing Entity <entity_signalgenerator> in library <work> (Architecture <archi
 Entity <entity_signalgenerator> analyzed. Unit <entity_signalgenerator> generated.
 
 Analyzing Entity <entity_pixelgenerator> in library <work> (Architecture <architecture_pixelgenerator>).
-WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" line 211: Unconnected output port 'number_pos_x_out' of component 'entity_number'.
-WARNING:Xst:753 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/pixelgenerator.vhd" line 211: Unconnected output port 'number_pos_y_out' of component 'entity_number'.
 Entity <entity_pixelgenerator> analyzed. Unit <entity_pixelgenerator> generated.
 
 Analyzing Entity <entity_ball> in library <work> (Architecture <architecture_ball>).
-WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <ball_mix_colour.red>, <ball_mix_colour.green>, <ball_mix_colour.blue>, <ball_position.x>, <ball_radius>, <ball_position.y>, <ball_colour_in.red>, <ball_colour_in.green>, <ball_colour_in.blue>
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd" line 27: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ball_position.x>, <ball_radius>, <ball_position.y>, <ball_colour_in.red>, <ball_colour_in.green>, <ball_colour_in.blue>
 Entity <entity_ball> analyzed. Unit <entity_ball> generated.
 
-Analyzing Entity <entity_colourcombiner> in library <work> (Architecture <architecture_colourcombiner>).
-Entity <entity_colourcombiner> analyzed. Unit <entity_colourcombiner> generated.
-
 Analyzing Entity <entity_paddle> in library <work> (Architecture <architecture_paddle>).
-WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <paddle_colour_mix.red>, <paddle_colour_mix.green>, <paddle_colour_mix.blue>, <paddle_position.x>, <paddle_dimension.width>, <paddle_position.y>, <paddle_dimension.height>, <paddle_colour_in.red>, <paddle_colour_in.green>, <paddle_colour_in.blue>
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd" line 26: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <paddle_position.x>, <paddle_dimension.width>, <paddle_position.y>, <paddle_dimension.height>, <paddle_colour_in.red>, <paddle_colour_in.green>, <paddle_colour_in.blue>
 Entity <entity_paddle> analyzed. Unit <entity_paddle> generated.
 
 Analyzing Entity <entity_border> in library <work> (Architecture <architecture_border>).
-WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <border_colour_mix.red>, <border_colour_mix.green>, <border_colour_mix.blue>, <border_width>, <border_colour_in.red>, <border_colour_in.green>, <border_colour_in.blue>
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd" line 29: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <border_width>, <border_colour_in.red>, <border_colour_in.green>, <border_colour_in.blue>
 Entity <entity_border> analyzed. Unit <entity_border> generated.
 
 Analyzing Entity <entity_number> in library <work> (Architecture <architecture_number>).
-WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" line 159: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <number_colour_in.red>, <number_colour_in.green>, <number_colour_in.blue>, <number_score_in>, <number_start_x_in>, <number_start_y_in>
+WARNING:Xst:819 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd" line 157: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <number_score_in>, <number_start_x_in>, <number_start_y_in>
 Entity <entity_number> analyzed. Unit <entity_number> generated.
 
 Analyzing Entity <entity_colourresolver> in library <work> (Architecture <architecture_colourresolver>).
@@ -208,58 +199,103 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <entity_ponglogic>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd".
+WARNING:Xst:653 - Signal <paddle_quart3> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <paddle_quart2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <paddle_quart1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
 WARNING:Xst:653 - Signal <paddle_position.x> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x5-bit multiplication is partially used. Only the 8 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 62: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/ponglogic.vhd" line 63: The result of a 4x3-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 4x5-bit multiplier for signal <$mult0000> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0002> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0003> created at line 62.
+    Found 4x4-bit multiplier for signal <$mult0004> created at line 63.
+    Found 4x3-bit multiplier for signal <$mult0005> created at line 63.
+    Found 9-bit adder for signal <add0000$addsub0000> created at line 62.
+    Found 9-bit subtractor for signal <add0000$addsub0001> created at line 62.
+    Found 9-bit adder carry out for signal <add0000$addsub0002> created at line 62.
+    Found 8-bit adder for signal <add0001$addsub0000> created at line 63.
+    Found 8-bit adder carry out for signal <add0001$addsub0001> created at line 63.
     Found 32-bit register for signal <ball_position.x>.
-    Found 32-bit adder for signal <ball_position.x$addsub0000> created at line 100.
-    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0000> created at line 94.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_position.x$mux0002>.
+    Found 32-bit adder for signal <ball_position.x$add0000> created at line 86.
+    Found 32-bit adder for signal <ball_position.x$addsub0000> created at line 94.
+    Found 32-bit comparator greater for signal <ball_position.x$cmp_gt0000> created at line 147.
+    Found 32-bit comparator lessequal for signal <ball_position.x$cmp_le0000> created at line 141.
+    Found 11-bit subtractor for signal <ball_position.x$sub0000> created at line 62.
     Found 32-bit register for signal <ball_position.y>.
-    Found 32-bit adder for signal <ball_position.y$addsub0000> created at line 138.
-    Found 32-bit comparator less for signal <ball_position.y$cmp_lt0000> created at line 86.
-    Found 32-bit 4-to-1 multiplexer for signal <ball_position.y$mux0000>.
-    Found 4-bit register for signal <ball_vector_x>.
-    Found 32-bit comparator greater for signal <ball_vector_x$cmp_gt0000> created at line 65.
-    Found 4-bit adder for signal <ball_vector_x$share0000>.
-    Found 4-bit register for signal <ball_vector_y>.
-    Found 32-bit adder for signal <ball_vector_y$add0000> created at line 65.
-    Found 32-bit adder for signal <ball_vector_y$add0001> created at line 65.
-    Found 32-bit comparator greatequal for signal <ball_vector_y$cmp_ge0000> created at line 86.
-    Found 32-bit comparator greater for signal <ball_vector_y$cmp_gt0000> created at line 65.
-    Found 32-bit comparator greater for signal <ball_vector_y$cmp_gt0001> created at line 125.
-    Found 32-bit comparator less for signal <ball_vector_y$cmp_lt0000> created at line 65.
-    Found 32-bit comparator less for signal <ball_vector_y$cmp_lt0001> created at line 131.
-    Found 4-bit adder for signal <ball_vector_y$share0000>.
-    Found 32-bit subtractor for signal <ball_vector_y$sub0000> created at line 65.
-    Found 32-bit down counter for signal <paddle_position.y>.
-    Found 32-bit subtractor for signal <paddle_position.y$addsub0000> created at line 146.
-    Found 32-bit adder for signal <paddle_position.y$addsub0001> created at line 153.
-    Found 32-bit comparator greater for signal <paddle_position.y$cmp_gt0000> created at line 145.
-    Found 32-bit comparator lessequal for signal <paddle_position.y$cmp_le0000> created at line 145.
-    Found 32-bit comparator less for signal <paddle_position.y$cmp_lt0000> created at line 152.
+    Found 11-bit adder for signal <ball_position.y$add0000> created at line 63.
+    Found 32-bit comparator greatequal for signal <ball_position.y$cmp_ge0000> created at line 166.
+    Found 4x3-bit multiplier for signal <ball_position.y$mult0000> created at line 63.
+    Found 10-bit subtractor for signal <ball_position.y$sub0000> created at line 63.
+    Found 32-bit register for signal <ball_vector.x>.
+    Found 32-bit comparator greatequal for signal <ball_vector.x$cmp_ge0000> created at line 96.
+    Found 32-bit comparator lessequal for signal <ball_vector.x$cmp_le0000> created at line 96.
+    Found 32-bit comparator lessequal for signal <ball_vector.x$cmp_le0001> created at line 147.
+    Found 32-bit adder for signal <ball_vector.x$mux0000> created at line 156.
+    Found 32-bit register for signal <ball_vector.y>.
+    Found 32-bit adder for signal <ball_vector.y$add0000> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0001> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0002> created at line 91.
+    Found 32-bit adder for signal <ball_vector.y$add0004> created at line 114.
+    Found 32-bit adder for signal <ball_vector.y$add0005> created at line 118.
+    Found 32-bit adder for signal <ball_vector.y$add0006> created at line 85.
+    Found 32-bit adder for signal <ball_vector.y$addsub0000> created at line 91.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0000> created at line 166.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0001> created at line 113.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0002> created at line 104.
+    Found 32-bit comparator greatequal for signal <ball_vector.y$cmp_ge0003> created at line 174.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0000> created at line 91.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0001> created at line 91.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0002> created at line 105.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0003> created at line 170.
+    Found 32-bit comparator greater for signal <ball_vector.y$cmp_gt0004> created at line 182.
+    Found 32-bit comparator lessequal for signal <ball_vector.y$cmp_le0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <ball_vector.y$cmp_le0001> created at line 105.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0000> created at line 174.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0001> created at line 91.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0002> created at line 104.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0003> created at line 106.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0004> created at line 113.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0005> created at line 110.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0006> created at line 104.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0007> created at line 166.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0008> created at line 170.
+    Found 32-bit comparator less for signal <ball_vector.y$cmp_lt0009> created at line 182.
+    Found 32-bit 8-to-1 multiplexer for signal <ball_vector.y$mux0009>.
+    Found 32-bit adder for signal <ball_vector.y$share0000>.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0000> created at line 91.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0001> created at line 91.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0002> created at line 103.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0003> created at line 106.
+    Found 32-bit subtractor for signal <ball_vector.y$sub0004> created at line 110.
+    Found 32-bit adder for signal <ball_vector.y$sub0005> created at line 114.
+    Found 1-bit register for signal <game_over>.
+    Found 32-bit comparator greater for signal <game_over$cmp_gt0000> created at line 91.
+    Found 32-bit comparator greater for signal <game_over$cmp_gt0001> created at line 141.
+    Found 4x4-bit multiplier for signal <mult0001$mult0000> created at line 62.
+    Found 4x3-bit multiplier for signal <mult0006$mult0000> created at line 63.
+    Found 32-bit register for signal <paddle_position.y>.
+    Found 32-bit adder for signal <paddle_position.y$addsub0000> created at line 80.
+    Found 32-bit comparator greatequal for signal <paddle_position.y$cmp_ge0000> created at line 72.
+    Found 32-bit comparator less for signal <paddle_position.y$cmp_lt0000> created at line 79.
     Found 32-bit 4-to-1 multiplexer for signal <paddle_position.y$mux0000>.
-    Found 16-bit register for signal <points>.
-    Found 32-bit adder for signal <points_0$add0000> created at line 104.
-    Found 32-bit adder for signal <points_0$add0001> created at line 104.
-    Found 4-bit adder for signal <points_0$addsub0000> created at line 74.
-    Found 4-bit adder for signal <points_0$addsub0001> created at line 113.
-    Found 32-bit comparator greatequal for signal <points_0$cmp_ge0000> created at line 65.
-    Found 32-bit comparator greatequal for signal <points_0$cmp_ge0001> created at line 104.
-    Found 32-bit comparator greater for signal <points_0$cmp_gt0000> created at line 104.
-    Found 32-bit comparator lessequal for signal <points_0$cmp_le0000> created at line 65.
-    Found 32-bit comparator lessequal for signal <points_0$cmp_le0001> created at line 104.
-    Found 32-bit comparator less for signal <points_0$cmp_lt0000> created at line 104.
-    Found 32-bit subtractor for signal <points_0$sub0000> created at line 104.
-    Found 4-bit adder for signal <points_1$addsub0000> created at line 78.
-    Found 4-bit adder for signal <points_1$addsub0001> created at line 117.
-    Found 4-bit adder for signal <points_2$addsub0000> created at line 82.
-    Found 4-bit adder for signal <points_2$addsub0001> created at line 121.
-    Found 4-bit adder for signal <points_3$addsub0000> created at line 86.
-    Found 4-bit adder for signal <points_3$addsub0001> created at line 125.
+    Found 32-bit 8-to-1 multiplexer for signal <paddle_position.y$mux0002> created at line 78.
+    Found 32-bit subtractor for signal <paddle_position.y$sub0000> created at line 73.
+    Found 4-bit up counter for signal <points>.
+    Found 32-bit comparator greatequal for signal <points_0$cmp_ge0000> created at line 91.
+    Found 32-bit comparator greater for signal <points_0$cmp_gt0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <points_0$cmp_le0000> created at line 91.
+    Found 32-bit comparator lessequal for signal <points_0$cmp_le0001> created at line 91.
     Summary:
-	inferred   1 Counter(s).
-	inferred  16 D-type flip-flop(s).
-	inferred  20 Adder/Subtractor(s).
-	inferred  17 Comparator(s).
+	inferred   4 Counter(s).
+	inferred  33 D-type flip-flop(s).
+	inferred  27 Adder/Subtractor(s).
+	inferred   8 Multiplier(s).
+	inferred  35 Comparator(s).
 	inferred  96 Multiplexer(s).
 Unit <entity_ponglogic> synthesized.
 
@@ -271,19 +307,16 @@ Synthesizing Unit <entity_signalgenerator>.
     Found 1-bit register for signal <siggen_vsync>.
     Found 1-bit register for signal <siggen_hsync>.
     Found 10-bit up counter for signal <hsync_counter>.
-    Found 10-bit comparator lessequal for signal <siggen_hsync$cmp_le0000> created at line 49.
-    Found 10-bit subtractor for signal <siggen_pos_x$addsub0000> created at line 63.
-    Found 10-bit comparator greater for signal <siggen_pos_x$cmp_gt0000> created at line 62.
-    Found 10-bit comparator lessequal for signal <siggen_pos_x$cmp_le0000> created at line 62.
-    Found 9-bit subtractor for signal <siggen_pos_y$addsub0000> created at line 69.
-    Found 10-bit comparator greater for signal <siggen_pos_y$cmp_gt0000> created at line 68.
-    Found 10-bit comparator lessequal for signal <siggen_pos_y$cmp_le0000> created at line 68.
-    Found 10-bit comparator lessequal for signal <siggen_vsync$cmp_le0000> created at line 55.
+    Found 10-bit comparator greater for signal <siggen_hsync$cmp_gt0000> created at line 62.
+    Found 10-bit comparator lessequal for signal <siggen_hsync$cmp_le0000> created at line 62.
+    Found 10-bit comparator lessequal for signal <siggen_pos_x$cmp_le0000> created at line 49.
+    Found 10-bit comparator lessequal for signal <siggen_pos_y$cmp_le0000> created at line 55.
+    Found 10-bit comparator greater for signal <siggen_vsync$cmp_gt0000> created at line 68.
+    Found 10-bit comparator lessequal for signal <siggen_vsync$cmp_le0000> created at line 68.
     Found 10-bit up counter for signal <vsync_counter>.
     Summary:
 	inferred   2 Counter(s).
 	inferred  21 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
 	inferred   6 Comparator(s).
 Unit <entity_signalgenerator> synthesized.
 
@@ -298,55 +331,16 @@ Synthesizing Unit <entity_colourresolver>.
 Unit <entity_colourresolver> synthesized.
 
 
-Synthesizing Unit <entity_number>.
-    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd".
-WARNING:Xst:737 - Found 10-bit latch for signal <number_pos_x_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 9-bit latch for signal <number_pos_y_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8x32-bit ROM for signal <$rom0000>.
-    Found 16x56-bit ROM for signal <number_score_in_0$rom0000>.
-    Found 8x32-bit ROM for signal <$rom0001>.
-    Found 16x56-bit ROM for signal <number_score_in_1$rom0000>.
-    Found 8x32-bit ROM for signal <$rom0002>.
-    Found 16x56-bit ROM for signal <number_score_in_2$rom0000>.
-    Found 8x32-bit ROM for signal <$rom0003>.
-    Found 16x56-bit ROM for signal <number_score_in_3$rom0000>.
-    Found 8-bit 12-to-1 multiplexer for signal <num$mux0000> created at line 197.
-    Found 1-bit 8-to-1 multiplexer for signal <num$mux0001> created at line 197.
-    Found 8-bit 12-to-1 multiplexer for signal <num$mux0002> created at line 197.
-    Found 1-bit 8-to-1 multiplexer for signal <num$mux0003> created at line 197.
-    Found 8-bit 12-to-1 multiplexer for signal <num$mux0004> created at line 197.
-    Found 1-bit 8-to-1 multiplexer for signal <num$mux0005> created at line 197.
-    Found 8-bit 12-to-1 multiplexer for signal <num$mux0006> created at line 197.
-    Found 1-bit 8-to-1 multiplexer for signal <num$mux0007> created at line 197.
-    Found 11-bit subtractor for signal <num$sub0000> created at line 197.
-    Found 10-bit subtractor for signal <num$sub0001> created at line 197.
-    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0000> created at line 196.
-    Found 9-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0001> created at line 196.
-    Found 10-bit comparator less for signal <number_colour_out.blue$cmp_lt0000> created at line 196.
-    Found 9-bit comparator less for signal <number_colour_out.blue$cmp_lt0001> created at line 196.
-    Summary:
-	inferred   8 ROM(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   4 Comparator(s).
-	inferred  36 Multiplexer(s).
-Unit <entity_number> synthesized.
-
-
-Synthesizing Unit <entity_colourcombiner>.
-    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/colourcombiner.vhd".
-Unit <entity_colourcombiner> synthesized.
-
-
 Synthesizing Unit <entity_ball>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_ball.vhd".
-    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 49.
-    Found 32-bit adder for signal <mix_colour.green$add0001> created at line 49.
-    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0000> created at line 49.
-    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0001> created at line 49.
-    Found 32-bit comparator lessequal for signal <mix_colour.green$cmp_le0000> created at line 49.
-    Found 32-bit comparator lessequal for signal <mix_colour.green$cmp_le0001> created at line 49.
-    Found 32-bit subtractor for signal <mix_colour.green$sub0000> created at line 49.
-    Found 32-bit subtractor for signal <mix_colour.green$sub0001> created at line 49.
+    Found 32-bit adder for signal <ball_colour_out.red$add0000> created at line 34.
+    Found 32-bit adder for signal <ball_colour_out.red$add0001> created at line 34.
+    Found 32-bit comparator greatequal for signal <ball_colour_out.red$cmp_ge0000> created at line 34.
+    Found 32-bit comparator greatequal for signal <ball_colour_out.red$cmp_ge0001> created at line 34.
+    Found 32-bit comparator lessequal for signal <ball_colour_out.red$cmp_le0000> created at line 34.
+    Found 32-bit comparator lessequal for signal <ball_colour_out.red$cmp_le0001> created at line 34.
+    Found 32-bit subtractor for signal <ball_colour_out.red$sub0000> created at line 34.
+    Found 32-bit subtractor for signal <ball_colour_out.red$sub0001> created at line 34.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
@@ -355,12 +349,12 @@ Unit <entity_ball> synthesized.
 
 Synthesizing Unit <entity_paddle>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_paddle.vhd".
-    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 47.
-    Found 32-bit adder for signal <mix_colour.green$add0001> created at line 47.
-    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0000> created at line 47.
-    Found 32-bit comparator greatequal for signal <mix_colour.green$cmp_ge0001> created at line 47.
-    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0000> created at line 47.
-    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0001> created at line 47.
+    Found 32-bit adder for signal <paddle_colour_out.red$add0000> created at line 32.
+    Found 32-bit adder for signal <paddle_colour_out.red$add0001> created at line 32.
+    Found 32-bit comparator greatequal for signal <paddle_colour_out.red$cmp_ge0000> created at line 32.
+    Found 32-bit comparator greatequal for signal <paddle_colour_out.red$cmp_ge0001> created at line 32.
+    Found 32-bit comparator less for signal <paddle_colour_out.red$cmp_lt0000> created at line 32.
+    Found 32-bit comparator less for signal <paddle_colour_out.red$cmp_lt0001> created at line 32.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
@@ -369,16 +363,51 @@ Unit <entity_paddle> synthesized.
 
 Synthesizing Unit <entity_border>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/disp_border.vhd".
-    Found 32-bit adder for signal <mix_colour.green$add0000> created at line 49.
-    Found 32-bit comparator greater for signal <mix_colour.green$cmp_gt0000> created at line 49.
-    Found 32-bit comparator greater for signal <mix_colour.green$cmp_gt0001> created at line 49.
-    Found 32-bit comparator less for signal <mix_colour.green$cmp_lt0000> created at line 49.
-    Found 32-bit adder for signal <mix_colour.green$sub0000> created at line 49.
-    Found 32-bit adder for signal <mix_colour.green$sub0001> created at line 49.
+    Found 32-bit adder for signal <border_colour_out.green$add0000> created at line 35.
+    Found 32-bit comparator greater for signal <border_colour_out.green$cmp_gt0000> created at line 35.
+    Found 32-bit comparator greater for signal <border_colour_out.green$cmp_gt0001> created at line 35.
+    Found 32-bit comparator less for signal <border_colour_out.green$cmp_lt0000> created at line 35.
+    Found 32-bit adder for signal <border_colour_out.green$sub0000> created at line 35.
+    Found 32-bit adder for signal <border_colour_out.green$sub0001> created at line 35.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
 Unit <entity_border> synthesized.
+
+
+Synthesizing Unit <entity_number>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/05/files/number.vhd".
+    Found 8x32-bit ROM for signal <$rom0000>.
+    Found 16x56-bit ROM for signal <number_score_in_0$rom0000>.
+    Found 8x32-bit ROM for signal <$rom0001>.
+    Found 16x56-bit ROM for signal <number_score_in_1$rom0000>.
+    Found 8x32-bit ROM for signal <$rom0002>.
+    Found 16x56-bit ROM for signal <number_score_in_2$rom0000>.
+    Found 8x32-bit ROM for signal <$rom0003>.
+    Found 16x56-bit ROM for signal <number_score_in_3$rom0000>.
+    Found 8-bit 12-to-1 multiplexer for signal <num$mux0000> created at line 201.
+    Found 1-bit 8-to-1 multiplexer for signal <num$mux0001> created at line 201.
+    Found 8-bit 12-to-1 multiplexer for signal <num$mux0002> created at line 201.
+    Found 8-bit 12-to-1 multiplexer for signal <num$mux0004> created at line 201.
+    Found 8-bit 12-to-1 multiplexer for signal <num$mux0006> created at line 201.
+    Found 10-bit subtractor for signal <num$sub0000> created at line 201.
+    Found 11-bit subtractor for signal <num$sub0001> created at line 201.
+    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0000> created at line 197.
+    Found 9-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0001> created at line 197.
+    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0002> created at line 197.
+    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0003> created at line 197.
+    Found 10-bit comparator greatequal for signal <number_colour_out.blue$cmp_ge0004> created at line 197.
+    Found 10-bit comparator less for signal <number_colour_out.blue$cmp_lt0000> created at line 197.
+    Found 9-bit comparator less for signal <number_colour_out.blue$cmp_lt0001> created at line 197.
+    Found 11-bit comparator less for signal <number_colour_out.blue$cmp_lt0002> created at line 197.
+    Found 11-bit comparator less for signal <number_colour_out.blue$cmp_lt0003> created at line 197.
+    Found 11-bit comparator less for signal <number_colour_out.blue$cmp_lt0004> created at line 197.
+    Summary:
+	inferred   8 ROM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  10 Comparator(s).
+	inferred  33 Multiplexer(s).
+Unit <entity_number> synthesized.
 
 
 Synthesizing Unit <entity_pixelgenerator>.
@@ -404,39 +433,46 @@ Macro Statistics
 # ROMs                                                 : 8
  16x56-bit ROM                                         : 4
  8x32-bit ROM                                          : 4
-# Adders/Subtractors                                   : 33
+# Multipliers                                          : 8
+ 4x3-bit multiplier                                    : 3
+ 4x4-bit multiplier                                    : 4
+ 4x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 38
  10-bit subtractor                                     : 2
- 11-bit subtractor                                     : 1
- 32-bit adder                                          : 14
- 32-bit subtractor                                     : 5
- 4-bit adder                                           : 10
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 2
+ 32-bit adder                                          : 20
+ 32-bit subtractor                                     : 8
+ 8-bit adder                                           : 1
+ 8-bit adder carry out                                 : 1
+ 9-bit adder                                           : 1
+ 9-bit adder carry out                                 : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 3
+# Counters                                             : 6
  10-bit up counter                                     : 2
- 32-bit down counter                                   : 1
-# Registers                                            : 18
- 1-bit register                                        : 2
+ 4-bit up counter                                      : 4
+# Registers                                            : 16
+ 1-bit register                                        : 3
  10-bit register                                       : 1
- 32-bit register                                       : 2
- 4-bit register                                        : 12
+ 32-bit register                                       : 5
+ 4-bit register                                        : 6
  9-bit register                                        : 1
-# Latches                                              : 2
- 10-bit latch                                          : 1
- 9-bit latch                                           : 1
-# Comparators                                          : 38
- 10-bit comparator greatequal                          : 1
+# Comparators                                          : 62
+ 10-bit comparator greatequal                          : 4
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 1
  10-bit comparator lessequal                           : 4
- 32-bit comparator greatequal                          : 7
- 32-bit comparator greater                             : 8
- 32-bit comparator less                                : 8
- 32-bit comparator lessequal                           : 5
+ 11-bit comparator less                                : 3
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 11
+ 32-bit comparator less                                : 14
+ 32-bit comparator lessequal                           : 9
  9-bit comparator greatequal                           : 1
  9-bit comparator less                                 : 1
-# Multiplexers                                         : 11
- 1-bit 8-to-1 multiplexer                              : 4
- 32-bit 4-to-1 multiplexer                             : 3
+# Multiplexers                                         : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 2
  8-bit 12-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -447,6 +483,20 @@ Macro Statistics
 
 Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
 
+Synthesizing (advanced) Unit <entity_ponglogic>.
+	Multiplier <Mmult__mult0003> in block <entity_ponglogic> and adder/subtractor <Msub_ball_position.x_sub0000> in block <entity_ponglogic> are combined into a MAC<Maddsub__mult0003>.
+	Multiplier <Mmult_ball_position.y_mult0000> in block <entity_ponglogic> and adder/subtractor <Madd_ball_position.y_add0000> in block <entity_ponglogic> are combined into a MAC<Maddsub_ball_position.y_mult0000>.
+	Multiplier <Mmult_mult0006_mult0000> in block <entity_ponglogic> and adder/subtractor <Msub_ball_position.y_sub0000> in block <entity_ponglogic> are combined into a MAC<Maddsub_mult0006_mult0000>.
+	Multiplier <Mmult_mult0001_mult0000> in block <entity_ponglogic> and adder/subtractor <Msub_add0000_addsub0001> in block <entity_ponglogic> are combined into a MAC<Maddsub_mult0001_mult0000>.
+	Multiplier <Mmult__mult0000> in block <entity_ponglogic> and adder/subtractor <Madd_add0000_addsub0000> in block <entity_ponglogic> are combined into a MAC<Maddsub__mult0000>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0002 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0002 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0004 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0004 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0005 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult__mult0005 by adding 2 register level(s).
+Unit <entity_ponglogic> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
@@ -454,36 +504,44 @@ Macro Statistics
 # ROMs                                                 : 8
  16x56-bit ROM                                         : 4
  8x32-bit ROM                                          : 4
+# MACs                                                 : 5
+ 4x3-to-10-bit MAC                                     : 1
+ 4x3-to-11-bit MAC                                     : 1
+ 4x4-to-11-bit MAC                                     : 1
+ 4x4-to-9-bit MAC                                      : 1
+ 4x5-to-9-bit MAC                                      : 1
+# Multipliers                                          : 3
+ 4x3-bit multiplier                                    : 1
+ 4x4-bit multiplier                                    : 2
 # Adders/Subtractors                                   : 33
- 10-bit subtractor                                     : 1
- 3-bit subtractor                                      : 1
- 32-bit adder                                          : 14
- 32-bit subtractor                                     : 5
- 4-bit adder                                           : 10
+ 32-bit adder                                          : 20
+ 32-bit subtractor                                     : 8
  4-bit subtractor                                      : 1
- 9-bit subtractor                                      : 1
-# Counters                                             : 3
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit adder carry out                                 : 1
+ 9-bit adder carry out                                 : 1
+# Counters                                             : 6
  10-bit up counter                                     : 2
- 32-bit down counter                                   : 1
-# Registers                                            : 133
- Flip-Flops                                            : 133
-# Latches                                              : 2
- 10-bit latch                                          : 1
- 9-bit latch                                           : 1
-# Comparators                                          : 38
- 10-bit comparator greatequal                          : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 142
+ Flip-Flops                                            : 142
+# Comparators                                          : 62
+ 10-bit comparator greatequal                          : 4
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 1
  10-bit comparator lessequal                           : 4
- 32-bit comparator greatequal                          : 7
- 32-bit comparator greater                             : 8
- 32-bit comparator less                                : 8
- 32-bit comparator lessequal                           : 5
+ 11-bit comparator less                                : 3
+ 32-bit comparator greatequal                          : 12
+ 32-bit comparator greater                             : 11
+ 32-bit comparator less                                : 14
+ 32-bit comparator lessequal                           : 9
  9-bit comparator greatequal                           : 1
  9-bit comparator less                                 : 1
-# Multiplexers                                         : 11
- 1-bit 8-to-1 multiplexer                              : 4
- 32-bit 4-to-1 multiplexer                             : 3
+# Multiplexers                                         : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 2
  8-bit 12-to-1 multiplexer                             : 4
 
 =========================================================================
@@ -491,6 +549,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <paddle_position.y_0> has a constant value of 0 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <entity_pong> ...
 
@@ -502,38 +561,19 @@ Optimizing unit <entity_paddle> ...
 
 Optimizing unit <entity_border> ...
 
-Optimizing unit <entity_ponglogic> ...
-WARNING:Xst:1293 - FF/Latch <ball_vector_x_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
-
 Optimizing unit <entity_number> ...
-WARNING:Xst:1293 - FF/Latch <ball_vector_y_0> has a constant value of 1 in block <entity_ponglogic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_9> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_8> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_7> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_6> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_5> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_4> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_x_out_0> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_8> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_7> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_6> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_5> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_4> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_3> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_2> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_1> of sequential type is unconnected in block <entity_pong>.
-WARNING:Xst:2677 - Node <paint_pm/score_pm/number_pos_y_out_0> of sequential type is unconnected in block <entity_pong>.
+
+Optimizing unit <entity_ponglogic> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <final_colour.red_0> in Unit <entity_pong> is equivalent to the following 3 FFs/Latches, which will be removed : <final_colour.red_1> <final_colour.red_2> <final_colour.red_3> 
-INFO:Xst:2261 - The FF/Latch <final_colour.blue_0> in Unit <entity_pong> is equivalent to the following 7 FFs/Latches, which will be removed : <final_colour.blue_1> <final_colour.blue_2> <final_colour.blue_3> <final_colour.green_0> <final_colour.green_1> <final_colour.green_2> <final_colour.green_3> 
-INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_3> in Unit <entity_pong> is equivalent to the following 7 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_green_2> <rslve_pm/rslv_colour_green_1> <rslve_pm/rslv_colour_green_0> <rslve_pm/rslv_colour_blue_3> <rslve_pm/rslv_colour_blue_2> <rslve_pm/rslv_colour_blue_1> <rslve_pm/rslv_colour_blue_0> 
+INFO:Xst:2261 - The FF/Latch <final_colour.green_1> in Unit <entity_pong> is equivalent to the following FF/Latch, which will be removed : <final_colour.green_3> 
+INFO:Xst:2261 - The FF/Latch <final_colour.blue_0> in Unit <entity_pong> is equivalent to the following 5 FFs/Latches, which will be removed : <final_colour.blue_1> <final_colour.blue_2> <final_colour.blue_3> <final_colour.green_0> <final_colour.green_2> 
+INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_3> in Unit <entity_pong> is equivalent to the following FF/Latch, which will be removed : <rslve_pm/rslv_colour_green_1> 
+INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_green_2> in Unit <entity_pong> is equivalent to the following 5 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_green_0> <rslve_pm/rslv_colour_blue_3> <rslve_pm/rslv_colour_blue_2> <rslve_pm/rslv_colour_blue_1> <rslve_pm/rslv_colour_blue_0> 
 INFO:Xst:2261 - The FF/Latch <rslve_pm/rslv_colour_red_3> in Unit <entity_pong> is equivalent to the following 3 FFs/Latches, which will be removed : <rslve_pm/rslv_colour_red_2> <rslve_pm/rslv_colour_red_1> <rslve_pm/rslv_colour_red_0> 
-Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block entity_pong, actual ratio is 8.
 
 Final Macro Processing ...
 
@@ -541,8 +581,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 163
- Flip-Flops                                            : 163
+# Registers                                            : 223
+ Flip-Flops                                            : 223
 
 =========================================================================
 
@@ -568,44 +608,45 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : NO
 
 Design Statistics
-# IOs                              : 18
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 3027
+# BELS                             : 4257
 #      GND                         : 1
-#      INV                         : 181
-#      LUT1                        : 213
-#      LUT2                        : 270
-#      LUT2_D                      : 1
-#      LUT2_L                      : 32
-#      LUT3                        : 334
+#      INV                         : 320
+#      LUT1                        : 240
+#      LUT2                        : 328
+#      LUT2_D                      : 2
+#      LUT2_L                      : 31
+#      LUT3                        : 289
 #      LUT3_D                      : 3
 #      LUT3_L                      : 4
-#      LUT4                        : 501
-#      LUT4_D                      : 32
-#      LUT4_L                      : 10
-#      MULT_AND                    : 5
-#      MUXCY                       : 770
-#      MUXF5                       : 131
-#      MUXF6                       : 40
-#      MUXF7                       : 4
+#      LUT4                        : 953
+#      LUT4_D                      : 60
+#      LUT4_L                      : 33
+#      MUXCY                       : 1082
+#      MUXF5                       : 140
+#      MUXF6                       : 34
+#      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 494
-# FlipFlops/Latches                : 163
-#      FD                          : 2
+#      XORCY                       : 735
+# FlipFlops/Latches                : 223
+#      FD                          : 3
 #      FDC                         : 9
-#      FDCE                        : 89
-#      FDE                         : 53
+#      FDCE                        : 88
+#      FDCPE                       : 64
+#      FDE                         : 52
 #      FDP                         : 1
-#      FDPE                        : 7
-#      FDR                         : 1
-#      FDRS                        : 1
+#      FDPE                        : 3
+#      FDRS                        : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 17
-#      IBUF                        : 3
+# IO Buffers                       : 19
+#      IBUF                        : 5
 #      OBUF                        : 14
+# DSPs                             : 4
+#      DSP48A                      : 4
 =========================================================================
 
 Device utilization summary:
@@ -613,12 +654,13 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                      881  out of  16640     5%  
- Number of Slice Flip Flops:            163  out of  33280     0%  
- Number of 4 input LUTs:               1581  out of  33280     4%  
- Number of IOs:                          18
- Number of bonded IOBs:                  18  out of    519     3%  
+ Number of Slices:                     1253  out of  16640     7%  
+ Number of Slice Flip Flops:            223  out of  33280     0%  
+ Number of 4 input LUTs:               2263  out of  33280     6%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    519     3%  
  Number of GCLKs:                         2  out of     24     8%  
+ Number of DSP48s:                        4  out of     84     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -641,25 +683,69 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | BUFGP                  | 45    |
-sgnal_pm/siggen_vsync1             | BUFG                   | 118   |
+clk_in                             | BUFGP                  | 47    |
+sgnal_pm/siggen_vsync1             | BUFG                   | 176   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------------------+-------------------------------+-------+
-Control Signal                                                     | Buffer(FF name)               | Load  |
--------------------------------------------------------------------+-------------------------------+-------+
-logic_pm/ball_position.x_Acst_inv(sgnal_pm/siggen_rst_inv1_INV_0:O)| NONE(sgnal_pm/vsync_counter_0)| 106   |
--------------------------------------------------------------------+-------------------------------+-------+
+------------------------------------------------------------------------------+----------------------------------+-------+
+Control Signal                                                                | Buffer(FF name)                  | Load  |
+------------------------------------------------------------------------------+----------------------------------+-------+
+logic_pm/ball_vector.x_Acst_inv(sgnal_pm/siggen_rst_in_inv1_INV_0:O)          | NONE(sgnal_pm/hsync_counter_5)   | 101   |
+logic_pm/ball_position.x_10__and0000(logic_pm/ball_position.x_10__and000011:O)| NONE(logic_pm/ball_position.x_12)| 22    |
+logic_pm/ball_position.x_10__and0001(logic_pm/ball_position.x_10__and000111:O)| NONE(logic_pm/ball_position.x_12)| 22    |
+logic_pm/ball_position.y_10__and0000(logic_pm/ball_position.y_10__and000011:O)| NONE(logic_pm/ball_position.y_28)| 22    |
+logic_pm/ball_position.y_10__and0001(logic_pm/ball_position.y_10__and000111:O)| NONE(logic_pm/ball_position.y_28)| 22    |
+logic_pm/ball_position.x_0__and0000(logic_pm/ball_position.x_0__and00001:O)   | NONE(logic_pm/ball_position.x_0) | 1     |
+logic_pm/ball_position.x_0__and0001(logic_pm/ball_position.x_0__and00011:O)   | NONE(logic_pm/ball_position.x_0) | 1     |
+logic_pm/ball_position.x_1__and0000(logic_pm/ball_position.x_1__and00001:O)   | NONE(logic_pm/ball_position.x_1) | 1     |
+logic_pm/ball_position.x_1__and0001(logic_pm/ball_position.x_1__and00011:O)   | NONE(logic_pm/ball_position.x_1) | 1     |
+logic_pm/ball_position.x_2__and0000(logic_pm/ball_position.x_2__and00001:O)   | NONE(logic_pm/ball_position.x_2) | 1     |
+logic_pm/ball_position.x_2__and0001(logic_pm/ball_position.x_2__and00011:O)   | NONE(logic_pm/ball_position.x_2) | 1     |
+logic_pm/ball_position.x_3__and0000(logic_pm/ball_position.x_3__and00001:O)   | NONE(logic_pm/ball_position.x_3) | 1     |
+logic_pm/ball_position.x_3__and0001(logic_pm/ball_position.x_3__and00011:O)   | NONE(logic_pm/ball_position.x_3) | 1     |
+logic_pm/ball_position.x_4__and0000(logic_pm/ball_position.x_4__and00001:O)   | NONE(logic_pm/ball_position.x_4) | 1     |
+logic_pm/ball_position.x_4__and0001(logic_pm/ball_position.x_4__and00011:O)   | NONE(logic_pm/ball_position.x_4) | 1     |
+logic_pm/ball_position.x_5__and0000(logic_pm/ball_position.x_5__and00001:O)   | NONE(logic_pm/ball_position.x_5) | 1     |
+logic_pm/ball_position.x_5__and0001(logic_pm/ball_position.x_5__and00011:O)   | NONE(logic_pm/ball_position.x_5) | 1     |
+logic_pm/ball_position.x_6__and0000(logic_pm/ball_position.x_6__and00001:O)   | NONE(logic_pm/ball_position.x_6) | 1     |
+logic_pm/ball_position.x_6__and0001(logic_pm/ball_position.x_6__and00011:O)   | NONE(logic_pm/ball_position.x_6) | 1     |
+logic_pm/ball_position.x_7__and0000(logic_pm/ball_position.x_7__and00001:O)   | NONE(logic_pm/ball_position.x_7) | 1     |
+logic_pm/ball_position.x_7__and0001(logic_pm/ball_position.x_7__and00011:O)   | NONE(logic_pm/ball_position.x_7) | 1     |
+logic_pm/ball_position.x_8__and0000(logic_pm/ball_position.x_8__and00001:O)   | NONE(logic_pm/ball_position.x_8) | 1     |
+logic_pm/ball_position.x_8__and0001(logic_pm/ball_position.x_8__and00011:O)   | NONE(logic_pm/ball_position.x_8) | 1     |
+logic_pm/ball_position.x_9__and0000(logic_pm/ball_position.x_9__and00001:O)   | NONE(logic_pm/ball_position.x_9) | 1     |
+logic_pm/ball_position.x_9__and0001(logic_pm/ball_position.x_9__and00011:O)   | NONE(logic_pm/ball_position.x_9) | 1     |
+logic_pm/ball_position.y_0__and0000(logic_pm/ball_position.y_0__and00001:O)   | NONE(logic_pm/ball_position.y_0) | 1     |
+logic_pm/ball_position.y_0__and0001(logic_pm/ball_position.y_0__and00011:O)   | NONE(logic_pm/ball_position.y_0) | 1     |
+logic_pm/ball_position.y_1__and0000(logic_pm/ball_position.y_1__and00001:O)   | NONE(logic_pm/ball_position.y_1) | 1     |
+logic_pm/ball_position.y_1__and0001(logic_pm/ball_position.y_1__and00011:O)   | NONE(logic_pm/ball_position.y_1) | 1     |
+logic_pm/ball_position.y_2__and0000(logic_pm/ball_position.y_2__and00001:O)   | NONE(logic_pm/ball_position.y_2) | 1     |
+logic_pm/ball_position.y_2__and0001(logic_pm/ball_position.y_2__and00011:O)   | NONE(logic_pm/ball_position.y_2) | 1     |
+logic_pm/ball_position.y_3__and0000(logic_pm/ball_position.y_3__and00001:O)   | NONE(logic_pm/ball_position.y_3) | 1     |
+logic_pm/ball_position.y_3__and0001(logic_pm/ball_position.y_3__and00011:O)   | NONE(logic_pm/ball_position.y_3) | 1     |
+logic_pm/ball_position.y_4__and0000(logic_pm/ball_position.y_4__and00001:O)   | NONE(logic_pm/ball_position.y_4) | 1     |
+logic_pm/ball_position.y_4__and0001(logic_pm/ball_position.y_4__and00011:O)   | NONE(logic_pm/ball_position.y_4) | 1     |
+logic_pm/ball_position.y_5__and0000(logic_pm/ball_position.y_5__and00001:O)   | NONE(logic_pm/ball_position.y_5) | 1     |
+logic_pm/ball_position.y_5__and0001(logic_pm/ball_position.y_5__and00011:O)   | NONE(logic_pm/ball_position.y_5) | 1     |
+logic_pm/ball_position.y_6__and0000(logic_pm/ball_position.y_6__and00001:O)   | NONE(logic_pm/ball_position.y_6) | 1     |
+logic_pm/ball_position.y_6__and0001(logic_pm/ball_position.y_6__and00011:O)   | NONE(logic_pm/ball_position.y_6) | 1     |
+logic_pm/ball_position.y_7__and0000(logic_pm/ball_position.y_7__and00001:O)   | NONE(logic_pm/ball_position.y_7) | 1     |
+logic_pm/ball_position.y_7__and0001(logic_pm/ball_position.y_7__and00011:O)   | NONE(logic_pm/ball_position.y_7) | 1     |
+logic_pm/ball_position.y_8__and0000(logic_pm/ball_position.y_8__and00001:O)   | NONE(logic_pm/ball_position.y_8) | 1     |
+logic_pm/ball_position.y_8__and0001(logic_pm/ball_position.y_8__and00011:O)   | NONE(logic_pm/ball_position.y_8) | 1     |
+logic_pm/ball_position.y_9__and0000(logic_pm/ball_position.y_9__and00001:O)   | NONE(logic_pm/ball_position.y_9) | 1     |
+logic_pm/ball_position.y_9__and0001(logic_pm/ball_position.y_9__and00011:O)   | NONE(logic_pm/ball_position.y_9) | 1     |
+------------------------------------------------------------------------------+----------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 21.254ns (Maximum Frequency: 47.051MHz)
-   Minimum input arrival time before clock: 12.466ns
-   Maximum output required time after clock: 5.868ns
+   Minimum period: 28.154ns (Maximum Frequency: 35.519MHz)
+   Minimum input arrival time before clock: 25.050ns
+   Maximum output required time after clock: 5.780ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -668,131 +754,147 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
-  Clock period: 10.877ns (frequency: 91.938MHz)
-  Total number of paths / destination ports: 1984 / 57
+  Clock period: 13.467ns (frequency: 74.258MHz)
+  Total number of paths / destination ports: 4035 / 63
 -------------------------------------------------------------------------
-Delay:               10.877ns (Levels of Logic = 10)
-  Source:            sgnal_pm/siggen_pos_x_0 (FF)
-  Destination:       final_colour.red_0 (FF)
+Delay:               13.467ns (Levels of Logic = 11)
+  Source:            sgnal_pm/siggen_pos_y_1 (FF)
+  Destination:       final_colour.green_1 (FF)
   Source Clock:      clk_in rising
   Destination Clock: clk_in rising
 
-  Data Path: sgnal_pm/siggen_pos_x_0 to final_colour.red_0
+  Data Path: sgnal_pm/siggen_pos_y_1 to final_colour.green_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             72   0.591   1.418  sgnal_pm/siggen_pos_x_0 (sgnal_pm/siggen_pos_x_0)
-     LUT3:I0->O          120   0.648   1.433  paint_pm/score_pm/Msub_num_sub0000_Madd_xor<2>11 (paint_pm/score_pm/num_sub0000<2>)
-     LUT3:I0->O            1   0.648   0.000  paint_pm/score_pm/Mmux_num_mux0003_10 (paint_pm/score_pm/Mmux_num_mux0003_10)
-     MUXF5:I1->O           1   0.276   0.000  paint_pm/score_pm/Mmux_num_mux0003_9_f5 (paint_pm/score_pm/Mmux_num_mux0003_9_f5)
-     MUXF6:I1->O           1   0.291   0.500  paint_pm/score_pm/Mmux_num_mux0003_8_f6 (paint_pm/score_pm/Mmux_num_mux0003_8_f6)
-     LUT3:I1->O            1   0.643   0.000  paint_pm/score_pm/Mmux_num_mux0003_5 (paint_pm/score_pm/Mmux_num_mux0003_5)
-     MUXF5:I1->O           1   0.276   0.000  paint_pm/score_pm/Mmux_num_mux0003_4_f5 (paint_pm/score_pm/Mmux_num_mux0003_4_f5)
-     MUXF6:I1->O           1   0.291   0.000  paint_pm/score_pm/Mmux_num_mux0003_3_f6 (paint_pm/score_pm/Mmux_num_mux0003_3_f6)
-     MUXF7:I1->O           1   0.291   0.563  paint_pm/score_pm/Mmux_num_mux0003_2_f7 (paint_pm/score_pm/num_mux0003)
-     LUT4:I0->O            1   0.648   0.423  paint_pm/score_pm/number_colour_out_blue<0>1245 (paint_pm/score_pm/number_colour_out_blue<0>1245)
-     LUT4:I3->O            1   0.648   0.420  paint_pm/score_pm/number_colour_out_blue<0>1269 (paint_pm/score_pm/N31)
-     FDRS:S                    0.869          final_colour.red_0
+     FDE:C->Q            159   0.591   1.302  sgnal_pm/siggen_pos_y_1 (sgnal_pm/siggen_pos_y_1)
+     INV:I->O             32   0.648   1.262  paint_pm/score_pm/Msub_num_sub0000_Madd_xor<1>11_INV_0 (paint_pm/score_pm/num_sub0000<1>)
+     MUXF6:S->O            2   0.771   0.527  paint_pm/score_pm/Mmux_num_mux0006_5_f6_6 (paint_pm/score_pm/Mmux_num_mux0006_5_f67)
+     LUT3:I1->O            1   0.643   0.000  paint_pm/score_pm/number_colour_out_blue<0>7021 (paint_pm/score_pm/number_colour_out_blue<0>7021)
+     MUXF5:I1->O           1   0.276   0.500  paint_pm/score_pm/number_colour_out_blue<0>702_f5 (paint_pm/score_pm/number_colour_out_blue<0>702)
+     LUT4:I1->O            1   0.643   0.563  paint_pm/score_pm/number_colour_out_blue<0>729 (paint_pm/score_pm/number_colour_out_blue<0>729)
+     LUT4:I0->O            1   0.648   0.452  paint_pm/score_pm/number_colour_out_blue<0>927_SW0 (N725)
+     LUT3:I2->O            1   0.648   0.000  paint_pm/score_pm/number_colour_out_blue<0>936_F (N992)
+     MUXF5:I0->O           1   0.276   0.423  paint_pm/score_pm/number_colour_out_blue<0>936 (paint_pm/score_pm/number_colour_out_blue<0>936)
+     LUT4:I3->O            1   0.648   0.423  paint_pm/score_pm/number_colour_out_blue<0>977 (paint_pm/score_pm/number_colour_out_blue<0>977)
+     LUT4:I3->O            3   0.648   0.674  paint_pm/score_pm/number_colour_out_blue<0>1054 (paint_pm/number_colour_blue<0>)
+     LUT2:I0->O            1   0.648   0.000  paint_pm/pxlgen_colour_out_green<1>11 (paint_pm/pxlgen_colour_out_green<1>1)
+     FDRS:D                    0.252          final_colour.green_1
     ----------------------------------------
-    Total                     10.877ns (6.120ns logic, 4.757ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                     13.467ns (7.340ns logic, 6.127ns route)
+                                       (54.5% logic, 45.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sgnal_pm/siggen_vsync1'
-  Clock period: 21.254ns (frequency: 47.051MHz)
-  Total number of paths / destination ports: 187772789 / 236
+  Clock period: 28.154ns (frequency: 35.519MHz)
+  Total number of paths / destination ports: 19480156632 / 351
 -------------------------------------------------------------------------
-Delay:               21.254ns (Levels of Logic = 70)
-  Source:            logic_pm/ball_position.x_1 (FF)
-  Destination:       logic_pm/ball_position.y_0 (FF)
+Delay:               28.154ns (Levels of Logic = 85)
+  Source:            logic_pm/paddle_position.y_1 (FF)
+  Destination:       logic_pm/ball_vector.y_31 (FF)
   Source Clock:      sgnal_pm/siggen_vsync1 rising
   Destination Clock: sgnal_pm/siggen_vsync1 rising
 
-  Data Path: logic_pm/ball_position.x_1 to logic_pm/ball_position.y_0
+  Data Path: logic_pm/paddle_position.y_1 to logic_pm/ball_vector.y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             5   0.591   0.776  logic_pm/ball_position.x_1 (logic_pm/ball_position.x_1)
-     LUT1:I0->O            1   0.648   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<1>_rt (logic_pm/Msub_ball_vector_y_sub0000_cy<1>_rt)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<1> (logic_pm/Msub_ball_vector_y_sub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<2> (logic_pm/Msub_ball_vector_y_sub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<3> (logic_pm/Msub_ball_vector_y_sub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<4> (logic_pm/Msub_ball_vector_y_sub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<5> (logic_pm/Msub_ball_vector_y_sub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<6> (logic_pm/Msub_ball_vector_y_sub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<7> (logic_pm/Msub_ball_vector_y_sub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<8> (logic_pm/Msub_ball_vector_y_sub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<9> (logic_pm/Msub_ball_vector_y_sub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<10> (logic_pm/Msub_ball_vector_y_sub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<11> (logic_pm/Msub_ball_vector_y_sub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<12> (logic_pm/Msub_ball_vector_y_sub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<13> (logic_pm/Msub_ball_vector_y_sub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<14> (logic_pm/Msub_ball_vector_y_sub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<15> (logic_pm/Msub_ball_vector_y_sub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<16> (logic_pm/Msub_ball_vector_y_sub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<17> (logic_pm/Msub_ball_vector_y_sub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<18> (logic_pm/Msub_ball_vector_y_sub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<19> (logic_pm/Msub_ball_vector_y_sub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<20> (logic_pm/Msub_ball_vector_y_sub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<21> (logic_pm/Msub_ball_vector_y_sub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<22> (logic_pm/Msub_ball_vector_y_sub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<23> (logic_pm/Msub_ball_vector_y_sub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<24> (logic_pm/Msub_ball_vector_y_sub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<25> (logic_pm/Msub_ball_vector_y_sub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<26> (logic_pm/Msub_ball_vector_y_sub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<27> (logic_pm/Msub_ball_vector_y_sub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<28> (logic_pm/Msub_ball_vector_y_sub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<29> (logic_pm/Msub_ball_vector_y_sub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector_y_sub0000_cy<30> (logic_pm/Msub_ball_vector_y_sub0000_cy<30>)
-     XORCY:CI->O          41   0.844   1.265  logic_pm/Msub_ball_vector_y_sub0000_xor<31> (logic_pm/ball_vector_y_sub0000<31>)
-     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector_y_cmp_lt0000_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector_y_cmp_lt0000_lut<10>)
-     MUXCY:S->O           19   0.836   1.117  logic_pm/Mcompar_ball_vector_y_cmp_lt0000_cy<10> (logic_pm/Mcompar_ball_vector_y_cmp_lt0000_cy<10>)
-     LUT3:I2->O           11   0.648   1.013  logic_pm/Mmux_ball_position.y_mux00001101_1 (logic_pm/Mmux_ball_position.y_mux00001101)
-     LUT2:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_position.y_mux00001211 (logic_pm/Mmux_ball_position.y_mux0000121)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_points_0_sub0000_cy<1> (logic_pm/Msub_points_0_sub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<2> (logic_pm/Msub_points_0_sub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<3> (logic_pm/Msub_points_0_sub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<4> (logic_pm/Msub_points_0_sub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<5> (logic_pm/Msub_points_0_sub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<6> (logic_pm/Msub_points_0_sub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<7> (logic_pm/Msub_points_0_sub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<8> (logic_pm/Msub_points_0_sub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<9> (logic_pm/Msub_points_0_sub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<10> (logic_pm/Msub_points_0_sub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<11> (logic_pm/Msub_points_0_sub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<12> (logic_pm/Msub_points_0_sub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<13> (logic_pm/Msub_points_0_sub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<14> (logic_pm/Msub_points_0_sub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<15> (logic_pm/Msub_points_0_sub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<16> (logic_pm/Msub_points_0_sub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<17> (logic_pm/Msub_points_0_sub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<18> (logic_pm/Msub_points_0_sub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<19> (logic_pm/Msub_points_0_sub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<20> (logic_pm/Msub_points_0_sub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<21> (logic_pm/Msub_points_0_sub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<22> (logic_pm/Msub_points_0_sub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<23> (logic_pm/Msub_points_0_sub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<24> (logic_pm/Msub_points_0_sub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<25> (logic_pm/Msub_points_0_sub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<26> (logic_pm/Msub_points_0_sub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<27> (logic_pm/Msub_points_0_sub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<28> (logic_pm/Msub_points_0_sub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<29> (logic_pm/Msub_points_0_sub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_points_0_sub0000_cy<30> (logic_pm/Msub_points_0_sub0000_cy<30>)
-     XORCY:CI->O          35   0.844   1.343  logic_pm/Msub_points_0_sub0000_xor<31> (logic_pm/points_0_sub0000<31>)
-     LUT2:I1->O            1   0.643   0.000  logic_pm/Mcompar_points_0_cmp_lt0000_lut<31> (logic_pm/Mcompar_points_0_cmp_lt0000_lut<31>)
-     MUXCY:S->O           57   0.836   1.302  logic_pm/Mcompar_points_0_cmp_lt0000_cy<31> (logic_pm/Mcompar_points_0_cmp_lt0000_cy<31>)
-     LUT3:I2->O           32   0.648   1.262  logic_pm/ball_position_y_not00011 (logic_pm/ball_position_y_not0001)
-     FDCE:CE                   0.312          logic_pm/ball_position.y_0
+     FDE:C->Q              6   0.591   0.812  logic_pm/paddle_position.y_1 (logic_pm/paddle_position.y_1)
+     LUT4:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_lut<1> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<2> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<3> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           4   0.269   0.590  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<7>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1_2 (logic_pm/Mcompar_paddle_position.y_cmp_ge0000_cy<9>1_1)
+     LUT4_D:I3->O          4   0.648   0.730  logic_pm/Mmux_paddle_position.y_mux00003211 (logic_pm/paddle_position_y_mux0000<9>1)
+     LUT4:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<5>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           3   0.269   0.563  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
+     LUT3_D:I2->O         16   0.648   1.037  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/Msub_ball_vector.y_sub0002_lut<1> (logic_pm/Msub_ball_vector.y_sub0002_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<1> (logic_pm/Msub_ball_vector.y_sub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<2> (logic_pm/Msub_ball_vector.y_sub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<3> (logic_pm/Msub_ball_vector.y_sub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<4> (logic_pm/Msub_ball_vector.y_sub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<5> (logic_pm/Msub_ball_vector.y_sub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<6> (logic_pm/Msub_ball_vector.y_sub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<7> (logic_pm/Msub_ball_vector.y_sub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<8> (logic_pm/Msub_ball_vector.y_sub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<9> (logic_pm/Msub_ball_vector.y_sub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<10> (logic_pm/Msub_ball_vector.y_sub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<11> (logic_pm/Msub_ball_vector.y_sub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<12> (logic_pm/Msub_ball_vector.y_sub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<13> (logic_pm/Msub_ball_vector.y_sub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<14> (logic_pm/Msub_ball_vector.y_sub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<15> (logic_pm/Msub_ball_vector.y_sub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<16> (logic_pm/Msub_ball_vector.y_sub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<17> (logic_pm/Msub_ball_vector.y_sub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<18> (logic_pm/Msub_ball_vector.y_sub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<19> (logic_pm/Msub_ball_vector.y_sub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<20> (logic_pm/Msub_ball_vector.y_sub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<21> (logic_pm/Msub_ball_vector.y_sub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<22> (logic_pm/Msub_ball_vector.y_sub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<23> (logic_pm/Msub_ball_vector.y_sub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<24> (logic_pm/Msub_ball_vector.y_sub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<25> (logic_pm/Msub_ball_vector.y_sub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<26> (logic_pm/Msub_ball_vector.y_sub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<27> (logic_pm/Msub_ball_vector.y_sub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<28> (logic_pm/Msub_ball_vector.y_sub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<29> (logic_pm/Msub_ball_vector.y_sub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<30> (logic_pm/Msub_ball_vector.y_sub0002_cy<30>)
+     XORCY:CI->O          39   0.844   1.264  logic_pm/Msub_ball_vector.y_sub0002_xor<31> (logic_pm/ball_vector_y_sub0002<31>)
+     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>)
+     MUXCY:S->O           48   0.836   1.270  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10> (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/ball_vector_y_mux0000<10>1_SW0 (N508)
+     LUT4:I3->O            6   0.648   0.672  logic_pm/ball_vector_y_mux0000<3>59 (logic_pm/ball_vector_y_mux0000<3>)
+     LUT4:I3->O            1   0.648   0.500  logic_pm/Mmux_ball_vector.y_mux000926_SW1 (N161)
+     LUT3:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_vector.y_mux000926 (logic_pm/ball_vector_y_mux0009<3>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<4> (logic_pm/Madd_ball_vector.y_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<5> (logic_pm/Madd_ball_vector.y_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<6> (logic_pm/Madd_ball_vector.y_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<7> (logic_pm/Madd_ball_vector.y_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<8> (logic_pm/Madd_ball_vector.y_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<9> (logic_pm/Madd_ball_vector.y_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<10> (logic_pm/Madd_ball_vector.y_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<11> (logic_pm/Madd_ball_vector.y_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<12> (logic_pm/Madd_ball_vector.y_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<13> (logic_pm/Madd_ball_vector.y_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<14> (logic_pm/Madd_ball_vector.y_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<15> (logic_pm/Madd_ball_vector.y_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<16> (logic_pm/Madd_ball_vector.y_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<17> (logic_pm/Madd_ball_vector.y_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<18> (logic_pm/Madd_ball_vector.y_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<19> (logic_pm/Madd_ball_vector.y_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<20> (logic_pm/Madd_ball_vector.y_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<21> (logic_pm/Madd_ball_vector.y_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<22> (logic_pm/Madd_ball_vector.y_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<23> (logic_pm/Madd_ball_vector.y_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<24> (logic_pm/Madd_ball_vector.y_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<25> (logic_pm/Madd_ball_vector.y_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<26> (logic_pm/Madd_ball_vector.y_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<27> (logic_pm/Madd_ball_vector.y_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<28> (logic_pm/Madd_ball_vector.y_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<29> (logic_pm/Madd_ball_vector.y_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<30> (logic_pm/Madd_ball_vector.y_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  logic_pm/Madd_ball_vector.y_share0000_xor<31> (logic_pm/ball_vector_y_share0000<31>)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/ball_vector_y_mux0008<31>22 (logic_pm/ball_vector_y_mux0008<31>)
+     FDCE:D                    0.252          logic_pm/ball_vector.y_31
     ----------------------------------------
-    Total                     21.254ns (13.175ns logic, 8.079ns route)
-                                       (62.0% logic, 38.0% route)
+    Total                     28.154ns (18.364ns logic, 9.790ns route)
+                                       (65.2% logic, 34.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
   Total number of paths / destination ports: 21 / 21
 -------------------------------------------------------------------------
-Offset:              2.363ns (Levels of Logic = 1)
+Offset:              2.455ns (Levels of Logic = 1)
   Source:            rst (PAD)
   Destination:       sgnal_pm/siggen_vsync (FF)
   Destination Clock: clk_in rising
@@ -801,110 +903,139 @@ Offset:              2.363ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            23   0.849   1.202  rst_IBUF (rst_IBUF)
-     FDE:CE                    0.312          sgnal_pm/siggen_pos_x_0
+     IBUF:I->O           133   0.849   1.294  rst_IBUF (rst_IBUF)
+     FDE:CE                    0.312          sgnal_pm/siggen_pos_y_0
     ----------------------------------------
-    Total                      2.363ns (1.161ns logic, 1.202ns route)
-                                       (49.1% logic, 50.9% route)
+    Total                      2.455ns (1.161ns logic, 1.294ns route)
+                                       (47.3% logic, 52.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sgnal_pm/siggen_vsync1'
-  Total number of paths / destination ports: 24064 / 64
+  Total number of paths / destination ports: 405120695 / 271
 -------------------------------------------------------------------------
-Offset:              12.466ns (Levels of Logic = 49)
+Offset:              25.050ns (Levels of Logic = 78)
   Source:            paddle_up (PAD)
-  Destination:       logic_pm/paddle_position.y_31 (FF)
+  Destination:       logic_pm/ball_vector.y_31 (FF)
   Destination Clock: sgnal_pm/siggen_vsync1 rising
 
-  Data Path: paddle_up to logic_pm/paddle_position.y_31
+  Data Path: paddle_up to logic_pm/ball_vector.y_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            68   0.849   1.417  paddle_up_IBUF (paddle_up_IBUF)
-     LUT2:I0->O            2   0.648   0.527  logic_pm/Mmux_paddle_position.y_mux00001101 (logic_pm/N0)
-     LUT4:I1->O            1   0.643   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<0> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<0> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<1> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<2> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4>)
+     IBUF:I->O            65   0.849   1.416  paddle_up_IBUF (paddle_up_IBUF)
+     LUT4:I0->O            5   0.648   0.776  logic_pm/Mmux_paddle_position.y_mux00002911 (logic_pm/paddle_position_y_mux0000<6>1)
+     LUT3:I0->O            1   0.648   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_lut<4>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<6>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<7>)
      MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<10> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<10>)
-     MUXCY:CI->O          32   0.269   1.405  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>)
-     LUT3:I0->O            1   0.648   0.452  logic_pm/paddle_position_y_mux0002<0>1 (logic_pm/paddle_position_y_mux0002<0>)
-     LUT3:I2->O            1   0.648   0.000  logic_pm/Mcount_paddle_position.y_lut<0> (logic_pm/Mcount_paddle_position.y_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  logic_pm/Mcount_paddle_position.y_cy<0> (logic_pm/Mcount_paddle_position.y_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<1> (logic_pm/Mcount_paddle_position.y_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<2> (logic_pm/Mcount_paddle_position.y_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<3> (logic_pm/Mcount_paddle_position.y_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<4> (logic_pm/Mcount_paddle_position.y_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<5> (logic_pm/Mcount_paddle_position.y_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<6> (logic_pm/Mcount_paddle_position.y_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<7> (logic_pm/Mcount_paddle_position.y_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<8> (logic_pm/Mcount_paddle_position.y_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<9> (logic_pm/Mcount_paddle_position.y_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<10> (logic_pm/Mcount_paddle_position.y_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<11> (logic_pm/Mcount_paddle_position.y_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<12> (logic_pm/Mcount_paddle_position.y_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<13> (logic_pm/Mcount_paddle_position.y_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<14> (logic_pm/Mcount_paddle_position.y_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<15> (logic_pm/Mcount_paddle_position.y_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<16> (logic_pm/Mcount_paddle_position.y_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<17> (logic_pm/Mcount_paddle_position.y_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<18> (logic_pm/Mcount_paddle_position.y_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<19> (logic_pm/Mcount_paddle_position.y_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<20> (logic_pm/Mcount_paddle_position.y_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<21> (logic_pm/Mcount_paddle_position.y_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<22> (logic_pm/Mcount_paddle_position.y_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<23> (logic_pm/Mcount_paddle_position.y_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<24> (logic_pm/Mcount_paddle_position.y_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<25> (logic_pm/Mcount_paddle_position.y_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<26> (logic_pm/Mcount_paddle_position.y_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<27> (logic_pm/Mcount_paddle_position.y_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<28> (logic_pm/Mcount_paddle_position.y_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<29> (logic_pm/Mcount_paddle_position.y_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  logic_pm/Mcount_paddle_position.y_cy<30> (logic_pm/Mcount_paddle_position.y_cy<30>)
-     XORCY:CI->O           1   0.844   0.000  logic_pm/Mcount_paddle_position.y_xor<31> (logic_pm/Mcount_paddle_position.y31)
-     FDE:D                     0.252          logic_pm/paddle_position.y_31
+     MUXCY:CI->O           3   0.269   0.563  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9> (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<9>)
+     LUT3_D:I2->O         16   0.648   1.037  logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1_1 (logic_pm/Mcompar_paddle_position.y_cmp_lt0000_cy<11>1)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/Msub_ball_vector.y_sub0002_lut<1> (logic_pm/Msub_ball_vector.y_sub0002_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<1> (logic_pm/Msub_ball_vector.y_sub0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<2> (logic_pm/Msub_ball_vector.y_sub0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<3> (logic_pm/Msub_ball_vector.y_sub0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<4> (logic_pm/Msub_ball_vector.y_sub0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<5> (logic_pm/Msub_ball_vector.y_sub0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<6> (logic_pm/Msub_ball_vector.y_sub0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<7> (logic_pm/Msub_ball_vector.y_sub0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<8> (logic_pm/Msub_ball_vector.y_sub0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<9> (logic_pm/Msub_ball_vector.y_sub0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<10> (logic_pm/Msub_ball_vector.y_sub0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<11> (logic_pm/Msub_ball_vector.y_sub0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<12> (logic_pm/Msub_ball_vector.y_sub0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<13> (logic_pm/Msub_ball_vector.y_sub0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<14> (logic_pm/Msub_ball_vector.y_sub0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<15> (logic_pm/Msub_ball_vector.y_sub0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<16> (logic_pm/Msub_ball_vector.y_sub0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<17> (logic_pm/Msub_ball_vector.y_sub0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<18> (logic_pm/Msub_ball_vector.y_sub0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<19> (logic_pm/Msub_ball_vector.y_sub0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<20> (logic_pm/Msub_ball_vector.y_sub0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<21> (logic_pm/Msub_ball_vector.y_sub0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<22> (logic_pm/Msub_ball_vector.y_sub0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<23> (logic_pm/Msub_ball_vector.y_sub0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<24> (logic_pm/Msub_ball_vector.y_sub0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<25> (logic_pm/Msub_ball_vector.y_sub0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<26> (logic_pm/Msub_ball_vector.y_sub0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<27> (logic_pm/Msub_ball_vector.y_sub0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<28> (logic_pm/Msub_ball_vector.y_sub0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<29> (logic_pm/Msub_ball_vector.y_sub0002_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Msub_ball_vector.y_sub0002_cy<30> (logic_pm/Msub_ball_vector.y_sub0002_cy<30>)
+     XORCY:CI->O          39   0.844   1.264  logic_pm/Msub_ball_vector.y_sub0002_xor<31> (logic_pm/ball_vector_y_sub0002<31>)
+     INV:I->O              1   0.648   0.000  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>1_INV_0 (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_lut<10>)
+     MUXCY:S->O           48   0.836   1.270  logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10> (logic_pm/Mcompar_ball_vector.y_cmp_lt0002_cy<10>)
+     LUT4_D:I3->O         12   0.648   0.964  logic_pm/ball_vector_y_mux0000<10>1_SW0 (N508)
+     LUT4:I3->O            6   0.648   0.672  logic_pm/ball_vector_y_mux0000<3>59 (logic_pm/ball_vector_y_mux0000<3>)
+     LUT4:I3->O            1   0.648   0.500  logic_pm/Mmux_ball_vector.y_mux000926_SW1 (N161)
+     LUT3:I1->O            1   0.643   0.000  logic_pm/Mmux_ball_vector.y_mux000926 (logic_pm/ball_vector_y_mux0009<3>)
+     MUXCY:S->O            1   0.632   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<3> (logic_pm/Madd_ball_vector.y_share0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<4> (logic_pm/Madd_ball_vector.y_share0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<5> (logic_pm/Madd_ball_vector.y_share0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<6> (logic_pm/Madd_ball_vector.y_share0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<7> (logic_pm/Madd_ball_vector.y_share0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<8> (logic_pm/Madd_ball_vector.y_share0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<9> (logic_pm/Madd_ball_vector.y_share0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<10> (logic_pm/Madd_ball_vector.y_share0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<11> (logic_pm/Madd_ball_vector.y_share0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<12> (logic_pm/Madd_ball_vector.y_share0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<13> (logic_pm/Madd_ball_vector.y_share0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<14> (logic_pm/Madd_ball_vector.y_share0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<15> (logic_pm/Madd_ball_vector.y_share0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<16> (logic_pm/Madd_ball_vector.y_share0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<17> (logic_pm/Madd_ball_vector.y_share0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<18> (logic_pm/Madd_ball_vector.y_share0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<19> (logic_pm/Madd_ball_vector.y_share0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<20> (logic_pm/Madd_ball_vector.y_share0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<21> (logic_pm/Madd_ball_vector.y_share0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<22> (logic_pm/Madd_ball_vector.y_share0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<23> (logic_pm/Madd_ball_vector.y_share0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<24> (logic_pm/Madd_ball_vector.y_share0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<25> (logic_pm/Madd_ball_vector.y_share0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<26> (logic_pm/Madd_ball_vector.y_share0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<27> (logic_pm/Madd_ball_vector.y_share0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<28> (logic_pm/Madd_ball_vector.y_share0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<29> (logic_pm/Madd_ball_vector.y_share0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  logic_pm/Madd_ball_vector.y_share0000_cy<30> (logic_pm/Madd_ball_vector.y_share0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  logic_pm/Madd_ball_vector.y_share0000_xor<31> (logic_pm/ball_vector_y_share0000<31>)
+     LUT4:I3->O            1   0.648   0.000  logic_pm/ball_vector_y_mux0008<31>22 (logic_pm/ball_vector_y_mux0008<31>)
+     FDCE:D                    0.252          logic_pm/ball_vector.y_31
     ----------------------------------------
-    Total                     12.466ns (8.665ns logic, 3.801ns route)
-                                       (69.5% logic, 30.5% route)
+    Total                     25.050ns (16.165ns logic, 8.885ns route)
+                                       (64.5% logic, 35.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
   Total number of paths / destination ports: 14 / 14
 -------------------------------------------------------------------------
-Offset:              5.868ns (Levels of Logic = 1)
-  Source:            rslve_pm/rslv_colour_green_3 (FF)
-  Destination:       colour_green<3> (PAD)
+Offset:              5.780ns (Levels of Logic = 1)
+  Source:            rslve_pm/rslv_colour_green_2 (FF)
+  Destination:       colour_green<2> (PAD)
   Source Clock:      clk_in rising
 
-  Data Path: rslve_pm/rslv_colour_green_3 to colour_green<3>
+  Data Path: rslve_pm/rslv_colour_green_2 to colour_green<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.591   0.757  rslve_pm/rslv_colour_green_3 (rslve_pm/rslv_colour_green_3)
+     FD:C->Q               6   0.591   0.669  rslve_pm/rslv_colour_green_2 (rslve_pm/rslv_colour_green_2)
      OBUF:I->O                 4.520          colour_blue_0_OBUF (colour_blue<0>)
     ----------------------------------------
-    Total                      5.868ns (5.111ns logic, 0.757ns route)
-                                       (87.1% logic, 12.9% route)
+    Total                      5.780ns (5.111ns logic, 0.669ns route)
+                                       (88.4% logic, 11.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 45.00 secs
-Total CPU time to Xst completion: 38.67 secs
+Total REAL time to Xst completion: 71.00 secs
+Total CPU time to Xst completion: 66.62 secs
  
 --> 
 
 
-Total memory usage is 217868 kilobytes
+Total memory usage is 247056 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 
