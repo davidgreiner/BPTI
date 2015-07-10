@@ -1,7 +1,7 @@
 # SYNTHESIS SCRIPT USING XST (WEBPACK)
 @echo off
 EXPORT NAME=invaders_top
-EXPORT ROM_PATH=roms\
+EXPORT ROM_PATH=roms/
 echo use build_xst -xil to skip synthesis stage.
 
 if [ ! -d "build" ]; then
