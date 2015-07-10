@@ -8,9 +8,21 @@ TIMESPEC TS11=FROM:PADS:TO:FFS : 30 ns;
 TIMESPEC TS12=FROM:FFS:TO:PADS : 30 ns;
 
 
-NET O_VIDEO_R        LOC = "H14"; 
-NET O_VIDEO_G        LOC = "H15";
-NET O_VIDEO_B        LOC = "G15";
+NET O_VIDEO_R<0>        LOC = "L20";
+NET O_VIDEO_R<1>        LOC = "K20";
+NET O_VIDEO_R<2>        LOC = "F25";
+NET O_VIDEO_R<3>        LOC = "F24";
+
+NET O_VIDEO_G<0>        LOC = "M19";
+Net O_VIDEO_G<1>        LOC = "M18";
+Net O_VIDEO_G<2>        LOC = "J23";
+Net O_VIDEO_G<3>        LOC = "J22";
+
+NET O_VIDEO_B<0>        LOC = "L22";
+NET O_VIDEO_B<1>        LOC = "K21";
+NET O_VIDEO_B<2>        LOC = "G23";
+NET O_VIDEO_B<3>        LOC = "G24";
+
 NET O_HSYNC          LOC = "K26";
 NET O_VSYNC          LOC = "K25";
 

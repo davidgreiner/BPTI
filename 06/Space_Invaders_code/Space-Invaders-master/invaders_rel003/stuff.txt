@@ -1,0 +1,2 @@
+C9:     Clk with 50MHz
+V16:    Reset push button

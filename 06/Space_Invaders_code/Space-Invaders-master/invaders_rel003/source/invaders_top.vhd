@@ -67,9 +67,9 @@ entity invaders_top is
     I_LEFT          : in std_logic;
     I_RIGHT         : in std_logic;
 
-    O_VIDEO_R      : out std_logic;
-    O_VIDEO_G      : out std_logic;
-    O_VIDEO_B      : out std_logic;
+    O_VIDEO_R      : out std_logic_vector(3 downto 0);
+    O_VIDEO_G      : out std_logic_vector(3 downto 0);
+    O_VIDEO_B      : out std_logic_vector(3 downto 0);
     O_HSYNC        : out std_logic;
     O_VSYNC        : out std_logic;
     --
@@ -346,9 +346,27 @@ architecture rtl of invaders_top is
             CLK_X2    => Clk_x2
         );
 
-        O_VIDEO_R <= VideoRGB_X2(2);
-        O_VIDEO_G <= VideoRGB_X2(1);
-        O_VIDEO_B <= VideoRGB_X2(0);
+        rgb_extend : process(VideoRGB_X2)
+        begin
+            if(VideoRGB_X2(2) = '1') then
+                O_VIDEO_R <= "1111";
+            else
+                O_VIDEO_R <= "0000";
+            end if;
+
+            if(VideoRGB_X2(1) = '1') then
+                O_VIDEO_G <= "1111";
+            else
+                O_VIDEO_G <= "0000";
+            end if;
+
+            if(VideoRGB_X2(0) = '1') then
+                O_VIDEO_B <= "1111";
+            else
+                O_VIDEO_B <= "0000";
+            end if;
+        end process;
+
         O_HSYNC   <= not HSync_X2;
         O_VSYNC   <= not VSync_X2;
 
