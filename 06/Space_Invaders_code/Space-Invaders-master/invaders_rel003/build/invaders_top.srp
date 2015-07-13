@@ -1,0 +1,425 @@
+Release 10.1.02 - xst K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "invaders_top.prj"
+Input Format                       : VHDL
+
+---- Target Parameters
+Output File Name                   : "invaders_top.ngc"
+Output Format                      : NGC
+Target Device                      : XC3SD1800A-FG676-4
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 2
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T80_Pack.vhd" in Library work.
+Package <t80_pack> compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T80_MCode.vhd" in Library work.
+Entity <t80_mcode> compiled.
+Entity <t80_mcode> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T80_ALU.vhd" in Library work.
+Entity <t80_alu> compiled.
+Entity <t80_alu> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T80_RegX.vhd" in Library work.
+Entity <t80_reg> compiled.
+Entity <t80_reg> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T80.vhd" in Library work.
+Entity <t80> compiled.
+Entity <t80> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/T8080se.vhd" in Library work.
+Entity <t8080se> compiled.
+Entity <t8080se> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/mw8080.vhd" in Library work.
+Entity <mw8080> compiled.
+Entity <mw8080> (Architecture <struct>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/clockdown.vhd" in Library work.
+Entity <clockdown> compiled.
+Entity <clockdown> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" in Library work.
+Entity <invaders_clocks> compiled.
+Entity <invaders_clocks> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders.vhd" in Library work.
+Entity <invaders> compiled.
+Entity <invaders> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_rom_h.vhd" in Library work.
+Entity <invaders_rom_h> compiled.
+Entity <invaders_rom_h> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_rom_g.vhd" in Library work.
+Entity <invaders_rom_g> compiled.
+Entity <invaders_rom_g> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_rom_f.vhd" in Library work.
+Entity <invaders_rom_f> compiled.
+Entity <invaders_rom_f> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_rom_e.vhd" in Library work.
+Entity <invaders_rom_e> compiled.
+Entity <invaders_rom_e> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/dblscan.vhd" in Library work.
+Entity <dblscan> compiled.
+Entity <dblscan> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.vhd" in Library work.
+Entity <invaders_top> compiled.
+Entity <invaders_top> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/dac.vhd" in Library work.
+Entity <dac> compiled.
+Entity <dac> (Architecture <rtl>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_audio.vhd" in Library work.
+Entity <invaders_audio> compiled.
+Entity <invaders_audio> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/ps2kbd.vhd" in Library work.
+Entity <ps2kbd> compiled.
+Entity <ps2kbd> (Architecture <rtl>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ps2kbd> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ps2kbd> in library <work> (Architecture <rtl>).
+Entity <ps2kbd> analyzed. Unit <ps2kbd> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ps2kbd>.
+    Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/ps2kbd.vhd".
+    Found 1-bit register for signal <Press>.
+    Found 1-bit register for signal <Release>.
+    Found 1-bit register for signal <Reset>.
+    Found 32-bit register for signal <Cnt>.
+    Found 32-bit adder for signal <Cnt$addsub0000> created at line 161.
+    Found 32-bit 4-to-1 multiplexer for signal <Cnt$mux0002>.
+    Found 2-bit register for signal <PS2_Clk_r>.
+    Found 1-bit register for signal <PS2_Clk_State>.
+    Found 1-bit 4-to-1 multiplexer for signal <PS2_Clk_State$mux0000>.
+    Found 2-bit register for signal <PS2_Data_r>.
+    Found 1-bit register for signal <PS2_Data_s>.
+    Found 1-bit 4-to-1 multiplexer for signal <PS2_Data_s$mux0000>.
+    Found 1-bit register for signal <PS2_Sample>.
+    Found 4-bit register for signal <RX_Bit_Cnt>.
+    Found 4-bit adder for signal <RX_Bit_Cnt$addsub0000> created at line 148.
+    Found 3-bit up counter for signal <RX_Byte>.
+    Found 1-bit register for signal <RX_Received>.
+    Found 1-bit register for signal <RX_Release>.
+    Found 8-bit register for signal <RX_ShiftReg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  34 Multiplexer(s).
+Unit <ps2kbd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 22
+ 1-bit register                                        : 20
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 56
+ Flip-Flops                                            : 56
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ps2kbd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop RX_ShiftReg_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop RX_ShiftReg_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : invaders_top.ngc
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 166
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      LUT3                        : 10
+#      LUT4                        : 56
+#      MUXCY                       : 31
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 64
+#      FDC                         : 4
+#      FDCE                        : 55
+#      FDPE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 4
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                       55  out of  16640     0%  
+ Number of Slice Flip Flops:             51  out of  33280     0%  
+ Number of 4 input LUTs:                 99  out of  33280     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    519     3%  
+    IOB Flip Flops:                      13
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 64    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Rst_n_inv(Rst_n_inv1_INV_0:O)      | NONE(Cnt_14)           | 64    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.513ns (Maximum Frequency: 153.539MHz)
+   Minimum input arrival time before clock: 4.251ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 6.513ns (frequency: 153.539MHz)
+  Total number of paths / destination ports: 1893 / 83
+-------------------------------------------------------------------------
+Delay:               6.513ns (Levels of Logic = 33)
+  Source:            Cnt_1 (FF)
+  Destination:       Cnt_31 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: Cnt_1 to Cnt_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.590  Cnt_1 (Cnt_1)
+     LUT1:I0->O            1   0.648   0.000  Madd_Cnt_addsub0000_cy<1>_rt (Madd_Cnt_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Madd_Cnt_addsub0000_cy<1> (Madd_Cnt_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<2> (Madd_Cnt_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<3> (Madd_Cnt_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<4> (Madd_Cnt_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<5> (Madd_Cnt_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<6> (Madd_Cnt_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<7> (Madd_Cnt_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<8> (Madd_Cnt_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<9> (Madd_Cnt_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<10> (Madd_Cnt_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<11> (Madd_Cnt_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<12> (Madd_Cnt_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<13> (Madd_Cnt_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<14> (Madd_Cnt_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<15> (Madd_Cnt_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<16> (Madd_Cnt_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<17> (Madd_Cnt_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<18> (Madd_Cnt_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<19> (Madd_Cnt_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<20> (Madd_Cnt_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<21> (Madd_Cnt_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<22> (Madd_Cnt_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<23> (Madd_Cnt_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<24> (Madd_Cnt_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<25> (Madd_Cnt_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<26> (Madd_Cnt_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<27> (Madd_Cnt_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<28> (Madd_Cnt_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_Cnt_addsub0000_cy<29> (Madd_Cnt_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  Madd_Cnt_addsub0000_cy<30> (Madd_Cnt_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  Madd_Cnt_addsub0000_xor<31> (Cnt_addsub0000<31>)
+     LUT4:I3->O            1   0.648   0.000  Mmux_Cnt_mux000211 (Cnt_mux0002<0>)
+     FDCE:D                    0.252          Cnt_31
+    ----------------------------------------
+    Total                      6.513ns (5.500ns logic, 1.013ns route)
+                                       (84.4% logic, 15.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 62 / 62
+-------------------------------------------------------------------------
+Offset:              4.251ns (Levels of Logic = 2)
+  Source:            Tick1us (PAD)
+  Destination:       RX_ShiftReg_7 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Tick1us to RX_ShiftReg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   0.849   1.408  Tick1us_IBUF (Tick1us_IBUF)
+     LUT4:I0->O           16   0.648   1.034  RX_ShiftReg_0_not0001 (RX_ShiftReg_0_not0001)
+     FDCE:CE                   0.312          RX_ShiftReg_7
+    ----------------------------------------
+    Total                      4.251ns (1.809ns logic, 2.442ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            Reset (FF)
+  Destination:       Reset (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: Reset to Reset
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.591   0.420  Reset (Reset_OBUF)
+     OBUF:I->O                 4.520          Reset_OBUF (Reset)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.46 secs
+ 
+--> 
+
+
+Total memory usage is 207420 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

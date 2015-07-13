@@ -1,7 +1,13 @@
+#/!bin bash
+
 # SYNTHESIS SCRIPT USING XST (WEBPACK)
-@echo off
-EXPORT NAME=invaders_top
-EXPORT ROM_PATH=roms/
+
+SHELL=/bin/bash
+
+export NAME=invaders_top
+export ROM_PATH=roms/
+export XILINX_PATH=/opt/Xilinx/10.1/ISE/bin/lin/
+
 echo use build_xst -xil to skip synthesis stage.
 
 if [ ! -d "build" ]; then
@@ -12,23 +18,23 @@ if [ ! -d "build" ]; then
 fi
 
 pushd build
-cp ../source/*.vhd
-cp ../source/*.edf
-cp ../${ROM_PATH}*.vhd
+cp ../source/*.vhd . 
+cp ../source/*.edf .
+cp ../${ROM_PATH}*.vhd .
 cp ../${NAME}_xst.ucf ${NAME}.ucf
-cp ../${NAME}.ut
-cp ../${NAME}.scr
-cp ../${NAME}.prj
+cp ../${NAME}.ut ${NAME}.ut
+cp ../${NAME}.scr ${NAME}.scr
+cp ../${NAME}.prj ${NAME}.prj
 
-if [ $1 != "-xil" ]; then
-  xst -ifn ${NAME}.scr -ofn ${NAME}.srp
+if [ $1!="-xil" ]; then
+  ${XILINX_PATH}xst -ifn ${NAME}.scr -ofn ${NAME}.srp
 fi
 
-ngdbuild -nt on -uc ${NAME}.ucf ${NAME}.ngc ${NAME}.ngd
-map -pr b ${NAME}.ngd -o ${NAME}.ncd ${NAME}.pcf
-par -w -ol high ${NAME}.ncd ${NAME}.ncd ${NAME}.pcf
-trce -v 10 -o ${NAME}.twr ${NAME}.ncd ${NAME}.pcf
-bitgen ${NAME}.ncd ${NAME}.bit -w -f ${NAME}.ut
+${XILINX_PATH}ngdbuild -nt on -uc ${NAME}.ucf ${NAME}.ngc ${NAME}.ngd
+${XILINX_PATH}map -pr b ${NAME}.ngd -o ${NAME}.ncd ${NAME}.pcf
+${XILINX_PATH}par -w -ol high ${NAME}.ncd ${NAME}.ncd ${NAME}.pcf
+${XILINX_PATH}trce -v 10 -o ${NAME}.twr ${NAME}.ncd ${NAME}.pcf
+${XILINX_PATH}bitgen ${NAME}.ncd ${NAME}.bit -w -f ${NAME}.ut
 
 popd
 exit 0
