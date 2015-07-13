@@ -79,7 +79,8 @@ entity invaders_top is
 end invaders_top;
 
 architecture rtl of invaders_top is
-
+    
+    signal clockdown : std_logic;
     signal I_RESET_L : std_logic;
     signal Clk       : std_logic;
     signal Clk_x2    : std_logic;
@@ -127,11 +128,21 @@ architecture rtl of invaders_top is
         -- Disable unused components
         ----------------------------------------------------------------------------------------------------------------------------------
 
+		clockdown_pm : entity work.clockdown
+		port map
+		(
+			CLKIN_IN => I_CLK_REF,
+			RST_IN => I_RESET_L,
+			CLKDV_OUT => clockdown,
+			CLKIN_IBUFG_OUT => OPEN,
+			CLK0_OUT => OPEN
+		);
+
         I_RESET_L      <= not I_RESET;
         --
         u_clocks : entity work.INVADERS_CLOCKS
         port map (
-            I_CLK_REF => I_CLK_REF,
+            I_CLK_REF => clockdown,
             I_RESET_L => I_RESET_L,
             --
             O_CLK     => Clk,
