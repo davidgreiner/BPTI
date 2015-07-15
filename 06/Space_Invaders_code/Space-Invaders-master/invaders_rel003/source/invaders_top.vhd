@@ -128,29 +128,18 @@ architecture rtl of invaders_top is
         ----------------------------------------------------------------------------------------------------------------------------------
 
 
-        I_RESET_L      <= not I_RESET;
+        I_RESET_L      <= I_RESET;
         --      
         
         u_clocks  : entity work.INVADERS_CLOCKS
         port map (
-        CLKIN_IN => I_CLK_REF,
-        RST_IN => I_RESET,
-        --
-        CLKFX_OUT => Clk_x2
+			I_CLK_REF         => I_CLK_REF,
+			I_RESET_L         => I_RESET_L,
+			--
+			O_CLK             => Clk,
+			O_CLK_X2 		  => Clk_x2
         );
-        
-		clock_p : process(Clk_x2, I_RESET)
-		variable switch : std_logic := '0';
-		begin
-			if(I_RESET = '0') then
-				switch := '0';
-			elsif(Clk_x2'event and Clk_x2 = '1') then
-				if(switch = '1') then
-					Clk <= not Clk;
-				end if;
-				switch := not switch;
-			end if;
-		end process;       
+      
         
         
 

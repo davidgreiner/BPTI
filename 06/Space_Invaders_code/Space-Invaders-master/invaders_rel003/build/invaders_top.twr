@@ -26,141 +26,75 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 ================================================================================
 Timing constraint: TS11 = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 30 ns;
 
- 49 paths analyzed, 45 endpoints analyzed, 0 failing endpoints
+ 338 paths analyzed, 334 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Maximum delay is   8.881ns.
+ Maximum delay is   7.401ns.
 --------------------------------------------------------------------------------
-Slack:                  21.119ns (requirement - data path)
-  Source:               I_LEFT (PAD)
-  Destination:          core/u_mw8080/u_8080/u0/IR_5 (FF)
+Slack:                  22.599ns (requirement - data path)
+  Source:               I_START (PAD)
+  Destination:          core/u_mw8080/u_8080/u0/IR_0 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      8.881ns (Levels of Logic = 4)
+  Data Path Delay:      7.401ns (Levels of Logic = 4)
   Destination Clock:    Clk rising
 
-  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/u0/IR_5
+  Maximum Data Path: I_START to core/u_mw8080/u_8080/u0/IR_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    J17.I                Tiopi                 0.524   I_LEFT
-                                                       I_LEFT
-                                                       I_LEFT_IBUF
-                                                       I_LEFT.DELAY_ADJ
-    SLICE_X46Y110.G3     net (fanout=2)        3.521   I_LEFT_IBUF
-    SLICE_X46Y110.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
-                                                       core/u_mw8080/Mmux_DI4382
-                                                       core/u_mw8080/Mmux_DI438_f5
-    SLICE_X28Y80.F3      net (fanout=1)        2.004   core/u_mw8080/Mmux_DI438
-    SLICE_X28Y80.X       Tilo                  0.692   core/u_mw8080/u_8080/DI_Reg<5>
-                                                       core/u_mw8080/Mmux_DI495
-    SLICE_X28Y79.F2      net (fanout=1)        0.351   core/u_mw8080/DI<5>
-    SLICE_X28Y79.CLK     Tfck                  0.802   core/u_mw8080/u_8080/u0/IR<5>
-                                                       core/u_mw8080/u_8080/u0/IR_mux0002<2>1
-                                                       core/u_mw8080/u_8080/u0/IR_5
+    J13.I                Tiopi                 0.524   I_START
+                                                       I_START
+                                                       I_START_IBUF
+                                                       I_START.DELAY_ADJ
+    SLICE_X62Y125.BX     net (fanout=1)        3.218   I_START_IBUF
+    SLICE_X62Y125.X      Tbxx                  0.860   N486
+                                                       core/u_mw8080/Mmux_DI1117_SW0_f5
+    SLICE_X64Y123.F3     net (fanout=1)        0.345   N486
+    SLICE_X64Y123.X      Tilo                  0.692   core/u_mw8080/Mmux_DI1117
+                                                       core/u_mw8080/Mmux_DI1117
+    SLICE_X67Y133.G1     net (fanout=2)        1.035   core/u_mw8080/Mmux_DI1117
+    SLICE_X67Y133.CLK    Tgck                  0.727   core/u_mw8080/u_8080/u0/IR<1>
+                                                       core/u_mw8080/u_8080/u0/IR_mux0002<7>1
+                                                       core/u_mw8080/u_8080/u0/IR_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.881ns (3.005ns logic, 5.876ns route)
-                                                       (33.8% logic, 66.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  21.120ns (requirement - data path)
-  Source:               I_LEFT (PAD)
-  Destination:          core/u_mw8080/u_8080/u0/IR_5 (FF)
-  Requirement:          30.000ns
-  Data Path Delay:      8.880ns (Levels of Logic = 4)
-  Destination Clock:    Clk rising
-
-  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/u0/IR_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    J17.I                Tiopi                 0.524   I_LEFT
-                                                       I_LEFT
-                                                       I_LEFT_IBUF
-                                                       I_LEFT.DELAY_ADJ
-    SLICE_X46Y110.F3     net (fanout=2)        3.520   I_LEFT_IBUF
-    SLICE_X46Y110.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
-                                                       core/u_mw8080/Mmux_DI4381
-                                                       core/u_mw8080/Mmux_DI438_f5
-    SLICE_X28Y80.F3      net (fanout=1)        2.004   core/u_mw8080/Mmux_DI438
-    SLICE_X28Y80.X       Tilo                  0.692   core/u_mw8080/u_8080/DI_Reg<5>
-                                                       core/u_mw8080/Mmux_DI495
-    SLICE_X28Y79.F2      net (fanout=1)        0.351   core/u_mw8080/DI<5>
-    SLICE_X28Y79.CLK     Tfck                  0.802   core/u_mw8080/u_8080/u0/IR<5>
-                                                       core/u_mw8080/u_8080/u0/IR_mux0002<2>1
-                                                       core/u_mw8080/u_8080/u0/IR_5
-    -------------------------------------------------  ---------------------------
-    Total                                      8.880ns (3.005ns logic, 5.875ns route)
-                                                       (33.8% logic, 66.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  21.300ns (requirement - data path)
-  Source:               I_FIRE (PAD)
-  Destination:          core/u_mw8080/u_8080/u0/IR_4 (FF)
-  Requirement:          30.000ns
-  Data Path Delay:      8.700ns (Levels of Logic = 4)
-  Destination Clock:    Clk rising
-
-  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/u0/IR_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    J15.I                Tiopi                 0.524   I_FIRE
-                                                       I_FIRE
-                                                       I_FIRE_IBUF
-                                                       I_FIRE.DELAY_ADJ
-    SLICE_X39Y113.F2     net (fanout=2)        3.526   I_FIRE_IBUF
-    SLICE_X39Y113.X      Tif5x                 0.924   core/GDB<4>
-                                                       core/GDB<4>2
-                                                       core/GDB<4>_f5
-    SLICE_X26Y81.F1      net (fanout=1)        1.937   core/GDB<4>
-    SLICE_X26Y81.X       Tif5x                 0.987   core/u_mw8080/u_8080/DI_Reg<4>
-                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
-                                                       core/u_mw8080/Mmux_DI_2_f5_0
-    SLICE_X27Y81.G3      net (fanout=1)        0.075   core/u_mw8080/DI<4>
-    SLICE_X27Y81.CLK     Tgck                  0.727   core/u_mw8080/u_8080/u0/IR<4>
-                                                       core/u_mw8080/u_8080/u0/IR_mux0002<3>1
-                                                       core/u_mw8080/u_8080/u0/IR_4
-    -------------------------------------------------  ---------------------------
-    Total                                      8.700ns (3.162ns logic, 5.538ns route)
-                                                       (36.3% logic, 63.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  21.667ns (requirement - data path)
-  Source:               I_FIRE (PAD)
-  Destination:          core/u_mw8080/u_8080/u0/IR_4 (FF)
-  Requirement:          30.000ns
-  Data Path Delay:      8.333ns (Levels of Logic = 4)
-  Destination Clock:    Clk rising
-
-  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/u0/IR_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    J15.I                Tiopi                 0.524   I_FIRE
-                                                       I_FIRE
-                                                       I_FIRE_IBUF
-                                                       I_FIRE.DELAY_ADJ
-    SLICE_X39Y113.G4     net (fanout=2)        3.159   I_FIRE_IBUF
-    SLICE_X39Y113.X      Tif5x                 0.924   core/GDB<4>
-                                                       core/GDB<4>3
-                                                       core/GDB<4>_f5
-    SLICE_X26Y81.F1      net (fanout=1)        1.937   core/GDB<4>
-    SLICE_X26Y81.X       Tif5x                 0.987   core/u_mw8080/u_8080/DI_Reg<4>
-                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
-                                                       core/u_mw8080/Mmux_DI_2_f5_0
-    SLICE_X27Y81.G3      net (fanout=1)        0.075   core/u_mw8080/DI<4>
-    SLICE_X27Y81.CLK     Tgck                  0.727   core/u_mw8080/u_8080/u0/IR<4>
-                                                       core/u_mw8080/u_8080/u0/IR_mux0002<3>1
-                                                       core/u_mw8080/u_8080/u0/IR_4
-    -------------------------------------------------  ---------------------------
-    Total                                      8.333ns (3.162ns logic, 5.171ns route)
+    Total                                      7.401ns (2.803ns logic, 4.598ns route)
                                                        (37.9% logic, 62.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  21.895ns (requirement - data path)
+Slack:                  22.650ns (requirement - data path)
+  Source:               I_START (PAD)
+  Destination:          core/u_mw8080/u_8080/DI_Reg_0 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      7.350ns (Levels of Logic = 4)
+  Destination Clock:    Clk rising
+
+  Maximum Data Path: I_START to core/u_mw8080/u_8080/DI_Reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J13.I                Tiopi                 0.524   I_START
+                                                       I_START
+                                                       I_START_IBUF
+                                                       I_START.DELAY_ADJ
+    SLICE_X62Y125.BX     net (fanout=1)        3.218   I_START_IBUF
+    SLICE_X62Y125.X      Tbxx                  0.860   N486
+                                                       core/u_mw8080/Mmux_DI1117_SW0_f5
+    SLICE_X64Y123.F3     net (fanout=1)        0.345   N486
+    SLICE_X64Y123.X      Tilo                  0.692   core/u_mw8080/Mmux_DI1117
+                                                       core/u_mw8080/Mmux_DI1117
+    SLICE_X66Y133.F4     net (fanout=2)        0.909   core/u_mw8080/Mmux_DI1117
+    SLICE_X66Y133.CLK    Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<0>
+                                                       core/u_mw8080/Mmux_DI1143
+                                                       core/u_mw8080/u_8080/DI_Reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.350ns (2.878ns logic, 4.472ns route)
+                                                       (39.2% logic, 60.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  22.759ns (requirement - data path)
   Source:               I_RIGHT (PAD)
   Destination:          core/u_mw8080/u_8080/u0/IR_6 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      8.105ns (Levels of Logic = 4)
+  Data Path Delay:      7.241ns (Levels of Logic = 4)
   Destination Clock:    Clk rising
 
   Maximum Data Path: I_RIGHT to core/u_mw8080/u_8080/u0/IR_6
@@ -171,84 +105,56 @@ Slack:                  21.895ns (requirement - data path)
                                                        I_RIGHT
                                                        I_RIGHT_IBUF
                                                        I_RIGHT.DELAY_ADJ
-    SLICE_X28Y99.F2      net (fanout=1)        4.233   I_RIGHT_IBUF
-    SLICE_X28Y99.X       Tilo                  0.692   core/u_mw8080/Mmux_DI538
+    SLICE_X63Y127.F2     net (fanout=1)        4.201   I_RIGHT_IBUF
+    SLICE_X63Y127.X      Tilo                  0.643   core/u_mw8080/Mmux_DI538
                                                        core/u_mw8080/Mmux_DI538
-    SLICE_X27Y83.F3      net (fanout=1)        1.090   core/u_mw8080/Mmux_DI538
-    SLICE_X27Y83.X       Tilo                  0.643   core/u_mw8080/u_8080/DI_Reg<6>
+    SLICE_X64Y129.F4     net (fanout=1)        0.379   core/u_mw8080/Mmux_DI538
+    SLICE_X64Y129.X      Tilo                  0.692   core/u_mw8080/u_8080/DI_Reg<6>
                                                        core/u_mw8080/Mmux_DI594
-    SLICE_X26Y82.G4      net (fanout=1)        0.106   core/u_mw8080/DI<6>
-    SLICE_X26Y82.CLK     Tgck                  0.817   core/u_mw8080/u_8080/u0/IR<7>
+    SLICE_X65Y128.G3     net (fanout=1)        0.075   core/u_mw8080/DI<6>
+    SLICE_X65Y128.CLK    Tgck                  0.727   core/u_mw8080/u_8080/u0/IR<7>
                                                        core/u_mw8080/u_8080/u0/IR_mux0002<1>1
                                                        core/u_mw8080/u_8080/u0/IR_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.105ns (2.676ns logic, 5.429ns route)
-                                                       (33.0% logic, 67.0% route)
+    Total                                      7.241ns (2.586ns logic, 4.655ns route)
+                                                       (35.7% logic, 64.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  21.913ns (requirement - data path)
-  Source:               I_RESET (PAD)
-  Destination:          Clk (FF)
+Slack:                  23.451ns (requirement - data path)
+  Source:               I_RIGHT (PAD)
+  Destination:          core/u_mw8080/u_8080/DI_Reg_6 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 2)
-  Destination Clock:    Clk_x2 rising
-
-  Maximum Data Path: I_RESET to Clk
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    Y16.I                Tiopi                 0.524   I_RESET
-                                                       I_RESET
-                                                       I_RESET_IBUF
-                                                       I_RESET.DELAY_ADJ
-    SLICE_X80Y86.F3      net (fanout=5)        4.434   I_RESET_IBUF
-    SLICE_X80Y86.X       Tilo                  0.692   Clk_and0000
-                                                       Clk_and00001
-    SLICE_X68Y115.CE     net (fanout=1)        2.126   Clk_and0000
-    SLICE_X68Y115.CLK    Tceck                 0.311   Clk1
-                                                       Clk
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (1.527ns logic, 6.560ns route)
-                                                       (18.9% logic, 81.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  21.992ns (requirement - data path)
-  Source:               I_FIRE (PAD)
-  Destination:          core/u_mw8080/u_8080/DI_Reg_4 (FF)
-  Requirement:          30.000ns
-  Data Path Delay:      8.008ns (Levels of Logic = 3)
+  Data Path Delay:      6.549ns (Levels of Logic = 3)
   Destination Clock:    Clk rising
 
-  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/DI_Reg_4
+  Maximum Data Path: I_RIGHT to core/u_mw8080/u_8080/DI_Reg_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    J15.I                Tiopi                 0.524   I_FIRE
-                                                       I_FIRE
-                                                       I_FIRE_IBUF
-                                                       I_FIRE.DELAY_ADJ
-    SLICE_X39Y113.F2     net (fanout=2)        3.526   I_FIRE_IBUF
-    SLICE_X39Y113.X      Tif5x                 0.924   core/GDB<4>
-                                                       core/GDB<4>2
-                                                       core/GDB<4>_f5
-    SLICE_X26Y81.F1      net (fanout=1)        1.937   core/GDB<4>
-    SLICE_X26Y81.CLK     Tfck                  1.097   core/u_mw8080/u_8080/DI_Reg<4>
-                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
-                                                       core/u_mw8080/Mmux_DI_2_f5_0
-                                                       core/u_mw8080/u_8080/DI_Reg_4
+    J10.I                Tiopi                 0.524   I_RIGHT
+                                                       I_RIGHT
+                                                       I_RIGHT_IBUF
+                                                       I_RIGHT.DELAY_ADJ
+    SLICE_X63Y127.F2     net (fanout=1)        4.201   I_RIGHT_IBUF
+    SLICE_X63Y127.X      Tilo                  0.643   core/u_mw8080/Mmux_DI538
+                                                       core/u_mw8080/Mmux_DI538
+    SLICE_X64Y129.F4     net (fanout=1)        0.379   core/u_mw8080/Mmux_DI538
+    SLICE_X64Y129.CLK    Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<6>
+                                                       core/u_mw8080/Mmux_DI594
+                                                       core/u_mw8080/u_8080/DI_Reg_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.008ns (2.545ns logic, 5.463ns route)
-                                                       (31.8% logic, 68.2% route)
+    Total                                      6.549ns (1.969ns logic, 4.580ns route)
+                                                       (30.1% logic, 69.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  22.162ns (requirement - data path)
+Slack:                  23.485ns (requirement - data path)
   Source:               I_LEFT (PAD)
-  Destination:          core/u_mw8080/u_8080/DI_Reg_5 (FF)
+  Destination:          core/u_mw8080/u_8080/u0/IR_5 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      7.838ns (Levels of Logic = 3)
+  Data Path Delay:      6.515ns (Levels of Logic = 4)
   Destination Clock:    Clk rising
 
-  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/DI_Reg_5
+  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/u0/IR_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -256,24 +162,122 @@ Slack:                  22.162ns (requirement - data path)
                                                        I_LEFT
                                                        I_LEFT_IBUF
                                                        I_LEFT.DELAY_ADJ
-    SLICE_X46Y110.G3     net (fanout=2)        3.521   I_LEFT_IBUF
-    SLICE_X46Y110.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
+    SLICE_X64Y131.G1     net (fanout=2)        2.847   I_LEFT_IBUF
+    SLICE_X64Y131.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
                                                        core/u_mw8080/Mmux_DI4382
                                                        core/u_mw8080/Mmux_DI438_f5
-    SLICE_X28Y80.F3      net (fanout=1)        2.004   core/u_mw8080/Mmux_DI438
-    SLICE_X28Y80.CLK     Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<5>
+    SLICE_X66Y131.F2     net (fanout=1)        0.376   core/u_mw8080/Mmux_DI438
+    SLICE_X66Y131.X      Tilo                  0.692   core/u_mw8080/u_8080/DI_Reg<5>
                                                        core/u_mw8080/Mmux_DI495
-                                                       core/u_mw8080/u_8080/DI_Reg_5
+    SLICE_X66Y135.F3     net (fanout=1)        0.287   core/u_mw8080/DI<5>
+    SLICE_X66Y135.CLK    Tfck                  0.802   core/u_mw8080/u_8080/u0/IR<5>
+                                                       core/u_mw8080/u_8080/u0/IR_mux0002<2>1
+                                                       core/u_mw8080/u_8080/u0/IR_5
     -------------------------------------------------  ---------------------------
-    Total                                      7.838ns (2.313ns logic, 5.525ns route)
-                                                       (29.5% logic, 70.5% route)
+    Total                                      6.515ns (3.005ns logic, 3.510ns route)
+                                                       (46.1% logic, 53.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  22.163ns (requirement - data path)
+Slack:                  23.495ns (requirement - data path)
+  Source:               I_LEFT (PAD)
+  Destination:          core/u_mw8080/u_8080/u0/IR_5 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      6.505ns (Levels of Logic = 4)
+  Destination Clock:    Clk rising
+
+  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/u0/IR_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J17.I                Tiopi                 0.524   I_LEFT
+                                                       I_LEFT
+                                                       I_LEFT_IBUF
+                                                       I_LEFT.DELAY_ADJ
+    SLICE_X64Y131.F1     net (fanout=2)        2.837   I_LEFT_IBUF
+    SLICE_X64Y131.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
+                                                       core/u_mw8080/Mmux_DI4381
+                                                       core/u_mw8080/Mmux_DI438_f5
+    SLICE_X66Y131.F2     net (fanout=1)        0.376   core/u_mw8080/Mmux_DI438
+    SLICE_X66Y131.X      Tilo                  0.692   core/u_mw8080/u_8080/DI_Reg<5>
+                                                       core/u_mw8080/Mmux_DI495
+    SLICE_X66Y135.F3     net (fanout=1)        0.287   core/u_mw8080/DI<5>
+    SLICE_X66Y135.CLK    Tfck                  0.802   core/u_mw8080/u_8080/u0/IR<5>
+                                                       core/u_mw8080/u_8080/u0/IR_mux0002<2>1
+                                                       core/u_mw8080/u_8080/u0/IR_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.505ns (3.005ns logic, 3.500ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  23.619ns (requirement - data path)
+  Source:               I_FIRE (PAD)
+  Destination:          core/u_mw8080/u_8080/u0/IR_4 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      6.381ns (Levels of Logic = 4)
+  Destination Clock:    Clk rising
+
+  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/u0/IR_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J15.I                Tiopi                 0.524   I_FIRE
+                                                       I_FIRE
+                                                       I_FIRE_IBUF
+                                                       I_FIRE.DELAY_ADJ
+    SLICE_X64Y125.F4     net (fanout=2)        2.275   I_FIRE_IBUF
+    SLICE_X64Y125.X      Tif5x                 0.987   core/GDB<4>
+                                                       core/GDB<4>2
+                                                       core/GDB<4>_f5
+    SLICE_X66Y126.F2     net (fanout=1)        0.393   core/GDB<4>
+    SLICE_X66Y126.X      Tif5x                 0.987   core/u_mw8080/u_8080/DI_Reg<4>
+                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
+                                                       core/u_mw8080/Mmux_DI_2_f5_0
+    SLICE_X66Y124.G2     net (fanout=1)        0.398   core/u_mw8080/DI<4>
+    SLICE_X66Y124.CLK    Tgck                  0.817   core/u_mw8080/u_8080/u0/IR<4>
+                                                       core/u_mw8080/u_8080/u0/IR_mux0002<3>1
+                                                       core/u_mw8080/u_8080/u0/IR_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.381ns (3.315ns logic, 3.066ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  23.924ns (requirement - data path)
+  Source:               I_FIRE (PAD)
+  Destination:          core/u_mw8080/u_8080/u0/IR_4 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      6.076ns (Levels of Logic = 4)
+  Destination Clock:    Clk rising
+
+  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/u0/IR_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    J15.I                Tiopi                 0.524   I_FIRE
+                                                       I_FIRE
+                                                       I_FIRE_IBUF
+                                                       I_FIRE.DELAY_ADJ
+    SLICE_X64Y125.G3     net (fanout=2)        1.970   I_FIRE_IBUF
+    SLICE_X64Y125.X      Tif5x                 0.987   core/GDB<4>
+                                                       core/GDB<4>3
+                                                       core/GDB<4>_f5
+    SLICE_X66Y126.F2     net (fanout=1)        0.393   core/GDB<4>
+    SLICE_X66Y126.X      Tif5x                 0.987   core/u_mw8080/u_8080/DI_Reg<4>
+                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
+                                                       core/u_mw8080/Mmux_DI_2_f5_0
+    SLICE_X66Y124.G2     net (fanout=1)        0.398   core/u_mw8080/DI<4>
+    SLICE_X66Y124.CLK    Tgck                  0.817   core/u_mw8080/u_8080/u0/IR<4>
+                                                       core/u_mw8080/u_8080/u0/IR_mux0002<3>1
+                                                       core/u_mw8080/u_8080/u0/IR_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.076ns (3.315ns logic, 2.761ns route)
+                                                       (54.6% logic, 45.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  24.464ns (requirement - data path)
   Source:               I_LEFT (PAD)
   Destination:          core/u_mw8080/u_8080/DI_Reg_5 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      7.837ns (Levels of Logic = 3)
+  Data Path Delay:      5.536ns (Levels of Logic = 3)
   Destination Clock:    Clk rising
 
   Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/DI_Reg_5
@@ -284,46 +288,45 @@ Slack:                  22.163ns (requirement - data path)
                                                        I_LEFT
                                                        I_LEFT_IBUF
                                                        I_LEFT.DELAY_ADJ
-    SLICE_X46Y110.F3     net (fanout=2)        3.520   I_LEFT_IBUF
-    SLICE_X46Y110.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
-                                                       core/u_mw8080/Mmux_DI4381
+    SLICE_X64Y131.G1     net (fanout=2)        2.847   I_LEFT_IBUF
+    SLICE_X64Y131.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
+                                                       core/u_mw8080/Mmux_DI4382
                                                        core/u_mw8080/Mmux_DI438_f5
-    SLICE_X28Y80.F3      net (fanout=1)        2.004   core/u_mw8080/Mmux_DI438
-    SLICE_X28Y80.CLK     Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<5>
+    SLICE_X66Y131.F2     net (fanout=1)        0.376   core/u_mw8080/Mmux_DI438
+    SLICE_X66Y131.CLK    Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<5>
                                                        core/u_mw8080/Mmux_DI495
                                                        core/u_mw8080/u_8080/DI_Reg_5
     -------------------------------------------------  ---------------------------
-    Total                                      7.837ns (2.313ns logic, 5.524ns route)
-                                                       (29.5% logic, 70.5% route)
+    Total                                      5.536ns (2.313ns logic, 3.223ns route)
+                                                       (41.8% logic, 58.2% route)
 
 --------------------------------------------------------------------------------
-Slack:                  22.359ns (requirement - data path)
-  Source:               I_FIRE (PAD)
-  Destination:          core/u_mw8080/u_8080/DI_Reg_4 (FF)
+Slack:                  24.474ns (requirement - data path)
+  Source:               I_LEFT (PAD)
+  Destination:          core/u_mw8080/u_8080/DI_Reg_5 (FF)
   Requirement:          30.000ns
-  Data Path Delay:      7.641ns (Levels of Logic = 3)
+  Data Path Delay:      5.526ns (Levels of Logic = 3)
   Destination Clock:    Clk rising
 
-  Maximum Data Path: I_FIRE to core/u_mw8080/u_8080/DI_Reg_4
+  Maximum Data Path: I_LEFT to core/u_mw8080/u_8080/DI_Reg_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    J15.I                Tiopi                 0.524   I_FIRE
-                                                       I_FIRE
-                                                       I_FIRE_IBUF
-                                                       I_FIRE.DELAY_ADJ
-    SLICE_X39Y113.G4     net (fanout=2)        3.159   I_FIRE_IBUF
-    SLICE_X39Y113.X      Tif5x                 0.924   core/GDB<4>
-                                                       core/GDB<4>3
-                                                       core/GDB<4>_f5
-    SLICE_X26Y81.F1      net (fanout=1)        1.937   core/GDB<4>
-    SLICE_X26Y81.CLK     Tfck                  1.097   core/u_mw8080/u_8080/DI_Reg<4>
-                                                       core/u_mw8080/Mmux_DI_2_f5_0_G
-                                                       core/u_mw8080/Mmux_DI_2_f5_0
-                                                       core/u_mw8080/u_8080/DI_Reg_4
+    J17.I                Tiopi                 0.524   I_LEFT
+                                                       I_LEFT
+                                                       I_LEFT_IBUF
+                                                       I_LEFT.DELAY_ADJ
+    SLICE_X64Y131.F1     net (fanout=2)        2.837   I_LEFT_IBUF
+    SLICE_X64Y131.X      Tif5x                 0.987   core/u_mw8080/Mmux_DI438
+                                                       core/u_mw8080/Mmux_DI4381
+                                                       core/u_mw8080/Mmux_DI438_f5
+    SLICE_X66Y131.F2     net (fanout=1)        0.376   core/u_mw8080/Mmux_DI438
+    SLICE_X66Y131.CLK    Tfck                  0.802   core/u_mw8080/u_8080/DI_Reg<5>
+                                                       core/u_mw8080/Mmux_DI495
+                                                       core/u_mw8080/u_8080/DI_Reg_5
     -------------------------------------------------  ---------------------------
-    Total                                      7.641ns (2.545ns logic, 5.096ns route)
-                                                       (33.3% logic, 66.7% route)
+    Total                                      5.526ns (2.313ns logic, 3.213ns route)
+                                                       (41.9% logic, 58.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -332,50 +335,50 @@ Timing constraint: TS12 = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 30 ns;
 
  14 paths analyzed, 14 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Maximum delay is   6.224ns.
+ Maximum delay is   5.923ns.
 --------------------------------------------------------------------------------
-Slack:                  23.776ns (requirement - data path)
-  Source:               u_dblscan/HSYNC_OUT (FF)
-  Destination:          O_HSYNC (PAD)
-  Requirement:          30.000ns
-  Data Path Delay:      6.224ns (Levels of Logic = 1)
-  Source Clock:         Clk_x2 rising
-
-  Maximum Data Path: u_dblscan/HSYNC_OUT to O_HSYNC
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X90Y97.YQ      Tcko                  0.676   u_dblscan/HSYNC_OUT
-                                                       u_dblscan/HSYNC_OUT
-    K26.O1               net (fanout=1)        1.552   u_dblscan/HSYNC_OUT
-    K26.PAD              Tioop                 3.996   O_HSYNC
-                                                       O_HSYNC_OBUF
-                                                       O_HSYNC
-    -------------------------------------------------  ---------------------------
-    Total                                      6.224ns (4.672ns logic, 1.552ns route)
-                                                       (75.1% logic, 24.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  24.415ns (requirement - data path)
+Slack:                  24.077ns (requirement - data path)
   Source:               u_dblscan/VSYNC_OUT (FF)
   Destination:          O_VSYNC (PAD)
   Requirement:          30.000ns
-  Data Path Delay:      5.585ns (Levels of Logic = 1)
+  Data Path Delay:      5.923ns (Levels of Logic = 1)
   Source Clock:         Clk_x2 rising
 
   Maximum Data Path: u_dblscan/VSYNC_OUT to O_VSYNC
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X92Y100.YQ     Tcko                  0.676   u_dblscan/VSYNC_OUT
+    SLICE_X91Y88.YQ      Tcko                  0.580   u_dblscan/VSYNC_OUT
                                                        u_dblscan/VSYNC_OUT
-    K25.O1               net (fanout=1)        0.913   u_dblscan/VSYNC_OUT
+    K25.O1               net (fanout=1)        1.347   u_dblscan/VSYNC_OUT
     K25.PAD              Tioop                 3.996   O_VSYNC
                                                        O_VSYNC_OBUF
                                                        O_VSYNC
     -------------------------------------------------  ---------------------------
-    Total                                      5.585ns (4.672ns logic, 0.913ns route)
-                                                       (83.7% logic, 16.3% route)
+    Total                                      5.923ns (4.576ns logic, 1.347ns route)
+                                                       (77.3% logic, 22.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  24.111ns (requirement - data path)
+  Source:               u_dblscan/HSYNC_OUT (FF)
+  Destination:          O_HSYNC (PAD)
+  Requirement:          30.000ns
+  Data Path Delay:      5.889ns (Levels of Logic = 1)
+  Source Clock:         Clk_x2 rising
+
+  Maximum Data Path: u_dblscan/HSYNC_OUT to O_HSYNC
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X92Y89.YQ      Tcko                  0.676   u_dblscan/HSYNC_OUT
+                                                       u_dblscan/HSYNC_OUT
+    K26.O1               net (fanout=1)        1.217   u_dblscan/HSYNC_OUT
+    K26.PAD              Tioop                 3.996   O_HSYNC
+                                                       O_HSYNC_OBUF
+                                                       O_HSYNC
+    -------------------------------------------------  ---------------------------
+    Total                                      5.889ns (4.672ns logic, 1.217ns route)
+                                                       (79.3% logic, 20.7% route)
 
 --------------------------------------------------------------------------------
 Slack:                  25.782ns (requirement - data path)
@@ -552,7 +555,10 @@ Setup/Hold to clock I_CLK_REF
             |  Setup to  |  Hold to   |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-I_RESET     |    5.213(R)|   -2.709(R)|Clk_x2            |   0.000|
+I_FIRE      |    7.405(R)|   -3.422(R)|Clk               |   0.000|
+I_LEFT      |    7.579(R)|   -3.882(R)|Clk               |   0.000|
+I_RIGHT     |    8.253(R)|   -4.664(R)|Clk               |   0.000|
+I_START     |    8.455(R)|   -5.354(R)|Clk               |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock I_CLK_REF to Pad
@@ -560,20 +566,20 @@ Clock I_CLK_REF to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-O_HSYNC     |    9.835(R)|Clk_x2            |   0.000|
-O_VIDEO_B<0>|    7.980(R)|Clk_x2            |   0.000|
-O_VIDEO_B<1>|    7.980(R)|Clk_x2            |   0.000|
-O_VIDEO_B<2>|    7.972(R)|Clk_x2            |   0.000|
-O_VIDEO_B<3>|    7.972(R)|Clk_x2            |   0.000|
-O_VIDEO_G<0>|    7.890(R)|Clk_x2            |   0.000|
-O_VIDEO_G<1>|    7.890(R)|Clk_x2            |   0.000|
-O_VIDEO_G<2>|    7.984(R)|Clk_x2            |   0.000|
-O_VIDEO_G<3>|    7.984(R)|Clk_x2            |   0.000|
-O_VIDEO_R<0>|    7.950(R)|Clk_x2            |   0.000|
-O_VIDEO_R<1>|    7.950(R)|Clk_x2            |   0.000|
-O_VIDEO_R<2>|    7.934(R)|Clk_x2            |   0.000|
-O_VIDEO_R<3>|    7.934(R)|Clk_x2            |   0.000|
-O_VSYNC     |    9.235(R)|Clk_x2            |   0.000|
+O_HSYNC     |    6.411(R)|Clk_x2            |   0.000|
+O_VIDEO_B<0>|    4.844(R)|Clk_x2            |   0.000|
+O_VIDEO_B<1>|    4.844(R)|Clk_x2            |   0.000|
+O_VIDEO_B<2>|    4.836(R)|Clk_x2            |   0.000|
+O_VIDEO_B<3>|    4.836(R)|Clk_x2            |   0.000|
+O_VIDEO_G<0>|    4.754(R)|Clk_x2            |   0.000|
+O_VIDEO_G<1>|    4.754(R)|Clk_x2            |   0.000|
+O_VIDEO_G<2>|    4.848(R)|Clk_x2            |   0.000|
+O_VIDEO_G<3>|    4.848(R)|Clk_x2            |   0.000|
+O_VIDEO_R<0>|    4.814(R)|Clk_x2            |   0.000|
+O_VIDEO_R<1>|    4.814(R)|Clk_x2            |   0.000|
+O_VIDEO_R<2>|    4.798(R)|Clk_x2            |   0.000|
+O_VIDEO_R<3>|    4.798(R)|Clk_x2            |   0.000|
+O_VSYNC     |    6.404(R)|Clk_x2            |   0.000|
 ------------+------------+------------------+--------+
 
 
@@ -582,24 +588,24 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover 63 paths, 0 nets, and 60 connections
+Constraints cover 352 paths, 0 nets, and 272 connections
 
 Design statistics:
-   Minimum period:   8.881ns{1}   (Maximum frequency: 112.600MHz)
-   Maximum path delay from/to any node:   8.881ns
+   Minimum period:   7.401ns{1}   (Maximum frequency: 135.117MHz)
+   Maximum path delay from/to any node:   7.401ns
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Jul 15 15:46:33 2015 
+Analysis completed Wed Jul 15 16:18:03 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 172 MB
+Peak Memory Usage: 173 MB
 
 
 

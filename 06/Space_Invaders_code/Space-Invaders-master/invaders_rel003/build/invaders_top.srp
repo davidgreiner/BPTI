@@ -63,7 +63,7 @@ Entity <mw8080> compiled.
 Entity <mw8080> (Architecture <struct>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" in Library work.
 Entity <INVADERS_CLOCKS> compiled.
-Entity <INVADERS_CLOCKS> (Architecture <BEHAVIORAL>) compiled.
+Entity <INVADERS_CLOCKS> (Architecture <RTL>) compiled.
 Compiling vhdl file "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders.vhd" in Library work.
 Entity <invaders> compiled.
 Entity <invaders> (Architecture <rtl>) compiled.
@@ -91,7 +91,7 @@ Entity <invaders_top> (Architecture <rtl>) compiled.
 =========================================================================
 Analyzing hierarchy for entity <invaders_top> in library <work> (architecture <rtl>).
 
-Analyzing hierarchy for entity <INVADERS_CLOCKS> in library <work> (architecture <BEHAVIORAL>).
+Analyzing hierarchy for entity <INVADERS_CLOCKS> in library <work> (architecture <RTL>).
 
 Analyzing hierarchy for entity <invaders> in library <work> (architecture <rtl>).
 
@@ -147,6 +147,11 @@ Analyzing hierarchy for entity <T80_ALU> in library <work> (architecture <rtl>) 
 
 Analyzing hierarchy for entity <T80_Reg> in library <work> (architecture <rtl>).
 
+WARNING:Xst:2591 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" line 122: attribute on instance <CLKDV_DIVIDE> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" line 122: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" line 122: attribute on instance <CLKIN_PERIOD> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" line 122: attribute on instance <DUTY_CYCLE_CORRECTION> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd" line 122: attribute on instance <STARTUP_WAIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -422,25 +427,26 @@ Analyzing Entity <invaders_top> in library <work> (Architecture <rtl>).
     Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <rams[3].u_ram> in unit <invaders_top>.
 Entity <invaders_top> analyzed. Unit <invaders_top> generated.
 
-Analyzing Entity <INVADERS_CLOCKS> in library <work> (Architecture <BEHAVIORAL>).
-    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKDV_DIVIDE =  2.5000000000000000" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKIN_DIVIDE_BY_2 =  TRUE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKIN_PERIOD =  39.7220000000000013" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "CLK_FEEDBACK =  NONE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
-    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <INVADERS_CLOCKS>.
+Analyzing Entity <INVADERS_CLOCKS> in library <work> (Architecture <RTL>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IBUFG0> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IBUFG0> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IBUFG0> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKDV_DIVIDE =  2.5000000000000000" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKFX_DIVIDE =  5" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKIN_PERIOD =  100.0000000000000000" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <dcma.dcm_inst> in unit <INVADERS_CLOCKS>.
 Entity <INVADERS_CLOCKS> analyzed. Unit <INVADERS_CLOCKS> generated.
 
 Analyzing Entity <invaders> in library <work> (Architecture <rtl>).
@@ -1051,7 +1057,7 @@ Unit <T80_ALU> synthesized.
 
 Synthesizing Unit <INVADERS_CLOCKS>.
     Related source file is "/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_clocks_xilinx.vhd".
-WARNING:Xst:646 - Signal <LOCKED_OUT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dcm_locked> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <INVADERS_CLOCKS> synthesized.
 
 
@@ -1249,7 +1255,6 @@ WARNING:Xst:646 - Signal <Tick1us> is assigned but never used. This unconnected 
 WARNING:Xst:646 - Signal <SoundCtrl5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <SoundCtrl3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <AD<15:13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 1-bit register for signal <Clk>.
     Found 4-bit up counter for signal <cnt>.
     Found 12-bit up counter for signal <HCnt>.
     Found 1-bit register for signal <HSync_t1>.
@@ -1258,11 +1263,10 @@ WARNING:Xst:646 - Signal <AD<15:13>> is assigned but never used. This unconnecte
     Found 1-bit register for signal <Overlay_G1_VCnt<0>>.
     Found 1-bit register for signal <Overlay_G2<0>>.
     Found 1-bit register for signal <Overlay_R1<0>>.
-    Found 1-bit register for signal <switch>.
     Found 12-bit up counter for signal <VCnt>.
     Summary:
 	inferred   3 Counter(s).
-	inferred   7 D-type flip-flop(s).
+	inferred   5 D-type flip-flop(s).
 	inferred   8 Multiplexer(s).
 Unit <invaders_top> synthesized.
 
@@ -1288,8 +1292,8 @@ Macro Statistics
  4-bit up counter                                      : 3
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 197
- 1-bit register                                        : 172
+# Registers                                            : 195
+ 1-bit register                                        : 170
  16-bit register                                       : 1
  2-bit register                                        : 3
  3-bit register                                        : 7
@@ -1346,8 +1350,8 @@ Macro Statistics
  4-bit up counter                                      : 2
  5-bit up counter                                      : 2
  8-bit up counter                                      : 1
-# Registers                                            : 319
- Flip-Flops                                            : 319
+# Registers                                            : 317
+ Flip-Flops                                            : 317
 # Comparators                                          : 8
  12-bit comparator less                                : 1
  3-bit comparator equal                                : 2
@@ -1495,8 +1499,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 328
- Flip-Flops                                            : 328
+# Registers                                            : 326
+ Flip-Flops                                            : 326
 
 =========================================================================
 
@@ -1524,23 +1528,23 @@ Design Statistics
 # IOs                              : 20
 
 Cell Usage :
-# BELS                             : 1943
+# BELS                             : 1942
 #      GND                         : 1
-#      INV                         : 18
+#      INV                         : 16
 #      LUT1                        : 48
-#      LUT2                        : 182
-#      LUT3                        : 367
-#      LUT4                        : 901
+#      LUT2                        : 181
+#      LUT3                        : 370
+#      LUT4                        : 897
 #      MUXCY                       : 127
-#      MUXF5                       : 153
+#      MUXF5                       : 156
 #      MUXF6                       : 9
 #      VCC                         : 1
 #      XORCY                       : 136
-# FlipFlops/Latches                : 328
+# FlipFlops/Latches                : 326
 #      FD                          : 19
-#      FDC                         : 25
+#      FDC                         : 24
 #      FDCE                        : 179
-#      FDE                         : 39
+#      FDE                         : 38
 #      FDP                         : 1
 #      FDPE                        : 36
 #      FDR                         : 24
@@ -1548,14 +1552,14 @@ Cell Usage :
 # RAMS                             : 42
 #      RAM16X1D                    : 32
 #      RAMB16BWER                  : 10
-# Clock Buffers                    : 2
-#      BUFG                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 3
 # IO Buffers                       : 20
 #      IBUF                        : 5
 #      IBUFG                       : 1
 #      OBUF                        : 14
 # DCMs                             : 1
-#      DCM_SP                      : 1
+#      DCM                         : 1
 =========================================================================
 
 Device utilization summary:
@@ -1563,16 +1567,16 @@ Device utilization summary:
 
 Selected Device : 3sd1800afg676-4 
 
- Number of Slices:                      859  out of  16640     5%  
- Number of Slice Flip Flops:            316  out of  33280     0%  
- Number of 4 input LUTs:               1580  out of  33280     4%  
-    Number used as logic:              1516
+ Number of Slices:                      858  out of  16640     5%  
+ Number of Slice Flip Flops:            314  out of  33280     0%  
+ Number of 4 input LUTs:               1576  out of  33280     4%  
+    Number used as logic:              1512
     Number used as RAMs:                 64
  Number of IOs:                          20
  Number of bonded IOBs:                  20  out of    519     3%  
     IOB Flip Flops:                      12
  Number of BRAMs:                        10  out of     84    11%  
- Number of GCLKs:                         2  out of     24     8%  
+ Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      8    12%  
 
 ---------------------------
@@ -1593,82 +1597,57 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-u_clocks/CLKFX_BUF                 | BUFG                   | 38    |
-Clk1                               | BUFG                   | 334   |
------------------------------------+------------------------+-------+
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+I_CLK_REF                          | u_clocks/dcma.dcm_inst:CLKDV| 334   |
+I_CLK_REF                          | u_clocks/dcma.dcm_inst:CLKFX| 36    |
+-----------------------------------+-----------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------------+----------------------------+-------+
-Control Signal                                               | Buffer(FF name)            | Load  |
--------------------------------------------------------------+----------------------------+-------+
-Rst_n_s_inv(core/u_mw8080/u_8080/u0/MCycle_Acst_inv1_INV_0:O)| NONE(core/u_mw8080/CntE5_3)| 238   |
-I_RESET                                                      | IBUF                       | 2     |
-I_RESET_L(I_RESET_L1_INV_0:O)                                | NONE(switch)               | 1     |
--------------------------------------------------------------+----------------------------+-------+
+-------------------------------------------------------------+------------------------+-------+
+Control Signal                                               | Buffer(FF name)        | Load  |
+-------------------------------------------------------------+------------------------+-------+
+Rst_n_s_inv(core/u_mw8080/u_8080/u0/MCycle_Acst_inv1_INV_0:O)| NONE(HCnt_3)           | 238   |
+core/Rst_n_inv(u_clocks/reset_dcm_h1_INV_0:O)                | NONE(core/Rst_n_s_i)   | 2     |
+-------------------------------------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 19.035ns (Maximum Frequency: 52.534MHz)
+   Minimum period: 7.937ns (Maximum Frequency: 125.992MHz)
    Minimum input arrival time before clock: 5.272ns
    Maximum output required time after clock: 6.599ns
-   Maximum combinational path delay: 1.436ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'u_clocks/CLKFX_BUF'
-  Clock period: 6.053ns (frequency: 165.207MHz)
-  Total number of paths / destination ports: 306 / 76
+Timing constraint: Default period analysis for Clock 'I_CLK_REF'
+  Clock period: 7.937ns (frequency: 125.992MHz)
+  Total number of paths / destination ports: 752746 / 980
 -------------------------------------------------------------------------
-Delay:               6.053ns (Levels of Logic = 3)
-  Source:            u_dblscan/hpos_o_4 (FF)
-  Destination:       u_dblscan/hpos_o_10 (FF)
-  Source Clock:      u_clocks/CLKFX_BUF rising
-  Destination Clock: u_clocks/CLKFX_BUF rising
-
-  Data Path: u_dblscan/hpos_o_4 to u_dblscan/hpos_o_10
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              4   0.591   0.730  u_dblscan/hpos_o_4 (u_dblscan/hpos_o_4)
-     LUT4:I0->O            1   0.648   0.563  u_dblscan/hpos_o_or000019 (u_dblscan/hpos_o_or000019)
-     LUT4:I0->O            1   0.648   0.423  u_dblscan/hpos_o_or000041_SW0 (N483)
-     LUT4:I3->O           11   0.648   0.933  u_dblscan/hpos_o_or000041 (u_dblscan/hpos_o_or0000)
-     FDR:R                     0.869          u_dblscan/hpos_o_0
-    ----------------------------------------
-    Total                      6.053ns (3.404ns logic, 2.649ns route)
-                                       (56.2% logic, 43.8% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'Clk1'
-  Clock period: 19.035ns (frequency: 52.534MHz)
-  Total number of paths / destination ports: 941246 / 905
--------------------------------------------------------------------------
-Delay:               19.035ns (Levels of Logic = 28)
+Delay:               19.842ns (Levels of Logic = 28)
   Source:            core/u_mw8080/u_8080/u0/IR_4 (FF)
   Destination:       core/u_mw8080/u_8080/u0/Regs/bG1[7].Reg2H (RAM)
-  Source Clock:      Clk1 rising
-  Destination Clock: Clk1 rising
+  Source Clock:      I_CLK_REF rising 0.4X
+  Destination Clock: I_CLK_REF rising 0.4X
 
   Data Path: core/u_mw8080/u_8080/u0/IR_4 to core/u_mw8080/u_8080/u0/Regs/bG1[7].Reg2H
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            97   0.591   1.426  core/u_mw8080/u_8080/u0/IR_4 (core/u_mw8080/u_8080/u0/IR_4)
+     FDCE:C->Q            98   0.591   1.426  core/u_mw8080/u_8080/u0/IR_4 (core/u_mw8080/u_8080/u0/IR_4)
      LUT2:I0->O           12   0.648   0.964  core/u_mw8080/u_8080/u0/mcode/Set_Addr_To_or000051 (core/u_mw8080/u_8080/u0/mcode/N123)
-     LUT4:I3->O           10   0.648   0.885  core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_cmp_eq02461 (core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_cmp_eq0246)
+     LUT4:I3->O           11   0.648   0.936  core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_cmp_eq02461 (core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_cmp_eq0246)
      LUT4:I3->O            1   0.648   0.423  core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_mux0010217 (core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_mux0010217)
-     LUT4:I3->O            7   0.648   0.740  core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_mux0010231 (core/u_mw8080/u_8080/u0/mcode/N25)
-     LUT3:I2->O            1   0.648   0.000  core/u_mw8080/u_8080/u0/mcode/IncDec_16_2_mux000113 (core/u_mw8080/u_8080/u0/mcode/IncDec_16_2_mux000111)
-     MUXF5:I0->O           6   0.276   0.672  core/u_mw8080/u_8080/u0/mcode/IncDec_16_2_mux00011_f5 (core/u_mw8080/u_8080/u0/IncDec_16<2>)
+     LUT4:I3->O            6   0.648   0.701  core/u_mw8080/u_8080/u0/mcode/Set_BusB_To_2_mux0010231 (core/u_mw8080/u_8080/u0/mcode/N25)
+     LUT3:I2->O            1   0.648   0.423  core/u_mw8080/u_8080/u0/mcode/IncDec_16_2_mux000111 (core/u_mw8080/u_8080/u0/mcode/N47)
+     LUT4:I3->O            6   0.648   0.672  core/u_mw8080/u_8080/u0/mcode/IncDec_16_2_mux00011 (core/u_mw8080/u_8080/u0/IncDec_16<2>)
      LUT4:I3->O            1   0.648   0.423  core/u_mw8080/u_8080/u0/IncDecZ_not000111 (core/u_mw8080/u_8080/u0/N71)
      LUT4:I3->O            2   0.648   0.450  core/u_mw8080/u_8080/u0/RegAddrA_and00021 (core/u_mw8080/u_8080/u0/RegAddrA_and0002)
      LUT4:I3->O           96   0.648   1.282  core/u_mw8080/u_8080/u0/RegAddrA<1> (core/u_mw8080/u_8080/u0/RegAddrA<1>)
@@ -1693,37 +1672,17 @@ Delay:               19.035ns (Levels of Logic = 28)
      LUT4:I3->O            2   0.648   0.000  core/u_mw8080/u_8080/u0/RegDIH<7>14 (core/u_mw8080/u_8080/u0/RegDIH<7>)
      RAM16X1D:D               -0.108          core/u_mw8080/u_8080/u0/Regs/bG1[7].Reg1H
     ----------------------------------------
-    Total                     19.035ns (10.736ns logic, 8.299ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                     19.842ns (11.108ns logic, 8.734ns route)
+                                       (56.0% logic, 44.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'u_clocks/CLKFX_BUF'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.959ns (Levels of Logic = 2)
-  Source:            I_RESET (PAD)
-  Destination:       Clk (FF)
-  Destination Clock: u_clocks/CLKFX_BUF rising
-
-  Data Path: I_RESET to Clk
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             4   0.849   0.730  I_RESET_IBUF (I_RESET_IBUF)
-     LUT2:I0->O            1   0.648   0.420  Clk_and00001 (Clk_and0000)
-     FDE:CE                    0.312          Clk
-    ----------------------------------------
-    Total                      2.959ns (1.809ns logic, 1.150ns route)
-                                       (61.1% logic, 38.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk1'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'I_CLK_REF'
   Total number of paths / destination ports: 12 / 8
 -------------------------------------------------------------------------
 Offset:              5.272ns (Levels of Logic = 6)
   Source:            I_FIRE (PAD)
   Destination:       core/u_mw8080/u_8080/u0/IR_4 (FF)
-  Destination Clock: Clk1 rising
+  Destination Clock: I_CLK_REF rising 0.4X
 
   Data Path: I_FIRE to core/u_mw8080/u_8080/u0/IR_4
                                 Gate     Net
@@ -1732,7 +1691,7 @@ Offset:              5.272ns (Levels of Logic = 6)
      IBUF:I->O             2   0.849   0.527  I_FIRE_IBUF (I_FIRE_IBUF)
      LUT4:I1->O            1   0.643   0.000  core/GDB<4>2 (core/GDB<4>1)
      MUXF5:I1->O           1   0.276   0.563  core/GDB<4>_f5 (core/GDB<4>)
-     LUT4:I0->O            1   0.648   0.000  core/u_mw8080/Mmux_DI_2_f5_0_G (N670)
+     LUT4:I0->O            1   0.648   0.000  core/u_mw8080/Mmux_DI_2_f5_0_G (N676)
      MUXF5:I1->O           2   0.276   0.590  core/u_mw8080/Mmux_DI_2_f5_0 (core/u_mw8080/DI<4>)
      LUT2:I0->O            1   0.648   0.000  core/u_mw8080/u_8080/u0/IR_mux0002<3>1 (core/u_mw8080/u_8080/u0/IR_mux0002<3>)
      FDCE:D                    0.252          core/u_mw8080/u_8080/u0/IR_4
@@ -1741,13 +1700,13 @@ Offset:              5.272ns (Levels of Logic = 6)
                                        (68.1% logic, 31.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'u_clocks/CLKFX_BUF'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'I_CLK_REF'
   Total number of paths / destination ports: 14 / 14
 -------------------------------------------------------------------------
 Offset:              6.599ns (Levels of Logic = 2)
   Source:            u_dblscan/VSYNC_OUT (FF)
   Destination:       O_VSYNC (PAD)
-  Source Clock:      u_clocks/CLKFX_BUF rising
+  Source Clock:      I_CLK_REF rising 0.8X
 
   Data Path: u_dblscan/VSYNC_OUT to O_VSYNC
                                 Gate     Net
@@ -1761,35 +1720,17 @@ Offset:              6.599ns (Levels of Logic = 2)
                                        (87.3% logic, 12.7% route)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Delay:               1.436ns (Levels of Logic = 1)
-  Source:            I_RESET (PAD)
-  Destination:       u_clocks/DCM_SP_INST:RST (PAD)
-
-  Data Path: I_RESET to u_clocks/DCM_SP_INST:RST
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             4   0.849   0.587  I_RESET_IBUF (I_RESET_IBUF)
-    DCM_SP:RST                 0.000          u_clocks/DCM_SP_INST
-    ----------------------------------------
-    Total                      1.436ns (0.849ns logic, 0.587ns route)
-                                       (59.1% logic, 40.9% route)
-
-=========================================================================
 
 
-Total REAL time to Xst completion: 90.00 secs
-Total CPU time to Xst completion: 84.66 secs
+Total REAL time to Xst completion: 86.00 secs
+Total CPU time to Xst completion: 85.02 secs
  
 --> 
 
 
-Total memory usage is 252720 kilobytes
+Total memory usage is 252692 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  159 (   0 filtered)
+Number of warnings :  164 (   0 filtered)
 Number of infos    :   10 (   0 filtered)
 

@@ -9,7 +9,7 @@ Target Device  : xc3sd1800a
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3adsp -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Jul 15 15:45:33 2015
+Mapped Date    : Wed Jul 15 16:17:11 2015
 
 Mapping design into LUTs...
 Writing file invaders_top.ngm...
@@ -25,27 +25,27 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    2
 Logic Utilization:
-  Number of Slice Flip Flops:           316 out of  33,280    1%
-  Number of 4 input LUTs:             1,531 out of  33,280    4%
+  Number of Slice Flip Flops:           314 out of  33,280    1%
+  Number of 4 input LUTs:             1,530 out of  33,280    4%
 Logic Distribution:
-  Number of occupied Slices:            837 out of  16,640    5%
-    Number of Slices containing only related logic:     837 out of     837 100%
-    Number of Slices containing unrelated logic:          0 out of     837   0%
+  Number of occupied Slices:            833 out of  16,640    5%
+    Number of Slices containing only related logic:     833 out of     833 100%
+    Number of Slices containing unrelated logic:          0 out of     833   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,579 out of  33,280    4%
-    Number used as logic:             1,467
+  Total Number of 4 input LUTs:       1,578 out of  33,280    4%
+    Number used as logic:             1,466
     Number used as a route-thru:         48
     Number used for Dual Port RAMs:      64
       (Two LUTs used per Dual Port RAM)
   Number of bonded IOBs:                 20 out of     519    3%
     IOB Flip Flops:                      12
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       8   12%
   Number of RAMB16BWERs:                 10 out of      84   11%
 
-Peak Memory Usage:  237 MB
-Total REAL time to MAP completion:  13 secs 
-Total CPU time to MAP completion:   10 secs 
+Peak Memory Usage:  236 MB
+Total REAL time to MAP completion:  9 secs 
+Total CPU time to MAP completion:   9 secs 
 
 NOTES:
 
