@@ -1,0 +1,263 @@
+iMPACT Version: 10.1.02
+
+iMPACT log file Started on Wed Jul 15 13:43:58 2015
+
+// *** BATCH CMD : loadProjectFile -file"/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/spaceinvaders.ipf"
+Reusing A002008B key.
+Reusing 2402008B key.
+ OS platform = i686.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/10.1/ISE/bin/lin/xusbdfwu.hex = 1030.
+File version of /usr/share/xusbdfwu.hex = 1030.
+ libusb-driver.so version: 2007-11-10 13:31:49.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1028.
+File version of /opt/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1302.
+Firmware hex file version = 1302.
+Downloading /opt/Xilinx/10.1/ISE/data/xusb_xlp.hex.
+Downloaded firmware version = 1302.
+PLD file version = 0012h.
+ PLD version = 0012h.
+'1': Loading file'/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit' ...
+INFO:iMPACT:1525 - File   /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/   Space-Invaders-master/invaders_rel003/build/invaders_top.bit can not be   found.
+INFO:iMPACT:2009 - Fail to add device by file   /home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/   Space-Invaders-master/invaders_rel003/build/invaders_top.bit.
+INFO:iMPACT:2587 - Failed to add device 0.
+Active mode is BS
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Reusing 7802008B key.
+Reusing FC02008B key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport0).
+ libusb-driver.so version: 2007-11-10 13:31:49.
+ parport0: baseAddress=0x0, ecpAddress=0x400
+ LPT base address = 0000h.
+ ECP base address = 0400h.
+LPT port is already in use. rc = FFFFFFFFh
+Cable connection failed.
+Reusing 7902008B key.
+Reusing FD02008B key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport1).
+ libusb-driver.so version: 2007-11-10 13:31:49.
+Cable connection failed.
+Reusing 7A02008B key.
+Reusing FE02008B key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport2).
+ libusb-driver.so version: 2007-11-10 13:31:49.
+Cable connection failed.
+Reusing 7B02008B key.
+Reusing FF02008B key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport3).
+ libusb-driver.so version: 2007-11-10 13:31:49.
+Cable connection failed.
+Reusing A002008B key.
+Reusing 2402008B key.
+ OS platform = i686.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/10.1/ISE/bin/lin/xusbdfwu.hex = 1030.
+File version of /usr/share/xusbdfwu.hex = 1030.
+ libusb-driver.so version: 2007-11-10 13:31:49.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1302.
+File version of /opt/Xilinx/10.1/ISE/data/xusb_xlp.hex = 1302.
+Firmware hex file version = 1302.
+PLD file version = 0012h.
+ PLD version = 0012h.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Attempting to identify devices in the boundary-scan chain configuration...// *** BATCH CMD : Identify 
+PROGRESS_START - Starting Operation.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc3sd1800a, Version : 0
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/10.1/ISE/spartan3adsp/data/xc3sd1800a.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3sd1800a successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit"
+'1': Loading file'/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc3sd1800a successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+IDCODE not validated while writing FDRI           :         0
+DCM matched                                       :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of VSEL pin 0                               :         1
+value of VSEL pin 1                               :         1
+value of VSEL pin 2                               :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from Done Pin                        :         1
+POST_CRC_ERR error                                :         0
+SYNC word not found                               :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1100 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Updating config file/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit...
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'1': Programming device...
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+IDCODE not validated while writing FDRI           :         0
+DCM matched                                       :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of VSEL pin 0                               :         1
+value of VSEL pin 1                               :         1
+value of VSEL pin 2                               :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from Done Pin                        :         1
+POST_CRC_ERR error                                :         0
+SYNC word not found                               :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1100 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      3 sec.
+Updating config file/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit...
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'1': Programming device...
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+IDCODE not validated while writing FDRI           :         0
+DCM matched                                       :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of VSEL pin 0                               :         1
+value of VSEL pin 1                               :         1
+value of VSEL pin 2                               :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from Done Pin                        :         1
+POST_CRC_ERR error                                :         0
+SYNC word not found                               :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1100 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      3 sec.
+Updating config file/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit...
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'1': Programming device...
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+IDCODE not validated while writing FDRI           :         0
+DCM matched                                       :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of VSEL pin 0                               :         1
+value of VSEL pin 1                               :         1
+value of VSEL pin 2                               :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from Done Pin                        :         1
+POST_CRC_ERR error                                :         0
+SYNC word not found                               :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1100 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Updating config file/home/prakti01/Praktikumsverzeichnis/bearbeitung/BPTI/06/Space_Invaders_code/Space-Invaders-master/invaders_rel003/build/invaders_top.bit...
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'1': Programming device...
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+IDCODE not validated while writing FDRI           :         0
+DCM matched                                       :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of VSEL pin 0                               :         1
+value of VSEL pin 1                               :         1
+value of VSEL pin 2                               :         1
+value of MODE pin M0                              :         1
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from Done Pin                        :         1
+POST_CRC_ERR error                                :         0
+SYNC word not found                               :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 1100 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.

@@ -10,6 +10,8 @@ export XILINX_PATH=/opt/Xilinx/10.1/ISE/bin/lin/
 
 echo use build_xst -xil to skip synthesis stage.
 
+rm -r build/
+
 if [ ! -d "build" ]; then
     mkdir build
 fi

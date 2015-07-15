@@ -4,32 +4,32 @@ CONFIG PART = XC3SD1800A-FG676-4;
 #NET I_CLK_REF       TNM_NET = clk_ref_grp;
 #TIMESPEC TS01 = PERIOD : clk_ref_grp : 20.00 : PRIORITY 1;   # 50.00 MHz
 
-#TIMESPEC TS11=FROM:PADS:TO:FFS : 30 ns;
-#TIMESPEC TS12=FROM:FFS:TO:PADS : 30 ns;
+TIMESPEC TS11=FROM:PADS:TO:FFS : 30 ns;
+TIMESPEC TS12=FROM:FFS:TO:PADS : 30 ns;
 
 
-NET "O_VIDEO_R<1>"        LOC = K20;
-NET O_VIDEO_R<0>        LOC = "L20";
-NET O_VIDEO_R<2>        LOC = F25;
-NET O_VIDEO_R<3>        LOC = F24;
+NET O_VIDEO_R<0> LOC = "L20";
+NET O_VIDEO_R<1> LOC = "K20";
+NET O_VIDEO_R<2> LOC = "F25";
+NET O_VIDEO_R<3> LOC = "F24";
 
-NET "O_VIDEO_G<0>"        LOC = "M19";
-Net "O_VIDEO_G<1>"        LOC = "M18";
-Net "O_VIDEO_G<2>"        LOC = "J23";
-Net "O_VIDEO_G<3>"        LOC = "J22";
+NET O_VIDEO_G<0> LOC = "M19";
+Net O_VIDEO_G<1> LOC = "M18";
+Net O_VIDEO_G<2> LOC = "J23";
+Net O_VIDEO_G<3> LOC = "J22";
 
-NET "O_VIDEO_B<0>"        LOC = "L22";
-NET "O_VIDEO_B<1>"        LOC = "K21";
-NET "O_VIDEO_B<2>"        LOC = "G23";
-NET "O_VIDEO_B<3>"        LOC = "G24";
+NET O_VIDEO_B<0> LOC = "L22";
+NET O_VIDEO_B<1> LOC = "K21";
+NET O_VIDEO_B<2> LOC = "G23";
+NET O_VIDEO_B<3> LOC = "G24";
 
-NET "O_HSYNC"          LOC = "K26";
-NET "O_VSYNC"          LOC = "K25";
+NET O_HSYNC LOC = "K26";
+NET O_VSYNC LOC = "K25";
 
-NET "I_RESET"          LOC = "Y16";
-NET "I_CLK_REF"        LOC = "C9";
+NET I_RESET LOC = "Y16";
+NET I_CLK_REF LOC = "P26";
 
-NET "I_START"         LOC = "J13";
-NET "I_FIRE"          LOC = "J15";
-NET "I_LEFT"          LOC = "J17";
-NET "I_RIGHT"         LOC = "J10";
+NET I_START LOC = "J13";
+NET I_FIRE LOC = "J15";
+NET I_LEFT LOC = "J17";
+NET I_RIGHT LOC = "J10";

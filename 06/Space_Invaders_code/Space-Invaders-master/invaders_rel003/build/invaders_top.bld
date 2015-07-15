@@ -13,106 +13,6 @@ Done.
 Applying constraints in "invaders_top.ucf" to the design...
 Resolving constraint associations...
 Checking Constraint Associations...
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_R<1>"        LOC = K20;>
-   [invaders_top.ucf(11)]: NET "O_VIDEO_R<1>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET O_VIDEO_R<0>        LOC = "L20";>
-   [invaders_top.ucf(12)]: NET "O_VIDEO_R<0>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET O_VIDEO_R<2>        LOC = F25;>
-   [invaders_top.ucf(13)]: NET "O_VIDEO_R<2>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET O_VIDEO_R<3>        LOC = F24;>
-   [invaders_top.ucf(14)]: NET "O_VIDEO_R<3>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_G<0>"        LOC = "M19";>
-   [invaders_top.ucf(16)]: NET "O_VIDEO_G<0>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <Net "O_VIDEO_G<1>"        LOC = "M18";>
-   [invaders_top.ucf(17)]: NET "O_VIDEO_G<1>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <Net "O_VIDEO_G<2>"        LOC = "J23";>
-   [invaders_top.ucf(18)]: NET "O_VIDEO_G<2>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <Net "O_VIDEO_G<3>"        LOC = "J22";>
-   [invaders_top.ucf(19)]: NET "O_VIDEO_G<3>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_B<0>"        LOC = "L22";>
-   [invaders_top.ucf(21)]: NET "O_VIDEO_B<0>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_B<1>"        LOC = "K21";>
-   [invaders_top.ucf(22)]: NET "O_VIDEO_B<1>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_B<2>"        LOC = "G23";>
-   [invaders_top.ucf(23)]: NET "O_VIDEO_B<2>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VIDEO_B<3>"        LOC = "G24";>
-   [invaders_top.ucf(24)]: NET "O_VIDEO_B<3>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_HSYNC"          LOC = "K26";>
-   [invaders_top.ucf(26)]: NET "O_HSYNC" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "O_VSYNC"          LOC = "K25";>
-   [invaders_top.ucf(27)]: NET "O_VSYNC" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_RESET"          LOC = "Y16";>
-   [invaders_top.ucf(29)]: NET "I_RESET" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_CLK_REF"        LOC = "C9";>
-   [invaders_top.ucf(30)]: NET "I_CLK_REF" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_START"         LOC = "J13";>
-   [invaders_top.ucf(32)]: NET "I_START" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_FIRE"          LOC = "J15";>
-   [invaders_top.ucf(33)]: NET "I_FIRE" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_LEFT"          LOC = "J17";>
-   [invaders_top.ucf(34)]: NET "I_LEFT" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "I_RIGHT"         LOC = "J10";>
-   [invaders_top.ucf(35)]: NET "I_RIGHT" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
 Done...
 Checking Partitions ...
 
@@ -126,12 +26,11 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:    20
+  Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 73348 kilobytes
+Total memory usage is 77012 kilobytes
 
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
+Writing NGD file "invaders_top.ngd" ...
 
 Writing NGDBUILD log file "invaders_top.bld"...

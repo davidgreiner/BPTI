@@ -61,26 +61,25 @@ use UNISIM.Vcomponents.all;
 entity invaders_top is
     port(
 
-    -- Replacement for PS2_CLK
-    I_START         : in std_logic;
-    I_FIRE          : in std_logic;
-    I_LEFT          : in std_logic;
-    I_RIGHT         : in std_logic;
-
-    O_VIDEO_R      : out std_logic_vector(3 downto 0);
+	O_VIDEO_R      : out std_logic_vector(3 downto 0);
     O_VIDEO_G      : out std_logic_vector(3 downto 0);
     O_VIDEO_B      : out std_logic_vector(3 downto 0);
     O_HSYNC        : out std_logic;
     O_VSYNC        : out std_logic;
     --
     I_RESET        : in  std_logic;
-    I_CLK_REF      : in  std_logic
+    I_CLK_REF      : in  std_logic;
+
+    -- Replacement for PS2_CLK
+    I_START         : in std_logic;
+    I_FIRE          : in std_logic;
+    I_LEFT          : in std_logic;
+    I_RIGHT         : in std_logic
     );
 end invaders_top;
 
 architecture rtl of invaders_top is
     
-    signal clockdown : std_logic;
     signal I_RESET_L : std_logic;
     signal Clk       : std_logic;
     signal Clk_x2    : std_logic;
@@ -128,26 +127,32 @@ architecture rtl of invaders_top is
         -- Disable unused components
         ----------------------------------------------------------------------------------------------------------------------------------
 
-		clockdown_pm : entity work.clockdown
-		port map
-		(
-			CLKIN_IN => I_CLK_REF,
-			RST_IN => I_RESET_L,
-			CLKDV_OUT => clockdown,
-			CLKIN_IBUFG_OUT => OPEN,
-			CLK0_OUT => OPEN
-		);
 
         I_RESET_L      <= not I_RESET;
-        --
-        u_clocks : entity work.INVADERS_CLOCKS
+        --      
+        
+        u_clocks  : entity work.INVADERS_CLOCKS
         port map (
-            I_CLK_REF => clockdown,
-            I_RESET_L => I_RESET_L,
-            --
-            O_CLK     => Clk,
-            O_CLK_X2  => Clk_x2
+        CLKIN_IN => I_CLK_REF,
+        RST_IN => I_RESET,
+        --
+        CLKFX_OUT => Clk_x2
         );
+        
+		clock_p : process(Clk_x2, I_RESET)
+		variable switch : std_logic := '0';
+		begin
+			if(I_RESET = '0') then
+				switch := '0';
+			elsif(Clk_x2'event and Clk_x2 = '1') then
+				if(switch = '1') then
+					Clk <= not Clk;
+				end if;
+				switch := not switch;
+			end if;
+		end process;       
+        
+        
 
         Buttons_n <= not Buttons(5 downto 1);
         DIP       <= "00000000";

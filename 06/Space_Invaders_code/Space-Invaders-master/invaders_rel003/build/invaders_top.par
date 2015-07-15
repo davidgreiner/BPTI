@@ -1,0 +1,196 @@
+Release 10.1.02 par K.37 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+i82pc25::  Wed Jul 15 15:45:49 2015
+
+par -w -ol high invaders_top.ncd invaders_top.ncd invaders_top.pcf 
+
+
+Constraints file: invaders_top.pcf.
+Loading device for application Rf_Device from file '3sd1800a.nph' in environment /opt/Xilinx/10.1/ISE.
+   "invaders_top" is an NCD, version 3.2, device xc3sd1800a, package fg676, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.32 2008-05-28".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          20 out of 519     3%
+
+   Number of External Input IOBs                  6
+
+      Number of External Input IBUFs              6
+        Number of LOCed External Input IBUFs      6 out of 6     100%
+
+
+   Number of External Output IOBs                14
+
+      Number of External Output IOBs             14
+        Number of LOCed External Output IOBs     14 out of 14    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of DCMs                            1 out of 8      12%
+   Number of RAMB16BWERs                    10 out of 84     11%
+   Number of Slices                        837 out of 16640   5%
+      Number of SLICEMs                     32 out of 8320    1%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:d558e) REAL time: 8 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:d558e) REAL time: 8 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:d558e) REAL time: 8 secs 
+
+Phase 4.2
+
+WARNING:Place:619 - This design is using a Side-BUFG site due to placement constraints on a BUFG, DCM, clock IOB or the
+   loads of these components. It is recommended that Top and Bottom BUFG sites be used instead of Side-BUFG sites
+   whenever possible because they can reach every clock region on the device. Side-BUFG sites can reach only clock
+   regions on the same side of the device and also preclude the use of certain Top and Bottom BUFGs in the same clock
+   region.
+......
+Phase 4.2 (Checksum:e647c) REAL time: 13 secs 
+
+.....
+.........
+Phase 5.30
+Phase 5.30 (Checksum:e647c) REAL time: 14 secs 
+
+Phase 6.8
+.....................
+..................
+................
+Phase 6.8 (Checksum:810f81) REAL time: 15 secs 
+
+Phase 7.5
+Phase 7.5 (Checksum:810f81) REAL time: 15 secs 
+
+Phase 8.18
+Phase 8.18 (Checksum:81d09d) REAL time: 15 secs 
+
+Phase 9.5
+Phase 9.5 (Checksum:81d09d) REAL time: 15 secs 
+
+REAL time consumed by placer: 15 secs 
+CPU  time consumed by placer: 14 secs 
+Writing design to file invaders_top.ncd
+
+
+Total REAL time to Placer completion: 16 secs 
+Total CPU time to Placer completion: 14 secs 
+
+Starting Router
+
+Phase 1: 6687 unrouted;       REAL time: 26 secs 
+
+Phase 2: 6215 unrouted;       REAL time: 27 secs 
+
+Phase 3: 1871 unrouted;       REAL time: 28 secs 
+
+Phase 4: 1871 unrouted; (0)      REAL time: 28 secs 
+
+Phase 5: 1871 unrouted; (0)      REAL time: 28 secs 
+
+Phase 6: 1871 unrouted; (0)      REAL time: 28 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 29 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 30 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 30 secs 
+
+
+Total REAL time to Router completion: 30 secs 
+Total CPU time to Router completion: 29 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|                 Clk | BUFGMUX_X2Y10| No   |  248 |  0.212     |  1.672      |
++---------------------+--------------+------+------+------------+-------------+
+|              Clk_x2 |  BUFGMUX_X3Y8| No   |   32 |  0.254     |  1.058      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS11 = MAXDELAY FROM TIMEGRP "PADS" TO TI | SETUP   |    21.119ns|     8.881ns|       0|           0
+  MEGRP "FFS" 30 ns                         | HOLD    |     5.392ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TS12 = MAXDELAY FROM TIMEGRP "FFS" TO TIM | MAXDELAY|    23.776ns|     6.224ns|       0|           0
+  EGRP "PADS" 30 ns                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 35 secs 
+Total CPU time to PAR completion: 32 secs 
+
+Peak Memory Usage:  241 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 0
+
+Writing design to file invaders_top.ncd
+
+
+
+PAR done!
